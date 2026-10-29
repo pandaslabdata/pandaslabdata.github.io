@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pandas Lab · Stories</title>
+<meta name="description" content="Pandas Lab — data stories made of wool, felt and real numbers">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background-color:#0b111a;background-image:url("data:image/svg+xml,<svg%20xmlns="http://www.w3.org/2000/svg"%20width="700"%20height="700"><circle%20cx="446.2"%20cy="22.3"%20r="1.0"%20fill="%23e8c98a"%20opacity="0.21"/><circle%20cx="75.7"%20cy="516.1"%20r="1.2"%20fill="white"%20opacity="0.15"/><circle%20cx="25.6"%20cy="155.9"%20r="1.2"%20fill="white"%20opacity="0.35"/><circle%20cx="499.1"%20cy="488.9"%20r="1.0"%20fill="white"%20opacity="0.2"/><circle%20cx="563.5"%20cy="9.5"%20r="0.8"%20fill="white"%20opacity="0.39"/><circle%20cx="112.3"%20cy="665.5"%20r="1.0"%20fill="white"%20opacity="0.16"/><circle%20cx="252.7"%20cy="242.3"%20r="1.0"%20fill="white"%20opacity="0.43"/><circle%20cx="375.0"%20cy="676.4"%20r="1.0"%20fill="white"%20opacity="0.15"/><circle%20cx="438.8"%20cy="616.0"%20r="1.0"%20fill="white"%20opacity="0.34"/><circle%20cx="36.6"%20cy="162.2"%20r="1.0"%20fill="white"%20opacity="0.49"/><circle%20cx="602.9"%20cy="267.3"%20r="1.0"%20fill="white"%20opacity="0.36"/><circle%20cx="260.4"%20cy="149.6"%20r="1.0"%20fill="white"%20opacity="0.39"/><circle%20cx="54.3"%20cy="443.1"%20r="1.2"%20fill="%23e8c98a"%20opacity="0.4"/><circle%20cx="266.8"%20cy="687.8"%20r="1.5"%20fill="white"%20opacity="0.38"/><circle%20cx="228.8"%20cy="535.1"%20r="0.7"%20fill="%23e8c98a"%20opacity="0.21"/><circle%20cx="222.7"%20cy="189.7"%20r="0.8"%20fill="white"%20opacity="0.47"/><circle%20cx="500.4"%20cy="151.7"%20r="1.0"%20fill="white"%20opacity="0.27"/><circle%20cx="321.6"%20cy="187.8"%20r="0.8"%20fill="white"%20opacity="0.4"/><circle%20cx="520.4"%20cy="300.6"%20r="1.2"%20fill="white"%20opacity="0.27"/><circle%20cx="693.3"%20cy="356.6"%20r="0.7"%20fill="white"%20opacity="0.41"/><circle%20cx="110.5"%20cy="115.4"%20r="1.5"%20fill="%23e8c98a"%20opacity="0.28"/><circle%20cx="268.3"%20cy="692.3"%20r="1.2"%20fill="white"%20opacity="0.22"/><circle%20cx="655.3"%20cy="474.4"%20r="0.7"%20fill="white"%20opacity="0.38"/><circle%20cx="189.1"%20cy="447.3"%20r="0.7"%20fill="%23e8c98a"%20opacity="0.23"/><circle%20cx="7.2"%20cy="503.2"%20r="1.5"%20fill="white"%20opacity="0.22"/><circle%20cx="128.3"%20cy="634.7"%20r="1.5"%20fill="white"%20opacity="0.23"/><circle%20cx="425.2"%20cy="110.5"%20r="0.8"%20fill="white"%20opacity="0.32"/><circle%20cx="370.9"%20cy="5.4"%20r="1.0"%20fill="%23e8c98a"%20opacity="0.31"/><circle%20cx="255.5"%20cy="684.9"%20r="1.0"%20fill="white"%20opacity="0.21"/><circle%20cx="396.5"%20cy="59.3"%20r="1.5"%20fill="%23e8c98a"%20opacity="0.3"/><circle%20cx="529.8"%20cy="533.4"%20r="0.8"%20fill="white"%20opacity="0.37"/><circle%20cx="118.9"%20cy="369.1"%20r="1.2"%20fill="white"%20opacity="0.28"/><circle%20cx="377.1"%20cy="508.7"%20r="0.8"%20fill="white"%20opacity="0.39"/><circle%20cx="468.5"%20cy="262.7"%20r="1.2"%20fill="white"%20opacity="0.29"/><circle%20cx="49.2"%20cy="19.5"%20r="1.2"%20fill="white"%20opacity="0.21"/><circle%20cx="54.0"%20cy="440.5"%20r="0.8"%20fill="%23e8c98a"%20opacity="0.15"/><circle%20cx="233.0"%20cy="359.8"%20r="1.0"%20fill="white"%20opacity="0.37"/><circle%20cx="96.3"%20cy="650.5"%20r="1.2"%20fill="white"%20opacity="0.34"/><circle%20cx="331.4"%20cy="285.9"%20r="0.7"%20fill="white"%20opacity="0.16"/><circle%20cx="297.3"%20cy="327.2"%20r="1.5"%20fill="white"%20opacity="0.14"/><circle%20cx="450.9"%20cy="46.8"%20r="1.5"%20fill="white"%20opacity="0.25"/><circle%20cx="176.6"%20cy="136.2"%20r="1.0"%20fill="white"%20opacity="0.17"/><circle%20cx="324.2"%20cy="608.4"%20r="0.7"%20fill="white"%20opacity="0.29"/><circle%20cx="384.7"%20cy="39.9"%20r="1.2"%20fill="white"%20opacity="0.44"/><circle%20cx="644.2"%20cy="590.6"%20r="0.8"%20fill="white"%20opacity="0.27"/><circle%20cx="601.6"%20cy="627.7"%20r="0.8"%20fill="white"%20opacity="0.26"/></svg>");background-size:700px 700px;color:#fff;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;text-align:center}
+a{text-decoration:none;color:inherit}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;max-width:980px;margin:0 auto;padding:16px 18px}
+.wordmark{font-weight:800;letter-spacing:.14em;color:#d49318;font-size:15px}
+.navlinks{display:flex;gap:18px;font-size:14px}
+.navlinks a{color:#cfd6e0;padding-bottom:3px}
+.navlinks a.active{color:#d49318;border-bottom:2px dashed #d49318}
+.langs{display:flex;gap:6px}
+.langs button{font-size:11px;letter-spacing:.05em;padding:4px 8px;border-radius:999px;border:1px solid rgba(212,147,24,.45);background:transparent;color:#cfd6e0;cursor:pointer}
+.langs button.on{background:#d49318;border-color:#d49318;color:#0b111a;font-weight:700}
+.hero{display:block;width:min(460px,92vw);margin:8px auto 0;border-radius:18px}
+.tagline{font-size:clamp(18px,3.4vw,24px);font-weight:700;color:#d49318;margin:26px 16px 8px}
+.sub{font-size:clamp(13px,2.4vw,16px);color:#e8edf4;margin:0 16px 22px}
+.icons{display:flex;justify-content:center;gap:16px;margin:6px 0 26px}
+.icons a{width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(212,147,24,.55);display:flex;align-items:center;justify-content:center;background:#10161f}
+.icons svg{width:20px;height:20px;fill:#e8edf4}
+.cta{display:block;width:min(430px,88vw);margin:14px auto;padding:15px 18px;background:#d49318;color:#13181f;font-weight:800;font-size:16px;border-radius:14px;border:2px dashed rgba(16,22,31,.5)}
+.contactbox{width:min(430px,88vw);margin:22px auto 0;padding:16px;border:1.5px dashed rgba(212,147,24,.5);border-radius:14px;background:#10161f}
+.contactbox .lbl{color:#d49318;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.contactbox .row{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap}
+.contactbox .mail{color:#e8edf4;font-size:15px}
+.contactbox button{padding:7px 16px;border-radius:999px;border:1px solid #d49318;background:transparent;color:#d49318;font-weight:700;cursor:pointer}
+.footer{color:#8c96a5;font-size:12px;letter-spacing:.12em;margin:40px 0 26px}
+.footer b{color:#d49318}
+.pagehead{font-size:clamp(22px,4vw,30px);font-weight:800;color:#d49318;margin:22px 16px 6px}
+.pageintro{color:#cfd6e0;font-size:14px;margin:0 16px 10px}
+.friday{display:inline-block;font-size:12px;color:#0b111a;background:#d49318;font-weight:700;border-radius:999px;padding:5px 14px;margin:6px 0 24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;max-width:980px;margin:0 auto;padding:0 18px 10px}
+.card{background:#10161f;border:1.5px dashed rgba(212,147,24,.5);border-radius:16px;overflow:hidden;text-align:left;display:flex;flex-direction:column;transition:transform .15s}
+.card:hover{transform:translateY(-3px)}
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.cbody{padding:12px 14px 14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.ep{color:#d49318;font-weight:800;font-size:11px;letter-spacing:.14em}
+.ctitle{font-size:15px;font-weight:700;color:#fff;line-height:1.35;flex:1}
+.cmeta{display:flex;justify-content:space-between;align-items:center}
+.dur{color:#8c96a5;font-size:12px}
+.watch{color:#d49318;font-weight:700;font-size:13px;border:1px solid rgba(212,147,24,.55);border-radius:999px;padding:5px 14px}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="wordmark" href="index.html">PANDAS LAB</a>
+  <div class="navlinks">
+    <a href="index.html" data-i="nav_home">Home</a>
+    <a href="stories.html" class="active" data-i="nav_stories">Stories</a>
+    <a href="about.html" data-i="nav_about">About</a>
+  </div>
+  <div class="langs" id="langs"></div>
+</nav>
+
+
+<div class="pagehead" data-i="st_title"></div>
+<div class="pageintro" data-i="st_intro"></div>
+<div class="friday" data-i="friday"></div>
+<div class="grid">
+  <a class="card" href="https://www.youtube.com/watch?v=SGAB3sh-rvs" target="_blank" rel="noopener">
+    <img src="https://i.ytimg.com/vi/SGAB3sh-rvs/hqdefault.jpg" alt="Why 68% of All Meteorites Are Found in One Place" loading="lazy">
+    <div class="cbody">
+      <div class="ep">EP 6</div>
+      <div class="ctitle">Why 68% of All Meteorites Are Found in One Place</div>
+      <div class="cmeta"><span class="dur">12:14</span><span class="watch" data-i="watch"></span></div>
+    </div>
+  </a>
+  <a class="card" href="https://www.youtube.com/watch?v=OXJaJOZGDf0" target="_blank" rel="noopener">
+    <img src="https://i.ytimg.com/vi/OXJaJOZGDf0/hqdefault.jpg" alt="Chicxulub Crater: Why You Can't See the World's Most Famous Impact" loading="lazy">
+    <div class="cbody">
+      <div class="ep">EP 5</div>
+      <div class="ctitle">Chicxulub Crater: Why You Can't See the World's Most Famous Impact</div>
+      <div class="cmeta"><span class="dur">10:00</span><span class="watch" data-i="watch"></span></div>
+    </div>
+  </a>
+  <a class="card" href="https://www.youtube.com/watch?v=IS_AozDs8ww" target="_blank" rel="noopener">
+    <img src="https://i.ytimg.com/vi/IS_AozDs8ww/hqdefault.jpg" alt="The Geography of Dinosaur Discoveries (It's Not What You Think)" loading="lazy">
+    <div class="cbody">
+      <div class="ep">EP 4</div>
+      <div class="ctitle">The Geography of Dinosaur Discoveries (It's Not What You Think)</div>
+      <div class="cmeta"><span class="dur">9:22</span><span class="watch" data-i="watch"></span></div>
+    </div>
+  </a>
+  <a class="card" href="https://www.youtube.com/watch?v=k_eJcF2WMfw" target="_blank" rel="noopener">
+    <img src="https://i.ytimg.com/vi/k_eJcF2WMfw/hqdefault.jpg" alt="Why T. Rex Keeps the Crown (Even If It's Not the Biggest)" loading="lazy">
+    <div class="cbody">
+      <div class="ep">EP 3</div>
+      <div class="ctitle">Why T. Rex Keeps the Crown (Even If It's Not the Biggest)</div>
+      <div class="cmeta"><span class="dur">8:21</span><span class="watch" data-i="watch"></span></div>
+    </div>
+  </a>
+  <a class="card" href="https://www.youtube.com/watch?v=4bmygw3PxK8" target="_blank" rel="noopener">
+    <img src="https://i.ytimg.com/vi/4bmygw3PxK8/hqdefault.jpg" alt="What If the Biggest Dinosaur Ever… Is Missing?" loading="lazy">
+    <div class="cbody">
+      <div class="ep">EP 2</div>
+      <div class="ctitle">What If the Biggest Dinosaur Ever… Is Missing?</div>
+      <div class="cmeta"><span class="dur">10:06</span><span class="watch" data-i="watch"></span></div>
+    </div>
+  </a>
+  <a class="card" href="https://www.youtube.com/watch?v=E4gdm25XoI8" target="_blank" rel="noopener">
+    <img src="https://i.ytimg.com/vi/E4gdm25XoI8/hqdefault.jpg" alt="Stegosaurus vs. T. rex: A tale of two eras" loading="lazy">
+    <div class="cbody">
+      <div class="ep">EP 1</div>
+      <div class="ctitle">Stegosaurus vs. T. rex: A tale of two eras</div>
+      <div class="cmeta"><span class="dur">10:37</span><span class="watch" data-i="watch"></span></div>
+    </div>
+  </a>
+</div>
+<div class="footer"><b>PANDAS LAB</b> · TURNING DATA INTO STORIES</div>
+<script>
+const I18N={"en": {"nav_home": "Home", "nav_stories": "Stories", "tagline": "Data stories made of wool, felt and real numbers", "sub": "Every number checked at the source · New story every day", "btn_videos": "Watch Our Latest Videos", "btn_tiktok": "Our Latest TikTok", "contact": "Contact", "copy": "Copy", "copied": "Copied!", "st_title": "Our Stories", "st_intro": "Every story starts with a real dataset · sources in every description", "watch": "Watch", "friday": "New story every Friday", "nav_about": "About"}, "de": {"nav_home": "Home", "nav_stories": "Storys", "tagline": "Datengeschichten aus Wolle, Filz und echten Zahlen", "sub": "Jede Zahl an der Quelle geprüft · Jeden Tag eine neue Geschichte", "btn_videos": "Unsere neuesten Videos", "btn_tiktok": "Unser neuestes TikTok", "contact": "Kontakt", "copy": "Kopieren", "copied": "Kopiert!", "st_title": "Unsere Geschichten", "st_intro": "Jede Geschichte beginnt mit einem echten Datensatz · Quellen in jeder Beschreibung", "watch": "Ansehen", "friday": "Jeden Freitag eine neue Geschichte", "nav_about": "Über uns"}, "es": {"nav_home": "Inicio", "nav_stories": "Historias", "tagline": "Historias de datos hechas de lana, fieltro y números reales", "sub": "Cada número verificado en la fuente · Una historia nueva cada día", "btn_videos": "Mira nuestros últimos vídeos", "btn_tiktok": "Nuestro último TikTok", "contact": "Contacto", "copy": "Copiar", "copied": "¡Copiado!", "st_title": "Nuestras historias", "st_intro": "Cada historia nace de un conjunto de datos real · fuentes en cada descripción", "watch": "Ver", "friday": "Una historia nueva cada viernes", "nav_about": "Sobre nosotros"}, "it": {"nav_home": "Home", "nav_stories": "Storie", "tagline": "Storie di dati fatte di lana, feltro e numeri veri", "sub": "Ogni numero verificato alla fonte · Una storia nuova ogni giorno", "btn_videos": "Guarda i nostri ultimi video", "btn_tiktok": "Il nostro ultimo TikTok", "contact": "Contatti", "copy": "Copia", "copied": "Copiato!", "st_title": "Le nostre storie", "st_intro": "Ogni storia nasce da un dataset reale · fonti in ogni descrizione", "watch": "Guarda", "friday": "Una storia nuova ogni venerdì", "nav_about": "Chi siamo"}, "fr": {"nav_home": "Accueil", "nav_stories": "Histoires", "tagline": "Des histoires de données en laine, feutre et vrais chiffres", "sub": "Chaque chiffre vérifié à la source · Une nouvelle histoire chaque jour", "btn_videos": "Nos dernières vidéos", "btn_tiktok": "Notre dernier TikTok", "contact": "Contact", "copy": "Copier", "copied": "Copié !", "st_title": "Nos histoires", "st_intro": "Chaque histoire naît d'un vrai jeu de données · sources dans chaque description", "watch": "Regarder", "friday": "Une nouvelle histoire chaque vendredi", "nav_about": "À propos"}};
+const LANGS=["en","de","es","it","fr"];
+function setLang(l){
+  try{localStorage.setItem("pl_lang",l)}catch(e){}
+  document.documentElement.lang=l;
+  document.querySelectorAll("[data-i]").forEach(el=>{const k=el.getAttribute("data-i");if(I18N[l][k])el.textContent=I18N[l][k]});
+  document.querySelectorAll("#langs button").forEach(b=>b.classList.toggle("on",b.dataset.l===l));
+}
+(function(){
+  const box=document.getElementById("langs");
+  LANGS.forEach(l=>{const b=document.createElement("button");b.dataset.l=l;b.textContent=l.toUpperCase();b.onclick=()=>setLang(l);box.appendChild(b)});
+  let saved=null;try{saved=localStorage.getItem("pl_lang")}catch(e){}
+  const nav=(navigator.language||"en").slice(0,2).toLowerCase();
+  setLang(saved&&LANGS.includes(saved)?saved:(LANGS.includes(nav)?nav:"en"));
+})();
+function copyMail(btn){
+  const m="info@pandaslab.it";
+  const done=()=>{const l=document.documentElement.lang||"en";btn.textContent=I18N[l].copied;setTimeout(()=>{btn.textContent=I18N[l].copy},1600)};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(m).then(done).catch(done)}
+  else{const t=document.createElement("textarea");t.value=m;document.body.appendChild(t);t.select();document.execCommand("copy");document.body.removeChild(t);done()}
+}
+</script>
+</body>
+</html>
