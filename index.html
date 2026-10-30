@@ -41,7 +41,7 @@ a{text-decoration:none;color:inherit}
 .footer{color:#8c96a5;font-size:12px;letter-spacing:.12em;margin:40px 0 26px}
 .footer b{color:#d49318}
 .hero3{display:block;width:100%;max-width:1680px;margin:0 auto}
-@media(max-width:720px){.hero3{height:46vh;object-fit:cover;object-position:center}}
+
 .tagline{font-size:clamp(18px,3vw,26px);font-weight:700;color:#d49318;margin:26px 16px 8px}
 .ctarow{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:0 16px}
 .ctarow .cta{width:auto;min-width:min(300px,86vw);margin:6px 0}
@@ -110,7 +110,10 @@ a{text-decoration:none;color:inherit}
 </nav>
 
 
+<picture>
+<source media="(max-width:720px)" srcset="hero-mobile.jpg">
 <img class="hero3" src="home-hero.jpg" alt="Pandas Lab — the evolution march">
+</picture>
 <div class="tagline" data-i="tagline"></div>
 <div class="sub" data-i="sub"></div>
 <div class="icons">
