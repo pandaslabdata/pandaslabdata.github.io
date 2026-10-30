@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pandas Lab · Free Kit</title>
+<meta name="description" content="Pandas Lab — data stories made of wool, felt and real numbers">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background-color:#0b111a;background-image:url("data:image/svg+xml,<svg%20xmlns="http://www.w3.org/2000/svg"%20width="700"%20height="700"><circle%20cx="446.2"%20cy="22.3"%20r="1.0"%20fill="%23e8c98a"%20opacity="0.21"/><circle%20cx="75.7"%20cy="516.1"%20r="1.2"%20fill="white"%20opacity="0.15"/><circle%20cx="25.6"%20cy="155.9"%20r="1.2"%20fill="white"%20opacity="0.35"/><circle%20cx="499.1"%20cy="488.9"%20r="1.0"%20fill="white"%20opacity="0.2"/><circle%20cx="563.5"%20cy="9.5"%20r="0.8"%20fill="white"%20opacity="0.39"/><circle%20cx="112.3"%20cy="665.5"%20r="1.0"%20fill="white"%20opacity="0.16"/><circle%20cx="252.7"%20cy="242.3"%20r="1.0"%20fill="white"%20opacity="0.43"/><circle%20cx="375.0"%20cy="676.4"%20r="1.0"%20fill="white"%20opacity="0.15"/><circle%20cx="438.8"%20cy="616.0"%20r="1.0"%20fill="white"%20opacity="0.34"/><circle%20cx="36.6"%20cy="162.2"%20r="1.0"%20fill="white"%20opacity="0.49"/><circle%20cx="602.9"%20cy="267.3"%20r="1.0"%20fill="white"%20opacity="0.36"/><circle%20cx="260.4"%20cy="149.6"%20r="1.0"%20fill="white"%20opacity="0.39"/><circle%20cx="54.3"%20cy="443.1"%20r="1.2"%20fill="%23e8c98a"%20opacity="0.4"/><circle%20cx="266.8"%20cy="687.8"%20r="1.5"%20fill="white"%20opacity="0.38"/><circle%20cx="228.8"%20cy="535.1"%20r="0.7"%20fill="%23e8c98a"%20opacity="0.21"/><circle%20cx="222.7"%20cy="189.7"%20r="0.8"%20fill="white"%20opacity="0.47"/><circle%20cx="500.4"%20cy="151.7"%20r="1.0"%20fill="white"%20opacity="0.27"/><circle%20cx="321.6"%20cy="187.8"%20r="0.8"%20fill="white"%20opacity="0.4"/><circle%20cx="520.4"%20cy="300.6"%20r="1.2"%20fill="white"%20opacity="0.27"/><circle%20cx="693.3"%20cy="356.6"%20r="0.7"%20fill="white"%20opacity="0.41"/><circle%20cx="110.5"%20cy="115.4"%20r="1.5"%20fill="%23e8c98a"%20opacity="0.28"/><circle%20cx="268.3"%20cy="692.3"%20r="1.2"%20fill="white"%20opacity="0.22"/><circle%20cx="655.3"%20cy="474.4"%20r="0.7"%20fill="white"%20opacity="0.38"/><circle%20cx="189.1"%20cy="447.3"%20r="0.7"%20fill="%23e8c98a"%20opacity="0.23"/><circle%20cx="7.2"%20cy="503.2"%20r="1.5"%20fill="white"%20opacity="0.22"/><circle%20cx="128.3"%20cy="634.7"%20r="1.5"%20fill="white"%20opacity="0.23"/><circle%20cx="425.2"%20cy="110.5"%20r="0.8"%20fill="white"%20opacity="0.32"/><circle%20cx="370.9"%20cy="5.4"%20r="1.0"%20fill="%23e8c98a"%20opacity="0.31"/><circle%20cx="255.5"%20cy="684.9"%20r="1.0"%20fill="white"%20opacity="0.21"/><circle%20cx="396.5"%20cy="59.3"%20r="1.5"%20fill="%23e8c98a"%20opacity="0.3"/><circle%20cx="529.8"%20cy="533.4"%20r="0.8"%20fill="white"%20opacity="0.37"/><circle%20cx="118.9"%20cy="369.1"%20r="1.2"%20fill="white"%20opacity="0.28"/><circle%20cx="377.1"%20cy="508.7"%20r="0.8"%20fill="white"%20opacity="0.39"/><circle%20cx="468.5"%20cy="262.7"%20r="1.2"%20fill="white"%20opacity="0.29"/><circle%20cx="49.2"%20cy="19.5"%20r="1.2"%20fill="white"%20opacity="0.21"/><circle%20cx="54.0"%20cy="440.5"%20r="0.8"%20fill="%23e8c98a"%20opacity="0.15"/><circle%20cx="233.0"%20cy="359.8"%20r="1.0"%20fill="white"%20opacity="0.37"/><circle%20cx="96.3"%20cy="650.5"%20r="1.2"%20fill="white"%20opacity="0.34"/><circle%20cx="331.4"%20cy="285.9"%20r="0.7"%20fill="white"%20opacity="0.16"/><circle%20cx="297.3"%20cy="327.2"%20r="1.5"%20fill="white"%20opacity="0.14"/><circle%20cx="450.9"%20cy="46.8"%20r="1.5"%20fill="white"%20opacity="0.25"/><circle%20cx="176.6"%20cy="136.2"%20r="1.0"%20fill="white"%20opacity="0.17"/><circle%20cx="324.2"%20cy="608.4"%20r="0.7"%20fill="white"%20opacity="0.29"/><circle%20cx="384.7"%20cy="39.9"%20r="1.2"%20fill="white"%20opacity="0.44"/><circle%20cx="644.2"%20cy="590.6"%20r="0.8"%20fill="white"%20opacity="0.27"/><circle%20cx="601.6"%20cy="627.7"%20r="0.8"%20fill="white"%20opacity="0.26"/></svg>");background-size:700px 700px;color:#fff;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;text-align:center}
+a{text-decoration:none;color:inherit}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;max-width:980px;margin:0 auto;padding:16px 18px}
+.wordmark{font-weight:800;letter-spacing:.14em;color:#d49318;font-size:15px}
+.navlinks{display:flex;gap:18px;font-size:14px}
+.navlinks a{color:#cfd6e0;padding-bottom:3px}
+.navlinks a.active{color:#d49318;border-bottom:2px dashed #d49318}
+.langs{display:flex;gap:6px}
+.langs button{font-size:11px;letter-spacing:.05em;padding:4px 8px;border-radius:999px;border:1px solid rgba(212,147,24,.45);background:transparent;color:#cfd6e0;cursor:pointer}
+.langs button.on{background:#d49318;border-color:#d49318;color:#0b111a;font-weight:700}
+.hero{display:block;width:min(460px,92vw);margin:8px auto 0;border-radius:18px}
+.tagline{font-size:clamp(18px,3.4vw,24px);font-weight:700;color:#d49318;margin:26px 16px 8px}
+.sub{font-size:clamp(13px,2.4vw,16px);color:#e8edf4;margin:0 16px 22px}
+.icons{display:flex;justify-content:center;gap:16px;margin:6px 0 26px}
+.icons a{width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(212,147,24,.55);display:flex;align-items:center;justify-content:center;background:#10161f}
+.icons svg{width:20px;height:20px;fill:#e8edf4}
+.cta{display:block;width:min(430px,88vw);margin:14px auto;padding:15px 18px;background:#d49318;color:#13181f;font-weight:800;font-size:16px;border-radius:14px;border:2px dashed rgba(16,22,31,.5)}
+.contactbox{width:min(430px,88vw);margin:22px auto 0;padding:16px;border:1.5px dashed rgba(212,147,24,.5);border-radius:14px;background:#10161f}
+.contactbox .lbl{color:#d49318;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.contactbox .row{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap}
+.contactbox .mail{color:#e8edf4;font-size:15px}
+.contactbox button{padding:7px 16px;border-radius:999px;border:1px solid #d49318;background:transparent;color:#d49318;font-weight:700;cursor:pointer}
+.foot{border-top:1.5px dashed rgba(212,147,24,.35);margin-top:46px;padding:26px 16px 30px}
+.flinks{display:flex;gap:24px;justify-content:center;font-size:13px;margin-bottom:16px}
+.flinks a{color:#cfd6e0}
+.ficons{display:flex;gap:12px;justify-content:center;margin-bottom:12px}
+.ficons a{width:34px;height:34px;border-radius:50%;border:1px solid rgba(212,147,24,.45);display:flex;align-items:center;justify-content:center;background:#10161f}
+.ficons svg{width:15px;height:15px;fill:#cfd6e0}
+.fmail a{color:#d49318;font-size:13px}
+.fbrand{color:#8c96a5;font-size:11px;letter-spacing:.12em;margin-top:14px}
+.fbrand b{color:#d49318}
+.footer{color:#8c96a5;font-size:12px;letter-spacing:.12em;margin:40px 0 26px}
+.footer b{color:#d49318}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;max-width:980px;margin:18px auto 8px;padding:0 18px}
+.pcard{background:#10161f;border:1.5px dashed rgba(212,147,24,.5);border-radius:16px;overflow:hidden;text-align:left;display:flex;flex-direction:column}
+.pcard img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.pbody{padding:14px 16px 16px;display:flex;flex-direction:column;gap:9px;flex:1}
+.badge{align-self:flex-start;background:#d49318;color:#0b111a;font-weight:800;font-size:11px;letter-spacing:.12em;border-radius:999px;padding:4px 12px}
+.badge.gray{background:transparent;color:#8c96a5;border:1px solid rgba(140,150,165,.5)}
+.ptitle{font-weight:800;font-size:16px;color:#fff}
+.pblurb{color:#cfd6e0;font-size:13px;line-height:1.5;flex:1}
+.pbtn{display:block;text-align:center;background:#d49318;color:#13181f;font-weight:800;font-size:14px;border-radius:12px;padding:12px;border:2px dashed rgba(16,22,31,.5)}
+.pbtn.off{background:transparent;color:#8c96a5;border:1.5px dashed rgba(140,150,165,.4)}
+.hint{color:#8c96a5;font-size:12.5px;margin:4px 16px 0}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;max-width:780px;margin:18px auto 6px;padding:0 18px}
+.tcard{background:#10161f;border:1.5px dashed rgba(212,147,24,.5);border-radius:16px;padding:24px 18px}
+.tcard img{width:172px;height:172px;border-radius:50%;object-fit:cover;border:2px dashed rgba(212,147,24,.65)}
+.tname{font-weight:800;font-size:17px;color:#fff;margin-top:14px}
+.trole{color:#d49318;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin:5px 0 10px}
+.tbio{color:#cfd6e0;font-size:14px;line-height:1.55}
+.mrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;max-width:860px;margin:12px auto 8px;padding:0 18px}
+.mcard{background:#10161f;border:1.5px dashed rgba(212,147,24,.4);border-radius:14px;padding:16px}
+.mt{color:#d49318;font-weight:800;font-size:14px;margin-bottom:6px}
+.mb{color:#cfd6e0;font-size:13px;line-height:1.5}
+.pagehead{font-size:clamp(22px,4vw,30px);font-weight:800;color:#d49318;margin:22px 16px 6px}
+.pageintro{color:#cfd6e0;font-size:14px;margin:0 16px 10px}
+.friday{display:inline-block;font-size:12px;color:#0b111a;background:#d49318;font-weight:700;border-radius:999px;padding:5px 14px;margin:6px 0 24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;max-width:980px;margin:0 auto;padding:0 18px 10px}
+.card{background:#10161f;border:1.5px dashed rgba(212,147,24,.5);border-radius:16px;overflow:hidden;text-align:left;display:flex;flex-direction:column;transition:transform .15s}
+.card:hover{transform:translateY(-3px)}
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.cbody{padding:12px 14px 14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.ep{color:#d49318;font-weight:800;font-size:11px;letter-spacing:.14em}
+.ctitle{font-size:15px;font-weight:700;color:#fff;line-height:1.35;flex:1}
+.cmeta{display:flex;justify-content:space-between;align-items:center}
+.dur{color:#8c96a5;font-size:12px}
+.watch{color:#d49318;font-weight:700;font-size:13px;border:1px solid rgba(212,147,24,.55);border-radius:999px;padding:5px 14px}
+</style>
+<meta name="robots" content="noindex">
+</head>
+<body>
+<nav class="nav">
+  <a class="wordmark" href="index.html">PANDAS LAB</a>
+  <div class="navlinks">
+    <a href="index.html" data-i="nav_home">Home</a>
+    <a href="stories.html" data-i="nav_stories">Stories</a>
+    <a href="about.html" data-i="nav_about">About</a>
+    <a href="shop.html" class="active" data-i="nav_shop">Shop</a>
+  </div>
+  <div class="langs" id="langs"></div>
+</nav>
+
+
+<h1 class="pagehead" data-i="kd_title">Your free kit</h1>
+<div class="pageintro" data-i="kd_intro">Thanks for joining the lab — your download is below</div>
+<div class="pgrid" style="max-width:520px">
+  <div class="pcard">
+    <img src="chartkit.jpg" alt="Pandas Lab Chart Kit">
+    <div class="pbody">
+      <span class="badge" data-i="free">FREE</span>
+      <div class="ptitle">Pandas Lab Chart Kit</div>
+      <div class="pblurb" data-i="k1_b">6 ready-to-use matplotlib chart templates in the Pandas Lab style — dark sky, gold stitches — plus a PDF guide to make them yours</div>
+      <a class="pbtn" href="pandas-lab-chart-kit.zip" download data-i="dl_btn">Download the Chart Kit (.zip)</a>
+    </div>
+  </div>
+</div>
+<div class="hint" style="text-align:center" data-i="kd_more">More kits are on the way — every new story brings a new one</div>
+<footer class="foot">
+  <div class="flinks"><a href="index.html" data-i="nav_home">Home</a><a href="stories.html" data-i="nav_stories">Stories</a><a href="about.html" data-i="nav_about">About</a><a href="shop.html" class="active" data-i="nav_shop">Shop</a></div>
+  <div class="ficons">
+    <a href="https://www.youtube.com/@pandaslab_data" title="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M23 7.2a4 4 0 0 0-2.8-2.9C18.2 4 12 4 12 4s-6.2 0-8.2.3A4 4 0 0 0 1 7.2 42 42 0 0 0 .7 12 42 42 0 0 0 1 16.8a4 4 0 0 0 2.8 2.9C5.8 20 12 20 12 20s6.2 0 8.2-.3a4 4 0 0 0 2.8-2.9A42 42 0 0 0 23.3 12 42 42 0 0 0 23 7.2zM9.8 15.5v-7l6 3.5z"/></svg></a>
+    <a href="https://www.instagram.com/pandaslab_data/" title="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.3.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.3-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.3.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.3-.4a3.9 3.9 0 0 1-1.4-.9c-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.3.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.3-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.1a6.7 6.7 0 1 0 0 13.4 6.7 6.7 0 0 0 0-13.4zm0 11a4.3 4.3 0 1 1 0-8.6 4.3 4.3 0 0 1 0 8.6zm8.5-11.3a1.6 1.6 0 1 1-3.2 0 1.6 1.6 0 0 1 3.2 0z"/></svg></a>
+    <a href="https://www.tiktok.com/@pandaslab_data" title="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M16.6 3c.4 2.1 1.7 3.6 3.9 3.8v2.9c-1.5.1-2.8-.3-4.3-1.2v6.3c0 4.4-3.4 6.6-6.7 5.9-2.6-.5-4.7-2.9-4.5-5.8.2-3.1 2.8-5.3 5.9-5.2l.9.1v3c-.4-.1-.8-.2-1.2-.1-1.4.1-2.5 1.2-2.5 2.6 0 1.5 1.3 2.7 2.8 2.6 1.4-.1 2.4-1.2 2.4-2.8V3h3.3z"/></svg></a>
+    <a href="https://www.facebook.com/1430869260102071" title="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V5c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7V11H8.3v3h2.4v7h2.8z"/></svg></a>
+    <a href="https://www.linkedin.com/company/pandas-lab" title="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9.5 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21h-4V9z"/></svg></a>
+  </div>
+  <div class="fmail"><a href="mailto:info@pandaslab.it">info@pandaslab.it</a></div>
+  <div class="fbrand"><b>PANDAS LAB</b> · TURNING DATA INTO STORIES</div>
+</footer>
+<script>
+const I18N={"en": {"nav_home": "Home", "nav_stories": "Stories", "tagline": "Data stories made of wool, felt and real numbers", "sub": "Every number checked at the source · New story every day", "btn_videos": "Watch Our Latest Videos", "btn_tiktok": "Our Latest TikTok", "contact": "Contact", "copy": "Copy", "copied": "Copied!", "st_title": "Our Stories", "st_intro": "Every story starts with a real dataset · sources in every description", "watch": "Watch", "friday": "New story every Friday", "nav_about": "About", "ab_title": "Who we are", "ab_intro": "One lab, two presenters — a human and his wool twin", "m_role": "Founder · Data storyteller", "m_bio": "The human half of the lab: he digs into real datasets, checks every number at the source and decides which stories deserve to be told", "mk_role": "The presenter · Wool twin", "mk_bio": "Michele's knitted twin: he tells the stories on screen, in a world made entirely of wool, felt and real numbers", "me_title": "How we work", "p1t": "Real data", "p1b": "Every story starts from a public dataset", "p2t": "Checked at the source", "p2b": "Sources linked in every video description", "p3t": "Handmade in wool", "p3b": "Charts and worlds built stitch by stitch, true to the numbers", "ab_li": "Follow us on LinkedIn", "nav_shop": "Shop", "sh_title": "Shop", "sh_intro": "Free kits from our stories — yours for an email", "free": "FREE", "soon": "Coming soon", "get_btn": "Get it free", "howworks": "How it works: tap Get it free, leave your email, the download link arrives right away", "k1_b": "6 ready-to-use matplotlib chart templates in the Pandas Lab style — dark sky, gold stitches — plus a PDF guide to make them yours", "ksoon_b": "The episode's charts and data, polished and ready to download", "kd_title": "Your free kit", "kd_intro": "Thanks for joining the lab — your download is below", "dl_btn": "Download the Chart Kit (.zip)", "kd_more": "More kits are on the way — every new story brings a new one"}, "de": {"nav_home": "Home", "nav_stories": "Storys", "tagline": "Datengeschichten aus Wolle, Filz und echten Zahlen", "sub": "Jede Zahl an der Quelle geprüft · Jeden Tag eine neue Geschichte", "btn_videos": "Unsere neuesten Videos", "btn_tiktok": "Unser neuestes TikTok", "contact": "Kontakt", "copy": "Kopieren", "copied": "Kopiert!", "st_title": "Unsere Geschichten", "st_intro": "Jede Geschichte beginnt mit einem echten Datensatz · Quellen in jeder Beschreibung", "watch": "Ansehen", "friday": "Jeden Freitag eine neue Geschichte", "nav_about": "Über uns", "ab_title": "Wer wir sind", "ab_intro": "Ein Labor, zwei Moderatoren — ein Mensch und sein Zwilling aus Wolle", "m_role": "Gründer · Data Storyteller", "m_bio": "Die menschliche Hälfte des Labors: er gräbt sich durch echte Datensätze, prüft jede Zahl an der Quelle und entscheidet, welche Geschichten erzählt werden", "mk_role": "Der Moderator · Woll-Zwilling", "mk_bio": "Micheles gestrickter Zwilling: er erzählt die Geschichten auf dem Bildschirm, in einer Welt ganz aus Wolle, Filz und echten Zahlen", "me_title": "Wie wir arbeiten", "p1t": "Echte Daten", "p1b": "Jede Geschichte beginnt mit einem öffentlichen Datensatz", "p2t": "An der Quelle geprüft", "p2b": "Die Quellen stehen in jeder Videobeschreibung", "p3t": "Handgemacht aus Wolle", "p3b": "Diagramme und Welten, Masche für Masche, zahlengetreu", "ab_li": "Folge uns auf LinkedIn", "nav_shop": "Shop", "sh_title": "Shop", "sh_intro": "Gratis-Kits aus unseren Geschichten — deine im Tausch gegen eine E-Mail", "free": "GRATIS", "soon": "Bald verfügbar", "get_btn": "Gratis holen", "howworks": "So funktioniert's: Button antippen, E-Mail dalassen, der Download-Link kommt sofort", "k1_b": "6 fertige Matplotlib-Vorlagen im Pandas-Lab-Stil — dunkler Himmel, goldene Stiche — plus PDF-Anleitung", "ksoon_b": "Die Diagramme und Daten der Episode, aufbereitet zum Download", "kd_title": "Dein Gratis-Kit", "kd_intro": "Danke, dass du dabei bist — unten dein Download", "dl_btn": "Chart Kit herunterladen (.zip)", "kd_more": "Weitere Kits sind unterwegs — jede neue Geschichte bringt eines mit"}, "es": {"nav_home": "Inicio", "nav_stories": "Historias", "tagline": "Historias de datos hechas de lana, fieltro y números reales", "sub": "Cada número verificado en la fuente · Una historia nueva cada día", "btn_videos": "Mira nuestros últimos vídeos", "btn_tiktok": "Nuestro último TikTok", "contact": "Contacto", "copy": "Copiar", "copied": "¡Copiado!", "st_title": "Nuestras historias", "st_intro": "Cada historia nace de un conjunto de datos real · fuentes en cada descripción", "watch": "Ver", "friday": "Una historia nueva cada viernes", "nav_about": "Sobre nosotros", "ab_title": "Quiénes somos", "ab_intro": "Un laboratorio, dos presentadores — un humano y su gemelo de lana", "m_role": "Fundador · Narrador de datos", "m_bio": "La mitad humana del laboratorio: explora conjuntos de datos reales, verifica cada número en la fuente y decide qué historias merecen ser contadas", "mk_role": "El presentador · Gemelo de lana", "mk_bio": "El gemelo tejido de Michele: cuenta las historias en pantalla, en un mundo hecho enteramente de lana, fieltro y números reales", "me_title": "Cómo trabajamos", "p1t": "Datos reales", "p1b": "Cada historia nace de un conjunto de datos público", "p2t": "Verificado en la fuente", "p2b": "Las fuentes están en cada descripción", "p3t": "Hecho a mano en lana", "p3b": "Gráficos y mundos tejidos punto a punto, fieles a los números", "ab_li": "Síguenos en LinkedIn", "nav_shop": "Shop", "sh_title": "Shop", "sh_intro": "Kits gratis de nuestras historias — tuyos a cambio de un email", "free": "GRATIS", "soon": "Muy pronto", "get_btn": "Consíguelo gratis", "howworks": "Cómo funciona: toca el botón, deja tu email y el enlace de descarga llega al instante", "k1_b": "6 plantillas de matplotlib listas para usar al estilo Pandas Lab — cielo oscuro, puntadas doradas — con guía en PDF", "ksoon_b": "Los gráficos y datos del episodio, pulidos y listos para descargar", "kd_title": "Tu kit gratis", "kd_intro": "Gracias por unirte al laboratorio — tu descarga está abajo", "dl_btn": "Descargar el Chart Kit (.zip)", "kd_more": "Más kits en camino — cada nueva historia trae uno"}, "it": {"nav_home": "Home", "nav_stories": "Storie", "tagline": "Storie di dati fatte di lana, feltro e numeri veri", "sub": "Ogni numero verificato alla fonte · Una storia nuova ogni giorno", "btn_videos": "Guarda i nostri ultimi video", "btn_tiktok": "Il nostro ultimo TikTok", "contact": "Contatti", "copy": "Copia", "copied": "Copiato!", "st_title": "Le nostre storie", "st_intro": "Ogni storia nasce da un dataset reale · fonti in ogni descrizione", "watch": "Guarda", "friday": "Una storia nuova ogni venerdì", "nav_about": "Chi siamo", "ab_title": "Chi siamo", "ab_intro": "Un laboratorio, due presentatori — un umano e il suo gemello di lana", "m_role": "Fondatore · Data storyteller", "m_bio": "La metà umana del laboratorio: scava nei dataset reali, verifica ogni numero alla fonte e decide quali storie meritano di essere raccontate", "mk_role": "Il presentatore · Gemello di lana", "mk_bio": "Il gemello a maglia di Michele: racconta le storie sullo schermo, in un mondo fatto interamente di lana, feltro e numeri veri", "me_title": "Come lavoriamo", "p1t": "Dati veri", "p1b": "Ogni storia nasce da un dataset pubblico", "p2t": "Verificato alla fonte", "p2b": "Le fonti sono in ogni descrizione", "p3t": "Fatto a mano in lana", "p3b": "Grafici e mondi costruiti punto per punto, fedeli ai numeri", "ab_li": "Seguici su LinkedIn", "nav_shop": "Shop", "sh_title": "Shop", "sh_intro": "Kit gratuiti dalle nostre storie — tuoi in cambio di una email", "free": "GRATIS", "soon": "In arrivo", "get_btn": "Prendilo gratis", "howworks": "Come funziona: premi il bottone, lasci la tua email e il link di download arriva subito", "k1_b": "6 modelli matplotlib pronti all'uso in stile Pandas Lab — cielo scuro, cuciture oro — con guida PDF", "ksoon_b": "I grafici e i dati dell'episodio, rifiniti e pronti da scaricare", "kd_title": "Il tuo kit gratuito", "kd_intro": "Grazie per essere entrato nel laboratorio — il download è qui sotto", "dl_btn": "Scarica il Chart Kit (.zip)", "kd_more": "Altri kit in arrivo — ogni nuova storia ne porta uno"}, "fr": {"nav_home": "Accueil", "nav_stories": "Histoires", "tagline": "Des histoires de données en laine, feutre et vrais chiffres", "sub": "Chaque chiffre vérifié à la source · Une nouvelle histoire chaque jour", "btn_videos": "Nos dernières vidéos", "btn_tiktok": "Notre dernier TikTok", "contact": "Contact", "copy": "Copier", "copied": "Copié !", "st_title": "Nos histoires", "st_intro": "Chaque histoire naît d'un vrai jeu de données · sources dans chaque description", "watch": "Regarder", "friday": "Une nouvelle histoire chaque vendredi", "nav_about": "À propos", "ab_title": "Qui sommes-nous", "ab_intro": "Un labo, deux présentateurs — un humain et son jumeau en laine", "m_role": "Fondateur · Data storyteller", "m_bio": "La moitié humaine du labo : il fouille de vrais jeux de données, vérifie chaque chiffre à la source et décide quelles histoires méritent d'être racontées", "mk_role": "Le présentateur · Jumeau en laine", "mk_bio": "Le jumeau tricoté de Michele : il raconte les histoires à l'écran, dans un monde entièrement fait de laine, de feutre et de vrais chiffres", "me_title": "Comment nous travaillons", "p1t": "De vraies données", "p1b": "Chaque histoire part d'un jeu de données public", "p2t": "Vérifié à la source", "p2b": "Les sources sont dans chaque description", "p3t": "Fait main en laine", "p3b": "Des graphiques et des mondes cousus point par point, fidèles aux chiffres", "ab_li": "Suivez-nous sur LinkedIn", "nav_shop": "Shop", "sh_title": "Shop", "sh_intro": "Des kits gratuits tirés de nos histoires — à vous contre un e-mail", "free": "GRATUIT", "soon": "Bientôt disponible", "get_btn": "Obtenez-le gratuitement", "howworks": "Comment ça marche : cliquez, laissez votre e-mail, le lien de téléchargement arrive aussitôt", "k1_b": "6 modèles matplotlib prêts à l'emploi au style Pandas Lab — ciel sombre, coutures dorées — avec guide PDF", "ksoon_b": "Les graphiques et les données de l'épisode, soignés et prêts à télécharger", "kd_title": "Votre kit gratuit", "kd_intro": "Merci de rejoindre le labo — votre téléchargement est ci-dessous", "dl_btn": "Télécharger le Chart Kit (.zip)", "kd_more": "D'autres kits arrivent — chaque nouvelle histoire en apporte un"}};
+const LANGS=["en","de","es","it","fr"];
+function setLang(l){
+  try{localStorage.setItem("pl_lang",l)}catch(e){}
+  document.documentElement.lang=l;
+  document.querySelectorAll("[data-i]").forEach(el=>{const k=el.getAttribute("data-i");if(I18N[l][k])el.textContent=I18N[l][k]});
+  document.querySelectorAll("#langs button").forEach(b=>b.classList.toggle("on",b.dataset.l===l));
+}
+(function(){
+  const box=document.getElementById("langs");
+  LANGS.forEach(l=>{const b=document.createElement("button");b.dataset.l=l;b.textContent=l.toUpperCase();b.onclick=()=>setLang(l);box.appendChild(b)});
+  let saved=null;try{saved=localStorage.getItem("pl_lang")}catch(e){}
+  const nav=(navigator.language||"en").slice(0,2).toLowerCase();
+  setLang(saved&&LANGS.includes(saved)?saved:(LANGS.includes(nav)?nav:"en"));
+})();
+function copyMail(btn){
+  const m="info@pandaslab.it";
+  const done=()=>{const l=document.documentElement.lang||"en";btn.textContent=I18N[l].copied;setTimeout(()=>{btn.textContent=I18N[l].copy},1600)};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(m).then(done).catch(done)}
+  else{const t=document.createElement("textarea");t.value=m;document.body.appendChild(t);t.select();document.execCommand("copy");document.body.removeChild(t);done()}
+}
+</script>
+<script data-goatcounter="https://pandaslab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
