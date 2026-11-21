@@ -410,6 +410,37 @@ def build_worlds(cases, ui_all, env, ver):
             out.write_text(page, encoding="utf-8")
 
 
+CASE_FX = {"067": "dust", "068": "stars"}   # the living-photo effect for each case photo (see case.js, 4d)
+
+
+def make_wall(cases, dj, lang, h, ui, hj):
+    """The evidence wall: one pinned clipping per file, newest first, tied together by red thread in the page.
+    Cases use their own clipping from the video; dossiers get a clipping built in code (headline + scene photo).
+    Also returns Steve's experiments: one card per case, with what Steve says when you point at it."""
+    wall, exps = [], []
+    for c, _ in sorted(cases, key=lambda ce: ce[0]["case"], reverse=True):
+        n, href = c["case"], case_paths(c["case"])[lang]
+        clip = f"/img/cases/{n}/clip.webp" if c["images"].get("clip_src") else None
+        wall.append({"kind": "case", "n": n, "href": href, "world": c["world"], "clip": clip, "img": f"/img/cases/{n}/{c['images']['cover']}",
+                     "head": c["i18n"][lang]["title"], "meta": f"{ui['case']} {n}", "stamp": c["dominant_label"], "fx": CASE_FX.get(n, "dust")})
+        say = h.get("steve_say", {}).get(n)
+        if say:
+            exps.append({"n": n, "href": href, "q": c["i18n"][lang]["title"], "label": c["dominant_label"], "face": say["face"], "say": say["text"],
+                         "img": f"/img/cases/{n}/{hj['_exp_img'].get(n, c['images']['cover'])}", "fx": CASE_FX.get(n, "dust")})
+    for d in dj["dossiers"]:
+        dp = BUILD / "dossiers" / f"D{d['n']}.json"
+        if not dp.exists() or not d.get("clip"):
+            continue
+        dd = json.loads(dp.read_text(encoding="utf-8"))
+        topic = dd["i18n"][lang]["title"].split("?")[0].split(":")[0]
+        wall.append({"kind": "dossier", "n": d["n"], "href": dossier_paths(d["n"])[lang], "world": d["world"], "clip": None, "img": d["clip_img"],
+                     "head": d["clip"][lang], "meta": f"{h['dossier'].title()} {d['n']}", "stamp": "RE-CHECKED", "fx": d.get("fx", "dust"), "title": topic})
+    for k, w in enumerate(wall):
+        w["r"] = round(((k * 37) % 9 - 4) * 0.55, 2)          # a fixed, hand-pinned tilt (same on every build)
+        w["sw"] = round((k * 0.9) % 7, 1)                      # sway phase
+    return wall, exps
+
+
 def build_home(cases, ui_all, env, ver):
     """the investigation room: board with the latest case, the filing cabinet, the drawers, the method"""
     hj = json.loads((BUILD / "ui_home.json").read_text(encoding="utf-8"))
@@ -445,6 +476,9 @@ def build_home(cases, ui_all, env, ver):
             worlds.append({"name": h["w"][k], "desc": h["wd"][k], "href": world_paths(k)[lang], "area": a, "rel": rel, "fit": k_fit})
         method = [{"key": k, "text": h["d"][k]} for k in LABELS]
         board = make_board(cases, lang, h, ui)
+        wall, exps = make_wall(cases, dj, lang, h, ui, hj)
+        n_files = len(wall)
+        hero_img = f"/img/cases/{lc['case']}/{hj['_exp_img'].get(lc['case'], lc['images']['cover'])}"
         jsonld = js_safe({"@context": "https://schema.org", "@type": "WebSite", "name": "Pandas Lab", "url": BASE + "/",
                           "inLanguage": LANGS, "description": h["description"]})
         page = env.get_template("home.html").render(
@@ -452,7 +486,8 @@ def build_home(cases, ui_all, env, ver):
             prefix="" if lang == "en" else f"/{lang}", page_kind="home", ver=ver,
             seo_title=h["seo_title"], og_title=h["seo_title"], description=h["description"], og_type="website",
             og_image=latest["cover"], og_locale=OG_LOCALE[lang], jsonld=jsonld,
-            h=h, g=geo, latest=latest, files=files, worlds=worlds, method=method, socials=SOCIALS, board=board)
+            h=h, g=geo, latest=latest, files=files, worlds=worlds, method=method, socials=SOCIALS, board=board,
+            wall=wall, exps=exps, n_files=n_files, hero_img=hero_img)
         out = SITE / alts[lang].strip("/") / "index.html" if lang != "en" else SITE / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(page, encoding="utf-8")

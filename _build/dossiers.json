@@ -17,7 +17,16 @@
     "Wessel &amp; Smith, GSHHG v2.3.7 full-resolution coastline (SOEST, University of Hawaii; LGPL) — <a href=\"https://www.soest.hawaii.edu/pwessel/gshhg/\" target=\"_blank\" rel=\"noopener\">www.soest.hawaii.edu/pwessel/gshhg/</a>",
     "Wikipedia, Maher Island (USGS GNIS name entry) — <a href=\"https://en.wikipedia.org/wiki/Maher_Island\" target=\"_blank\" rel=\"noopener\">en.wikipedia.org/wiki/Maher_Island</a>",
     "Wikipedia, Russia (area 17,098,246 km², infobox) — <a href=\"https://en.wikipedia.org/wiki/Russia\" target=\"_blank\" rel=\"noopener\">en.wikipedia.org/wiki/Russia</a>"
-   ]
+   ],
+   "clip_img": "/img/dossiers/d10.jpg",
+   "fx": "water",
+   "clip": {
+    "en": "2,688 KM FROM ANY LAND",
+    "it": "A 2.688 KM DA QUALSIASI TERRA",
+    "de": "2.688 KM VON JEDEM LAND",
+    "es": "A 2.688 KM DE CUALQUIER TIERRA",
+    "fr": "À 2 688 KM DE TOUTE TERRE"
+   }
   },
   {
    "n": "09",
@@ -35,7 +44,16 @@
     "NASA Science, Our Milky Way galaxy: how big is space? — <a href=\"https://science.nasa.gov/universe/exoplanets/our-milky-way-galaxy-how-big-is-space/\" target=\"_blank\" rel=\"noopener\">science.nasa.gov/universe/exoplanets/our-milky-way-galaxy-how-big-is-space/</a>",
     "NASA Science, Hubble&#x27;s new shot of Proxima Centauri — <a href=\"https://science.nasa.gov/missions/hubble/hubbles-new-shot-of-proxima-centauri-our-nearest-neighbor\" target=\"_blank\" rel=\"noopener\">science.nasa.gov/missions/hubble/hubbles-new-shot-of-proxima-centauri-our-nearest-neighbor</a>",
     "GRAVITY Collaboration 2019, Astronomy &amp; Astrophysics 625, L10 — <a href=\"https://arxiv.org/abs/1904.05721\" target=\"_blank\" rel=\"noopener\">arxiv.org/abs/1904.05721</a>"
-   ]
+   ],
+   "clip_img": "/img/dossiers/d09.jpg",
+   "fx": "spin",
+   "clip": {
+    "en": "93 BILLION LIGHT-YEARS: THE PART WE SEE",
+    "it": "93 MILIARDI DI ANNI LUCE: LA PARTE CHE VEDIAMO",
+    "de": "93 MILLIARDEN LICHTJAHRE: DER SICHTBARE TEIL",
+    "es": "93 MIL MILLONES DE AÑOS LUZ: LA PARTE VISIBLE",
+    "fr": "93 MILLIARDS D'ANNÉES-LUMIÈRE : LA PARTIE VISIBLE"
+   }
   },
   {
    "n": "08",
@@ -53,7 +71,16 @@
     "Greenaway et al. 2021, Deep-Sea Research Part I 178 (NOAA Repository) — <a href=\"https://repository.library.noaa.gov/view/noaa/33477\" target=\"_blank\" rel=\"noopener\">repository.library.noaa.gov/view/noaa/33477</a>",
     "Fujii et al. 2026, Scientific Data (Europe PMC full text) — <a href=\"https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13582998/fullTextXML\" target=\"_blank\" rel=\"noopener\">www.ebi.ac.uk/europepmc/webservices/rest/PMC13582998/fullTextXML</a>",
     "Bongiovanni, Stewart &amp; Jamieson 2022, Geoscience Data Journal 9(1) (NORA) — <a href=\"https://nora.nerc.ac.uk/id/eprint/530930/\" target=\"_blank\" rel=\"noopener\">nora.nerc.ac.uk/id/eprint/530930/</a>"
-   ]
+   ],
+   "clip_img": "/img/dossiers/d08.jpg",
+   "fx": "water",
+   "clip": {
+    "en": "EVEREST WOULDN'T REACH THE BOTTOM",
+    "it": "L'EVEREST NON TOCCHEREBBE IL FONDO",
+    "de": "DER EVEREST REICHT NICHT BIS ZUM GRUND",
+    "es": "EL EVEREST NO LLEGARÍA AL FONDO",
+    "fr": "L'EVEREST N'ATTEINDRAIT PAS LE FOND"
+   }
   },
   {
    "n": "07",
@@ -71,7 +98,16 @@
     "ISC-GEM catalogue description (ISC) — <a href=\"https://www.isc.ac.uk/iscgem/\" target=\"_blank\" rel=\"noopener\">www.isc.ac.uk/iscgem/</a>",
     "Berkeley Seismology Lab, Today in Earthquake History: Chile 1960 — <a href=\"https://seismo.berkeley.edu/blog/2015/05/22/today-in-earthquake-history-chile-1960.html\" target=\"_blank\" rel=\"noopener\">seismo.berkeley.edu/blog/2015/05/22/today-in-earthquake-history-chile-1960.html</a>",
     "USGS, Volcano Watch: Are earthquakes on the rise? — <a href=\"https://www.usgs.gov/news/volcano-watch-are-earthquakes-rise\" target=\"_blank\" rel=\"noopener\">www.usgs.gov/news/volcano-watch-are-earthquakes-rise</a>"
-   ]
+   ],
+   "clip_img": "/img/dossiers/d07.jpg",
+   "fx": "fire",
+   "clip": {
+    "en": "RECORD QUAKE: MAGNITUDE 9.55",
+    "it": "TERREMOTO RECORD: MAGNITUDO 9,55",
+    "de": "REKORDBEBEN: MAGNITUDE 9,55",
+    "es": "TERREMOTO RÉCORD: MAGNITUD 9,55",
+    "fr": "SÉISME RECORD : MAGNITUDE 9,55"
+   }
   },
   {
    "n": "06",
@@ -88,7 +124,16 @@
     "Meteoritical Bulletin Database — <a href=\"https://www.lpi.usra.edu/meteor/\" target=\"_blank\" rel=\"noopener\">www.lpi.usra.edu/meteor/</a>",
     "Evatt et al. 2020, Geology — <a href=\"https://doi.org/10.1130/G46733.1\" target=\"_blank\" rel=\"noopener\">doi.org/10.1130/G46733.1</a>",
     "Tollenaar et al. 2024, Nature Climate Change — <a href=\"https://doi.org/10.1038/s41558-024-01954-y\" target=\"_blank\" rel=\"noopener\">doi.org/10.1038/s41558-024-01954-y</a>"
-   ]
+   ],
+   "clip_img": "/img/dossiers/d06.jpg",
+   "fx": "fire",
+   "clip": {
+    "en": "2 IN 3 CATALOGED METEORITES: ANTARCTICA",
+    "it": "2 METEORITI CATALOGATI SU 3: ANTARTIDE",
+    "de": "2 VON 3 ERFASSTEN METEORITEN: ANTARKTIS",
+    "es": "2 DE CADA 3 METEORITOS CATALOGADOS: ANTÁRTIDA",
+    "fr": "2 MÉTÉORITES CATALOGUÉES SUR 3 : ANTARCTIQUE"
+   }
   },
   {
    "n": "05",
@@ -104,7 +149,16 @@
     "NASA/JPL CNEOS Fireball Data — <a href=\"https://cneos.jpl.nasa.gov/fireballs/\" target=\"_blank\" rel=\"noopener\">cneos.jpl.nasa.gov/fireballs/</a>",
     "The Paleobiology Database (CC BY 4.0) — <a href=\"https://paleobiodb.org\" target=\"_blank\" rel=\"noopener\">paleobiodb.org</a>",
     "Alvarez et al. 1980 · Hildebrand et al. 1991 · Kring 1995 · Evatt et al. 2020"
-   ]
+   ],
+   "clip_img": "/img/dossiers/d05.jpg",
+   "fx": "water",
+   "clip": {
+    "en": "THE CRATER NOBODY CAN SEE: 180 KM WIDE",
+    "it": "IL CRATERE CHE NESSUNO VEDE: 180 KM",
+    "de": "DER KRATER, DEN NIEMAND SIEHT: 180 KM",
+    "es": "EL CRÁTER QUE NADIE VE: 180 KM",
+    "fr": "LE CRATÈRE QUE PERSONNE NE VOIT : 180 KM"
+   }
   },
   {
    "n": "04",
@@ -121,7 +175,16 @@
     "Upchurch et al. 2011, Geol. Soc. London SP 358 — <a href=\"https://doi.org/10.1144/SP358.14\" target=\"_blank\" rel=\"noopener\">doi.org/10.1144/SP358.14</a>",
     "Dean et al. 2025, Current Biology — <a href=\"https://doi.org/10.1016/j.cub.2025.03.025\" target=\"_blank\" rel=\"noopener\">doi.org/10.1016/j.cub.2025.03.025</a>",
     "Hammer &amp; Hickerson 1994 · Cordes-Person et al. 2020 · Vennen et al. 2024"
-   ]
+   ],
+   "clip_img": "/img/dossiers/d04.jpg",
+   "fx": "dust",
+   "clip": {
+    "en": "DINOSAURS ARE FOUND WHERE ROCK IS EXPOSED",
+    "it": "I DINOSAURI SI TROVANO DOVE LA ROCCIA AFFIORA",
+    "de": "DINOSAURIER FINDET MAN, WO FELS FREILIEGT",
+    "es": "LOS DINOSAURIOS APARECEN DONDE AFLORA LA ROCA",
+    "fr": "ON TROUVE LES DINOSAURES OÙ LA ROCHE AFFLEURE"
+   }
   },
   {
    "n": "03",
@@ -136,7 +199,16 @@
     "The Paleobiology Database — <a href=\"https://paleobiodb.org\" target=\"_blank\" rel=\"noopener\">paleobiodb.org</a>",
     "Osborn 1905 · Stromer 1915, 1931 · Coria &amp; Salgado 1995",
     "Brochu 2003 · Sereno et al. 1996 · Calvo &amp; Coria 1998 · Ibrahim et al. 2014"
-   ]
+   ],
+   "clip_img": "/img/dossiers/d03.jpg",
+   "fx": "dust",
+   "clip": {
+    "en": "T. REX: NOT THE LONGEST PREDATOR",
+    "it": "T. REX: NON È IL PREDATORE PIÙ LUNGO",
+    "de": "T. REX: NICHT DER LÄNGSTE RÄUBER",
+    "es": "T. REX: NO ES EL DEPREDADOR MÁS LARGO",
+    "fr": "T. REX : PAS LE PLUS LONG DES PRÉDATEURS"
+   }
   },
   {
    "n": "02",
@@ -150,7 +222,16 @@
    "sources": [
     "The Paleobiology Database — <a href=\"https://paleobiodb.org\" target=\"_blank\" rel=\"noopener\">paleobiodb.org</a>",
     "Mass estimates: Mazzetta 2004 · Sellers 2013 · Benson 2014 · González Riga 2016 · Carballido 2017 · Lacovara 2014 · Bates 2015 · Paul 2019 · Otero 2020 · Simón &amp; Salgado 2023"
-   ]
+   ],
+   "clip_img": "/img/dossiers/d02.jpg",
+   "fx": "dust",
+   "clip": {
+    "en": "HEAVIEST DINOSAUR? KNOWN FROM 5% OF A SKELETON",
+    "it": "IL PIÙ PESANTE? NOTO DAL 5% DELLO SCHELETRO",
+    "de": "DER SCHWERSTE? BEKANNT AUS 5 % EINES SKELETTS",
+    "es": "¿EL MÁS PESADO? CONOCIDO POR EL 5% DE UN ESQUELETO",
+    "fr": "LE PLUS LOURD ? CONNU PAR 5 % D'UN SQUELETTE"
+   }
   },
   {
    "n": "01",
@@ -165,7 +246,16 @@
     "The Paleobiology Database (CC BY 4.0) — <a href=\"https://paleobiodb.org\" target=\"_blank\" rel=\"noopener\">paleobiodb.org</a>",
     "International Commission on Stratigraphy 2024",
     "Paul 2010 · Mazzetta 2004 · Benson et al. 2014 · Wang &amp; Dodson 2006 · Larson &amp; Currie 2013"
-   ]
+   ],
+   "clip_img": "/img/dossiers/d01.jpg",
+   "fx": "dust",
+   "clip": {
+    "en": "T. REX NEVER MET STEGOSAURUS",
+    "it": "IL T. REX NON HA MAI INCONTRATO LO STEGOSAURO",
+    "de": "T. REX TRAF NIE DEN STEGOSAURUS",
+    "es": "EL T. REX NUNCA CONOCIÓ AL ESTEGOSAURIO",
+    "fr": "LE T. REX N'A JAMAIS CROISÉ LE STÉGOSAURE"
+   }
   }
  ],
  "coming": [],

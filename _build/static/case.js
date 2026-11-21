@@ -99,6 +99,123 @@
     }
   }
 
+  var calm0=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // 4d) living photos, like the boiling glass in the videos: every photo moves the way its subject would.
+  //     water = rippling refraction, fire = embers + flicker, stars = twinkling, dust = motes in the light, spin = slow galaxy turn
+  (function(){
+    var lives=[].slice.call(document.querySelectorAll('.live[data-fx]')); if(!lives.length||calm0) return;
+    if(lives.some(function(l){return l.dataset.fx==='water';})){
+      var d=document.createElement('div'); d.style.cssText='position:absolute;width:0;height:0;overflow:hidden';
+      d.innerHTML='<svg width="0" height="0"><filter id="fx-water" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.045" numOctaves="2" seed="3" result="n"><animate attributeName="baseFrequency" dur="14s" values="0.012 0.045;0.016 0.052;0.012 0.045" repeatCount="indefinite"/></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="9" xChannelSelector="R" yChannelSelector="G"/></filter></svg>';
+      document.body.appendChild(d);
+    }
+    var running=[];
+    lives.forEach(function(box){
+      var fx=box.dataset.fx; if(fx==='water'||fx==='spin') return;
+      var cv=document.createElement('canvas'), cx=cv.getContext('2d'), P=[], on=false; box.appendChild(cv);
+      var size=function(){ var r=box.getBoundingClientRect(), k=Math.min(2,window.devicePixelRatio||1); cv.width=Math.max(1,r.width*k); cv.height=Math.max(1,r.height*k); };
+      var spawn=function(init){ var W=cv.width,H=cv.height;
+        if(fx==='fire') return {x:W*(.25+Math.random()*.5),y:init?Math.random()*H:H*(.6+Math.random()*.4),r:(1+Math.random()*2.2)*(W/300),vy:-(.4+Math.random()*1.1)*(H/300),vx:(Math.random()-.5)*.6,l:1};
+        if(fx==='stars') return {x:Math.random()*W,y:Math.random()*H,r:(.6+Math.random()*1.6)*(W/300),ph:Math.random()*6.3,sp:.02+Math.random()*.05};
+        return {x:Math.random()*W,y:init?Math.random()*H:H+5,r:(.8+Math.random()*1.8)*(W/300),vy:-(.08+Math.random()*.25)*(H/300),vx:(Math.random()-.3)*.25,ph:Math.random()*6.3}; };
+      var n=fx==='stars'?38:fx==='fire'?34:24;
+      var frame=function(){ if(!on) return; var W=cv.width,H=cv.height; cx.clearRect(0,0,W,H);
+        P.forEach(function(p,i){
+          if(fx==='fire'){ p.x+=p.vx+Math.sin(p.y/18)*.4; p.y+=p.vy; p.l-=.006; if(p.y<0||p.l<=0) P[i]=spawn(false);
+            cx.fillStyle='rgba(255,'+(140+Math.random()*80|0)+',60,'+(p.l*.9).toFixed(2)+')'; cx.beginPath(); cx.arc(p.x,p.y,p.r,0,7); cx.fill(); }
+          else if(fx==='stars'){ p.ph+=p.sp; var a=Math.max(0,Math.sin(p.ph)); cx.fillStyle='rgba(255,236,190,'+(a*.9).toFixed(2)+')';
+            cx.beginPath(); cx.arc(p.x,p.y,p.r*(.6+a*.6),0,7); cx.fill(); if(a>.92){ cx.fillRect(p.x-p.r*3,p.y-.5,p.r*6,1); cx.fillRect(p.x-.5,p.y-p.r*3,1,p.r*6); } }
+          else { p.ph+=.02; p.x+=p.vx+Math.sin(p.ph)*.15; p.y+=p.vy; if(p.y<-5) P[i]=spawn(false);
+            cx.fillStyle='rgba(255,226,170,'+(.35+Math.sin(p.ph)*.25).toFixed(2)+')'; cx.beginPath(); cx.arc(p.x,p.y,p.r,0,7); cx.fill(); } });
+        requestAnimationFrame(frame); };
+      new IntersectionObserver(function(es){ es.forEach(function(e){ var was=on; on=e.isIntersecting;
+        if(on&&!was){ size(); if(!P.length) for(var i=0;i<n;i++) P.push(spawn(true)); requestAnimationFrame(frame); } }); }).observe(box);
+    });
+  })();
+
+  // 4e) the evidence wall: red thread from every file to the next one, fainter threads between files of the same world.
+  //     Point at a file: the rest dims and its threads light up (same gesture as the old board menu).
+  (function(){
+    var wall=document.querySelector('[data-wall]'); if(!wall) return; var web=wall.querySelector('[data-web]'), NS='http://www.w3.org/2000/svg';
+    var cl=[].slice.call(wall.querySelectorAll('.clip'));
+    var pin=function(el){ var p=el.querySelector('.pin2'), w=wall.getBoundingClientRect(), r=p.getBoundingClientRect(); return [r.left-w.left+r.width/2, r.top-w.top+5]; };
+    var drawn=false;
+    var draw=function(){ while(web.firstChild) web.removeChild(web.firstChild);
+      web.setAttribute('width',wall.clientWidth); web.setAttribute('height',wall.clientHeight); web.setAttribute('viewBox','0 0 '+wall.clientWidth+' '+wall.clientHeight);
+      cl.forEach(function(c){ c._p=[]; });
+      var link=function(a,b,x){ var A=pin(a),B=pin(b),d=Math.hypot(B[0]-A[0],B[1]-A[1]);
+        var p=document.createElementNS(NS,'path'); p.setAttribute('d','M'+A[0].toFixed(1)+' '+A[1].toFixed(1)+' Q'+((A[0]+B[0])/2).toFixed(1)+' '+(Math.max(A[1],B[1])+d*.05).toFixed(1)+' '+B[0].toFixed(1)+' '+B[1].toFixed(1));
+        if(x) p.setAttribute('class','x'); if(!drawn&&!calm0){ p.classList.add('draw'); p.style.setProperty('--len',Math.ceil(d*1.2)); p.style.animationDelay=(cl.indexOf(a)*.1)+'s'; }
+        web.appendChild(p); a._p.push(p); b._p.push(p); };
+      for(var i=0;i<cl.length-1;i++) link(cl[i],cl[i+1]);
+      var g={}; cl.forEach(function(c){ (g[c.dataset.world]=g[c.dataset.world]||[]).push(c); });
+      Object.keys(g).forEach(function(k){ var a=g[k]; for(var i=0;i+2<a.length;i+=2) link(a[i],a[i+2],true); });
+      // handwritten notes hang halfway along a thread, in the gap between rows
+      [].forEach.call(wall.querySelectorAll('.note2[data-at]'),function(n){ var c=cl[+n.dataset.at]; var p=c&&c._p&&c._p[c._p.length>1?1:0]; if(!p) return;
+        var L=p.getTotalLength(), m=p.getPointAtLength(L*.5); n.style.left=m.x+'px'; n.style.top=m.y+'px'; n.classList.add('on'); });
+      drawn=true; };
+    var t; var later=function(){ clearTimeout(t); t=setTimeout(draw,140); };
+    var seen=new IntersectionObserver(function(es){ if(es.some(function(e){return e.isIntersecting;})){ seen.disconnect();
+      cl.forEach(function(c,i){ setTimeout(function(){ c.classList.add('in'); },i*110); });   // pinned one after the other
+      setTimeout(draw,cl.length*110+800); } },{threshold:.05}); seen.observe(wall);
+    wall.addEventListener('transitionend',function(e){ if(drawn&&e.target.classList&&e.target.classList.contains('clip')) later(); });
+    window.addEventListener('resize',function(){ if(drawn) later(); });
+    var hot=function(c,on){ wall.classList.toggle('focus',on); web.classList.toggle('focus',on); c.classList.toggle('hot',on); (c._p||[]).forEach(function(p){ p.classList.toggle('hot',on); }); };
+    cl.forEach(function(c){ c.addEventListener('mouseenter',function(){ hot(c,true); }); c.addEventListener('mouseleave',function(){ hot(c,false); });
+      c.addEventListener('focus',function(){ hot(c,true); }); c.addEventListener('blur',function(){ hot(c,false); }); });
+  })();
+
+  // 4f) Steve: the same rig as the videos (assets/steve), animated in code. Breathes, blinks, waves when he appears,
+  //     pulls a face and talks when you point at an experiment, jumps when you poke him.
+  (function(){
+    var host=document.querySelector('[data-steve]'), bubble=document.querySelector('[data-bubble]'); if(!host) return;
+    fetch('/assets/steve/rig.json').then(function(r){ return r.json(); }).then(function(R){
+      var S=R.segments, P=R.pivots, bones={};
+      var make=function(name,parent){ var s=S[name], g=document.createElement('div'); g.className='g';
+        var pv=s.joint?P[s.joint]:P.neck; g.style.transformOrigin=pv[0]+'px '+pv[1]+'px'; g.style.zIndex=s.z;
+        var im=new Image(); im.src='/assets/steve/'+name+'.webp'; im.alt=''; im.style.cssText='left:'+s.x+'px;top:'+s.y+'px;width:'+s.w+'px;height:'+s.h+'px;z-index:1';
+        g.appendChild(im); parent.appendChild(g); bones[name]={g:g,im:im}; return g; };
+      var torso=make('torso',host);
+      ['upperarm_L','upperarm_R','thigh_L','thigh_R','head'].forEach(function(n){ make(n,torso); });
+      make('forearm_L',bones.upperarm_L.g); make('forearm_R',bones.upperarm_R.g); make('shin_L',bones.thigh_L.g); make('shin_R',bones.thigh_R.g);
+      bones.forearm_L.g.style.zIndex=0; bones.forearm_R.g.style.zIndex=0;
+      var faces={}; ['blink','smile','surprised','laugh','sly','wink','dizzy','terrified'].forEach(function(f){ var i=new Image(); i.src='/assets/steve/head_'+f+'.webp'; faces[f]=i.src; });
+      var base=bones.head.im.src, face=null, until=0, wave=0, hop=0, nextBlink=performance.now()+2500;
+      var setFace=function(f,ms){ face=f; until=performance.now()+ms; bones.head.im.src=f?faces[f]:base; };
+      var say=function(t){ if(!bubble) return; bubble.textContent=t; bubble.classList.add('pop'); setTimeout(function(){ bubble.classList.remove('pop'); },250); };
+      var tick=function(t){
+        if(!calm0){ var s=Math.sin(t/900), b=Math.sin(t/1400);
+          torso.style.transform='translateY('+(-Math.abs(Math.sin(hop))*60).toFixed(1)+'px) rotate('+(b*1.2).toFixed(2)+'deg) scale(1,'+(1+s*.008).toFixed(4)+')';
+          bones.head.g.style.transform='rotate('+(Math.sin(t/1700)*4).toFixed(2)+'deg)';
+          var w=wave>0; if(w) wave-=16;
+          bones.upperarm_R.g.style.transform='rotate('+(w?Math.sin(t/120)*35-60:s*4).toFixed(1)+'deg)';
+          bones.forearm_R.g.style.transform='rotate('+(w?Math.sin(t/120)*25-30:s*3).toFixed(1)+'deg)';
+          bones.upperarm_L.g.style.transform='rotate('+(-s*4).toFixed(1)+'deg)'; bones.forearm_L.g.style.transform='rotate('+(-s*3).toFixed(1)+'deg)';
+          if(hop>0){ hop+=.11; if(hop>=Math.PI) hop=0; } }
+        if(face&&t>until) setFace(null,0);
+        if(!face&&t>nextBlink){ setFace('blink',140); nextBlink=t+2200+Math.random()*3500; }
+        requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
+      new IntersectionObserver(function(es,o){ es.forEach(function(e){ if(e.isIntersecting){ wave=1400; setFace('smile',1600); o.disconnect(); } }); },{threshold:.5}).observe(host);
+      document.querySelectorAll('.exp[data-face]').forEach(function(c){ var go=function(){ setFace(c.dataset.face,2200); say(c.dataset.say); };
+        c.addEventListener('mouseenter',go); c.addEventListener('focus',go); });
+      var poke=0; host.addEventListener('click',function(){ hop=.01; poke++; var dz=poke%2===0; setFace(dz?'dizzy':'laugh',1500); say(dz?host.dataset.click2:host.dataset.click1); });
+    });
+  })();
+
+  // 4g) dust in the lamp light, on every page
+  (function(){ var d=document.querySelector('.web-bg .dust'); if(!d||calm0) return;
+    for(var i=0;i<22;i++){ var m=document.createElement('i'); m.style.left=(Math.random()*42)+'%'; m.style.top=(18+Math.random()*72)+'%';
+      m.style.animationDuration=(9+Math.random()*12)+'s'; m.style.animationDelay=(-Math.random()*20)+'s'; d.appendChild(m); } })();
+
+  // torn edges: every clipping and title sheet gets its own ragged outline
+  document.querySelectorAll('[data-torn]').forEach(function(el,k){ var pts=[],n=14,s=k*97+11,j=function(){ s=(s*9301+49297)%233280; return s/233280; };
+    for(var i=0;i<=n;i++) pts.push((i/n*100).toFixed(1)+'% '+(j()*3).toFixed(1)+'%');
+    for(i=0;i<=8;i++) pts.push((100-j()*2.5).toFixed(1)+'% '+(i/8*100).toFixed(1)+'%');
+    for(i=n;i>=0;i--) pts.push((i/n*100).toFixed(1)+'% '+(100-j()*3).toFixed(1)+'%');
+    for(i=8;i>=0;i--) pts.push((j()*2.5).toFixed(1)+'% '+(i/8*100).toFixed(1)+'%');
+    var cp='polygon('+pts.join(',')+')'; el.style.clipPath=cp; var sh=el.previousElementSibling; if(sh&&sh.classList.contains('shade')) sh.style.clipPath=cp; });
+
   // 4c) stories: topic tabs (also from the address: /stories.html#dino opens that drawer)
   var tabs=document.querySelectorAll('.ftab');
   if(tabs.length){

@@ -1,60 +1,70 @@
 {% extends "base.html" %}
 {% block body %}
-<section class="room-wrap" aria-label="{{ h.kicker }}">
-  <div class="room" data-room>
-    <div class="cork" data-board>
-      <svg class="yarn" aria-hidden="true"></svg><svg class="yarn-top" aria-hidden="true"><path d=""/></svg>
-
-      <div class="it card-h hub" data-hub style="--hf:{{ [1, 34 / ((h.h1a ~ h.h1b)|length)]|min }};--sf:{{ [1, 88 / (h.board_sub|length)]|min }};--x:33%;--y:4%;--w:34%;--r:-1deg;--mx:4%;--my:0%;--mw:92%;--mr:-1deg;--d:.1s">
-        <img class="pin" src="/assets/board/pin1.webp" alt="" width="73" height="155">
-        <div class="card-txt">
-          <img class="hub-logo" src="/assets/board/logo.webp" alt="Pandas Lab" width="520" height="102">
-          <div class="kick">{{ h.kicker }}</div>
-          <h1 class="slab">{{ h.h1a }}<br><em>{{ h.h1b }}</em></h1>
-          <p class="card-sub">{{ h.board_sub }}</p>
-          <div class="card-ctas"><a class="tag-btn" href="{{ latest.href }}">{{ h.open_latest }} →</a></div>
-        </div>
-      </div>
-
-      {% macro body(b) %}
-        {% if b.frame == 'pola' %}<span class="pola-photo" style="--wx:{{ g.polaroid_window[0]*100 }}%;--wy:{{ g.polaroid_window[1]*100 }}%;--ww:{{ (g.polaroid_window[2]-g.polaroid_window[0])*100 }}%;--wh:{{ (g.polaroid_window[3]-g.polaroid_window[1])*100 }}%"><img src="{{ b.img }}" alt="" loading="lazy"></span><img class="bgimg" src="/assets/board/polaroid.webp" alt="" width="352" height="404"><img class="pin" src="/assets/board/pin2.webp" alt="" width="73" height="157">{% if b.cap %}<span class="pola-cap">{{ b.cap }}</span>{% endif %}{% if b.stamp %}<img class="stampimg" src="/assets/board/st_{{ b.stamp|lower }}.webp" alt="{{ b.stamp }}" width="240" height="108">{% endif %}
-        {% elif b.frame == 'photo' %}<span class="shot-img"><img src="{{ b.img }}" alt="" loading="lazy"></span><img class="tape" src="/assets/board/tape2.webp" alt="" width="240" height="75"><img class="pin" src="/assets/board/pin1.webp" alt="" width="73" height="155">{% if b.cap %}<span class="shot-cap">{{ b.cap }}</span>{% endif %}
-        {% elif b.frame == 'card' %}<span class="mini-card"><img src="{{ b.img }}" alt="" loading="lazy"></span><img class="pin" src="/assets/board/pin2.webp" alt="" width="73" height="157">
-        {% elif b.frame == 'clip' %}<img class="bgimg" src="{{ b.img }}" alt="" loading="lazy"><img class="pin" src="/assets/board/pin1.webp" alt="" width="73" height="155">
-        {% elif b.frame == 'postit' %}<img class="bgimg" src="/assets/board/postit.webp" alt="" width="260" height="264"><span class="post-txt" style="--pf:{{ [1, 26 / (b.text|length)]|min }}">{{ b.text }}</span>
-        {% endif %}
-      {% endmacro %}
-
-      {% for b in board.decos %}{% set p = b.pos %}<a class="it deco {{ b.frame }} dsk" href="{{ b.href }}" aria-label="{{ b.title or b.text }}" style="--x:{{ p.x }}%;--y:{{ p.y }}%;--w:{{ p.w }}%;--r:{{ p.r }}deg;--d:{{ b.d }}s">{{ body(b) }}</a>
-      {% endfor %}
-      {% for b in board.nodes %}{% set p = b.pos %}<a class="it node {{ b.frame }}{% if b.dsk %} dsk{% endif %}" href="{{ b.href }}" data-node="{{ b.i }}" style="--x:{{ p.x }}%;--y:{{ p.y }}%;--w:{{ p.w }}%;--r:{{ p.r }}deg;--mx:{{ p.mx }}%;--my:{{ p.my }}%;--mw:{{ p.mw }}%;--mr:{{ p.mr }}deg;--d:{{ b.d }}s">{{ body(b) }}<span class="node-tag"><b>{{ b.label }}</b>{% if b.sub %}<small>{{ b.sub }}</small>{% endif %}</span></a>
-      {% endfor %}
+<section class="wrap hero2" aria-label="{{ h.kicker }}">
+  <div class="title-sheet rv" style="--r:-1.5deg">
+    <span class="shade"></span>
+    <div class="torn-sheet" data-torn>
+      <span class="tagstamp">{{ h.case_files }}</span>
+      <h1 class="headline">{{ h.h1a }}<br><em>{{ h.h1b }}</em></h1>
+      <div class="cols" aria-hidden="true"></div>
     </div>
-    <div class="glow" aria-hidden="true"></div>
-    <img class="desk" src="/assets/board/desk.webp" alt="" width="1505" height="628" data-depth="1">
+    <span class="pin2" style="left:10%"></span><span class="pin2" style="left:90%"></span>
   </div>
-  <div class="wrap hero-under">
-    <p class="lede">{{ h.lead }}</p>
-    <div class="ctas"><a class="btn" href="{{ latest.href }}">{{ h.open_latest }} →</a><a class="btn ghost" href="#files">{{ h.browse }}</a></div>
-  </div>
+  <p class="hand-lede rv" style="--r:-1deg">{{ h.lead }}</p>
+  <div class="hero-ctas rv" style="--r:0deg"><a class="btn" href="{{ latest.href }}">{{ h.open_latest }} →</a><a class="btn ghost" href="#wall">{{ h.browse }}</a></div>
+  <a class="hero-photo rv" href="{{ latest.href }}" style="--r:2.5deg" aria-label="{{ latest.title }}">
+    <span class="frame-w"><span class="live" data-fx="{{ wall[0].fx }}"><img src="{{ hero_img }}" alt="" width="720" height="960"></span></span>
+    <span class="hand-cap">{{ h.latest_note }} {{ ui.case }} {{ latest.case }}</span>
+    <span class="tape2" style="left:-26px;top:-12px;--tr:-28deg"></span><span class="tape2" style="right:-26px;top:-8px;--tr:24deg"></span>
+  </a>
 </section>
 
-<section id="files" class="wrap sec">
-  <div class="sec-head"><h2 class="slab">{{ h.files_t }}</h2><p>{{ h.files_p }}</p></div>
-  <div class="swipe-hint light"><span>{{ h.swipe }}</span><span class="arrow">→</span><span class="dots"></span></div>
-  <div class="cabinet rail">
-    {% for f in files %}<a class="folder-card rv" href="{{ f.href }}"{% if f.external %} target="_blank" rel="noopener"{% endif %}>
-      <img class="bgimg" src="/assets/board/folder.webp" alt="" width="438" height="410" loading="lazy">
-      <span class="f-photo{% if f.wide %} wide{% endif %}"><img src="{{ f.img }}" alt="" loading="lazy"></span>
-      <img class="f-clip" src="/assets/board/{% if f.wide %}tape2{% else %}clip{% endif %}.webp" alt="" loading="lazy">
-      <span class="f-label"><b>{{ f.kind }} {{ f.n }}</b>{{ f.title }}</span>
-      <span class="stamp anim{% if f.navy %} navy{% endif %}">{{ f.stamp }}</span>
-    </a>{% endfor %}
+<div class="band rv" style="--r:-1deg"><h2>{{ h.wall_t }}</h2><p>{{ h.wall_p|replace('{n}', n_files) }}</p></div>
+
+<section id="wall" class="wrap wall" data-wall>
+  <svg class="web" data-web aria-hidden="true"></svg>
+  {% for w in wall %}
+  <a class="clip rv {{ w.kind }}" href="{{ w.href }}" data-world="{{ w.world }}" style="--r:{{ w.r }}deg">
+    <span class="sway" style="animation-delay:-{{ w.sw }}s">
+      <span class="shade"></span>
+      {% if w.clip %}
+      <span class="realclip"><img src="{{ w.clip }}" alt="{{ w.head }}" loading="lazy"></span>
+      {% else %}
+      <span class="news" data-torn>
+        <span class="h3" style="--hf:{{ [1, 26 / (w.head|length)]|min|round(3) }}">{{ w.head }}</span>
+        <span class="ph live" data-fx="{{ w.fx }}"><img src="{{ w.img }}" alt="" loading="lazy" width="576" height="720"></span>
+        <span class="cols" aria-hidden="true"></span>
+      </span>
+      {% endif %}
+      <span class="pin2"></span>
+      {% if w.kind == 'dossier' and loop.index is divisibleby 3 %}<span class="stamp2">{{ w.stamp }}</span>{% endif %}
+    </span>
+    <span class="meta">{{ w.meta }}</span>
+  </a>
+  {% if loop.index == 3 %}<div class="note2 n-a dsk" data-at="2" style="--r:-3deg">{{ h.note_a }}<small><i>{{ h.note_a2 }}</i></small></div>{% endif %}
+  {% if loop.index == 7 %}<div class="note2 n-b dsk" data-at="6" style="--r:4deg">{{ h.note_b }}<small><i>{{ h.note_b2 }}</i></small></div>{% endif %}
+  {% endfor %}
+</section>
+
+{% if exps %}
+<div class="band rv" style="--r:1deg"><h2>{{ h.steve_t }}</h2><p>{{ h.steve_p }}</p></div>
+<section id="steve" class="wrap lab">
+  <div class="steve-spot">
+    <div class="steve" data-steve role="img" aria-label="{{ h.steve_alt }}" data-click1="{{ h.steve_click1 }}" data-click2="{{ h.steve_click2 }}"></div>
+    <div class="bubble" data-bubble aria-live="polite">{{ h.steve_hi }}</div>
+  </div>
+  <div class="exps">
+    {% for e in exps %}<a class="exp rv" href="{{ e.href }}" data-face="{{ e.face }}" data-say="{{ e.say }}" style="--r:{{ [-2, 1.5, -1][loop.index0 % 3] }}deg"><span class="pin2"></span>
+      <b>{{ h.steve_exp }} #{{ e.n }}</b><span class="q">{{ e.q }}</span><span class="lbl">{{ e.label }}</span>
+      <span class="live exp-ph" data-fx="{{ e.fx }}"><img src="{{ e.img }}" alt="" loading="lazy" width="720" height="1280"></span></a>{% endfor %}
+    <div class="exp next rv" data-face="sly" data-say="{{ h.steve_next_say }}" tabindex="0" style="--r:-1deg"><span class="tape2" style="left:30%;top:-14px;--tr:-4deg"></span>
+      <b>{{ h.steve_next_t }}</b><span class="q">{{ h.steve_next_p }}</span></div>
   </div>
 </section>
+{% endif %}
 
 <section id="worlds" class="wrap sec">
-  <div class="sec-head"><h2 class="slab">{{ h.worlds_t }}</h2><p>{{ h.worlds_p }}</p></div>
+  <div class="band rv" style="--r:-.5deg"><h2>{{ h.worlds_t }}</h2><p>{{ h.worlds_p }}</p></div>
   <div class="drawers rv">
     <img src="/assets/board/drawers.webp" alt="" width="1200" height="800" loading="lazy">
     {% for w in worlds %}<a class="drawer" href="{{ w.href }}" style="--ax:{{ w.area[0]*100 }}%;--ay:{{ w.area[1]*100 }}%;--aw:{{ (w.area[2]-w.area[0])*100 }}%;--ah:{{ (w.area[3]-w.area[1])*100 }}%;--rx:{{ w.rel[0] }}%;--ry:{{ w.rel[1] }}%;--rw:{{ w.rel[2] }}%;--rh:{{ w.rel[3] }}%;--fit:{{ w.fit }}"><span class="d-lab">{{ w.name }}</span><span class="d-desc">{{ w.desc }}</span></a>{% endfor %}
@@ -63,7 +73,7 @@
 </section>
 
 <section id="method" class="wrap sec">
-  <div class="sec-head"><h2 class="slab">{{ h.method_t }}</h2><p>{{ h.method_p }}</p></div>
+  <div class="band rv" style="--r:.8deg"><h2>{{ h.method_t }}</h2><p>{{ h.method_p }}</p></div>
   <div class="swipe-hint light"><span>{{ h.swipe_m }}</span><span class="arrow">→</span><span class="dots"></span></div>
   <div class="method rail">
     {% for m in method %}<div class="m paper rv"><img class="pin-s" src="/assets/board/pin1.webp" alt="" width="73" height="155"><img class="m-stamp" src="/assets/board/st_{{ m.key|lower }}.webp" alt="{{ m.key }}" width="240" height="108" loading="lazy"><p>{{ m.text }}</p></div>{% endfor %}
