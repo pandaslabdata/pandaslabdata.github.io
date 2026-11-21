@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="arch-head"><div class="wrap">
+  <div class="kicker">{{ kicker }}</div>
+  <h1 class="slab">{{ title }}</h1>
+  <p class="lede">{{ intro }}</p>
+</div></div>
+
+{% if page == 'stories' %}
+<div class="wrap">
+  <div class="tabs" role="toolbar">{% for t in topics %}<button type="button" class="ftab{% if loop.first %} on{% endif %}" data-t="{{ t.key }}">{{ t.name }}</button>{% endfor %}</div>
+  <div class="dgrid">
+    {% for d in dossiers %}<article class="dfile paper rv" data-tags="{{ d.tags }}">
+      <img class="tape-a" src="/assets/board/tape2.webp" alt="" width="240" height="75">
+      <a class="dphoto" href="{{ d.url }}" target="_blank" rel="noopener"><img src="{{ d.thumb }}" alt="{{ d.title }}" loading="lazy" width="480" height="360"><span class="play">▶</span></a>
+      <div class="dbody">
+        <div class="dmeta typed">{{ d.ep }} · {{ d.dur }}</div>
+        <h2><a href="{{ d.url }}" target="_blank" rel="noopener">{{ d.title }}</a></h2>
+        <a class="btn" href="{{ d.url }}" target="_blank" rel="noopener">{{ o.watch }} →</a>
+        <details class="dsrc"><summary>{{ o.src }}</summary><ul>{% for s in d.sources %}<li>{{ s|safe }}</li>{% endfor %}</ul></details>
+      </div>
+      <span class="stamp anim navy">{{ dossier_word }} {{ d.n }}</span>
+    </article>{% endfor %}
+    {% for c in coming %}<article class="dfile paper rv soon" data-tags="{{ c.tags }}">
+      <img class="tape-a" src="/assets/board/tape3.webp" alt="" width="240" height="79">
+      <span class="dphoto"><img src="{{ c.img }}" alt="{{ c.title }}" loading="lazy"></span>
+      <div class="dbody"><div class="dmeta typed">· · ·</div><h2>{{ c.title }}</h2></div>
+      <span class="stamp anim">{{ o.soon|upper }}</span>
+    </article>{% endfor %}
+  </div>
+</div>
+
+{% elif page == 'about' %}
+<div class="wrap">
+  <div class="people">
+    {% for p in people %}<article class="pfile paper rv">
+      <img class="pin-a" src="/assets/board/pin1.webp" alt="" width="73" height="155">
+      <div class="pframe" style="--wx:{{ g.polaroid_window[0]*100 }}%;--wy:{{ g.polaroid_window[1]*100 }}%;--ww:{{ (g.polaroid_window[2]-g.polaroid_window[0])*100 }}%;--wh:{{ (g.polaroid_window[3]-g.polaroid_window[1])*100 }}%">
+        <span class="pphoto"><img src="{{ p.img }}" alt="{{ p.name }}" loading="lazy"></span><img class="pframe-img" src="/assets/board/polaroid.webp" alt="" width="352" height="404"><span class="pcap">{{ p.name }}</span>
+      </div>
+      <div class="pbody"><div class="typed role">{{ p.role }}</div><h2 class="slab">{{ p.name }}</h2><p>{{ p.bio }}</p></div>
+      <span class="stamp anim">{{ p.stamp }}</span>
+    </article>{% endfor %}
+  </div>
+  <h2 class="slab sub-h">{{ o.me_title }}</h2>
+  <div class="cards3">
+    {% for m in howto %}<div class="icard rv"><img class="bgimg" src="/assets/board/card.webp" alt="" width="520" height="352" loading="lazy"><img class="pin-c" src="/assets/board/pin2.webp" alt="" width="73" height="157"><div class="itxt"><b>{{ m.t }}</b><span>{{ m.b }}</span></div></div>{% endfor %}
+  </div>
+  <p class="center"><a class="btn" href="https://www.linkedin.com/company/pandas-lab" target="_blank" rel="noopener">{{ o.ab_li }}</a></p>
+</div>
+
+{% elif page == 'shop' or page == 'kit' %}
+<div class="wrap">
+  <div class="locker{% if page == 'kit' %} single{% endif %}">
+    {% for k in kits %}<article class="kfile paper rv{% if not k.href %} soon{% endif %}">
+      <img class="tape-a" src="/assets/board/tape1.webp" alt="" width="240" height="93">
+      <span class="kphoto"><img src="{{ k.img }}" alt="{{ k.title }}" loading="lazy"></span>
+      <h2>{{ k.title }}</h2><p>{{ k.blurb }}</p>
+      {% if k.href %}<a class="btn" href="{{ k.href }}"{% if k.download %} download{% else %} target="_blank" rel="noopener"{% endif %}>{{ k.btn }}</a>{% else %}<span class="btn ghost off">{{ k.btn }}</span>{% endif %}
+      <span class="stamp anim{% if not k.href %} navy{% endif %}">{{ k.stamp }}</span>
+    </article>{% endfor %}
+  </div>
+  <p class="center hintline typed">{{ hint }}</p>
+</div>
+{% endif %}
+{% endblock %}

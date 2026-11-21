@@ -213,6 +213,61 @@ footer a{color:var(--gold);text-decoration:none}
 .mind .slab{position:absolute;left:5%;bottom:30%;font-size:clamp(22px,3vw,40px);color:var(--cream);text-shadow:0 2px 8px #000}
 .mind .btn{position:absolute;left:5%;bottom:10%}
 
+/* =================== STORIES (dossiers), ABOUT (personnel files), SHOP (evidence locker) =================== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 26px}
+.ftab{font:14px "Special Elite";color:var(--ink);background:var(--paper-d);border:0;border-radius:8px 8px 2px 2px;padding:9px 16px 8px;min-height:44px;cursor:pointer;
+  box-shadow:0 3px 6px rgba(0,0,0,.35);transform:translateY(3px);transition:transform .2s,background .2s}
+.ftab.on,.ftab:hover{background:var(--paper);transform:translateY(0)}
+.ftab.on{box-shadow:0 0 0 2px var(--gold),0 3px 6px rgba(0,0,0,.35)}
+.dgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:34px 30px}
+.dfile{position:relative;display:grid;grid-template-columns:46% 1fr;gap:18px;padding:26px 22px 22px;align-items:start}
+.dfile.hide{display:none}
+.dfile:nth-child(odd){transform:rotate(-.5deg)}.dfile:nth-child(even){transform:rotate(.6deg)}
+.dphoto{position:relative;display:block;background:#111;border:6px solid #f3ead6;box-shadow:0 5px 10px rgba(0,0,0,.35);transform:rotate(-2deg)}
+.dphoto img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.dphoto .play{position:absolute;inset:0;display:grid;place-items:center;font:34px "Alfa Slab One";color:var(--gold);text-shadow:0 2px 8px #000;opacity:.9}
+.tape-a{position:absolute;left:14%;top:6px;width:30%;transform:rotate(-7deg);z-index:3;opacity:.92}
+.dbody h2{font:600 19px/1.3 "Source Serif 4";margin:6px 0 12px}
+.dbody h2 a{text-decoration:none;color:var(--navy)}
+.dmeta{font-size:13px;color:var(--pencil)}.dmeta b{color:var(--red);letter-spacing:.08em}
+.dsrc{margin-top:14px;background:#f4ecd9;border:1px solid rgba(33,28,26,.15);padding:8px 10px;font-size:13.5px;line-height:1.45;box-shadow:0 2px 4px rgba(0,0,0,.15)}
+.dsrc summary{cursor:pointer;font:14px "Special Elite";color:#8a5f0d;min-height:28px}
+.dsrc ul{margin:8px 0 2px 18px}.dsrc li{margin-bottom:5px}.dsrc a{color:var(--blue);word-break:break-word}
+.dfile .stamp,.pfile .stamp,.kfile .stamp{position:absolute;right:14px;top:-12px;font-size:14px;background:rgba(236,222,190,.92);z-index:4}
+.dfile.soon{opacity:.85}.dfile.soon .dphoto img{filter:saturate(.6) brightness(.8)}
+.people{display:grid;grid-template-columns:repeat(2,1fr);gap:34px;margin-top:10px}
+.pfile{position:relative;display:grid;grid-template-columns:42% 1fr;gap:22px;padding:30px 24px 26px;align-items:center}
+.pin-a{position:absolute;left:50%;top:-12px;width:18px;transform:translateX(-50%);z-index:4}
+.pframe{position:relative;transform:rotate(-3deg)}
+.pframe .pframe-img{width:100%;filter:drop-shadow(0 6px 8px rgba(0,0,0,.4))}
+.pframe .pphoto{position:absolute;left:var(--wx);top:var(--wy);width:var(--ww);height:var(--wh);overflow:hidden;z-index:2;background:#222}
+.pframe .pphoto img{width:100%;height:100%;object-fit:cover}
+.pframe .pcap{position:absolute;left:0;right:0;bottom:6%;text-align:center;font:20px/1 "Caveat",cursive;color:var(--ink)}
+.pbody .role{font-size:12.5px;letter-spacing:.12em;color:#8a5f0d;text-transform:uppercase}
+.pbody h2{font-size:28px;color:var(--navy);margin:4px 0 10px}
+.pbody p{font-size:16px;line-height:1.55}
+.sub-h{font-size:clamp(26px,3.4vw,38px);margin:56px 0 18px}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.icard{position:relative;transform:rotate(-1deg)}.icard:nth-child(2){transform:rotate(1.2deg)}
+.icard .bgimg{width:100%;filter:drop-shadow(0 8px 10px rgba(0,0,0,.4))}
+.icard .pin-c{position:absolute;left:50%;top:-10px;width:17px;transform:translateX(-50%);z-index:3}
+.icard .itxt{position:absolute;inset:20% 8% 8% 9%;display:flex;flex-direction:column;gap:4px;color:var(--ink)}
+.icard .itxt b{font:clamp(15px,1.5vw,19px)/1.15 "Alfa Slab One";color:var(--navy)}
+.icard .itxt span{font:clamp(16px,1.6vw,20px)/1.1 "Caveat",cursive}
+.center{text-align:center;margin-top:30px}
+.locker{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:10px}
+.locker.single{grid-template-columns:minmax(0,520px);justify-content:center}
+.kfile{position:relative;padding:28px 22px 24px;display:flex;flex-direction:column;gap:10px}
+.kfile:nth-child(2){transform:rotate(.8deg)}.kfile:nth-child(3){transform:rotate(-.7deg)}
+.kphoto{display:block;border:6px solid #f3ead6;box-shadow:0 5px 10px rgba(0,0,0,.35);transform:rotate(-1.5deg);background:#111}
+.kphoto img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.kfile h2{font:600 19px/1.3 "Source Serif 4";color:var(--navy);margin-top:6px}
+.kfile p{font-size:15px;line-height:1.5;flex:1}
+.kfile .btn{align-self:flex-start;min-height:46px}
+.kfile.soon .kphoto img{filter:saturate(.6) brightness(.8)}
+.btn.off{cursor:default;color:var(--pencil);border-color:rgba(77,71,66,.55)}
+.hintline{opacity:.8;font-size:14px}
+
 /* mobile: thumb bar, language sheet, swipe rails */
 .tabbar,.sheet-lang,.swipe-hint{display:none}
 @media (max-width:920px){nav.main{gap:16px;font-size:14px}}
@@ -306,6 +361,13 @@ footer a{color:var(--gold);text-decoration:none}
   .drawer .d-lab{font-size:calc(var(--fit,1) * 12.5px)}
   .mind img{max-height:none;height:42vh}
   .arch-head{padding:24px 0 6px}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -20px 20px;padding:6px 20px}
+  .ftab{flex:0 0 auto}
+  .dgrid,.people,.cards3,.locker{grid-template-columns:1fr;gap:30px}
+  .dfile,.pfile{grid-template-columns:1fr;padding:24px 18px 20px}
+  .dfile:nth-child(odd),.dfile:nth-child(even){transform:none}
+  .pframe{max-width:240px;margin:0 auto}
+  .icard .itxt b{font-size:18px}.icard .itxt span{font-size:20px}
   .files{--card:68%;margin:20px -20px 0;padding-left:20px;padding-right:20px}
   footer{margin-top:50px}
 }

@@ -73,6 +73,6 @@
 <section class="wrap sec follow">
   <h2 class="slab">{{ h.follow_t }}</h2>
   <div class="socials">{% for s in socials %}<a href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.name }}"><svg viewBox="0 0 24 24"><path d="{{ s.icon }}"/></svg></a>{% endfor %}</div>
-  <a class="mind" href="/about.html"><img src="/about-strip.jpg" alt="{{ h.mind_t }}" loading="lazy"><span class="slab">{{ h.mind_t }}</span><span class="btn">{{ h.mind_btn }}</span></a>
+  <a class="mind" href="{{ prefix }}/about.html"><img src="/about-strip.jpg" alt="{{ h.mind_t }}" loading="lazy"><span class="slab">{{ h.mind_t }}</span><span class="btn">{{ h.mind_btn }}</span></a>
 </section>
 {% endblock %}

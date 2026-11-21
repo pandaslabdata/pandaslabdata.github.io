@@ -70,6 +70,15 @@
     }
   }
 
+  // 4c) stories: topic tabs (also from the address: /stories.html#dino opens that drawer)
+  var tabs=document.querySelectorAll('.ftab');
+  if(tabs.length){
+    var pick=function(t){ tabs.forEach(function(b){ b.classList.toggle('on',b.dataset.t===t); });
+      document.querySelectorAll('.dfile').forEach(function(f){ f.classList.toggle('hide', t!=='all' && (' '+f.dataset.tags+' ').indexOf(' '+t+' ')<0); }); };
+    tabs.forEach(function(b){ b.addEventListener('click',function(){ pick(b.dataset.t); history.replaceState(null,'',b.dataset.t==='all'?location.pathname:'#'+b.dataset.t); }); });
+    var h=location.hash.slice(1); if(h && document.querySelector('.ftab[data-t="'+h+'"]')) pick(h);
+  }
+
   // 5) table of contents follows the reading + red thread under the header
   var toc=document.querySelector('.toc');
   if(toc){

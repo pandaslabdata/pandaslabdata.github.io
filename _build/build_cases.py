@@ -306,7 +306,8 @@ def build_home(cases, ui_all, env, ver):
             rel = [round((l[0] - a[0]) / aw * 100, 2), round((l[1] - a[1]) / ah * 100, 2),
                    round((l[2] - l[0]) / aw * 100, 2), round((l[3] - l[1]) / ah * 100, 2)]   # label box inside the drawer, %
             k_fit = round(min(1.0, 5.0 / len(h["w"][k])), 3)        # long words (Geschichte, Histoire) shrink to fit the holder
-            worlds.append({"name": h["w"][k], "desc": h["wd"][k], "href": dj["world_links"][k], "area": a, "rel": rel, "fit": k_fit})
+            pre = "" if lang == "en" else f"/{lang}"
+            worlds.append({"name": h["w"][k], "desc": h["wd"][k], "href": pre + dj["world_links"][k], "area": a, "rel": rel, "fit": k_fit})
         method = [{"key": k, "text": h["d"][k]} for k in LABELS]
         jsonld = js_safe({"@context": "https://schema.org", "@type": "WebSite", "name": "Pandas Lab", "url": BASE + "/",
                           "inLanguage": LANGS, "description": h["description"]})
@@ -319,6 +320,54 @@ def build_home(cases, ui_all, env, ver):
         out = SITE / alts[lang].strip("/") / "index.html" if lang != "en" else SITE / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(page, encoding="utf-8")
+
+
+PAGE_KICKER = {
+    "stories": {"en": "CASE ARCHIVE · DOSSIERS", "it": "ARCHIVIO DEI CASI · DOSSIER", "de": "FALLARCHIV · DOSSIERS", "es": "ARCHIVO DE CASOS · DOSIERES", "fr": "ARCHIVES · DOSSIERS"},
+    "about": {"en": "PERSONNEL FILES", "it": "SCHEDE DEL PERSONALE", "de": "PERSONALAKTEN", "es": "FICHAS DEL PERSONAL", "fr": "DOSSIERS DU PERSONNEL"},
+    "shop": {"en": "THE EVIDENCE LOCKER", "it": "L'ARMADIETTO DELLE PROVE", "de": "DER BEWEISSCHRANK", "es": "EL ARMARIO DE PRUEBAS", "fr": "LE CASIER À PREUVES"},
+}
+PAGE_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSc3-X8BLaDtu4r_aQWDvJe6gLbH7yJetHiXEZn76VxUAYTzuA/viewform"
+
+
+def page_paths(name):
+    return {l: (f"/{name}.html" if l == "en" else f"/{l}/{name}.html") for l in LANGS}
+
+
+def build_pages(ui_all, env, ver):
+    """stories (dossiers), about (personnel files), shop + kit (evidence locker): same URLs as before for EN"""
+    old = json.loads((BUILD / "ui_pages_old.json").read_text(encoding="utf-8"))   # translations of the previous site
+    hj = json.loads((BUILD / "ui_home.json").read_text(encoding="utf-8"))
+    dj = json.loads((BUILD / "dossiers.json").read_text(encoding="utf-8"))
+    geo = json.loads((BUILD / "board_geometry.json").read_text(encoding="utf-8"))
+    for lang in LANGS:
+        o, ui = old[lang], dict(ui_all[lang], worlds_nav=WORLDS_NAV[lang])
+        common = dict(lang=lang, langs=LANGS, lang_names=LANG_NAMES, ui=ui, base=BASE, ver=ver, o=o, g=geo,
+                      prefix="" if lang == "en" else f"/{lang}", og_type="website", og_locale=OG_LOCALE[lang], jsonld=None,
+                      og_image="/assets/board/room_16x9.webp", dossier_word=hj[lang]["dossier"])
+        pages = {
+            "stories": dict(kicker=PAGE_KICKER["stories"][lang], title=o["st_title"], intro=o["st_intro"],
+                            topics=[{"key": k, "name": o["t_" + k]} for k in ("all", "dino", "space", "map", "evo")],
+                            dossiers=dj["dossiers"], coming=dj["coming"]),
+            "about": dict(kicker=PAGE_KICKER["about"][lang], title=o["ab_title"], intro=o["ab_intro"],
+                          people=[{"name": "Michele Barison", "img": "/michele.jpg", "role": o["m_role"], "bio": o["m_bio"], "stamp": "LAB FOUNDER"},
+                                  {"name": "Mike", "img": "/mike.jpg", "role": o["mk_role"], "bio": o["mk_bio"], "stamp": "WOOL TWIN"}],
+                          howto=[{"t": o["p1t"], "b": o["p1b"]}, {"t": o["p2t"], "b": o["p2b"]}, {"t": o["p3t"], "b": o["p3b"]}]),
+            "shop": dict(kicker=PAGE_KICKER["shop"][lang], title=o["sh_title"], intro=o["sh_intro"], hint=o["howworks"],
+                         kits=[{"title": "Pandas Lab Chart Kit", "img": "/chartkit.jpg", "blurb": o["k1_b"], "href": PAGE_FORM, "btn": o["get_btn"], "stamp": o["free"]},
+                               {"title": "EP 3 Data Kit · T. rex & the Giants", "img": "https://i.ytimg.com/vi/k_eJcF2WMfw/hqdefault.jpg", "blurb": o["ksoon_b"], "href": None, "btn": o["soon"], "stamp": o["soon"].upper()},
+                               {"title": "EP 6 Data Kit · Meteorites", "img": "https://i.ytimg.com/vi/SGAB3sh-rvs/hqdefault.jpg", "blurb": o["ksoon_b"], "href": None, "btn": o["soon"], "stamp": o["soon"].upper()}]),
+            "kit": dict(kicker=PAGE_KICKER["shop"][lang], title=o["kd_title"], intro=o["kd_intro"], hint=o["kd_more"],
+                        kits=[{"title": "Pandas Lab Chart Kit", "img": "/chartkit.jpg", "blurb": o["k1_b"], "href": "/pandas-lab-chart-kit.zip", "download": True, "btn": o["dl_btn"], "stamp": o["free"]}]),
+        }
+        for name, extra in pages.items():
+            alts = page_paths(name)
+            html_ = env.get_template("pages.html").render(page=name, page_kind=name, alts=alts, alts_json=js_safe(alts),
+                                                          seo_title=f"{extra['title']} | Pandas Lab", og_title=extra["title"],
+                                                          description=extra["intro"], **common, **extra)
+            out = SITE / alts[lang].lstrip("/")
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(html_, encoding="utf-8")
 
 
 def update_sitemap(groups, today):
@@ -377,6 +426,9 @@ def main():
     if "--home" in sys.argv:            # the investigation-room home replaces the old one only when asked
         build_home(cases, ui_all, env, ver)
         groups = [(home_paths(), "1.0")] + groups
+    if "--pages" in sys.argv:           # stories / about / shop / kit in the board style, 5 languages
+        build_pages(ui_all, env, ver)
+        groups += [(page_paths("stories"), "0.9"), (page_paths("shop"), "0.8"), (page_paths("about"), "0.7")]
     update_sitemap(groups, date.today().isoformat())
     print(f"BUILT: {len(cases)} case page(s) + archive, {len(LANGS)} languages each; sitemap updated")
 

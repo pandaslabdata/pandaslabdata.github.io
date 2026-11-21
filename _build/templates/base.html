@@ -23,7 +23,7 @@
 <header class="top"><div class="wrap">
   <a class="logo" href="{{ prefix }}/"><img src="/assets/board/logo.webp" alt="Pandas Lab" width="520" height="102"></a>
   <nav class="main" aria-label="Main">
-    <a href="{{ prefix }}/"{% if page_kind == 'home' %} class="on"{% endif %}>{{ ui.nav_home }}</a><a href="{{ prefix }}/cases/"{% if page_kind == 'archive' or page_kind == 'case' %} class="on"{% endif %}>{{ ui.nav_cases }}</a><a href="/stories.html">{{ ui.nav_stories }}</a><a href="/about.html">{{ ui.nav_about }}</a><a href="/shop.html">{{ ui.nav_shop }}</a>
+    <a href="{{ prefix }}/"{% if page_kind == 'home' %} class="on"{% endif %}>{{ ui.nav_home }}</a><a href="{{ prefix }}/cases/"{% if page_kind == 'archive' or page_kind == 'case' %} class="on"{% endif %}>{{ ui.nav_cases }}</a><a href="{{ prefix }}/stories.html"{% if page_kind == 'stories' %} class="on"{% endif %}>{{ ui.nav_stories }}</a><a href="{{ prefix }}/about.html"{% if page_kind == 'about' %} class="on"{% endif %}>{{ ui.nav_about }}</a><a href="{{ prefix }}/shop.html"{% if page_kind in ('shop', 'kit') %} class="on"{% endif %}>{{ ui.nav_shop }}</a>
   </nav>
   <div class="hdr-r"><div class="langs">{% for l in langs %}<a href="{{ alts[l] }}" hreflang="{{ l }}" data-setlang="{{ l }}"{% if l == lang %} class="on" aria-current="true"{% endif %}>{{ l|upper }}</a>{% endfor %}</div></div>
 </div></header>
@@ -37,7 +37,7 @@
   {% if page_kind == 'case' %}<a href="#w"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 9.2v5.6l4.4-2.8z"/></svg><span>{{ ui.nav_watch }}</span></a>
   {% elif page_kind == 'home' %}<a href="#worlds"><svg viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="16" rx="1.5"/><path d="M3.5 12h17M10 8h4M10 16h4"/></svg><span>{{ ui.worlds_nav }}</span></a>
   {% else %}<a href="{{ prefix }}/"><svg viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7v9h-6v-6h-5v6h-6z"/></svg><span>{{ ui.nav_home }}</span></a>{% endif %}
-  <a href="/stories.html"><svg viewBox="0 0 24 24"><path d="M4 5.5h7v14H4zM13 5.5h7v14h-7z"/></svg><span>{{ ui.nav_stories }}</span></a>
+  <a href="{{ prefix }}/stories.html"{% if page_kind == 'stories' %} class="on"{% endif %}><svg viewBox="0 0 24 24"><path d="M4 5.5h7v14H4zM13 5.5h7v14h-7z"/></svg><span>{{ ui.nav_stories }}</span></a>
   <button class="lg" type="button" aria-haspopup="dialog"><b>{{ lang|upper }}</b><span>{{ ui.nav_lang }}</span></button>
 </nav>
 <div class="sheet-lang" aria-hidden="true"><div class="bg"></div><div class="pan" role="dialog" aria-label="{{ ui.nav_lang }}"><div class="grab"></div><h2>{{ ui.lang_title }}</h2>
