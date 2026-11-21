@@ -333,7 +333,8 @@
     fetch('/assets/alive.json').then(function(r){ return r.json(); }).then(function(A){
       var defs=document.createElement('div'); defs.style.cssText='position:absolute;width:0;height:0;overflow:hidden';
       defs.innerHTML='<svg width="0" height="0"><filter id="al-water" x="-5%" y="-10%" width="110%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.008 0.07" numOctaves="2" seed="5" result="n"><animate attributeName="baseFrequency" dur="11s" values="0.008 0.07;0.011 0.085;0.008 0.07" repeatCount="indefinite"/></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/></filter>'
-        +'<filter id="al-smoke" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="2" seed="9" result="n"><animate attributeName="baseFrequency" dur="10s" values="0.012 0.02;0.016 0.026;0.012 0.02" repeatCount="indefinite"/></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="14" xChannelSelector="R" yChannelSelector="G"/></filter></svg>';
+        +'<filter id="al-smoke" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="2" seed="9" result="n"><animate attributeName="baseFrequency" dur="10s" values="0.012 0.02;0.016 0.026;0.012 0.02" repeatCount="indefinite"/></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="14" xChannelSelector="R" yChannelSelector="G"/></filter>'
+        +'<filter id="al-flame" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.02 0.06" numOctaves="2" seed="2" result="n"><animate attributeName="seed" dur="1.1s" values="1;2;3;4;5;6;7;8;9" repeatCount="indefinite"/></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="9" xChannelSelector="R" yChannelSelector="G"/></filter></svg>';
       document.body.appendChild(defs);
       var pct=function(r){ return 'left:'+r[0]+'%;top:'+r[1]+'%;width:'+r[2]+'%;height:'+r[3]+'%'; };
       var warp=function(inner,src,r,fid){ var s=document.createElement('span'); s.className='al-warp';
@@ -367,7 +368,11 @@
           inner.style.cssText='left:'+((cw-dw)/2)+'px;top:'+((ch-dh)/2)+'px;width:'+dw+'px;height:'+dh+'px'; };
         place(); if(window.ResizeObserver) new ResizeObserver(place).observe(img); window.addEventListener('resize',place);
         if(!calm0){ (a.water||[]).forEach(function(r){ warp(inner,img.src,r,'al-water'); }); (a.smoke||[]).forEach(function(r){ warp(inner,img.src,r,'al-smoke'); });
-          (a.dust||[]).forEach(function(r){ dust(inner,r); }); }
+          (a.dust||[]).forEach(function(r){ dust(inner,r); });
+          (a.flame||[]).forEach(function(r){ warp(inner,img.src,r,'al-flame'); var g=document.createElement('span'); g.className='al-glow'; g.style.cssText=pct(r); inner.appendChild(g); });
+          (a.spin||[]).forEach(function(c){ var r=[c[0]-c[2],c[1]-c[3],c[2]*2,c[3]*2], s=document.createElement('span'); s.className='al-spin';
+            s.style.cssText=pct(r)+';background-image:url("'+img.src+'");background-size:'+(10000/r[2])+'% '+(10000/r[3])+'%;background-position:'+(r[0]/(100-r[2])*100)+'% '+(r[1]/(100-r[3])*100)+'%';
+            inner.appendChild(s); }); }
         (a.faces||[]).forEach(function(f){ face(inner,f); }); });
     }).catch(function(){});
   })();

@@ -801,3 +801,14 @@ footer a{color:var(--gold);text-decoration:none}
 .lf-glow{mix-blend-mode:screen;opacity:.28;background:radial-gradient(circle at var(--bx) var(--by),rgba(255,226,160,.85) 0,rgba(255,186,96,.35) 3.5%,transparent 16%),radial-gradient(ellipse 26% 42% at calc(var(--bx) + 9%) calc(var(--by) + 22%),rgba(255,184,100,.32),transparent 72%)}
 .lf-dark{mix-blend-mode:multiply;opacity:0;background:radial-gradient(circle at var(--bx) var(--by),rgba(20,14,10,.95) 0,rgba(20,14,10,.75) 5%,transparent 20%),radial-gradient(ellipse 30% 48% at calc(var(--bx) + 10%) calc(var(--by) + 24%),rgba(14,12,20,.75),transparent 75%)}
 @media (max-width:820px){.lamp-fx{--bx:11.6%;--by:8.1%;height:calc(100vw * 1.5)}}
+
+.al-glow,.al-spin{position:absolute;display:block;pointer-events:none}
+.al-glow{mix-blend-mode:screen;background:radial-gradient(closest-side,rgba(255,140,40,.35),transparent);animation:alglow 1.3s steps(5) infinite}
+@keyframes alglow{0%{opacity:.5}20%{opacity:.9}45%{opacity:.6}70%{opacity:1}100%{opacity:.5}}
+.al-spin{border-radius:50%;-webkit-mask-image:radial-gradient(closest-side,#000 62%,transparent);mask-image:radial-gradient(closest-side,#000 62%,transparent);animation:alspin 150s linear infinite}
+@keyframes alspin{to{transform:rotate(-360deg)}}
+@media (prefers-reduced-motion:reduce){.al-glow,.al-spin{animation:none}}
+
+/* landscape photos: photo on top across the whole clipping, headline below, nothing cropped */
+.clip .news.wide{grid-template-columns:1fr;gap:10px}
+.clip .news.wide .ph{order:-1}

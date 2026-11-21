@@ -437,7 +437,7 @@ def make_wall(cases, dj, lang, h, ui, hj):
         dd = json.loads(dp.read_text(encoding="utf-8"))
         topic = dd["i18n"][lang]["title"].split("?")[0].split(":")[0]
         wall.append({"kind": "dossier", "n": d["n"], "href": dossier_paths(d["n"])[lang], "world": d["world"], "clip": None, "img": d["clip_img"],
-                     "head": d["clip"][lang], "meta": f"{h['dossier'].title()} {d['n']}", "stamp": "RE-CHECKED", "fx": d.get("fx", "dust"), "title": topic})
+                     "head": d["clip"][lang], "meta": f"{h['dossier'].title()} {d['n']}", "stamp": "RE-CHECKED", "fx": d.get("fx", "dust"), "title": topic, "ar": img_ar(d["clip_img"])})
     for k, w in enumerate(wall):
         w["r"] = round(((k * 37) % 9 - 4) * 0.55, 2)          # a fixed, hand-pinned tilt (same on every build)
         w["sw"] = round((k * 0.9) % 7, 1)                      # sway phase
@@ -517,6 +517,14 @@ def page_paths(name):
     return {l: (f"/{name}.html" if l == "en" else f"/{l}/{name}.html") for l in LANGS}
 
 
+def img_ar(src):
+    """width/height of a site image, for frames that must show the whole picture"""
+    from PIL import Image
+    try:
+        with Image.open(SITE / src.lstrip("/")) as im: return f"{im.width}/{im.height}"
+    except Exception: return "4/5"
+
+
 def build_pages(ui_all, env, ver):
     """stories (dossiers), about (personnel files), shop + kit (evidence locker): same URLs as before for EN"""
     old = json.loads((BUILD / "ui_pages_old.json").read_text(encoding="utf-8"))   # translations of the previous site
@@ -532,7 +540,7 @@ def build_pages(ui_all, env, ver):
             "stories": dict(kicker=PAGE_KICKER["stories"][lang], title=o["st_title"], intro=o["st_intro"],
                             open_file={"en": "Open the file", "it": "Apri il fascicolo", "de": "Akte öffnen", "es": "Abrir el expediente", "fr": "Ouvrir le dossier"}[lang],
                             topics=[{"key": "all", "name": o["t_all"]}] + [{"key": k, "name": hj[lang]["w"][k]} for k in WORLD_KEYS if any(x["world"] == k for x in dj["dossiers"])],
-                            dossiers=[dict(x, page=dossier_paths(x["n"])[lang] if (BUILD / "dossiers" / f"D{x['n']}.json").exists() else None) for x in dj["dossiers"]],
+                            dossiers=[dict(x, ar=img_ar(x["clip_img"]), page=dossier_paths(x["n"])[lang] if (BUILD / "dossiers" / f"D{x['n']}.json").exists() else None) for x in dj["dossiers"]],
                             coming=dj["coming"]),
             "about": dict(kicker=PAGE_KICKER["about"][lang], title=o["ab_title"], intro=o["ab_intro"],
                           people=[{"name": "Michele Barison", "img": "/michele.jpg", "role": o["m_role"], "bio": o["m_bio"], "stamp": "LAB FOUNDER"},

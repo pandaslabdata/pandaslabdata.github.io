@@ -51,7 +51,7 @@
           <span class="sway" style="animation-delay:-{{ loop.index0 * 0.9 }}s">
             <span class="shade"></span>
             {% if f.clip %}<span class="realclip"><img src="{{ f.clip }}" alt="{{ f.head }}" loading="lazy"></span>
-            {% else %}<span class="news" data-torn><span class="h3" style="--hf:{{ [1, 26 / (f.head|length)]|min|round(3) }}">{{ f.head }}</span><span class="ph live"{% if f.fx in ['water', 'spin'] %} data-fx="{{ f.fx }}"{% endif %}><img src="{{ f.img }}" alt="" loading="lazy" width="576" height="720"></span><span class="cols" aria-hidden="true"></span></span>{% endif %}
+            {% else %}{% set ar = (f.ar or "4/5").split('/') %}<span class="news{% if (ar[0]|int) > (ar[1]|int) * 1.15 %} wide{% endif %}" data-torn><span class="h3" style="--hf:{{ [1, 26 / (f.head|length)]|min|round(3) }}">{{ f.head }}</span><span class="ph live"{% if f.ar %} style="aspect-ratio:{{ f.ar }}"{% endif %}{% if f.fx in ['water', 'spin'] %} data-fx="{{ f.fx }}"{% endif %}><img src="{{ f.img }}" alt="" loading="lazy" width="576" height="720"></span><span class="cols" aria-hidden="true"></span></span>{% endif %}
             <span class="pin2"></span>
           </span>
           <span class="meta">{{ f.meta }}</span>

@@ -11,7 +11,7 @@
       <a class="clip wpf rv" href="{{ d.page or d.url }}"{% if not d.page %} target="_blank" rel="noopener"{% endif %} style="--r:{{ [-1.6, 1.2, -0.6, 1.8, -1.1][loop.index0 % 5] }}deg">
         <span class="sway" style="animation-delay:-{{ loop.index0 * 0.9 }}s">
           <span class="shade"></span>
-          <span class="news" data-torn><span class="h3" style="--hf:{{ [1, 26 / (d.clip[lang]|length)]|min|round(3) }}">{{ d.clip[lang] }}</span><span class="ph live"><img src="{{ d.clip_img }}" alt="" loading="lazy"></span><span class="cols" aria-hidden="true"></span></span>
+          {% set ar = d.ar.split('/') %}<span class="news{% if (ar[0]|int) > (ar[1]|int) * 1.15 %} wide{% endif %}" data-torn><span class="h3" style="--hf:{{ [1, 26 / (d.clip[lang]|length)]|min|round(3) }}">{{ d.clip[lang] }}</span><span class="ph live" style="aspect-ratio:{{ d.ar }}"><img src="{{ d.clip_img }}" alt="" loading="lazy"></span><span class="cols" aria-hidden="true"></span></span>
           <span class="pin2"></span>
         </span>
       </a>
