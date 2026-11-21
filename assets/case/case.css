@@ -312,6 +312,11 @@ footer a{color:var(--gold);text-decoration:none}
 .world-tabs a.on{background:var(--gold);color:var(--night)}
 .empty-drawer{position:relative;max-width:520px;margin:30px auto;padding:34px 26px;text-align:center}
 .empty-drawer p{font-size:16px;color:var(--ink)}
+/* cover stamp always readable (no multiply over dark photos); YouTube thumbnails cropped to 16:9 (no black bars) */
+.cover .stamp{mix-blend-mode:normal;background:rgba(236,222,190,.95)!important;z-index:5}
+.cover .yt-cover{aspect-ratio:16/9;object-fit:cover;width:100%}
+.dossier-head .cover:has(.yt-cover) .stamp{left:auto;right:-12px;bottom:-14px}
+@media (max-width:760px){.dossier-head .cover:has(.yt-cover) .stamp{left:-10px;right:auto;bottom:-12px}}
 /* =================== DOSSIER pages =================== */
 .cardsx{grid-template-columns:repeat(2,1fr)}
 .xcard{position:relative;min-height:230px;padding:42px 22px 18px;background:url("/assets/board/card.webp") center/100% 100% no-repeat;filter:drop-shadow(0 8px 10px rgba(0,0,0,.25))}
