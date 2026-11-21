@@ -38,9 +38,9 @@ nav.main a:hover,nav.main a.on{color:var(--gold);opacity:1}
   clip-path:polygon(0 2%,4% 0,9% 1.5%,15% .3%,22% 1.8%,30% .2%,38% 1.4%,47% 0,55% 1.6%,63% .4%,71% 1.7%,80% .2%,88% 1.5%,95% 0,100% 1.8%,99.4% 20%,100% 42%,99.2% 64%,100% 86%,99.5% 98%,94% 100%,86% 98.6%,77% 100%,68% 98.4%,59% 100%,50% 98.6%,41% 100%,32% 98.5%,23% 100%,14% 98.4%,6% 100%,0 98.6%,.6% 76%,0 52%,.7% 30%)}
 .pin{position:absolute;width:18px;height:18px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffe7a6,#c58b16 45%,#6b4708 100%);box-shadow:0 3px 5px rgba(0,0,0,.5);z-index:3}
 .tape{position:absolute;width:90px;height:26px;background:rgba(230,215,182,.55);transform:rotate(-8deg);z-index:3;box-shadow:0 1px 3px rgba(0,0,0,.2)}
-.stamp{display:inline-block;font-family:"Alfa Slab One";color:var(--red);border:3px solid var(--red);padding:4px 12px;border-radius:6px;letter-spacing:.06em;transform:rotate(-7deg);box-shadow:inset 0 0 0 2px rgba(168,20,15,.25);opacity:.92;mix-blend-mode:multiply}
+.stamp{display:inline-block;font-family:"Alfa Slab One";color:var(--red);border:3px solid var(--red);padding:4px 12px;border-radius:6px;letter-spacing:.06em;transform:rotate(-7deg);box-shadow:inset 0 0 0 2px rgba(168,20,15,.25);opacity:.95}
 .js .stamp.anim{opacity:0;transform:rotate(-7deg) scale(1.7)}
-.js .stamp.anim.in{opacity:.92;transform:rotate(-7deg) scale(1);transition:transform .22s cubic-bezier(.3,1.6,.6,1),opacity .1s}
+.js .stamp.anim.in{opacity:.95;transform:rotate(-7deg) scale(1);transition:transform .22s cubic-bezier(.3,1.6,.6,1),opacity .1s}
 /* certainty labels = the same red rubber stamps on torn paper used in the videos */
 .label{display:inline-flex;align-items:center;font:700 11.5px/1 "Special Elite",monospace;letter-spacing:.1em;padding:5px 8px 4px;color:var(--red);
   background:rgba(236,222,190,.96);border:2px solid var(--red);box-shadow:inset 0 0 0 1.5px rgba(236,222,190,.96),inset 0 0 0 3px var(--red);
@@ -193,7 +193,7 @@ footer a{color:var(--gold);text-decoration:none}
 .clipn .pin{left:50%;top:-10px;width:16px}
 .shot{display:block}
 .shot-img{display:block;border:6px solid #f3ead6;border-bottom-width:22px;box-shadow:0 6px 10px rgba(0,0,0,.45);background:#111}
-.shot-img img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.shot-img img{width:100%;aspect-ratio:16/9;object-fit:cover}
 .shot .tape{left:28%;top:-9%;width:46%}
 .shot-cap{position:absolute;left:0;right:0;bottom:3px;text-align:center;font:clamp(10px,.85vw,13px) "Caveat",cursive;color:var(--ink)}
 .scrap .bgimg{filter:drop-shadow(0 4px 6px rgba(0,0,0,.4))}
@@ -212,7 +212,7 @@ footer a{color:var(--gold);text-decoration:none}
 .folder-card:hover{transform:translateY(-6px) rotate(-1deg)}
 .folder-card .bgimg{width:100%;filter:drop-shadow(0 10px 14px rgba(0,0,0,.5))}
 .f-photo{position:absolute;left:14%;top:17%;width:54%;aspect-ratio:3/4;overflow:hidden;background:#111;border:5px solid #f1e8d4;box-shadow:0 4px 8px rgba(0,0,0,.35);transform:rotate(-3deg)}
-.f-photo.wide{width:72%;aspect-ratio:16/10;top:20%;left:10%}
+.f-photo.wide{width:72%;aspect-ratio:16/9;top:20%;left:10%}
 .f-photo img{width:100%;height:100%;object-fit:cover;object-position:top}
 .f-clip{position:absolute;left:18%;top:9%;width:12%;z-index:2}
 .f-photo.wide~.f-clip{left:30%;top:13%;width:40%}
@@ -253,7 +253,7 @@ footer a{color:var(--gold);text-decoration:none}
 .dfile.hide{display:none}
 .dfile:nth-child(odd){transform:rotate(-.5deg)}.dfile:nth-child(even){transform:rotate(.6deg)}
 .dphoto{position:relative;display:block;background:#111;border:6px solid #f3ead6;box-shadow:0 5px 10px rgba(0,0,0,.35);transform:rotate(-2deg)}
-.dphoto img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.dphoto img{width:100%;aspect-ratio:16/9;object-fit:cover}
 .dphoto .play{position:absolute;inset:0;display:grid;place-items:center;font:34px "Alfa Slab One";color:var(--gold);text-shadow:0 2px 8px #000;opacity:.9}
 .tape-a{position:absolute;left:14%;top:6px;width:30%;transform:rotate(-7deg);z-index:3;opacity:.92}
 .dbody h2{font:600 19px/1.3 "Source Serif 4";margin:6px 0 12px}
@@ -289,7 +289,7 @@ footer a{color:var(--gold);text-decoration:none}
 .kfile{position:relative;padding:28px 22px 24px;display:flex;flex-direction:column;gap:10px}
 .kfile:nth-child(2){transform:rotate(.8deg)}.kfile:nth-child(3){transform:rotate(-.7deg)}
 .kphoto{display:block;border:6px solid #f3ead6;box-shadow:0 5px 10px rgba(0,0,0,.35);transform:rotate(-1.5deg);background:#111}
-.kphoto img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.kphoto img{width:100%;aspect-ratio:16/9;object-fit:cover}
 .kfile h2{font:600 19px/1.3 "Source Serif 4";color:var(--navy);margin-top:6px}
 .kfile p{font-size:15px;line-height:1.5;flex:1}
 .kfile .btn{align-self:flex-start;min-height:46px}
@@ -317,6 +317,9 @@ footer a{color:var(--gold);text-decoration:none}
 .cover .yt-cover{aspect-ratio:16/9;object-fit:cover;width:100%}
 .dossier-head .cover:has(.yt-cover) .stamp{left:auto;right:-12px;bottom:-14px}
 @media (max-width:760px){.dossier-head .cover:has(.yt-cover) .stamp{left:-10px;right:auto;bottom:-12px}}
+/* stamps over photos: solid paper behind the ink, everywhere */
+.folder-card .stamp,.dfile .stamp,.kfile .stamp,.pfile .stamp,.file .stamp,.cover .stamp{background:rgba(236,222,190,.95)!important;mix-blend-mode:normal}
+
 /* =================== DOSSIER pages =================== */
 .cardsx{grid-template-columns:repeat(2,1fr)}
 .xcard{position:relative;min-height:230px;padding:42px 22px 18px;background:url("/assets/board/card.webp") center/100% 100% no-repeat;filter:drop-shadow(0 8px 10px rgba(0,0,0,.25))}
