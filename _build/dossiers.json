@@ -1,0 +1,12 @@
+{
+ "_comment": "Long data episodes (EP1-EP6), filed as DOSSIER 01-06. Titles and URLs are the real YouTube ones (from stories.html, 21/11/2026). Each gets its own page only after a Science QA recheck: until then the folder links to the video.",
+ "dossiers": [
+  {"n": "06", "ep": "EP 6", "world": "earth", "title": "Why 68% of All Meteorites Are Found in One Place", "url": "https://www.youtube.com/watch?v=SGAB3sh-rvs", "thumb": "https://i.ytimg.com/vi/SGAB3sh-rvs/hqdefault.jpg"},
+  {"n": "05", "ep": "EP 5", "world": "earth", "title": "Chicxulub Crater: Why You Can't See the World's Most Famous Impact", "url": "https://www.youtube.com/watch?v=OXJaJOZGDf0", "thumb": "https://i.ytimg.com/vi/OXJaJOZGDf0/hqdefault.jpg"},
+  {"n": "04", "ep": "EP 4", "world": "history", "title": "The Geography of Dinosaur Discoveries (It's Not What You Think)", "url": "https://www.youtube.com/watch?v=IS_AozDs8ww", "thumb": "https://i.ytimg.com/vi/IS_AozDs8ww/hqdefault.jpg"},
+  {"n": "03", "ep": "EP 3", "world": "history", "title": "Why T. Rex Keeps the Crown (Even If It's Not the Biggest)", "url": "https://www.youtube.com/watch?v=k_eJcF2WMfw", "thumb": "https://i.ytimg.com/vi/k_eJcF2WMfw/hqdefault.jpg"},
+  {"n": "02", "ep": "EP 2", "world": "history", "title": "What If the Biggest Dinosaur Ever… Is Missing?", "url": "https://www.youtube.com/watch?v=4bmygw3PxK8", "thumb": "https://i.ytimg.com/vi/4bmygw3PxK8/hqdefault.jpg"},
+  {"n": "01", "ep": "EP 1", "world": "history", "title": "Stegosaurus vs. T. rex: A tale of two eras", "url": "https://www.youtube.com/watch?v=E4gdm25XoI8", "thumb": "https://i.ytimg.com/vi/E4gdm25XoI8/hqdefault.jpg"}
+ ],
+ "world_links": {"space": "/stories.html#space", "earth": "/stories.html#map", "life": "/stories.html#evo", "history": "/stories.html#dino"}
+}

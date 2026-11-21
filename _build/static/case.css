@@ -9,8 +9,9 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
 @supports (overflow:clip){html,body{overflow-x:clip}}
-body{background:var(--felt),radial-gradient(120% 80% at 50% 0%,#22324a 0%,var(--night) 70%);background-color:var(--night);color:var(--cream);
-  font:17px/1.65 "Source Serif 4",Georgia,serif}
+/* real navy felt (SITE-A5), darkened at the edges like a room lit by one lamp */
+body{background:radial-gradient(130% 90% at 50% 0%,rgba(16,22,31,.15) 0%,rgba(16,22,31,.72) 75%),url("/assets/board/felt.webp") 0 0/512px 512px repeat;
+  background-color:var(--night);color:var(--cream);font:17px/1.65 "Source Serif 4",Georgia,serif}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
@@ -20,8 +21,8 @@ a{color:inherit}
 /* header */
 header.top{position:sticky;top:0;z-index:20;background:rgba(16,22,31,.88);backdrop-filter:blur(8px);border-bottom:1px dashed rgba(212,147,24,.35)}
 header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
-.logo{font-family:"Alfa Slab One";font-size:21px;color:var(--cream);text-decoration:none;letter-spacing:.04em;white-space:nowrap}
-.logo span{color:var(--gold)}
+.logo{display:block;line-height:0}
+.logo img{height:30px;width:auto}
 nav.main{display:flex;gap:24px;font:15px "Special Elite",monospace}
 nav.main a{text-decoration:none;opacity:.85;white-space:nowrap}
 nav.main a:hover,nav.main a.on{color:var(--gold);opacity:1}
@@ -40,8 +41,10 @@ nav.main a:hover,nav.main a.on{color:var(--gold);opacity:1}
 .stamp{display:inline-block;font-family:"Alfa Slab One";color:var(--red);border:3px solid var(--red);padding:4px 12px;border-radius:6px;letter-spacing:.06em;transform:rotate(-7deg);box-shadow:inset 0 0 0 2px rgba(168,20,15,.25);opacity:.92;mix-blend-mode:multiply}
 .js .stamp.anim{opacity:0;transform:rotate(-7deg) scale(1.7)}
 .js .stamp.anim.in{opacity:.92;transform:rotate(-7deg) scale(1);transition:transform .22s cubic-bezier(.3,1.6,.6,1),opacity .1s}
-.label{display:inline-flex;align-items:center;font:12px/1 "Special Elite",monospace;letter-spacing:.08em;padding:5px 9px;border-radius:5px;color:#fff;border:1.5px dashed rgba(255,255,255,.55);vertical-align:middle;white-space:nowrap}
-.l-observed{background:#6f7d36}.l-estimate{background:var(--blue)}.l-simulation{background:#b57a10}.l-scenario{background:var(--navy)}.l-hypothesis{background:var(--pencil)}
+/* certainty labels = the same red rubber stamps on torn paper used in the videos */
+.label{display:inline-flex;align-items:center;font:700 11.5px/1 "Special Elite",monospace;letter-spacing:.1em;padding:5px 8px 4px;color:var(--red);
+  background:rgba(236,222,190,.96);border:2px solid var(--red);box-shadow:inset 0 0 0 1.5px rgba(236,222,190,.96),inset 0 0 0 3px var(--red);
+  border-radius:3px;vertical-align:middle;white-space:nowrap;transform:rotate(-2deg)}
 .js .rv{opacity:0;transform:translateY(24px)}
 .js .rv.in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s ease}
 
@@ -133,6 +136,83 @@ footer a{color:var(--gold);text-decoration:none}
 .file .stamp{position:absolute;right:8px;top:58px;font-size:14px;background:rgba(230,215,182,.75);z-index:4}
 .file .pin{left:50%;top:22px}
 
+/* =================== HOME: the investigation room =================== */
+.room-wrap{position:relative}
+.room{position:relative;max-width:1500px;margin:0 auto;aspect-ratio:3/2;background:url("/assets/board/room_16x9.webp") center/cover no-repeat;overflow:hidden}
+.room .cork{position:absolute;left:12%;top:6%;width:73.5%;height:56%}
+.it{position:absolute;z-index:3;left:var(--x);top:var(--y);width:var(--w);transform:rotate(var(--r));display:block;text-decoration:none;color:var(--ink)}
+.it .bgimg{width:100%;height:auto;filter:drop-shadow(0 8px 10px rgba(0,0,0,.45))}
+.it .pin{position:absolute;left:50%;top:-9%;width:9%;min-width:16px;transform:translateX(-50%);z-index:3;filter:drop-shadow(2px 4px 3px rgba(0,0,0,.5))}
+.it .tape{position:absolute;left:30%;top:-8%;width:42%;transform:rotate(-6deg);z-index:3;opacity:.92}
+.card-h .card-txt{position:absolute;inset:16% 7% 8% 7%;display:flex;flex-direction:column;justify-content:center}
+.card-h .kick{font:clamp(9px,.9vw,13px) "Special Elite";letter-spacing:.14em;color:#8a5f0d}
+.card-h h1{font-size:clamp(20px,2.9vw,46px);color:var(--navy);margin-top:6px;line-height:1.02}
+.card-h h1 em{font-style:normal;color:var(--red)}
+.pola .pola-photo{position:absolute;left:var(--wx);top:var(--wy);width:var(--ww);height:var(--wh);overflow:hidden;background:#111;z-index:2;box-shadow:inset 0 0 0 1px rgba(0,0,0,.3)}
+.pola .pola-photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.pola .pola-cap{position:absolute;left:0;right:0;bottom:6%;text-align:center;font:clamp(11px,1.15vw,18px)/1 "Caveat",cursive;color:var(--ink)}
+.pola .stampimg{position:absolute;left:-26%;bottom:16%;width:72%;transform:rotate(-9deg);z-index:4;filter:drop-shadow(0 4px 5px rgba(0,0,0,.4))}
+.postit .post-txt{position:absolute;inset:12% 9% 15% 9%;font-family:"Caveat",cursive;line-height:1.05;font-size:calc(var(--pf,1) * clamp(12px,1.25vw,20px));color:var(--ink);display:flex;align-items:center;justify-content:center;text-align:center}
+.drawer-list{display:none}
+.yarn{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:2;pointer-events:none}
+.yarn path{fill:none;stroke:#b3241c;stroke-width:3;vector-effect:non-scaling-stroke;stroke-linecap:round;filter:drop-shadow(0 3px 2px rgba(0,0,0,.5));stroke-dasharray:1;stroke-dashoffset:0}
+.y-m{display:none}
+.glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(38% 34% at 76% 40%,rgba(255,190,90,.22),transparent 70%);mix-blend-mode:screen}
+.desk{position:absolute;left:-2%;width:104%;max-width:none;bottom:-6%;z-index:5;filter:drop-shadow(0 -10px 18px rgba(0,0,0,.45));will-change:transform}
+.hero-under{text-align:center;margin-top:-10px;position:relative;z-index:6}
+.hero-under .lede{margin:0 auto 18px;max-width:680px}
+.ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+/* entrance: items get pinned one after another, the yarn is pulled tight */
+.js .room .it{opacity:0;transform:translateY(-26px) rotate(var(--r)) scale(1.04)}
+.js .room.on .it{opacity:1;transform:rotate(var(--r));transition:transform .55s cubic-bezier(.3,1.5,.5,1) var(--d,0s),opacity .25s var(--d,0s)}
+.js .room .yarn path{stroke-dashoffset:1}
+.js .room.on .yarn path{stroke-dashoffset:0;transition:stroke-dashoffset 1.6s ease-in-out 1.1s}
+.js .room .stampimg{opacity:0;transform:rotate(-9deg) scale(1.8)}
+.js .room.on .stampimg{opacity:1;transform:rotate(-9deg) scale(1);transition:transform .22s cubic-bezier(.3,1.6,.6,1) 1.9s,opacity .1s 1.9s}
+.room .glow{animation:lamp 7s ease-in-out infinite}
+@keyframes lamp{0%,100%{opacity:.85}45%{opacity:1}52%{opacity:.78}58%{opacity:1}}
+.it.pola:hover,.it.postit:hover{transform:rotate(0deg) scale(1.04)!important;transition:transform .25s}
+
+.sec{padding-top:70px}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(30px,4vw,46px)}
+.sec-head p{font:15px "Special Elite";opacity:.8;max-width:460px}
+.swipe-hint.light{color:var(--gold)}
+.cabinet{display:flex;gap:26px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;padding:22px 4px 26px}
+.folder-card{position:relative;flex:0 0 250px;scroll-snap-align:start;text-decoration:none;color:var(--ink);transition:transform .25s}
+.folder-card:hover{transform:translateY(-6px) rotate(-1deg)}
+.folder-card .bgimg{width:100%;filter:drop-shadow(0 10px 14px rgba(0,0,0,.5))}
+.f-photo{position:absolute;left:14%;top:17%;width:54%;aspect-ratio:3/4;overflow:hidden;background:#111;border:5px solid #f1e8d4;box-shadow:0 4px 8px rgba(0,0,0,.35);transform:rotate(-3deg)}
+.f-photo.wide{width:72%;aspect-ratio:16/10;top:20%;left:10%}
+.f-photo img{width:100%;height:100%;object-fit:cover;object-position:top}
+.f-clip{position:absolute;left:18%;top:9%;width:12%;z-index:2}
+.f-photo.wide~.f-clip{left:30%;top:13%;width:40%}
+.f-label{position:absolute;left:8%;right:8%;bottom:7%;background:#f3ead6;padding:6px 8px;font:12px/1.25 "Special Elite";box-shadow:0 2px 4px rgba(0,0,0,.25);transform:rotate(1deg);
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.f-label b{display:block;color:var(--red);letter-spacing:.1em}
+.folder-card .stamp{position:absolute;right:5%;top:6%;font-size:12px;padding:3px 8px;background:rgba(236,222,190,.9);z-index:3}
+.stamp.navy{color:var(--navy);border-color:var(--navy)}
+.drawers{position:relative;max-width:1000px;margin:0 auto}
+.drawers img{width:100%;filter:drop-shadow(0 18px 26px rgba(0,0,0,.55))}
+.drawer{position:absolute;left:var(--ax);top:var(--ay);width:var(--aw);height:var(--ah);text-decoration:none;border-radius:6px;transition:transform .3s,box-shadow .3s}
+.drawer:hover,.drawer:focus-visible{transform:translateY(-3px);box-shadow:0 0 0 2px rgba(212,147,24,.7),0 10px 30px rgba(255,190,90,.25)}
+.drawer .d-lab{position:absolute;left:var(--rx);top:var(--ry);width:var(--rw);height:var(--rh);display:grid;place-items:center;font-family:"Special Elite";font-size:calc(var(--fit,1) * clamp(12px,1.7vw,21px));color:var(--ink);letter-spacing:.04em;white-space:nowrap}
+.drawer .d-desc{position:absolute;left:6%;right:6%;bottom:6%;text-align:center;font:clamp(10px,1.1vw,14px) "Caveat",cursive;font-size:clamp(14px,1.6vw,20px);color:#f3e2bd;text-shadow:0 1px 3px #000;opacity:0;transition:opacity .3s}
+.drawer:hover .d-desc,.drawer:focus-visible .d-desc{opacity:1}
+.method{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.method .m{padding:26px 16px 18px;text-align:center}
+.method .m-stamp{width:88%;margin:0 auto 8px;transform:rotate(-4deg)}
+.method .m p{font-size:14.5px;line-height:1.45;color:var(--ink)}
+.method .pin-s{position:absolute;left:50%;top:-10px;width:16px;transform:translateX(-50%);z-index:3}
+.follow{text-align:center}
+.socials{display:flex;gap:14px;justify-content:center;margin:18px 0 34px}
+.socials a{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--navy);border:2px dashed rgba(212,147,24,.7);box-shadow:0 0 0 4px var(--navy)}
+.socials svg{width:22px;height:22px;fill:var(--cream)}
+.mind{position:relative;display:block;max-width:1100px;margin:0 auto;text-decoration:none;border-radius:10px;overflow:hidden;border:2px dashed rgba(212,147,24,.55)}
+.mind img{width:100%;max-height:360px;object-fit:cover;object-position:28% center;filter:brightness(.7)}
+.mind .slab{position:absolute;left:5%;bottom:30%;font-size:clamp(22px,3vw,40px);color:var(--cream);text-shadow:0 2px 8px #000}
+.mind .btn{position:absolute;left:5%;bottom:10%}
+
 /* mobile: thumb bar, language sheet, swipe rails */
 .tabbar,.sheet-lang,.swipe-hint{display:none}
 @media (max-width:920px){nav.main{gap:16px;font-size:14px}}
@@ -200,6 +280,31 @@ footer a{color:var(--gold);text-decoration:none}
   .axis{margin:0}
   .sources li{grid-template-columns:34px 1fr;font-size:14.5px}
   .phone{max-width:200px;margin:0 auto}
+  /* home on the phone: the vertical board (SITE-A4), no desk layer (it is in the plate) */
+  .room{aspect-ratio:2/3;background-image:url("/assets/board/room_9x16.webp")}
+  .room .cork{left:9%;top:6%;width:81%;height:73%}
+  .it{left:var(--mx);top:var(--my);width:var(--mw);transform:rotate(var(--mr))}
+  .js .room .it{transform:translateY(-26px) rotate(var(--mr)) scale(1.04)}
+  .js .room.on .it{transform:rotate(var(--mr))}
+  .card-h .kick{font-size:10px}
+  .card-h h1{font-size:min(30px,7.2vw)}
+  .pola .pola-cap{font-size:16px}
+  .postit .post-txt{font-size:calc(var(--pf,1) * 19px)}
+  .drawer .d-lab{opacity:.9}
+  .drawer-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+  .drawer-list a{display:flex;flex-direction:column;gap:2px;min-height:56px;padding:10px 12px;text-decoration:none;border-radius:8px;background:rgba(46,65,91,.85);border:1.5px dashed rgba(212,147,24,.55)}
+  .drawer-list b{font:15px "Special Elite";color:var(--gold)}
+  .drawer-list span{font-size:13px;line-height:1.3;opacity:.85}
+  .y-d{display:none}.y-m{display:block}
+  .desk{display:none}
+  .glow{background:radial-gradient(60% 40% at 80% 62%,rgba(255,190,90,.22),transparent 70%)}
+  .hero-under{margin-top:14px}
+  .sec{padding-top:46px}
+  .cabinet{--card:66%;margin:0 -20px;padding-left:20px;padding-right:20px}
+  .method{--card:72%;margin:0 -20px;padding-left:20px;padding-right:20px}
+  .drawer .d-desc{display:none}
+  .drawer .d-lab{font-size:calc(var(--fit,1) * 12.5px)}
+  .mind img{max-height:none;height:42vh}
   .arch-head{padding:24px 0 6px}
   .files{--card:68%;margin:20px -20px 0;padding-left:20px;padding-right:20px}
   footer{margin-top:50px}

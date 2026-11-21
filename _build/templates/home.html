@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="room-wrap" aria-label="{{ h.kicker }}">
+  <div class="room" data-room>
+    <div class="cork">
+      <svg class="yarn y-d" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M24 1 C 40 -3, 52 -4, 62 -1 S 80 22, 84 27 S 62 58, 51 66"/></svg>
+      <svg class="yarn y-m" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M50 -2 C 34 18, 20 34, 26 45 S 62 44, 72 50 S 76 66, 69 74"/></svg>
+
+      <div class="it card-h" style="--x:3%;--y:4%;--w:42%;--r:-2deg;--mx:6%;--my:0%;--mw:88%;--mr:-1deg;--d:0s">
+        <img class="bgimg" src="/assets/board/card.webp" alt="" width="520" height="352">
+        <img class="pin" src="/assets/board/pin1.webp" alt="" width="73" height="155">
+        <div class="card-txt"><div class="kick">{{ h.kicker }}</div><h1 class="slab">{{ h.h1a }}<br><em>{{ h.h1b }}</em></h1></div>
+      </div>
+
+      <a class="it pola" href="{{ latest.href }}" style="--x:52%;--y:2%;--w:20%;--r:3deg;--mx:5%;--my:47%;--mw:42%;--mr:-3deg;--d:.3s">
+        <span class="pola-photo" style="--wx:{{ g.polaroid_window[0]*100 }}%;--wy:{{ g.polaroid_window[1]*100 }}%;--ww:{{ (g.polaroid_window[2]-g.polaroid_window[0])*100 }}%;--wh:{{ (g.polaroid_window[3]-g.polaroid_window[1])*100 }}%"><img src="{{ latest.cover }}" alt="{{ latest.title }}" width="507" height="900"></span>
+        <img class="bgimg" src="/assets/board/polaroid.webp" alt="" width="352" height="404">
+        <img class="pin" src="/assets/board/pin2.webp" alt="" width="73" height="157">
+        <span class="pola-cap">{{ h.latest }} · {{ latest.case }}</span>
+        <img class="stampimg" src="/assets/board/st_{{ latest.label|lower }}.webp" alt="{{ latest.label }}" width="240" height="108">
+      </a>
+
+      <div class="it clipn" style="--x:73%;--y:28%;--w:26%;--r:-3deg;--mx:48%;--my:51%;--mw:50%;--mr:4deg;--d:.6s">
+        <img class="bgimg" src="/assets/board/clip068.webp" alt="" width="620" height="407">
+        <img class="tape" src="/assets/board/tape1.webp" alt="" width="240" height="93">
+      </div>
+
+      <a class="it postit" href="{{ latest.href }}" style="--x:44%;--y:64%;--w:15%;--r:-4deg;--mx:52%;--my:73%;--mw:34%;--mr:3deg;--d:.9s">
+        <img class="bgimg" src="/assets/board/postit.webp" alt="" width="260" height="264">
+        <span class="post-txt" style="--pf:{{ [1, 30 / (latest.title|length)]|min }}">{{ latest.title }}</span>
+      </a>
+    </div>
+    <div class="glow" aria-hidden="true"></div>
+    <img class="desk" src="/assets/board/desk.webp" alt="" width="1505" height="628" data-depth="1">
+  </div>
+  <div class="wrap hero-under">
+    <p class="lede">{{ h.lead }}</p>
+    <div class="ctas"><a class="btn" href="{{ latest.href }}">{{ h.open_latest }} →</a><a class="btn ghost" href="#files">{{ h.browse }}</a></div>
+  </div>
+</section>
+
+<section id="files" class="wrap sec">
+  <div class="sec-head"><h2 class="slab">{{ h.files_t }}</h2><p>{{ h.files_p }}</p></div>
+  <div class="swipe-hint light"><span>{{ h.swipe }}</span><span class="arrow">→</span><span class="dots"></span></div>
+  <div class="cabinet rail">
+    {% for f in files %}<a class="folder-card rv" href="{{ f.href }}"{% if f.external %} target="_blank" rel="noopener"{% endif %}>
+      <img class="bgimg" src="/assets/board/folder.webp" alt="" width="438" height="410" loading="lazy">
+      <span class="f-photo{% if f.wide %} wide{% endif %}"><img src="{{ f.img }}" alt="" loading="lazy"></span>
+      <img class="f-clip" src="/assets/board/{% if f.wide %}tape2{% else %}clip{% endif %}.webp" alt="" loading="lazy">
+      <span class="f-label"><b>{{ f.kind }} {{ f.n }}</b>{{ f.title }}</span>
+      <span class="stamp anim{% if f.navy %} navy{% endif %}">{{ f.stamp }}</span>
+    </a>{% endfor %}
+  </div>
+</section>
+
+<section id="worlds" class="wrap sec">
+  <div class="sec-head"><h2 class="slab">{{ h.worlds_t }}</h2><p>{{ h.worlds_p }}</p></div>
+  <div class="drawers rv">
+    <img src="/assets/board/drawers.webp" alt="" width="1200" height="800" loading="lazy">
+    {% for w in worlds %}<a class="drawer" href="{{ w.href }}" style="--ax:{{ w.area[0]*100 }}%;--ay:{{ w.area[1]*100 }}%;--aw:{{ (w.area[2]-w.area[0])*100 }}%;--ah:{{ (w.area[3]-w.area[1])*100 }}%;--rx:{{ w.rel[0] }}%;--ry:{{ w.rel[1] }}%;--rw:{{ w.rel[2] }}%;--rh:{{ w.rel[3] }}%;--fit:{{ w.fit }}"><span class="d-lab">{{ w.name }}</span><span class="d-desc">{{ w.desc }}</span></a>{% endfor %}
+  </div>
+  <div class="drawer-list">{% for w in worlds %}<a href="{{ w.href }}"><b>{{ w.name }}</b><span>{{ w.desc }}</span></a>{% endfor %}</div>
+</section>
+
+<section id="method" class="wrap sec">
+  <div class="sec-head"><h2 class="slab">{{ h.method_t }}</h2><p>{{ h.method_p }}</p></div>
+  <div class="swipe-hint light"><span>{{ h.swipe_m }}</span><span class="arrow">→</span><span class="dots"></span></div>
+  <div class="method rail">
+    {% for m in method %}<div class="m paper rv"><img class="pin-s" src="/assets/board/pin1.webp" alt="" width="73" height="155"><img class="m-stamp" src="/assets/board/st_{{ m.key|lower }}.webp" alt="{{ m.key }}" width="240" height="108" loading="lazy"><p>{{ m.text }}</p></div>{% endfor %}
+  </div>
+</section>
+
+<section class="wrap sec follow">
+  <h2 class="slab">{{ h.follow_t }}</h2>
+  <div class="socials">{% for s in socials %}<a href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.name }}"><svg viewBox="0 0 24 24"><path d="{{ s.icon }}"/></svg></a>{% endfor %}</div>
+  <a class="mind" href="/about.html"><img src="/about-strip.jpg" alt="{{ h.mind_t }}" loading="lazy"><span class="slab">{{ h.mind_t }}</span><span class="btn">{{ h.mind_btn }}</span></a>
+</section>
+{% endblock %}

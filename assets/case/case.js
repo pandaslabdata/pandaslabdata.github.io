@@ -51,6 +51,25 @@
     r.addEventListener('scroll',function(){ requestAnimationFrame(upd); },{passive:true}); upd();
   });
 
+  // 4b) home: pin the evidence once the room is loaded; the desk moves with the scroll (depth), the board with the pointer
+  var room=document.querySelector('[data-room]');
+  if(room){
+    var start=function(){ room.classList.add('on'); };
+    var bg=new Image(); bg.onload=start; bg.onerror=start; bg.src=getComputedStyle(room).backgroundImage.replace(/^url\(["']?|["']?\)$/g,'');
+    setTimeout(start,1800);
+    var calm=matchMedia('(prefers-reduced-motion: reduce)').matches, desk=room.querySelector('.desk'), cork=room.querySelector('.cork');
+    if(!calm){
+      var mx=0,my=0,ticking=false;
+      var draw=function(){ ticking=false; var r=room.getBoundingClientRect(), k=Math.max(-1,Math.min(1,-r.top/r.height));
+        if(desk) desk.style.transform='translate3d('+(mx*-10)+'px,'+(k*70)+'px,0) scale('+(1+k*.04)+')';
+        if(cork) cork.style.transform='translate3d('+(mx*6)+'px,'+(my*4+k*-18)+'px,0)'; };
+      var ask=function(){ if(!ticking){ ticking=true; requestAnimationFrame(draw); } };
+      window.addEventListener('scroll',ask,{passive:true});
+      room.addEventListener('pointermove',function(e){ if(e.pointerType!=='mouse') return; var r=room.getBoundingClientRect(); mx=(e.clientX-r.left)/r.width-.5; my=(e.clientY-r.top)/r.height-.5; ask(); });
+      room.addEventListener('pointerleave',function(){ mx=my=0; ask(); });
+    }
+  }
+
   // 5) table of contents follows the reading + red thread under the header
   var toc=document.querySelector('.toc');
   if(toc){

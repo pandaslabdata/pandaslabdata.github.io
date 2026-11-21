@@ -1,4 +1,4 @@
-﻿"""Pandas Lab — Case pages for pandaslab.it, generated from the case files.
+"""Pandas Lab — Case pages for pandaslab.it, generated from the case files.
 
     python _build/build_cases.py            build every case in _build/cases/ (5 languages) + archive + sitemap
     python _build/build_cases.py --check    run only the consistency check, write nothing
@@ -265,11 +265,69 @@ def build_archive(cases, ui_all, env, ver):
         out.write_text(page, encoding="utf-8")
 
 
+SOCIALS = [  # same official profiles and icons as the current site
+    {"name": "YouTube", "url": "https://www.youtube.com/@pandaslab_data", "icon": "M23 7.2a4 4 0 0 0-2.8-2.9C18.2 4 12 4 12 4s-6.2 0-8.2.3A4 4 0 0 0 1 7.2 42 42 0 0 0 .7 12 42 42 0 0 0 1 16.8a4 4 0 0 0 2.8 2.9C5.8 20 12 20 12 20s6.2 0 8.2-.3a4 4 0 0 0 2.8-2.9A42 42 0 0 0 23.3 12 42 42 0 0 0 23 7.2zM9.8 15.5v-7l6 3.5z"},
+    {"name": "Instagram", "url": "https://www.instagram.com/pandaslab_data/", "icon": "M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.3.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.3-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.3.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.3-.4a3.9 3.9 0 0 1-1.4-.9c-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.3.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.3-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.1a6.7 6.7 0 1 0 0 13.4 6.7 6.7 0 0 0 0-13.4zm0 11a4.3 4.3 0 1 1 0-8.6 4.3 4.3 0 0 1 0 8.6zm8.5-11.3a1.6 1.6 0 1 1-3.2 0 1.6 1.6 0 0 1 3.2 0z"},
+    {"name": "TikTok", "url": "https://www.tiktok.com/@pandaslab_data", "icon": "M16.6 3c.4 2.1 1.7 3.6 3.9 3.8v2.9c-1.5.1-2.8-.3-4.3-1.2v6.3c0 4.4-3.4 6.6-6.7 5.9-2.6-.5-4.7-2.9-4.5-5.8.2-3.1 2.8-5.3 5.9-5.2l.9.1v3c-.4-.1-.8-.2-1.2-.1-1.4.1-2.5 1.2-2.5 2.6 0 1.5 1.3 2.7 2.8 2.6 1.4-.1 2.4-1.2 2.4-2.8V3h3.3z"},
+    {"name": "Facebook", "url": "https://www.facebook.com/1430869260102071", "icon": "M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V5c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7V11H8.3v3h2.4v7h2.8z"},
+    {"name": "LinkedIn", "url": "https://www.linkedin.com/company/pandas-lab", "icon": "M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9.5 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21h-4V9z"},
+]
+WORLDS_NAV = {"en": "Worlds", "it": "Mondi", "de": "Welten", "es": "Mundos", "fr": "Mondes"}
+
+
+def home_paths():
+    return {l: ("/" if l == "en" else f"/{l}/") for l in LANGS}
+
+
+def build_home(cases, ui_all, env, ver):
+    """the investigation room: board with the latest case, the filing cabinet, the drawers, the method"""
+    hj = json.loads((BUILD / "ui_home.json").read_text(encoding="utf-8"))
+    dj = json.loads((BUILD / "dossiers.json").read_text(encoding="utf-8"))
+    geo = json.loads((BUILD / "board_geometry.json").read_text(encoding="utf-8"))
+    alts = home_paths()
+    latest_c, latest_e = sorted(cases, key=lambda ce: ce[0]["case"])[-1]
+    for lang in LANGS:
+        ui = dict(ui_all[lang], worlds_nav=WORLDS_NAV[lang])
+        h = hj[lang]
+        lc = latest_c
+        latest = {"case": lc["case"], "title": lc["i18n"][lang]["title"], "href": case_paths(lc["case"])[lang],
+                  "cover": f"/img/cases/{lc['case']}/{lc['images']['cover']}", "label": lc["dominant_label"]}
+        files = []
+        for c, _ in sorted(cases, key=lambda ce: ce[0]["case"], reverse=True):
+            files.append({"href": case_paths(c["case"])[lang], "external": False, "img": f"/img/cases/{c['case']}/{c['images']['cover']}",
+                          "kind": ui["case"], "n": c["case"], "title": c["i18n"][lang]["title"], "stamp": ui["status"][c["status"]], "navy": False, "wide": False})
+        for d in dj["dossiers"]:
+            files.append({"href": d["url"], "external": True, "img": d["thumb"], "kind": h["dossier"], "n": d["n"], "title": d["title"],
+                          "stamp": "YOUTUBE", "navy": True, "wide": True})
+        worlds = []
+        for i, k in enumerate(["space", "earth", "life", "history"]):
+            a, l = geo["drawer_areas"][i], geo["drawer_labels"][i]
+            aw, ah = a[2] - a[0], a[3] - a[1]
+            rel = [round((l[0] - a[0]) / aw * 100, 2), round((l[1] - a[1]) / ah * 100, 2),
+                   round((l[2] - l[0]) / aw * 100, 2), round((l[3] - l[1]) / ah * 100, 2)]   # label box inside the drawer, %
+            k_fit = round(min(1.0, 5.0 / len(h["w"][k])), 3)        # long words (Geschichte, Histoire) shrink to fit the holder
+            worlds.append({"name": h["w"][k], "desc": h["wd"][k], "href": dj["world_links"][k], "area": a, "rel": rel, "fit": k_fit})
+        method = [{"key": k, "text": h["d"][k]} for k in LABELS]
+        jsonld = js_safe({"@context": "https://schema.org", "@type": "WebSite", "name": "Pandas Lab", "url": BASE + "/",
+                          "inLanguage": LANGS, "description": h["description"]})
+        page = env.get_template("home.html").render(
+            lang=lang, langs=LANGS, lang_names=LANG_NAMES, ui=ui, base=BASE, alts=alts, alts_json=js_safe(alts),
+            prefix="" if lang == "en" else f"/{lang}", page_kind="home", ver=ver,
+            seo_title=h["seo_title"], og_title=h["seo_title"], description=h["description"], og_type="website",
+            og_image=latest["cover"], og_locale=OG_LOCALE[lang], jsonld=jsonld,
+            h=h, g=geo, latest=latest, files=files, worlds=worlds, method=method, socials=SOCIALS)
+        out = SITE / alts[lang].strip("/") / "index.html" if lang != "en" else SITE / "index.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(page, encoding="utf-8")
+
+
 def update_sitemap(groups, today):
     """Keep the existing site entries, replace the generated ones, add hreflang alternates."""
     sm = SITE / "sitemap.xml"
     old = sm.read_text(encoding="utf-8")
-    keep = [u for u in re.findall(r"<url>.*?</url>", old, re.S) if "/cases/" not in u]
+    generated = {BASE + p for alts, _ in groups for p in alts.values()}
+    keep = [u for u in re.findall(r"<url>.*?</url>", old, re.S)
+            if "/cases/" not in u and re.search(r"<loc>(.*?)</loc>", u).group(1) not in generated]
     new = []
     for alts, prio in groups:
         links = "".join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{BASE}{alts[l]}"/>' for l in LANGS)
@@ -315,7 +373,11 @@ def main():
             shutil.copyfile(srcdir / in_name, dst / out_name)
         build_case(c, engine, ui_all, env, ver)
     build_archive(cases, ui_all, env, ver)
-    update_sitemap([(archive_paths(), "0.8")] + [(case_paths(c["case"]), "0.9") for c, _ in cases], date.today().isoformat())
+    groups = [(archive_paths(), "0.8")] + [(case_paths(c["case"]), "0.9") for c, _ in cases]
+    if "--home" in sys.argv:            # the investigation-room home replaces the old one only when asked
+        build_home(cases, ui_all, env, ver)
+        groups = [(home_paths(), "1.0")] + groups
+    update_sitemap(groups, date.today().isoformat())
     print(f"BUILT: {len(cases)} case page(s) + archive, {len(LANGS)} languages each; sitemap updated")
 
 
