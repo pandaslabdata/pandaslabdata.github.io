@@ -531,6 +531,7 @@ def build_pages(ui_all, env, ver):
     hj = json.loads((BUILD / "ui_home.json").read_text(encoding="utf-8"))
     dj = json.loads((BUILD / "dossiers.json").read_text(encoding="utf-8"))
     geo = json.loads((BUILD / "board_geometry.json").read_text(encoding="utf-8"))
+    ab = json.loads((BUILD / "ui_about.json").read_text(encoding="utf-8"))
     for lang in LANGS:
         o, ui = old[lang], dict(ui_all[lang], worlds_nav=WORLDS_NAV[lang])
         common = dict(lang=lang, langs=LANGS, lang_names=LANG_NAMES, ui=ui, base=BASE, ver=ver, o=o, g=geo,
@@ -542,8 +543,8 @@ def build_pages(ui_all, env, ver):
                             topics=[{"key": "all", "name": o["t_all"]}] + [{"key": k, "name": hj[lang]["w"][k]} for k in WORLD_KEYS if any(x["world"] == k for x in dj["dossiers"])],
                             dossiers=[dict(x, ar=img_ar(x["clip_img"]), page=dossier_paths(x["n"])[lang] if (BUILD / "dossiers" / f"D{x['n']}.json").exists() else None) for x in dj["dossiers"]],
                             coming=dj["coming"]),
-            "about": dict(kicker=PAGE_KICKER["about"][lang], title=o["ab_title"], intro=o["ab_intro"],
-                          people=[{"name": "Michele Barison", "img": "/michele.jpg", "role": o["m_role"], "bio": o["m_bio"], "stamp": "LAB FOUNDER"},
+            "about": dict(kicker=PAGE_KICKER["about"][lang], title=o["ab_title"], intro=ab[lang]["intro"], ab=ab[lang],
+                          people=[{"name": "Michele Barison", "img": "/img/about/a_portrait.webp", "role": o["m_role"], "bio": ab[lang]["m_bio"], "stamp": "LAB FOUNDER"},
                                   {"name": "Mike", "img": "/mike.jpg", "role": o["mk_role"], "bio": o["mk_bio"], "stamp": "WOOL TWIN"}],
                           howto=[{"t": o["p1t"], "b": o["p1b"]}, {"t": o["p2t"], "b": o["p2b"]}, {"t": o["p3t"], "b": o["p3b"]}]),
             "shop": dict(kicker=PAGE_KICKER["shop"][lang], title=o["sh_title"], intro=o["sh_intro"], hint=o["howworks"],

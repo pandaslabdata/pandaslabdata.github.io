@@ -36,9 +36,21 @@
       <span class="stamp anim">{{ p.stamp }}</span>
     </article>{% endfor %}
   </div>
-  <h2 class="slab sub-h">{{ o.me_title }}</h2>
+  <h2 class="slab sub-h">{{ ab.focus_t }}</h2>
   <div class="cards3">
-    {% for m in howto %}<div class="icard rv"><img class="bgimg" src="/assets/board/card.webp" alt="" width="520" height="352" loading="lazy"><img class="pin-c" src="/assets/board/pin2.webp" alt="" width="73" height="157"><div class="itxt"><b>{{ m.t }}</b><span>{{ m.b }}</span></div></div>{% endfor %}
+    {% for m in ab.focus %}<div class="icard rv"><img class="bgimg" src="/assets/board/card.webp" alt="" width="520" height="352" loading="lazy"><img class="pin-c" src="/assets/board/pin2.webp" alt="" width="73" height="157"><div class="itxt"><b>{{ m[0] }}</b><span>{{ m[1] }}</span></div></div>{% endfor %}
+  </div>
+  <h2 class="slab sub-h">{{ ab.labels_t }}</h2>
+  <div class="ab-labels">
+    {% for k, v in ab.labels.items() %}<div class="ab-label rv" style="--r:{{ [-1.5, 1, -0.5, 1.4, -1][loop.index0] }}deg"><span class="label l-{{ k|lower }}">{{ k }}</span><span class="hand">{{ v }}</span></div>{% endfor %}
+  </div>
+  <h2 class="slab sub-h">{{ ab.steps_t }}</h2>
+  <div class="ab-steps">
+    {% for s in ab.steps %}<figure class="ab-print rv" style="--r:{{ [-1.8, 1.3, -0.7, 1.6, -1.2][loop.index0] }}deg">
+      <span class="tape2" style="left:38%;top:-12px;--tr:{{ [-4, 3, -2, 5, -3][loop.index0] }}deg"></span>
+      <span class="ab-ph"><img src="/img/about/a_{{ s[0] }}.webp" alt="{{ s[1] }}" loading="lazy" width="1200" height="800"></span>
+      <figcaption><b><i>{{ loop.index }}</i> {{ s[1] }}</b><span>{{ s[2] }}</span></figcaption>
+    </figure>{% endfor %}
   </div>
   <p class="center"><a class="btn" href="https://www.linkedin.com/company/pandas-lab" target="_blank" rel="noopener">{{ o.ab_li }}</a></p>
 </div>
