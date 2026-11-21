@@ -158,7 +158,7 @@ footer a{color:var(--gold);text-decoration:none}
 .yarn path{fill:none;stroke:#b3241c;stroke-width:3;vector-effect:non-scaling-stroke;stroke-linecap:round;filter:drop-shadow(0 3px 2px rgba(0,0,0,.5));stroke-dasharray:1;stroke-dashoffset:0}
 .y-m{display:none}
 .glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(38% 34% at 76% 40%,rgba(255,190,90,.22),transparent 70%);mix-blend-mode:screen}
-.desk{position:absolute;left:-2%;width:104%;max-width:none;bottom:-6%;z-index:5;filter:drop-shadow(0 -10px 18px rgba(0,0,0,.45));will-change:transform}
+.desk{position:absolute;left:-2%;width:104%;max-width:none;bottom:-6%;z-index:5;pointer-events:none;filter:drop-shadow(0 -10px 18px rgba(0,0,0,.45));will-change:transform}
 .hero-under{text-align:center;margin-top:-10px;position:relative;z-index:6}
 .hero-under .lede{margin:0 auto 18px;max-width:680px}
 .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
@@ -202,6 +202,41 @@ footer a{color:var(--gold);text-decoration:none}
 .hero-under{display:none}
 .it:hover{z-index:6}
 
+/* ---- HOME v3: the board is the menu ---- */
+.hub{text-align:center;z-index:4}
+.hub .hub-logo{width:52%;margin:0 auto 4px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.35))}
+.hub .kick{display:none}
+.hub h1{margin:2px 0 6px}
+.hub .card-sub{margin-bottom:8px}
+.hub .card-ctas{justify-content:center}
+.node{z-index:4}
+.node-tag{position:absolute;left:50%;bottom:-14px;transform:translate(-50%,100%) rotate(-1deg);white-space:nowrap;text-align:center;
+  background:#f3ead6;color:var(--ink);padding:5px 12px 4px;box-shadow:0 3px 6px rgba(0,0,0,.4);border-left:4px solid var(--red);z-index:5}
+.node-tag b{display:block;font:clamp(12px,1.05vw,17px) "Alfa Slab One";letter-spacing:.04em;text-transform:uppercase;color:var(--navy)}
+.node-tag small{display:block;font:clamp(9px,.72vw,11.5px) "Special Elite";color:var(--pencil);max-width:22ch;overflow:hidden;text-overflow:ellipsis}
+.node.photo .node-tag,.node.card .node-tag{bottom:-6px}
+.mini-card{display:grid;place-items:center;aspect-ratio:1.477;background:url("/assets/board/card.webp") center/100% 100% no-repeat;filter:drop-shadow(0 8px 10px rgba(0,0,0,.45))}
+.mini-card img{width:78%;transform:rotate(-6deg)}
+.photo .pin,.card .pin{position:absolute;left:50%;top:-10px;width:15px;transform:translateX(-50%);z-index:4}
+.shot-img img{aspect-ratio:16/9}
+.photo.node .shot-img{border-bottom-width:6px}
+/* the red threads: one per section, from the middle */
+.room .yarn path{fill:none;stroke:#a3150f;stroke-width:3.5px;stroke-linecap:round;filter:none!important;transition:opacity .25s,stroke-width .25s}
+.room .yarn path.deco-line{stroke-width:2.2px;opacity:.85}
+.room .yarn path{stroke-dasharray:none!important}
+.js .room .yarn{opacity:0}
+.js .room.on .yarn{opacity:1;transition:opacity 1.2s ease .8s}
+/* hover / focus: the rest of the board dims, the thread to the middle lights up */
+/* a dark veil over the whole board; the chosen item, the hub and their thread stay above it */
+.cork::after{content:"";position:absolute;inset:-3%;background:rgba(8,10,16,.58);opacity:0;pointer-events:none;transition:opacity .25s;z-index:6}
+.cork.focus::after{opacity:1}
+.cork.focus .it.hot{z-index:9!important}
+.cork.focus .hub{z-index:8}
+.yarn-top{position:absolute;left:0;top:0;width:100%;height:100%;z-index:7;overflow:visible;pointer-events:none;opacity:0;transition:opacity .2s}
+.cork.focus .yarn-top{opacity:1}
+.yarn-top path{fill:none;stroke:#ff5a46;stroke-width:6px;stroke-linecap:round}
+.it.node.hot,.it.deco.hot{transform:rotate(0) scale(1.05)!important;transition:transform .25s}
+.it{transition:filter .25s}
 .sec{padding-top:70px}
 .sec-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px;flex-wrap:wrap}
 .sec-head h2{font-size:clamp(30px,4vw,46px)}
@@ -417,6 +452,9 @@ footer a{color:var(--gold);text-decoration:none}
   .dsk{display:none!important}
   .card-sub,.card-ctas{display:none}
   .hero-under{display:block}
+  .hub .hub-logo{width:46%}
+  .node-tag b{font-size:13px}.node-tag small{font-size:10px;max-width:18ch}
+  .node-tag{bottom:-8px}
   .shot-cap{font-size:14px}
   .pola .pola-cap{font-size:16px}
   .postit .post-txt{font-size:calc(var(--pf,1) * min(17px,4.4vw))}
@@ -451,3 +489,6 @@ footer a{color:var(--gold);text-decoration:none}
   .js .rv,.js .stamp.anim{opacity:1!important;transform:none!important;transition:none!important}
   .chart .bar i{width:var(--w)!important;transition:none!important}
 }
+
+/* decorations never catch clicks */
+.cork::after,.room .yarn,.room .yarn-top{pointer-events:none}

@@ -2,43 +2,33 @@
 {% block body %}
 <section class="room-wrap" aria-label="{{ h.kicker }}">
   <div class="room" data-room>
-    <div class="cork">
-      <svg class="yarn" aria-hidden="true"><path pathLength="1" d=""/></svg>
+    <div class="cork" data-board>
+      <svg class="yarn" aria-hidden="true"></svg><svg class="yarn-top" aria-hidden="true"><path d=""/></svg>
 
-      <div class="it card-h" data-yarn="1" style="--hf:{{ [1, 34 / ((h.h1a ~ h.h1b)|length)]|min }};--sf:{{ [1, 88 / (h.board_sub|length)]|min }};--x:2%;--y:1%;--w:36%;--r:-1.5deg;--mx:4%;--my:0%;--mw:92%;--mr:-1deg;--d:.1s">
+      <div class="it card-h hub" data-hub style="--hf:{{ [1, 34 / ((h.h1a ~ h.h1b)|length)]|min }};--sf:{{ [1, 88 / (h.board_sub|length)]|min }};--x:33%;--y:4%;--w:34%;--r:-1deg;--mx:4%;--my:0%;--mw:92%;--mr:-1deg;--d:.1s">
         <img class="pin" src="/assets/board/pin1.webp" alt="" width="73" height="155">
         <div class="card-txt">
+          <img class="hub-logo" src="/assets/board/logo.webp" alt="Pandas Lab" width="520" height="102">
           <div class="kick">{{ h.kicker }}</div>
           <h1 class="slab">{{ h.h1a }}<br><em>{{ h.h1b }}</em></h1>
           <p class="card-sub">{{ h.board_sub }}</p>
-          <div class="card-ctas"><a class="tag-btn" href="{{ latest.href }}">{{ h.open_latest }} →</a><a class="tag-btn ghost" href="#files">{{ h.browse }}</a></div>
+          <div class="card-ctas"><a class="tag-btn" href="{{ latest.href }}">{{ h.open_latest }} →</a></div>
         </div>
       </div>
 
-      {% for b in board %}{% set p = b.pos %}
-      {% set st = "--x:%s%%;--y:%s%%;--w:%s%%;--r:%sdeg;--mx:%s%%;--my:%s%%;--mw:%s%%;--mr:%sdeg;--d:%ss"|format(p.x, p.y, p.w, p.r, p.mx, p.my, p.mw, p.mr, b.d) %}
-      {% if b.kind == 'pola' %}<a class="it pola{% if b.dsk %} dsk{% endif %}" href="{{ b.href }}" data-yarn="{{ b.yarn }}" style="{{ st }}" aria-label="{{ b.title }}">
-        <span class="pola-photo" style="--wx:{{ g.polaroid_window[0]*100 }}%;--wy:{{ g.polaroid_window[1]*100 }}%;--ww:{{ (g.polaroid_window[2]-g.polaroid_window[0])*100 }}%;--wh:{{ (g.polaroid_window[3]-g.polaroid_window[1])*100 }}%"><img src="{{ b.cover }}" alt="" width="507" height="900"></span>
-        <img class="bgimg" src="/assets/board/polaroid.webp" alt="" width="352" height="404">
-        <img class="pin" src="/assets/board/pin2.webp" alt="" width="73" height="157">
-        <span class="pola-cap">{{ b.cap }}</span>
-        <img class="stampimg" src="/assets/board/st_{{ b.stamp|lower }}.webp" alt="{{ b.stamp }}" width="240" height="108">
-      </a>
-      {% elif b.kind == 'clip' %}<a class="it clipn{% if b.dsk %} dsk{% endif %}" href="{{ b.href }}" data-yarn="{{ b.yarn }}" style="{{ st }}" tabindex="-1" aria-hidden="true">
-        <img class="bgimg" src="{{ b.img }}" alt="" width="620" height="407">
-        <img class="pin" src="/assets/board/pin1.webp" alt="" width="73" height="155">
-      </a>
-      {% elif b.kind == 'photo' %}<a class="it shot{% if b.dsk %} dsk{% endif %}" href="{{ b.href }}" data-yarn="{{ b.yarn }}" style="{{ st }}" aria-label="{{ b.title }}">
-        <span class="shot-img"><img src="{{ b.img }}" alt="" loading="lazy" width="480" height="360"></span>
-        <img class="tape" src="/assets/board/tape2.webp" alt="" width="240" height="75">
-        <span class="shot-cap">{{ b.cap }}</span>
-      </a>
-      {% elif b.kind == 'postit' %}<a class="it postit{% if b.dsk %} dsk{% endif %}" href="{{ b.href }}" style="{{ st }}">
-        <img class="bgimg" src="/assets/board/postit.webp" alt="" width="260" height="264">
-        <span class="post-txt" style="--pf:{{ [1, 26 / (b.text|length)]|min }}">{{ b.text }}</span>
-      </a>
-      {% elif b.kind == 'scrap' %}<div class="it scrap dsk" style="{{ st }}" aria-hidden="true"><img class="bgimg" src="{{ b.img }}" alt="" width="260" height="286"></div>
-      {% endif %}{% endfor %}
+      {% macro body(b) %}
+        {% if b.frame == 'pola' %}<span class="pola-photo" style="--wx:{{ g.polaroid_window[0]*100 }}%;--wy:{{ g.polaroid_window[1]*100 }}%;--ww:{{ (g.polaroid_window[2]-g.polaroid_window[0])*100 }}%;--wh:{{ (g.polaroid_window[3]-g.polaroid_window[1])*100 }}%"><img src="{{ b.img }}" alt="" loading="lazy"></span><img class="bgimg" src="/assets/board/polaroid.webp" alt="" width="352" height="404"><img class="pin" src="/assets/board/pin2.webp" alt="" width="73" height="157">{% if b.cap %}<span class="pola-cap">{{ b.cap }}</span>{% endif %}{% if b.stamp %}<img class="stampimg" src="/assets/board/st_{{ b.stamp|lower }}.webp" alt="{{ b.stamp }}" width="240" height="108">{% endif %}
+        {% elif b.frame == 'photo' %}<span class="shot-img"><img src="{{ b.img }}" alt="" loading="lazy"></span><img class="tape" src="/assets/board/tape2.webp" alt="" width="240" height="75"><img class="pin" src="/assets/board/pin1.webp" alt="" width="73" height="155">{% if b.cap %}<span class="shot-cap">{{ b.cap }}</span>{% endif %}
+        {% elif b.frame == 'card' %}<span class="mini-card"><img src="{{ b.img }}" alt="" loading="lazy"></span><img class="pin" src="/assets/board/pin2.webp" alt="" width="73" height="157">
+        {% elif b.frame == 'clip' %}<img class="bgimg" src="{{ b.img }}" alt="" loading="lazy"><img class="pin" src="/assets/board/pin1.webp" alt="" width="73" height="155">
+        {% elif b.frame == 'postit' %}<img class="bgimg" src="/assets/board/postit.webp" alt="" width="260" height="264"><span class="post-txt" style="--pf:{{ [1, 26 / (b.text|length)]|min }}">{{ b.text }}</span>
+        {% endif %}
+      {% endmacro %}
+
+      {% for b in board.decos %}{% set p = b.pos %}<a class="it deco {{ b.frame }} dsk" href="{{ b.href }}" aria-label="{{ b.title or b.text }}" style="--x:{{ p.x }}%;--y:{{ p.y }}%;--w:{{ p.w }}%;--r:{{ p.r }}deg;--d:{{ b.d }}s">{{ body(b) }}</a>
+      {% endfor %}
+      {% for b in board.nodes %}{% set p = b.pos %}<a class="it node {{ b.frame }}{% if b.dsk %} dsk{% endif %}" href="{{ b.href }}" data-node="{{ b.i }}" style="--x:{{ p.x }}%;--y:{{ p.y }}%;--w:{{ p.w }}%;--r:{{ p.r }}deg;--mx:{{ p.mx }}%;--my:{{ p.my }}%;--mw:{{ p.mw }}%;--mr:{{ p.mr }}deg;--d:{{ b.d }}s">{{ body(b) }}<span class="node-tag"><b>{{ b.label }}</b>{% if b.sub %}<small>{{ b.sub }}</small>{% endif %}</span></a>
+      {% endfor %}
     </div>
     <div class="glow" aria-hidden="true"></div>
     <img class="desk" src="/assets/board/desk.webp" alt="" width="1505" height="628" data-depth="1">

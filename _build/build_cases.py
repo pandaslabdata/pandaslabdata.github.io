@@ -281,10 +281,51 @@ def home_paths():
     return {l: ("/" if l == "en" else f"/{l}/") for l in LANGS}
 
 
+MENU_WORD = {
+    "method": {"en": "Method", "it": "Metodo", "de": "Methode", "es": "Método", "fr": "Méthode"},
+    "dossiers": {"en": "Dossiers", "it": "Dossier", "de": "Dossiers", "es": "Dosieres", "fr": "Dossiers"},
+}
+
+
 def make_board(cases, lang, h, ui):
-    """The evidence pinned on the home board, built from the data: the two latest cases (photo, clipping,
-    question) and the latest dossiers. Positions are % of the cork (computer x,y,w,r | phone mx,my,mw,mr);
-    'yarn' gives the order of the red thread between pins; 'dsk' items show on the computer only."""
+    """The home board IS the site menu: Pandas Lab in the middle, every section pinned around it and tied to it
+    by a red thread (kind 'node', with a tag naming the section). Extra evidence ('deco') is clickable too.
+    Positions are % of the cork: computer x,y,w,r | phone mx,my,mw,mr. 'dsk' = computer only."""
+    pre = "" if lang == "en" else f"/{lang}"
+    cs = sorted(cases, key=lambda ce: ce[0]["case"], reverse=True)
+    ds = [json.loads(f.read_text(encoding="utf-8")) for f in sorted(dossier_files(), reverse=True)]
+    nodes, decos = [], []
+    P = lambda x, y, w, r, mx=0, my=0, mw=0, mr=0: dict(x=x, y=y, w=w, r=r, mx=mx, my=my, mw=mw, mr=mr)
+    if cs:
+        c = cs[0][0]
+        img = f"/img/cases/{c['case']}"
+        nodes.append(dict(frame="pola", href=f"{pre}/cases/", img=f"{img}/{c['images']['cover']}", label=ui["nav_cases"],
+                          sub=f"{len(cs)} · {h['latest']} {c['case']}", stamp=c["dominant_label"], dsk=False, pos=P(3, 4, 14, -3, 4, 34, 30, -3)))
+        if c["images"].get("clip_src"):
+            decos.append(dict(frame="clip", href=case_paths(c["case"])[lang], img=f"{img}/clip.webp", title=c["i18n"][lang]["title"], pos=P(16, 15, 16, 3)))
+    if len(cs) > 1:
+        c = cs[1][0]
+        decos.append(dict(frame="pola", href=case_paths(c["case"])[lang], img=f"/img/cases/{c['case']}/{c['images']['cover']}",
+                          title=c["i18n"][lang]["title"], cap=f"{ui['case']} {c['case']}", pos=P(84, 3, 13, 5)))
+    if ds:
+        nodes.append(dict(frame="photo", href=f"{pre}/stories.html", img=f"https://i.ytimg.com/vi/{ds[0]['yt']}/hqdefault.jpg",
+                          label=MENU_WORD["dossiers"][lang], sub=f"{len(ds)} · RE-CHECKED", dsk=False, pos=P(66, 5, 15, 3, 40, 37, 56, 3)))
+    nodes.append(dict(frame="photo", href=f"{pre}/#worlds", img="/assets/board/drawers.webp", label=WORLDS_NAV[lang],
+                      sub="4", dsk=False, pos=P(3, 53, 15, 2, 3, 70, 44, -2)))
+    nodes.append(dict(frame="card", href=f"{pre}/#method", img="/assets/board/st_observed.webp", label=MENU_WORD["method"][lang],
+                      sub="", dsk=False, pos=P(83, 39, 13, -3, 53, 71, 42, 2)))
+    nodes.append(dict(frame="pola", href=f"{pre}/about.html", img="/michele.jpg", label=ui["nav_about"], sub="Michele · Mike",
+                      dsk=True, pos=P(21, 50, 11, 4)))
+    nodes.append(dict(frame="photo", href=f"{pre}/shop.html", img="/chartkit.jpg", label=ui["nav_shop"], sub="Chart Kit",
+                      dsk=True, pos=P(66, 60, 13, -2)))
+    for k, n in enumerate(nodes):
+        n["i"], n["d"] = k, round(0.35 + k * 0.12, 2)
+    for k, n in enumerate(decos):
+        n["d"] = round(0.35 + (len(nodes) + k) * 0.1, 2)
+    return {"nodes": nodes, "decos": decos}
+
+
+def make_board_old(cases, lang, h, ui):
     cs = sorted(cases, key=lambda ce: ce[0]["case"], reverse=True)
     items = []
     for slot, (c, _) in enumerate(cs[:2]):

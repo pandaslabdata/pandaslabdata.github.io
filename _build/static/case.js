@@ -54,21 +54,32 @@
   // 4b) home: pin the evidence once the room is loaded; the desk moves with the scroll (depth), the board with the pointer
   var room=document.querySelector('[data-room]');
   if(room){
-    // red thread: from pin to pin, in the order given by data-yarn, with a little sag like real string
+    // red threads: the board is the menu. One thread from the middle (Pandas Lab) to every pinned item,
+    // with a little sag like real string. Hover or keyboard focus: the rest dims, that thread lights up.
+    var cork0=room.querySelector('[data-board]'), svgNS='http://www.w3.org/2000/svg';
+    var anchor=function(el){ var a=el.querySelector('.pin')||el.querySelector('.tape')||el;
+      return [el.offsetLeft+(a===el?el.offsetWidth/2:a.offsetLeft+a.offsetWidth/2), el.offsetTop+(a===el?0:a.offsetTop+a.offsetHeight*(a.classList.contains('pin')?.18:.5))]; };
     var drawYarn=function(){
-      var svg=room.querySelector('.yarn'), cork=room.querySelector('.cork'); if(!svg||!cork) return;
-      var W=cork.clientWidth, H=cork.clientHeight; svg.setAttribute('viewBox','0 0 '+W+' '+H);
-      var pts=[].slice.call(cork.querySelectorAll('[data-yarn]')).filter(function(el){ return el.offsetParent!==null && el.dataset.yarn; })
-        .sort(function(a,b){ return a.dataset.yarn-b.dataset.yarn; })
-        .map(function(el){ var a=el.querySelector('.pin')||el.querySelector('.tape')||el;
-          var x=el.offsetLeft+(a===el?el.offsetWidth/2:a.offsetLeft+a.offsetWidth/2), y=el.offsetTop+(a===el?0:a.offsetTop+a.offsetHeight*(a.classList.contains('pin')?.18:.5));
-          return [x,y]; });
-      if(pts.length<2) return;
-      var d='M'+pts[0][0].toFixed(1)+' '+pts[0][1].toFixed(1);
-      for(var i=1;i<pts.length;i++){ var p=pts[i-1], q=pts[i], dist=Math.hypot(q[0]-p[0],q[1]-p[1]);
-        d+=' Q'+((p[0]+q[0])/2).toFixed(1)+' '+(Math.max(p[1],q[1])+dist*.12).toFixed(1)+' '+q[0].toFixed(1)+' '+q[1].toFixed(1); }
-      svg.querySelector('path').setAttribute('d',d);
+      var svg=room.querySelector('.yarn'); if(!svg||!cork0) return;
+      var hub=cork0.querySelector('[data-hub]'); if(!hub) return;
+      svg.setAttribute('viewBox','0 0 '+cork0.clientWidth+' '+cork0.clientHeight);
+      var c=[hub.offsetLeft+hub.offsetWidth/2, hub.offsetTop+hub.offsetHeight*.45];
+      var items=[].slice.call(cork0.querySelectorAll('.node,.deco')).filter(function(el){ return el.offsetParent!==null; });
+      while(svg.firstChild) svg.removeChild(svg.firstChild);
+      items.forEach(function(el,i){ var q=anchor(el), dist=Math.hypot(q[0]-c[0],q[1]-c[1]);
+        var p=document.createElementNS(svgNS,'path');
+        p.setAttribute('d','M'+c[0].toFixed(1)+' '+c[1].toFixed(1)+' Q'+((c[0]+q[0])/2).toFixed(1)+' '+(Math.max(c[1],q[1])+dist*.1).toFixed(1)+' '+q[0].toFixed(1)+' '+q[1].toFixed(1));
+        p.setAttribute('pathLength','1'); if(el.classList.contains('deco')) p.setAttribute('class','deco-line');
+        svg.appendChild(p); el._yarn=p; });
     };
+    if(cork0){
+      var top=cork0.querySelector('.yarn-top');
+      var hot=function(el,on){ cork0.classList.toggle('focus',on); el.classList.toggle('hot',on);
+        if(top&&el._yarn){ top.setAttribute('viewBox',cork0.querySelector('.yarn').getAttribute('viewBox')); top.querySelector('path').setAttribute('d',on?el._yarn.getAttribute('d'):''); } };
+      [].forEach.call(cork0.querySelectorAll('.node,.deco'),function(el){
+        el.addEventListener('mouseenter',function(){ hot(el,true); }); el.addEventListener('mouseleave',function(){ hot(el,false); });
+        el.addEventListener('focus',function(){ hot(el,true); }); el.addEventListener('blur',function(){ hot(el,false); }); });
+    }
     drawYarn(); window.addEventListener('resize',function(){ requestAnimationFrame(drawYarn); });
     if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawYarn);
     window.addEventListener('load',drawYarn);
