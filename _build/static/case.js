@@ -133,73 +133,68 @@
     });
   })();
 
-  // 4e) the evidence wall: red thread from every file to the next one, fainter threads between files of the same world.
-  //     Point at a file: the rest dims and its threads light up (same gesture as the old board menu).
+  // 4e) the evidence wall: the banner hangs on two pins tied to the first files; red thread from every file to the next,
+  //     fainter threads between files of the same world. Point at a file: the rest dims and its threads light up.
   (function(){
     var wall=document.querySelector('[data-wall]'); if(!wall) return; var web=wall.querySelector('[data-web]'), NS='http://www.w3.org/2000/svg';
-    var cl=[].slice.call(wall.querySelectorAll('.clip'));
-    var pin=function(el){ var p=el.querySelector('.pin2'), w=wall.getBoundingClientRect(), r=p.getBoundingClientRect(); return [r.left-w.left+r.width/2, r.top-w.top+5]; };
+    var all=[].slice.call(wall.querySelectorAll('.clip')), band=wall.querySelector('[data-band]'), more=wall.querySelector('[data-more]');
+    var vis=function(){ return all.filter(function(c){ return c.offsetParent!==null; }); };
+    var pin=function(el,k){ var ps=el.querySelectorAll('.pin2'), p=ps[k||0]||ps[0], w=wall.getBoundingClientRect(), r=p.getBoundingClientRect(); return [r.left-w.left+r.width/2, r.top-w.top+5]; };
     var drawn=false;
     var draw=function(){ while(web.firstChild) web.removeChild(web.firstChild);
       web.setAttribute('width',wall.clientWidth); web.setAttribute('height',wall.clientHeight); web.setAttribute('viewBox','0 0 '+wall.clientWidth+' '+wall.clientHeight);
-      cl.forEach(function(c){ c._p=[]; });
-      var link=function(a,b,x){ var A=pin(a),B=pin(b),d=Math.hypot(B[0]-A[0],B[1]-A[1]);
+      var cl=vis(); all.forEach(function(c){ c._p=[]; }); if(band) band._p=[];
+      var link=function(a,b,x,ka){ var A=pin(a,ka),B=pin(b),d=Math.hypot(B[0]-A[0],B[1]-A[1]);
         var p=document.createElementNS(NS,'path'); p.setAttribute('d','M'+A[0].toFixed(1)+' '+A[1].toFixed(1)+' Q'+((A[0]+B[0])/2).toFixed(1)+' '+(Math.max(A[1],B[1])+d*.05).toFixed(1)+' '+B[0].toFixed(1)+' '+B[1].toFixed(1));
-        if(x) p.setAttribute('class','x'); if(!drawn&&!calm0){ p.classList.add('draw'); p.style.setProperty('--len',Math.ceil(d*1.2)); p.style.animationDelay=(cl.indexOf(a)*.1)+'s'; }
-        web.appendChild(p); a._p.push(p); b._p.push(p); };
+        if(x) p.setAttribute('class','x'); if(!drawn&&!calm0){ p.classList.add('draw'); p.style.setProperty('--len',Math.ceil(d*1.2)); p.style.animationDelay=(Math.max(0,cl.indexOf(a))*.1)+'s'; }
+        p._a=a; p._b=b; web.appendChild(p); a._p.push(p); b._p.push(p); };
+      if(band&&cl.length>2&&band.offsetParent!==null){ link(band,cl[0],false,0); link(band,cl[2],false,1); }
       for(var i=0;i<cl.length-1;i++) link(cl[i],cl[i+1]);
       var g={}; cl.forEach(function(c){ (g[c.dataset.world]=g[c.dataset.world]||[]).push(c); });
       Object.keys(g).forEach(function(k){ var a=g[k]; for(var i=0;i+2<a.length;i+=2) link(a[i],a[i+2],true); });
       // handwritten notes hang halfway along a thread, in the gap between rows
-      [].forEach.call(wall.querySelectorAll('.note2[data-at]'),function(n){ var c=cl[+n.dataset.at]; var p=c&&c._p&&c._p[c._p.length>1?1:0]; if(!p) return;
+      [].forEach.call(wall.querySelectorAll('.note2[data-at]'),function(n){ var c=cl[+n.dataset.at], c2=cl[+n.dataset.at+1]; var p=c&&c._p&&c._p.filter(function(q){ return q._a===c&&q._b===c2; })[0]; if(!p){ n.classList.remove('on'); return; }
         var L=p.getTotalLength(), m=p.getPointAtLength(L*.5); n.style.left=m.x+'px'; n.style.top=m.y+'px'; n.classList.add('on'); });
       drawn=true; };
+    // the banner is as tall as its language needs: the files start just below it
+    var fit=function(){ if(band) wall.style.paddingTop=(band.offsetHeight+34)+'px'; }; fit(); window.addEventListener('resize',fit);
+    if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
     var t; var later=function(){ clearTimeout(t); t=setTimeout(draw,140); };
     var seen=new IntersectionObserver(function(es){ if(es.some(function(e){return e.isIntersecting;})){ seen.disconnect();
-      cl.forEach(function(c,i){ setTimeout(function(){ c.classList.add('in'); },i*110); });   // pinned one after the other
-      setTimeout(draw,cl.length*110+800); } },{threshold:.05}); seen.observe(wall);
+      if(band) band.classList.add('in');
+      all.forEach(function(c,i){ setTimeout(function(){ c.classList.add('in'); },150+i*110); });   // pinned one after the other
+      setTimeout(draw,Math.min(all.length,7)*110+900); } },{threshold:.05}); seen.observe(wall);
     wall.addEventListener('transitionend',function(e){ if(drawn&&e.target.classList&&e.target.classList.contains('clip')) later(); });
     window.addEventListener('resize',function(){ if(drawn) later(); });
+    if(more) more.addEventListener('click',function(){ wall.classList.add('all'); setTimeout(draw,60); setTimeout(draw,900); });
     var hot=function(c,on){ wall.classList.toggle('focus',on); web.classList.toggle('focus',on); c.classList.toggle('hot',on); (c._p||[]).forEach(function(p){ p.classList.toggle('hot',on); }); };
-    cl.forEach(function(c){ c.addEventListener('mouseenter',function(){ hot(c,true); }); c.addEventListener('mouseleave',function(){ hot(c,false); });
+    all.forEach(function(c){ c.addEventListener('mouseenter',function(){ hot(c,true); }); c.addEventListener('mouseleave',function(){ hot(c,false); });
       c.addEventListener('focus',function(){ hot(c,true); }); c.addEventListener('blur',function(){ hot(c,false); }); });
   })();
 
-  // 4f) Steve: the same rig as the videos (assets/steve), animated in code. Breathes, blinks, waves when he appears,
-  //     pulls a face and talks when you point at an experiment, jumps when you poke him.
+  // 4f) Steve, exactly as approved (assets/steve/steve.webp): one whole figure, alive in code.
+  //     He breathes and sways on his feet, blinks his button eyes, hops and greets you when he appears,
+  //     leans towards the experiment you point at and says something, jumps when you poke him.
   (function(){
     var host=document.querySelector('[data-steve]'), bubble=document.querySelector('[data-bubble]'); if(!host) return;
-    fetch('/assets/steve/rig.json').then(function(r){ return r.json(); }).then(function(R){
-      var S=R.segments, P=R.pivots, bones={};
-      var make=function(name,parent){ var s=S[name], g=document.createElement('div'); g.className='g';
-        var pv=s.joint?P[s.joint]:P.neck; g.style.transformOrigin=pv[0]+'px '+pv[1]+'px'; g.style.zIndex=s.z;
-        var im=new Image(); im.src='/assets/steve/'+name+'.webp'; im.alt=''; im.style.cssText='left:'+s.x+'px;top:'+s.y+'px;width:'+s.w+'px;height:'+s.h+'px;z-index:1';
-        g.appendChild(im); parent.appendChild(g); bones[name]={g:g,im:im}; return g; };
-      var torso=make('torso',host);
-      ['upperarm_L','upperarm_R','thigh_L','thigh_R','head'].forEach(function(n){ make(n,torso); });
-      make('forearm_L',bones.upperarm_L.g); make('forearm_R',bones.upperarm_R.g); make('shin_L',bones.thigh_L.g); make('shin_R',bones.thigh_R.g);
-      bones.forearm_L.g.style.zIndex=0; bones.forearm_R.g.style.zIndex=0;
-      var faces={}; ['blink','smile','surprised','laugh','sly','wink','dizzy','terrified'].forEach(function(f){ var i=new Image(); i.src='/assets/steve/head_'+f+'.webp'; faces[f]=i.src; });
-      var base=bones.head.im.src, face=null, until=0, wave=0, hop=0, nextBlink=performance.now()+2500;
-      var setFace=function(f,ms){ face=f; until=performance.now()+ms; bones.head.im.src=f?faces[f]:base; };
+    fetch('/assets/steve/steve.json').then(function(r){ return r.json(); }).then(function(S){
+      var im=new Image(); im.src='/assets/steve/steve.webp'; im.alt=''; host.appendChild(im);
+      var lids=S.eyes.map(function(e){ var l=document.createElement('span'); l.className='lid';
+        l.style.cssText='left:'+e.cx+'%;top:'+e.cy+'%;width:'+(e.rx*2)+'%;height:'+(e.ry*2)+'%;background:'+S.lid; host.appendChild(l); return l; });
+      var hop=0, lean=0, leanTo=0, nextBlink=performance.now()+2000;
+      var blink=function(){ host.classList.add('blink'); setTimeout(function(){ host.classList.remove('blink'); },120); };
       var say=function(t){ if(!bubble) return; bubble.textContent=t; bubble.classList.add('pop'); setTimeout(function(){ bubble.classList.remove('pop'); },250); };
       var tick=function(t){
-        if(!calm0){ var s=Math.sin(t/900), b=Math.sin(t/1400);
-          torso.style.transform='translateY('+(-Math.abs(Math.sin(hop))*60).toFixed(1)+'px) rotate('+(b*1.2).toFixed(2)+'deg) scale(1,'+(1+s*.008).toFixed(4)+')';
-          bones.head.g.style.transform='rotate('+(Math.sin(t/1700)*4).toFixed(2)+'deg)';
-          var w=wave>0; if(w) wave-=16;
-          bones.upperarm_R.g.style.transform='rotate('+(w?Math.sin(t/120)*35-60:s*4).toFixed(1)+'deg)';
-          bones.forearm_R.g.style.transform='rotate('+(w?Math.sin(t/120)*25-30:s*3).toFixed(1)+'deg)';
-          bones.upperarm_L.g.style.transform='rotate('+(-s*4).toFixed(1)+'deg)'; bones.forearm_L.g.style.transform='rotate('+(-s*3).toFixed(1)+'deg)';
-          if(hop>0){ hop+=.11; if(hop>=Math.PI) hop=0; } }
-        if(face&&t>until) setFace(null,0);
-        if(!face&&t>nextBlink){ setFace('blink',140); nextBlink=t+2200+Math.random()*3500; }
+        if(!calm0){ var s=Math.sin(t/950), h=hop>0?Math.sin(hop):0; lean+=(leanTo-lean)*.08;
+          host.style.transform='translateY('+(-h*46).toFixed(1)+'px) rotate('+(Math.sin(t/1600)*1.6+lean).toFixed(2)+'deg) scale('+(1-s*.006).toFixed(4)+','+(1+s*.012-h*.04).toFixed(4)+')';
+          if(hop>0){ hop+=.12; if(hop>=Math.PI) hop=0; } }
+        if(t>nextBlink){ blink(); if(Math.random()<.25) setTimeout(blink,220); nextBlink=t+2400+Math.random()*3200; }
         requestAnimationFrame(tick); };
       requestAnimationFrame(tick);
-      new IntersectionObserver(function(es,o){ es.forEach(function(e){ if(e.isIntersecting){ wave=1400; setFace('smile',1600); o.disconnect(); } }); },{threshold:.5}).observe(host);
-      document.querySelectorAll('.exp[data-face]').forEach(function(c){ var go=function(){ setFace(c.dataset.face,2200); say(c.dataset.say); };
-        c.addEventListener('mouseenter',go); c.addEventListener('focus',go); });
-      var poke=0; host.addEventListener('click',function(){ hop=.01; poke++; var dz=poke%2===0; setFace(dz?'dizzy':'laugh',1500); say(dz?host.dataset.click2:host.dataset.click1); });
+      new IntersectionObserver(function(es,o){ es.forEach(function(e){ if(e.isIntersecting){ hop=.01; o.disconnect(); } }); },{threshold:.5}).observe(host);
+      document.querySelectorAll('.exp[data-say]').forEach(function(c,i){ var go=function(){ leanTo=c.getBoundingClientRect().left>host.getBoundingClientRect().left?5:-5; say(c.dataset.say); blink(); };
+        c.addEventListener('mouseenter',go); c.addEventListener('focus',go); c.addEventListener('mouseleave',function(){ leanTo=0; }); });
+      var poke=0; host.addEventListener('click',function(){ hop=.01; poke++; say(poke%2?host.dataset.click1:host.dataset.click2); });
     });
   })();
 

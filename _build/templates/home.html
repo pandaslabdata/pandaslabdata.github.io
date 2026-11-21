@@ -10,8 +10,7 @@
     </div>
     <span class="pin2" style="left:10%"></span><span class="pin2" style="left:90%"></span>
   </div>
-  <p class="hand-lede rv" style="--r:-1deg">{{ h.lead }}</p>
-  <div class="hero-ctas rv" style="--r:0deg"><a class="btn" href="{{ latest.href }}">{{ h.open_latest }} →</a><a class="btn ghost" href="#wall">{{ h.browse }}</a></div>
+  <p class="hand-lede rv" style="--r:-1deg">{{ h.board_sub }}</p>
   <a class="hero-photo rv" href="{{ latest.href }}" style="--r:2.5deg" aria-label="{{ latest.title }}">
     <span class="frame-w"><span class="live" data-fx="{{ wall[0].fx }}"><img src="{{ hero_img }}" alt="" width="720" height="960"></span></span>
     <span class="hand-cap">{{ h.latest_note }} {{ ui.case }} {{ latest.case }}</span>
@@ -19,12 +18,11 @@
   </a>
 </section>
 
-<div class="band rv" style="--r:-1deg"><h2>{{ h.wall_t }}</h2><p>{{ h.wall_p|replace('{n}', n_files) }}</p></div>
-
 <section id="wall" class="wrap wall" data-wall>
   <svg class="web" data-web aria-hidden="true"></svg>
+  <div class="wall-band rv" style="--r:-1deg" data-band><span class="pin2" style="left:4%"></span><span class="pin2" style="left:96%"></span><h2>{{ h.wall_t }}</h2><p>{{ h.wall_p|replace('{n}', n_files) }}</p></div>
   {% for w in wall %}
-  <a class="clip rv {{ w.kind }}" href="{{ w.href }}" data-world="{{ w.world }}" style="--r:{{ w.r }}deg">
+  <a class="clip rv {{ w.kind }}{% if loop.index > 6 %} more{% endif %}" href="{{ w.href }}" data-world="{{ w.world }}" style="--r:{{ w.r }}deg">
     <span class="sway" style="animation-delay:-{{ w.sw }}s">
       <span class="shade"></span>
       {% if w.clip %}
@@ -44,11 +42,12 @@
   {% if loop.index == 3 %}<div class="note2 n-a dsk" data-at="2" style="--r:-3deg">{{ h.note_a }}<small><i>{{ h.note_a2 }}</i></small></div>{% endif %}
   {% if loop.index == 7 %}<div class="note2 n-b dsk" data-at="6" style="--r:4deg">{{ h.note_b }}<small><i>{{ h.note_b2 }}</i></small></div>{% endif %}
   {% endfor %}
+  {% if wall|length > 6 %}<button class="more-btn" type="button" data-more>{{ h.browse }} ({{ wall|length }}) ↓</button>{% endif %}
 </section>
 
 {% if exps %}
-<div class="band rv" style="--r:1deg"><h2>{{ h.steve_t }}</h2><p>{{ h.steve_p }}</p></div>
 <section id="steve" class="wrap lab">
+  <div class="lab-band rv" style="--r:1deg"><h2>{{ h.steve_t }}</h2><p>{{ h.steve_p }}</p></div>
   <div class="steve-spot">
     <div class="steve" data-steve role="img" aria-label="{{ h.steve_alt }}" data-click1="{{ h.steve_click1 }}" data-click2="{{ h.steve_click2 }}"></div>
     <div class="bubble" data-bubble aria-live="polite">{{ h.steve_hi }}</div>

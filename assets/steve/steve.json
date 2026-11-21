@@ -1,0 +1,10 @@
+{
+ "_note": "Steve as approved by Michele (IMMAGINI PANDAS LAB/070_ALLEGA_B_1_steve_riferimento.png), cut from white. Eyes measured on a % grid of steve.webp: the black buttons sit on navy patches, so a blink = the button covered by patch colour + a stitched lid line.",
+ "w": 397,
+ "h": 560,
+ "eyes": [
+  {"cx": 43.6, "cy": 21.6, "rx": 4.2, "ry": 2.4},
+  {"cx": 70.6, "cy": 20.9, "rx": 3.6, "ry": 2.2}
+ ],
+ "lid": "#1c2337"
+}
