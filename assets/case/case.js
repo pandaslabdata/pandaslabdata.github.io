@@ -54,6 +54,24 @@
   // 4b) home: pin the evidence once the room is loaded; the desk moves with the scroll (depth), the board with the pointer
   var room=document.querySelector('[data-room]');
   if(room){
+    // red thread: from pin to pin, in the order given by data-yarn, with a little sag like real string
+    var drawYarn=function(){
+      var svg=room.querySelector('.yarn'), cork=room.querySelector('.cork'); if(!svg||!cork) return;
+      var W=cork.clientWidth, H=cork.clientHeight; svg.setAttribute('viewBox','0 0 '+W+' '+H);
+      var pts=[].slice.call(cork.querySelectorAll('[data-yarn]')).filter(function(el){ return el.offsetParent!==null && el.dataset.yarn; })
+        .sort(function(a,b){ return a.dataset.yarn-b.dataset.yarn; })
+        .map(function(el){ var a=el.querySelector('.pin')||el.querySelector('.tape')||el;
+          var x=el.offsetLeft+(a===el?el.offsetWidth/2:a.offsetLeft+a.offsetWidth/2), y=el.offsetTop+(a===el?0:a.offsetTop+a.offsetHeight*(a.classList.contains('pin')?.18:.5));
+          return [x,y]; });
+      if(pts.length<2) return;
+      var d='M'+pts[0][0].toFixed(1)+' '+pts[0][1].toFixed(1);
+      for(var i=1;i<pts.length;i++){ var p=pts[i-1], q=pts[i], dist=Math.hypot(q[0]-p[0],q[1]-p[1]);
+        d+=' Q'+((p[0]+q[0])/2).toFixed(1)+' '+(Math.max(p[1],q[1])+dist*.12).toFixed(1)+' '+q[0].toFixed(1)+' '+q[1].toFixed(1); }
+      svg.querySelector('path').setAttribute('d',d);
+    };
+    drawYarn(); window.addEventListener('resize',function(){ requestAnimationFrame(drawYarn); });
+    if(document.fonts&&document.fonts.ready) document.fonts.ready.then(drawYarn);
+    window.addEventListener('load',drawYarn);
     var start=function(){ room.classList.add('on'); };
     var bg=new Image(); bg.onload=start; bg.onerror=start; bg.src=getComputedStyle(room).backgroundImage.replace(/^url\(["']?|["']?\)$/g,'');
     setTimeout(start,1800);

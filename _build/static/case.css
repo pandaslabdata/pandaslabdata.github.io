@@ -173,6 +173,35 @@ footer a{color:var(--gold);text-decoration:none}
 @keyframes lamp{0%,100%{opacity:.85}45%{opacity:1}52%{opacity:.78}58%{opacity:1}}
 .it.pola:hover,.it.postit:hover{transform:rotate(0deg) scale(1.04)!important;transition:transform .25s}
 
+/* ---- HOME v2 (21/11/2026): a full evidence board, the whole room inside the first screen ---- */
+.room{width:min(100%, calc((100vh - 64px) * 1.5))}
+/* the shadow sits on a pseudo-element: drop-shadow + rotation on the same box makes Chrome skip the text */
+.card-h{isolation:isolate;padding:6% 7% 5%}
+.card-h::before{content:"";position:absolute;inset:0;z-index:-1;background:url("/assets/board/card.webp") center/100% 100% no-repeat;filter:drop-shadow(0 10px 14px rgba(0,0,0,.45))}
+@media (max-width:1100px) and (min-width:761px){.card-sub,.scrap{display:none!important}.card-h h1{font-size:clamp(20px,2.4vw,30px)}}
+.card-h .card-txt{position:static;display:block}
+.card-h .kick{font-size:clamp(9px,.8vw,12px)}
+.card-h h1{font-size:calc(var(--hf,1) * clamp(20px,min(2.4vw,4.1vh),40px));margin:6px 0 8px}
+.card-sub{font-family:"Special Elite",monospace;font-size:calc(var(--sf,1) * clamp(11px,min(.95vw,1.6vh),15px));line-height:1.35;color:var(--ink);margin-bottom:10px}
+.card-h .kick{font-size:clamp(8px,min(.72vw,1.25vh),11px);line-height:1.3}
+.card-ctas{display:flex;flex-wrap:wrap;gap:8px}
+.tag-btn{display:inline-block;font:clamp(12px,.95vw,15px) "Special Elite",monospace;text-decoration:none;color:var(--night);background:var(--gold);
+  padding:8px 14px;border-radius:4px 14px 14px 4px;border:1.5px dashed rgba(16,22,31,.45);box-shadow:0 3px 6px rgba(0,0,0,.35);transform:rotate(-1deg);transition:transform .2s}
+.tag-btn.ghost{background:#f3ead6;color:var(--navy)}
+.tag-btn:hover{transform:rotate(0) translateY(-2px)}
+.card-h .pin{top:-14px;width:22px}
+.clipn .pin{left:50%;top:-10px;width:16px}
+.shot{display:block}
+.shot-img{display:block;border:6px solid #f3ead6;border-bottom-width:22px;box-shadow:0 6px 10px rgba(0,0,0,.45);background:#111}
+.shot-img img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.shot .tape{left:28%;top:-9%;width:46%}
+.shot-cap{position:absolute;left:0;right:0;bottom:3px;text-align:center;font:clamp(10px,.85vw,13px) "Caveat",cursive;color:var(--ink)}
+.scrap .bgimg{filter:drop-shadow(0 4px 6px rgba(0,0,0,.4))}
+.yarn{position:absolute;left:0;top:0;width:100%;height:100%;z-index:2;overflow:visible}
+.yarn path{stroke-width:2.5}
+.hero-under{display:none}
+.it:hover{z-index:6}
+
 .sec{padding-top:70px}
 .sec-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px;flex-wrap:wrap}
 .sec-head h2{font-size:clamp(30px,4vw,46px)}
@@ -283,7 +312,7 @@ footer a{color:var(--gold);text-decoration:none}
 .xcard:nth-child(odd){transform:rotate(-1deg)}.xcard:nth-child(even){transform:rotate(1deg)}
 .xcard .pin-c{position:absolute;left:50%;top:-8px;width:17px;transform:translateX(-50%)}
 .xcard .xtag{position:absolute;right:16px;top:14px}
-.xcard p{font:22px/1.15 "Caveat",cursive;color:var(--ink);margin:6px 0 10px}
+.xcard p{font:15px/1.5 "Special Elite","Courier New",monospace;color:var(--ink);margin:8px 0 10px}
 .xcard .xsrc{font:12px "Special Elite";color:var(--pencil)}
 .sources .cite i{font-style:normal;color:var(--pencil);font-size:12px}
 .errata{border-left:6px solid var(--red)}
@@ -291,7 +320,7 @@ footer a{color:var(--gold);text-decoration:none}
 .verdict{font-size:19px;line-height:1.6}
 .yt{position:relative;aspect-ratio:16/9;border:8px solid #0b0f15;border-radius:10px;overflow:hidden;background:#000;box-shadow:0 8px 16px rgba(0,0,0,.35)}
 .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-@media (max-width:760px){.cardsx{--card:86%}.xcard:nth-child(odd),.xcard:nth-child(even){transform:none}.xcard p{font-size:20px}}
+@media (max-width:760px){.cardsx{--card:86%}.xcard:nth-child(odd),.xcard:nth-child(even){transform:none}.xcard p{font-size:14.5px}}
 
 /* mobile: thumb bar, language sheet, swipe rails */
 .tabbar,.sheet-lang,.swipe-hint{display:none}
@@ -369,8 +398,13 @@ footer a{color:var(--gold);text-decoration:none}
   .js .room.on .it{transform:rotate(var(--mr))}
   .card-h .kick{font-size:10px}
   .card-h h1{font-size:min(30px,7.2vw)}
+  .room{width:100%}
+  .dsk{display:none!important}
+  .card-sub,.card-ctas{display:none}
+  .hero-under{display:block}
+  .shot-cap{font-size:14px}
   .pola .pola-cap{font-size:16px}
-  .postit .post-txt{font-size:calc(var(--pf,1) * 19px)}
+  .postit .post-txt{font-size:calc(var(--pf,1) * min(17px,4.4vw))}
   .drawer .d-lab{opacity:.9}
   .drawer-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
   .drawer-list a{display:flex;flex-direction:column;gap:2px;min-height:56px;padding:10px 12px;text-decoration:none;border-radius:8px;background:rgba(46,65,91,.85);border:1.5px dashed rgba(212,147,24,.55)}

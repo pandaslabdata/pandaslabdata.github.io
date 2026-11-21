@@ -11,6 +11,7 @@
  "dominant_label": "SIMULATION",
  "yt": "i2BhEURDtNc",
  "images": {
+  "clip_src": "../Motore Vox/assets/case_067/parts/clips/piece_00.png",
   "cover": "cover.jpg", "og": "cover.jpg", "poster": "p02.jpg", "model": "p02.jpg",
   "src_dir": "../Motore Vox/assets/case_067/board",
   "copy": {"cover.jpg": "GD_COVER_9x16.png", "p02.jpg": "GD_PHOTO_02.png", "p03.jpg": "GD_PHOTO_03.png", "p04.jpg": "GD_PHOTO_04.png", "p05.jpg": "GD_PHOTO_05.png", "p07.jpg": "GD_PHOTO_07.png"}

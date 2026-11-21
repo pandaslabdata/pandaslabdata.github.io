@@ -3,32 +3,42 @@
 <section class="room-wrap" aria-label="{{ h.kicker }}">
   <div class="room" data-room>
     <div class="cork">
-      <svg class="yarn y-d" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M24 1 C 40 -3, 52 -4, 62 -1 S 80 22, 84 27 S 62 58, 51 66"/></svg>
-      <svg class="yarn y-m" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M50 -2 C 34 18, 20 34, 26 45 S 62 44, 72 50 S 76 66, 69 74"/></svg>
+      <svg class="yarn" aria-hidden="true"><path pathLength="1" d=""/></svg>
 
-      <div class="it card-h" style="--x:3%;--y:4%;--w:42%;--r:-2deg;--mx:6%;--my:0%;--mw:88%;--mr:-1deg;--d:0s">
-        <img class="bgimg" src="/assets/board/card.webp" alt="" width="520" height="352">
+      <div class="it card-h" data-yarn="1" style="--hf:{{ [1, 34 / ((h.h1a ~ h.h1b)|length)]|min }};--sf:{{ [1, 88 / (h.board_sub|length)]|min }};--x:2%;--y:1%;--w:36%;--r:-1.5deg;--mx:4%;--my:0%;--mw:92%;--mr:-1deg;--d:.1s">
         <img class="pin" src="/assets/board/pin1.webp" alt="" width="73" height="155">
-        <div class="card-txt"><div class="kick">{{ h.kicker }}</div><h1 class="slab">{{ h.h1a }}<br><em>{{ h.h1b }}</em></h1></div>
+        <div class="card-txt">
+          <div class="kick">{{ h.kicker }}</div>
+          <h1 class="slab">{{ h.h1a }}<br><em>{{ h.h1b }}</em></h1>
+          <p class="card-sub">{{ h.board_sub }}</p>
+          <div class="card-ctas"><a class="tag-btn" href="{{ latest.href }}">{{ h.open_latest }} →</a><a class="tag-btn ghost" href="#files">{{ h.browse }}</a></div>
+        </div>
       </div>
 
-      <a class="it pola" href="{{ latest.href }}" style="--x:52%;--y:2%;--w:20%;--r:3deg;--mx:5%;--my:47%;--mw:42%;--mr:-3deg;--d:.3s">
-        <span class="pola-photo" style="--wx:{{ g.polaroid_window[0]*100 }}%;--wy:{{ g.polaroid_window[1]*100 }}%;--ww:{{ (g.polaroid_window[2]-g.polaroid_window[0])*100 }}%;--wh:{{ (g.polaroid_window[3]-g.polaroid_window[1])*100 }}%"><img src="{{ latest.cover }}" alt="{{ latest.title }}" width="507" height="900"></span>
+      {% for b in board %}{% set p = b.pos %}
+      {% set st = "--x:%s%%;--y:%s%%;--w:%s%%;--r:%sdeg;--mx:%s%%;--my:%s%%;--mw:%s%%;--mr:%sdeg;--d:%ss"|format(p.x, p.y, p.w, p.r, p.mx, p.my, p.mw, p.mr, b.d) %}
+      {% if b.kind == 'pola' %}<a class="it pola{% if b.dsk %} dsk{% endif %}" href="{{ b.href }}" data-yarn="{{ b.yarn }}" style="{{ st }}" aria-label="{{ b.title }}">
+        <span class="pola-photo" style="--wx:{{ g.polaroid_window[0]*100 }}%;--wy:{{ g.polaroid_window[1]*100 }}%;--ww:{{ (g.polaroid_window[2]-g.polaroid_window[0])*100 }}%;--wh:{{ (g.polaroid_window[3]-g.polaroid_window[1])*100 }}%"><img src="{{ b.cover }}" alt="" width="507" height="900"></span>
         <img class="bgimg" src="/assets/board/polaroid.webp" alt="" width="352" height="404">
         <img class="pin" src="/assets/board/pin2.webp" alt="" width="73" height="157">
-        <span class="pola-cap">{{ h.latest }} · {{ latest.case }}</span>
-        <img class="stampimg" src="/assets/board/st_{{ latest.label|lower }}.webp" alt="{{ latest.label }}" width="240" height="108">
+        <span class="pola-cap">{{ b.cap }}</span>
+        <img class="stampimg" src="/assets/board/st_{{ b.stamp|lower }}.webp" alt="{{ b.stamp }}" width="240" height="108">
       </a>
-
-      <div class="it clipn" style="--x:73%;--y:28%;--w:26%;--r:-3deg;--mx:48%;--my:51%;--mw:50%;--mr:4deg;--d:.6s">
-        <img class="bgimg" src="/assets/board/clip068.webp" alt="" width="620" height="407">
-        <img class="tape" src="/assets/board/tape1.webp" alt="" width="240" height="93">
-      </div>
-
-      <a class="it postit" href="{{ latest.href }}" style="--x:44%;--y:64%;--w:15%;--r:-4deg;--mx:52%;--my:73%;--mw:34%;--mr:3deg;--d:.9s">
+      {% elif b.kind == 'clip' %}<a class="it clipn{% if b.dsk %} dsk{% endif %}" href="{{ b.href }}" data-yarn="{{ b.yarn }}" style="{{ st }}" tabindex="-1" aria-hidden="true">
+        <img class="bgimg" src="{{ b.img }}" alt="" width="620" height="407">
+        <img class="pin" src="/assets/board/pin1.webp" alt="" width="73" height="155">
+      </a>
+      {% elif b.kind == 'photo' %}<a class="it shot{% if b.dsk %} dsk{% endif %}" href="{{ b.href }}" data-yarn="{{ b.yarn }}" style="{{ st }}" aria-label="{{ b.title }}">
+        <span class="shot-img"><img src="{{ b.img }}" alt="" loading="lazy" width="480" height="360"></span>
+        <img class="tape" src="/assets/board/tape2.webp" alt="" width="240" height="75">
+        <span class="shot-cap">{{ b.cap }}</span>
+      </a>
+      {% elif b.kind == 'postit' %}<a class="it postit{% if b.dsk %} dsk{% endif %}" href="{{ b.href }}" style="{{ st }}">
         <img class="bgimg" src="/assets/board/postit.webp" alt="" width="260" height="264">
-        <span class="post-txt" style="--pf:{{ [1, 30 / (latest.title|length)]|min }}">{{ latest.title }}</span>
+        <span class="post-txt" style="--pf:{{ [1, 26 / (b.text|length)]|min }}">{{ b.text }}</span>
       </a>
+      {% elif b.kind == 'scrap' %}<div class="it scrap dsk" style="{{ st }}" aria-hidden="true"><img class="bgimg" src="{{ b.img }}" alt="" width="260" height="286"></div>
+      {% endif %}{% endfor %}
     </div>
     <div class="glow" aria-hidden="true"></div>
     <img class="desk" src="/assets/board/desk.webp" alt="" width="1505" height="628" data-depth="1">

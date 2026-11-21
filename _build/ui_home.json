@@ -1,6 +1,6 @@
 {
  "en": {
-  "seo_title": "Pandas Lab — Impossible questions, real science", "description": "An investigative archive in felt: every case starts with an impossible question and ends with evidence you can check. Sources, numbers and certainty labels included.",
+  "board_sub": "Every case starts with a question that can't happen, and ends with evidence you can check.", "seo_title": "Pandas Lab — Impossible questions, real science", "description": "An investigative archive in felt: every case starts with an impossible question and ends with evidence you can check. Sources, numbers and certainty labels included.",
   "kicker": "THE PANDAS LAB CASE ARCHIVE", "h1a": "Impossible questions.", "h1b": "Real science.",
   "lead": "Every case starts with a question that can't happen, and ends with evidence you can check. Sources, numbers and models included, all handmade in felt.",
   "open_latest": "Open the latest case", "browse": "Browse the archive", "latest": "LATEST CASE",
@@ -14,7 +14,7 @@
   "follow_t": "Follow the investigation", "mind_t": "The mind behind the lab", "mind_btn": "Get to know us"
  },
  "it": {
-  "seo_title": "Pandas Lab — Domande impossibili, scienza vera", "description": "Un archivio investigativo in feltro: ogni caso parte da una domanda impossibile e finisce con prove che puoi controllare. Fonti, numeri ed etichette di certezza inclusi.",
+  "board_sub": "Ogni caso parte da una domanda che non può accadere e finisce con prove che puoi controllare.", "seo_title": "Pandas Lab — Domande impossibili, scienza vera", "description": "Un archivio investigativo in feltro: ogni caso parte da una domanda impossibile e finisce con prove che puoi controllare. Fonti, numeri ed etichette di certezza inclusi.",
   "kicker": "L'ARCHIVIO DEI CASI DI PANDAS LAB", "h1a": "Domande impossibili.", "h1b": "Scienza vera.",
   "lead": "Ogni caso parte da una domanda che non può accadere e finisce con prove che puoi controllare. Fonti, numeri e modelli inclusi, tutto fatto a mano in feltro.",
   "open_latest": "Apri l'ultimo caso", "browse": "Sfoglia l'archivio", "latest": "ULTIMO CASO",
@@ -28,7 +28,7 @@
   "follow_t": "Segui l'indagine", "mind_t": "La mente dietro il laboratorio", "mind_btn": "Vieni a conoscerci"
  },
  "de": {
-  "seo_title": "Pandas Lab — Unmögliche Fragen, echte Wissenschaft", "description": "Ein Ermittlungsarchiv aus Filz: Jeder Fall beginnt mit einer unmöglichen Frage und endet mit Beweisen, die du prüfen kannst. Quellen, Zahlen und Sicherheits-Labels inklusive.",
+  "board_sub": "Jeder Fall beginnt mit einer Frage, die nicht passieren kann, und endet mit Beweisen, die du prüfen kannst.", "seo_title": "Pandas Lab — Unmögliche Fragen, echte Wissenschaft", "description": "Ein Ermittlungsarchiv aus Filz: Jeder Fall beginnt mit einer unmöglichen Frage und endet mit Beweisen, die du prüfen kannst. Quellen, Zahlen und Sicherheits-Labels inklusive.",
   "kicker": "DAS FALLARCHIV VON PANDAS LAB", "h1a": "Unmögliche Fragen.", "h1b": "Echte Wissenschaft.",
   "lead": "Jeder Fall beginnt mit einer Frage, die nicht passieren kann, und endet mit Beweisen, die du prüfen kannst. Quellen, Zahlen und Modelle inklusive, alles handgemacht aus Filz.",
   "open_latest": "Neuesten Fall öffnen", "browse": "Archiv durchsuchen", "latest": "NEUESTER FALL",
@@ -42,7 +42,7 @@
   "follow_t": "Folge der Ermittlung", "mind_t": "Der Kopf hinter dem Labor", "mind_btn": "Lern uns kennen"
  },
  "es": {
-  "seo_title": "Pandas Lab — Preguntas imposibles, ciencia real", "description": "Un archivo de investigación en fieltro: cada caso empieza con una pregunta imposible y termina con pruebas que puedes comprobar. Fuentes, números y etiquetas de certeza incluidos.",
+  "board_sub": "Cada caso empieza con una pregunta que no puede ocurrir y termina con pruebas que puedes comprobar.", "seo_title": "Pandas Lab — Preguntas imposibles, ciencia real", "description": "Un archivo de investigación en fieltro: cada caso empieza con una pregunta imposible y termina con pruebas que puedes comprobar. Fuentes, números y etiquetas de certeza incluidos.",
   "kicker": "EL ARCHIVO DE CASOS DE PANDAS LAB", "h1a": "Preguntas imposibles.", "h1b": "Ciencia real.",
   "lead": "Cada caso empieza con una pregunta que no puede ocurrir y termina con pruebas que puedes comprobar. Fuentes, números y modelos incluidos, todo hecho a mano en fieltro.",
   "open_latest": "Abrir el último caso", "browse": "Explorar el archivo", "latest": "ÚLTIMO CASO",
@@ -56,7 +56,7 @@
   "follow_t": "Sigue la investigación", "mind_t": "La mente detrás del laboratorio", "mind_btn": "Conócenos"
  },
  "fr": {
-  "seo_title": "Pandas Lab — Questions impossibles, vraie science", "description": "Des archives d'enquête en feutre : chaque affaire commence par une question impossible et se termine par des preuves vérifiables. Sources, chiffres et étiquettes de certitude inclus.",
+  "board_sub": "Chaque affaire commence par une question qui ne peut pas arriver et se termine par des preuves vérifiables.", "seo_title": "Pandas Lab — Questions impossibles, vraie science", "description": "Des archives d'enquête en feutre : chaque affaire commence par une question impossible et se termine par des preuves vérifiables. Sources, chiffres et étiquettes de certitude inclus.",
   "kicker": "LES ARCHIVES DES AFFAIRES DE PANDAS LAB", "h1a": "Questions impossibles.", "h1b": "Vraie science.",
   "lead": "Chaque affaire commence par une question qui ne peut pas arriver et se termine par des preuves que tu peux vérifier. Sources, chiffres et modèles inclus, le tout fait main en feutre.",
   "open_latest": "Ouvrir la dernière affaire", "browse": "Parcourir les archives", "latest": "DERNIÈRE AFFAIRE",

@@ -17,7 +17,7 @@
         <div class="dmeta typed">{{ d.ep }} · {{ d.dur }}</div>
         <h2><a href="{{ d.page or d.url }}"{% if not d.page %} target="_blank" rel="noopener"{% endif %}>{{ d.title }}</a></h2>
         {% if d.page %}<a class="btn" href="{{ d.page }}">{{ open_file }} →</a> {% endif %}<a class="btn{% if d.page %} ghost{% endif %}" href="{{ d.url }}" target="_blank" rel="noopener">{{ o.watch }} →</a>
-        <details class="dsrc"><summary>{{ o.src }}</summary><ul>{% for s in d.sources %}<li>{{ s|safe }}</li>{% endfor %}</ul></details>
+        {% if not d.page %}<details class="dsrc"><summary>{{ o.src }}</summary><ul>{% for s in d.sources %}<li>{{ s|safe }}</li>{% endfor %}</ul></details>{% endif %}
       </div>
       <span class="stamp anim navy">{{ dossier_word }} {{ d.n }}</span>
     </article>{% endfor %}

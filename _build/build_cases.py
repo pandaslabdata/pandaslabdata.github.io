@@ -281,6 +281,48 @@ def home_paths():
     return {l: ("/" if l == "en" else f"/{l}/") for l in LANGS}
 
 
+def make_board(cases, lang, h, ui):
+    """The evidence pinned on the home board, built from the data: the two latest cases (photo, clipping,
+    question) and the latest dossiers. Positions are % of the cork (computer x,y,w,r | phone mx,my,mw,mr);
+    'yarn' gives the order of the red thread between pins; 'dsk' items show on the computer only."""
+    cs = sorted(cases, key=lambda ce: ce[0]["case"], reverse=True)
+    items = []
+    for slot, (c, _) in enumerate(cs[:2]):
+        num, title = c["case"], c["i18n"][lang]["title"]
+        href, img = case_paths(num)[lang], f"/img/cases/{num}"
+        if slot == 0:   # the latest case: big photo + clipping + its question on a post-it
+            items.append(dict(kind="pola", href=href, cover=f"{img}/{c['images']['cover']}", cap=f"{h['latest']} · {num}",
+                              stamp=c["dominant_label"], title=title, yarn=2, dsk=False,
+                              pos=dict(x=38, y=2, w=18, r=3, mx=4, my=44, mw=40, mr=-3)))
+            if c["images"].get("clip_src"):
+                items.append(dict(kind="clip", href=href, img=f"{img}/clip.webp", yarn=3, dsk=False,
+                                  pos=dict(x=57, y=6, w=21, r=-3, mx=47, my=47, mw=51, mr=4)))
+            items.append(dict(kind="postit", href=href, text=title, yarn=None, dsk=False,
+                              pos=dict(x=51, y=48, w=10, r=-4, mx=69, my=73, mw=28, mr=4)))
+        else:           # the case before: smaller, computer only
+            items.append(dict(kind="pola", href=href, cover=f"{img}/{c['images']['cover']}", cap=f"{ui['case']} {num}",
+                              stamp=c["dominant_label"], title=title, yarn=4, dsk=True,
+                              pos=dict(x=79, y=3, w=16, r=6, mx=0, my=0, mw=0, mr=0)))
+            if c["images"].get("clip_src"):
+                items.append(dict(kind="clip", href=href, img=f"{img}/clip.webp", yarn=5, dsk=True,
+                                  pos=dict(x=63, y=45, w=17, r=4, mx=0, my=0, mw=0, mr=0)))
+            items.append(dict(kind="postit", href=href, text=title, yarn=None, dsk=True,
+                              pos=dict(x=83, y=43, w=10, r=5, mx=0, my=0, mw=0, mr=0)))
+    # the latest re-checked dossiers, taped like old photos
+    spots = [dict(x=38, y=50, w=14, r=-4, mx=5, my=80, mw=40, mr=-2),
+             dict(x=43, y=72, w=14, r=3, mx=0, my=0, mw=0, mr=0),
+             dict(x=60, y=71, w=14, r=-2, mx=0, my=0, mw=0, mr=0)]
+    for i, f in enumerate(sorted(dossier_files(), reverse=True)[:3]):
+        d = json.loads(f.read_text(encoding="utf-8"))
+        items.append(dict(kind="photo", href=dossier_paths(d["n"])[lang], img=f"https://i.ytimg.com/vi/{d['yt']}/hqdefault.jpg",
+                          cap=f"{h['dossier']} {d['n']}", title=d["i18n"][lang]["title"], yarn=6 + i, dsk=i > 0, pos=spots[i]))
+    items.append(dict(kind="scrap", img="/assets/board/scrap_q.webp", yarn=None, dsk=True,
+                      pos=dict(x=31, y=84, w=6, r=-8, mx=0, my=0, mw=0, mr=0)))
+    for k, it in enumerate(items):
+        it["d"] = round(0.3 + k * 0.12, 2)
+    return items
+
+
 def build_home(cases, ui_all, env, ver):
     """the investigation room: board with the latest case, the filing cabinet, the drawers, the method"""
     hj = json.loads((BUILD / "ui_home.json").read_text(encoding="utf-8"))
@@ -299,9 +341,12 @@ def build_home(cases, ui_all, env, ver):
             files.append({"href": case_paths(c["case"])[lang], "external": False, "img": f"/img/cases/{c['case']}/{c['images']['cover']}",
                           "kind": ui["case"], "n": c["case"], "title": c["i18n"][lang]["title"], "stamp": ui["status"][c["status"]], "navy": False, "wide": False})
         for d in dj["dossiers"]:
-            has_page = (BUILD / "dossiers" / f"D{d['n']}.json").exists()
-            files.append({"href": dossier_paths(d["n"])[lang] if has_page else d["url"], "external": not has_page, "img": d["thumb"], "kind": h["dossier"], "n": d["n"], "title": d["title"],
-                          "stamp": "YOUTUBE", "navy": True, "wide": True})
+            dp = BUILD / "dossiers" / f"D{d['n']}.json"
+            has_page = dp.exists()
+            # the page title is the corrected one, in the visitor's language (not the old YouTube title)
+            title = json.loads(dp.read_text(encoding="utf-8"))["i18n"][lang]["title"] if has_page else d["title"]
+            files.append({"href": dossier_paths(d["n"])[lang] if has_page else d["url"], "external": not has_page, "img": d["thumb"], "kind": h["dossier"], "n": d["n"], "title": title,
+                          "stamp": "RE-CHECKED" if has_page else "YOUTUBE", "navy": True, "wide": True})
         worlds = []
         for i, k in enumerate(["space", "earth", "life", "history"]):
             a, l = geo["drawer_areas"][i], geo["drawer_labels"][i]
@@ -312,6 +357,7 @@ def build_home(cases, ui_all, env, ver):
             pre = "" if lang == "en" else f"/{lang}"
             worlds.append({"name": h["w"][k], "desc": h["wd"][k], "href": pre + dj["world_links"][k], "area": a, "rel": rel, "fit": k_fit})
         method = [{"key": k, "text": h["d"][k]} for k in LABELS]
+        board = make_board(cases, lang, h, ui)
         jsonld = js_safe({"@context": "https://schema.org", "@type": "WebSite", "name": "Pandas Lab", "url": BASE + "/",
                           "inLanguage": LANGS, "description": h["description"]})
         page = env.get_template("home.html").render(
@@ -319,7 +365,7 @@ def build_home(cases, ui_all, env, ver):
             prefix="" if lang == "en" else f"/{lang}", page_kind="home", ver=ver,
             seo_title=h["seo_title"], og_title=h["seo_title"], description=h["description"], og_type="website",
             og_image=latest["cover"], og_locale=OG_LOCALE[lang], jsonld=jsonld,
-            h=h, g=geo, latest=latest, files=files, worlds=worlds, method=method, socials=SOCIALS)
+            h=h, g=geo, latest=latest, files=files, worlds=worlds, method=method, socials=SOCIALS, board=board)
         out = SITE / alts[lang].strip("/") / "index.html" if lang != "en" else SITE / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(page, encoding="utf-8")
@@ -533,6 +579,11 @@ def main():
             if im.width > 720:
                 im = im.resize((720, round(im.height * 720 / im.width)), _I.LANCZOS)
             im.save(dst / out_name, "JPEG", quality=76, optimize=True, progressive=True)
+        if c["images"].get("clip_src"):                       # the case's newspaper clipping, cut-out with transparency
+            cl = _I.open((SITE / c["images"]["clip_src"]).resolve()).convert("RGBA")
+            if cl.width > 620:
+                cl = cl.resize((620, round(cl.height * 620 / cl.width)), _I.LANCZOS)
+            cl.save(dst / "clip.webp", "WEBP", quality=80, method=6)
         build_case(c, engine, ui_all, env, ver, pool=[x for x, _ in cases])
     build_archive(cases, ui_all, env, ver)
     groups = [(archive_paths(), "0.8")] + [(case_paths(c["case"]), "0.9") for c, _ in cases]
