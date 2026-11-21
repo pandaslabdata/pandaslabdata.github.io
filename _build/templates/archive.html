@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="arch-head"><div class="wrap">
+  <div class="kicker">{{ ui.archive_kicker }}</div>
+  <h1 class="slab">{{ ui.archive_title }}</h1>
+  <p class="lede">{{ ui.archive_intro }}</p>
+  <div class="files rail">
+    {% for f in files %}<a class="file" href="{{ f.href }}"><span class="tab">{{ ui.case }} {{ f.case }}</span><div class="folder paper"><span class="pin"></span><img src="{{ f.cover }}" alt="" width="507" height="900"><h2>{{ f.title }}</h2><div class="meta">{% for l in f.labels %}<span class="label l-{{ l|lower }}">{{ l }}</span>{% endfor %}</div></div><span class="stamp">{{ ui.status[f.status] }}</span></a>
+    {% endfor %}
+  </div>
+</div></div>
+{% endblock %}

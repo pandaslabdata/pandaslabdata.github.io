@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="dossier-head"><div class="wrap">
+  <div>
+    <div class="crumb"><a href="{{ prefix }}/cases/">{{ ui.nav_cases }}</a> / {{ ui.worlds[c.world] }} / {{ c.case }}</div>
+    <h1 class="slab{% if t.title|length > 40 %} long{% endif %}">{{ t.title_html|safe }}</h1>
+    <p class="lede">{{ t.lede|safe }}</p>
+    <div class="facts"><span>{{ ui.case }} {{ c.case }}</span><span>{{ ui.world }}: {{ ui.worlds[c.world] }}</span><span>{{ claims_line }}</span><span>{{ ui.updated }} {{ updated }}</span></div>
+  </div>
+  <div class="cover paper"><span class="pin" style="left:46%;top:-4px"></span><img src="{{ img }}/{{ c.images.cover }}" alt="{{ t.title }}" width="507" height="900"><span class="stamp anim">{{ ui.status[c.status] }}</span></div>
+</div></div>
+
+<nav class="toc" aria-label="{{ ui.case }} {{ c.case }}"><div class="wrap">
+  {% for s in toc %}<a href="#{{ s.id }}">{{ s.n }} · {{ s.name }}</a>{% endfor %}
+</div><div class="read-thread"><i></i></div></nav>
+
+<div class="wrap"><article>
+  <section id="q" class="sheet paper rv"><span class="pin" style="left:30px;top:16px"></span>
+    <div class="num">01 · {{ ui.sec_q }}</div>
+    <h2 class="slab">{{ t.q_h2|safe }}</h2>
+    {% for p in t.q_p %}<p>{{ p|safe }}</p>{% endfor %}
+    <div class="hand-note">{{ t.q_note|safe }}</div>
+  </section>
+
+  <section id="e" class="sheet paper rv"><span class="tape" style="left:44%;top:-8px"></span>
+    <div class="num">02 · {{ ui.sec_e }}</div>
+    <h2 class="slab">{{ t.e_h2|safe }}</h2>
+    <div class="swipe-hint"><span>{{ ui.swipe_ev }}</span><span class="arrow">→</span><span class="dots"></span></div>
+    <div class="exhibits rail">
+      {% for x in exhibits %}<div class="ex"><span class="label l-{{ x.label|lower }} tag">{{ x.label }}</span><img src="{{ img }}/{{ x.img }}" alt="{{ x.alt }}" loading="lazy" width="600" height="900">
+        <div class="big">{{ x.big|safe }}</div><p>{{ x.text|safe }}</p>
+        <div class="src">{{ x.claim }} · {{ x.name }} · <a href="{{ x.url }}" rel="noopener" target="_blank">{{ x.host }}</a></div></div>
+      {% endfor %}
+    </div>
+    <div class="chart" role="img" aria-label="{{ chart_tide.title }}">
+      <h3>{{ chart_tide.title }}</h3><div class="sub">{{ chart_tide.sub|safe }}</div>
+      {% for r in chart_tide.rows %}<div class="bar-row"><span>{{ r.label }}</span><div class="bar"><i class="c-{{ r.color }}" style="--w:{{ r.w }}%"></i></div><span>{{ r.val|safe }}</span></div>{% endfor %}
+    </div>
+  </section>
+
+  <section id="m" class="sheet paper rv"><span class="pin" style="right:40px;top:16px"></span>
+    <div class="num">03 · {{ sec_m }}</div>
+    <h2 class="slab">{{ t.m_h2|safe }}</h2>
+    {% for p in t.m_p %}<p>{{ p|safe }}</p>{% endfor %}
+    <div class="chart" role="img" aria-label="{{ chart_tilt.title }}">
+      <h3>{{ chart_tilt.title }}</h3><div class="sub">{{ chart_tilt.sub|safe }}</div>
+      {% for r in chart_tilt.rows %}<div class="bar-row"><span>{{ r.label }}</span><div class="bar"><i class="c-{{ r.color }}" style="--w:{{ r.w }}%"></i></div><span>{{ r.val|safe }}</span></div>{% endfor %}
+      <div class="axis">{% for a in chart_tilt.axis %}<span>{{ a|safe }}</span>{% endfor %}</div>
+      <p class="note">{{ chart_tilt.note|safe }}</p>
+    </div>
+  </section>
+
+  <section id="v" class="sheet paper rv"><span class="tape" style="left:20px;top:-6px"></span>
+    <div class="num">04 · {{ ui.sec_v }}</div>
+    <h2 class="slab">{{ t.v_h2|safe }}</h2>
+    {% for p in t.v_p %}<p>{{ p|safe }}</p>{% endfor %}
+    <span class="stamp anim" style="font-size:24px;margin-top:10px">{{ ui.case }} {{ c.case }} — {{ ui.status[c.status] }}</span>
+  </section>
+
+  <section id="f" class="sheet paper rv"><span class="pin" style="left:30px;top:16px"></span>
+    <div class="num">05 · {{ ui.sec_f }}</div>
+    <h2 class="slab">{{ t.f_h2|safe }}</h2>
+    <ol class="sources">
+      {% for s in sources %}<li id="{{ s.claim|lower }}"><b>{{ s.claim }}</b><div>{{ s.desc|safe }} <span class="label l-{{ s.label|lower }}">{{ s.label }}</span>
+        <span class="cite">{{ s.name }}</span>
+        {% for u in s.urls %}<a href="{{ u }}" rel="noopener" target="_blank">{{ u|replace('https://','') }}</a><br>{% endfor %}
+        <span class="read">{{ ui.read }}: {{ s.read }}</span></div></li>
+      {% endfor %}
+    </ol>
+    <p class="labels-note">{{ ui.labels_note }}</p>
+  </section>
+
+  <section id="w" class="sheet paper rv"><span class="tape" style="right:40px;top:-8px"></span>
+    <div class="num">06 · {{ ui.sec_w }}</div>
+    <h2 class="slab">{{ t.w_h2|safe }}</h2>
+    <div class="watch">
+      <div class="phone"><img src="{{ img }}/{{ c.images.poster }}" alt="" loading="lazy"></div>
+      <div>
+        {% if posts %}<p class="typed">{{ ui.posts_title }}</p>
+        <div class="channels">{% for p in posts %}<a href="{{ p.url }}" rel="noopener" target="_blank"><span>{{ p.platform }}</span><span>→</span></a>{% endfor %}</div>
+        {% else %}<p>{{ ui.watch_intro }}</p>
+        <div class="channels">{% for ch in channels %}<a href="{{ ch.url }}" rel="noopener" target="_blank"><span>{{ ch.name }}</span><span>→</span></a>{% endfor %}</div>{% endif %}
+        {% if related %}<div class="related">{% for r in related %}<a href="{{ r.href }}">{{ r.title }}</a>{% endfor %}</div>{% endif %}
+        <a class="btn ghost allcases" href="{{ prefix }}/cases/">{{ ui.all_cases }}</a>
+      </div>
+    </div>
+  </section>
+</article></div>
+{% endblock %}
