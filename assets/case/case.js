@@ -258,6 +258,73 @@
     var fit=function(){ hs.forEach(function(h){ var b=h.querySelector('b'), i=h.querySelector('i'), f=24; b.style.fontSize=f+'px';
       while(f>9&&(b.scrollWidth>h.clientWidth+1||h.scrollHeight>h.clientHeight+1||b.offsetHeight+(i?i.offsetHeight+6:0)>h.clientHeight+2)){ f-=.5; b.style.fontSize=f+'px'; } }); };
     fit(); window.addEventListener('resize',fit); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit); window.addEventListener('load',fit); })();
+  // 4j) the creatures on the world clippings: the volcano smokes, the T. rex blinks, the chameleon shoots its tongue.
+  //     Coordinates are pixels of the 900 px clipping image (measured on the GPT clippings), placed in % of the clipping.
+  (function(){
+    var clip=function(k){ var c=document.querySelector('.wclip[data-open="'+k+'"] .sway'); return c; };
+    var pct=function(x,y,w,h,W,H){ return 'left:'+(x/W*100)+'%;top:'+(y/H*100)+'%;width:'+(w/W*100)+'%;height:'+(h/H*100)+'%'; };
+    var watch=function(el,cb){ var on=false; new IntersectionObserver(function(es){ es.forEach(function(e){ var was=on; on=e.isIntersecting; cb(on,was); }); }).observe(el); return function(){ return on; }; };
+    if(!document.getElementById('fx-smoke')){ var d=document.createElement('div'); d.style.cssText='position:absolute;width:0;height:0;overflow:hidden';
+      d.innerHTML='<svg width="0" height="0"><filter id="fx-smoke" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.011 0.017" numOctaves="2" seed="4" result="n"><animate attributeName="baseFrequency" dur="9s" values="0.011 0.017;0.015 0.022;0.012 0.014;0.011 0.017" repeatCount="indefinite"/></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="16" xChannelSelector="R" yChannelSelector="G"><animate attributeName="scale" dur="6s" values="12;20;12" repeatCount="indefinite"/></feDisplacementMap></filter></svg>';
+      document.body.appendChild(d); }
+
+    // the volcano: the plume billows (a moving warp of the plume itself), puffs of smoke rise from the crater, steam off the sea
+    var e=clip('earth');
+    if(e){ var W=900,H=517, img=e.querySelector('.wc-img').getAttribute('src');
+      var R=[515,58,365,150], wp=document.createElement('span'); wp.className='cr-warp';
+      wp.style.cssText=pct(R[0],R[1],R[2],R[3],W,H)+';background-image:url('+img+');background-size:'+(W/R[2]*100)+'% '+(H/R[3]*100)+'%;background-position:'+(R[0]/W/(1-R[2]/W)*100)+'% '+(R[1]/H/(1-R[3]/H)*100)+'%';
+      e.appendChild(wp);
+      if(!calm0){ var cv=document.createElement('canvas'); cv.className='cr-canvas'; cv.style.cssText=pct(437,62,437,372,W,H); e.appendChild(cv);
+        var cx=cv.getContext('2d'), P=[], S=[];
+        var sz=function(){ var r=cv.getBoundingClientRect(),k=Math.min(2,window.devicePixelRatio||1); cv.width=r.width*k; cv.height=r.height*k; };
+        // crater ~ (690,185) and steam ~ (492,262) in image px -> fractions of the canvas
+        var CX=(690-437)/437, CY=(185-62)/372, SX=(492-437)/437, SY=(262-62)/372;
+        var puff=function(init){ var w=cv.width,h=cv.height; return {x:w*(CX+(Math.random()-.5)*.08),y:h*CY,r:w*(.02+Math.random()*.03),vx:w*(.0004+Math.random()*.0009),vy:-h*(.0012+Math.random()*.0016),l:init?Math.random():1,d:.0035+Math.random()*.003,g:90+Math.random()*60|0}; };
+        var steam=function(){ var w=cv.width,h=cv.height; return {x:w*(SX+(Math.random()-.5)*.06),y:h*SY,r:w*(.01+Math.random()*.015),vx:w*(Math.random()-.3)*.0006,vy:-h*(.0008+Math.random()*.001),l:1,d:.006+Math.random()*.005}; };
+        var blob=function(x,y,r,c,a){ var g=cx.createRadialGradient(x,y,0,x,y,r); g.addColorStop(0,c+a+')'); g.addColorStop(1,c+'0)'); cx.fillStyle=g; cx.beginPath(); cx.arc(x,y,r,0,7); cx.fill(); };
+        var live;
+        var fr=function(){ if(!live()) return; var w=cv.width,h=cv.height; cx.clearRect(0,0,w,h);
+          while(P.length<26) P.push(puff(P.length<20)); while(S.length<10) S.push(steam());
+          P.forEach(function(q,i){ q.x+=q.vx; q.y+=q.vy; q.r*=1.006; q.l-=q.d; if(q.l<=0||q.y<-q.r){ P[i]=puff(false); return; }
+            var a=Math.min(1,q.l*1.6)*Math.min(1,(1-q.l)*5)*.6; blob(q.x,q.y,q.r,'rgba('+q.g+','+(q.g-6)+','+(q.g-12)+',',a.toFixed(3)); });
+          S.forEach(function(q,i){ q.x+=q.vx+Math.sin(q.y/12)*.3; q.y+=q.vy; q.r*=1.01; q.l-=q.d; if(q.l<=0){ S[i]=steam(); return; }
+            blob(q.x,q.y,q.r,'rgba(235,240,245,',(q.l*(1-q.l)*1.1).toFixed(3)); });
+          requestAnimationFrame(fr); };
+        live=watch(e,function(on,was){ if(on&&!was){ sz(); requestAnimationFrame(fr); } });
+        window.addEventListener('resize',function(){ if(live()) sz(); }); } }
+
+    // the T. rex: felt eyelid that closes now and then (sometimes twice)
+    var r=clip('prehistory');
+    if(r){ var lid=document.createElement('span'); lid.className='cr-lid'; lid.style.cssText=pct(773.5,116.5,18,16,900,518); r.appendChild(lid);
+      if(!calm0){ var blink=function(){ lid.classList.remove('shut'); void lid.offsetWidth; lid.classList.add('shut');
+          if(Math.random()<.3) setTimeout(function(){ lid.classList.remove('shut'); void lid.offsetWidth; lid.classList.add('shut'); },330);
+          setTimeout(blink,2600+Math.random()*3400); };
+        setTimeout(blink,1500+Math.random()*1500); } }
+
+    // the chameleon: a fly buzzes in front of it; the tongue shoots out, catches it, and the fly comes back later
+    var c=clip('life');
+    if(c&&!calm0){ var NS='http://www.w3.org/2000/svg', sv=document.createElementNS(NS,'svg'); sv.setAttribute('class','cr-svg'); sv.setAttribute('viewBox','0 0 900 516'); sv.setAttribute('preserveAspectRatio','none');
+      sv.innerHTML='<defs><clipPath id="cr-ph"><rect x="437" y="64" width="437" height="368"/></clipPath><linearGradient id="cr-tg" x1="0" x2="1"><stop offset="0" stop-color="#c9566b"/><stop offset="1" stop-color="#ec8a98"/></linearGradient></defs>'
+        +'<g clip-path="url(#cr-ph)"><g class="cr-fly"><ellipse cx="0" cy="0" rx="3.4" ry="2.4" fill="#1d1a17"/><circle cx="2.8" cy="-.6" r="1.6" fill="#2b241f"/><ellipse class="cr-wing" cx="-1" cy="-3" rx="3.2" ry="1.6" fill="rgba(220,235,255,.75)"/><ellipse class="cr-wing b" cx="-1.5" cy="-2.4" rx="2.8" ry="1.4" fill="rgba(220,235,255,.55)"/></g>'
+        +'<line class="cr-tongue" x1="799" y1="202" x2="799" y2="202" stroke="url(#cr-tg)" stroke-width="9" stroke-linecap="round"/><circle class="cr-tip" cx="799" cy="202" r="0" fill="#e0708a"/></g>';
+      c.appendChild(sv);
+      var fly=sv.querySelector('.cr-fly'), tg=sv.querySelector('.cr-tongue'), tip=sv.querySelector('.cr-tip'), MX=799, MY=202;
+      var F={x:852,y:170,show:true,t:0}, shot=null, nextShot=performance.now()+2500+Math.random()*2000, liveC;
+      var fr2=function(now){ if(!liveC()) return; F.t+=.05;
+        if(!shot){ var fx=852+Math.sin(F.t*1.3)*12+Math.sin(F.t*3.1)*4, fy=168+Math.cos(F.t*1.7)*10+Math.sin(F.t*4.3)*3; F.x=fx; F.y=fy; }
+        fly.setAttribute('transform','translate('+F.x.toFixed(1)+' '+F.y.toFixed(1)+') scale(1.9)'); fly.style.opacity=F.show?1:0;
+        if(!shot&&F.show&&now>nextShot) shot={t0:now,x:F.x,y:F.y};
+        var k=0;
+        if(shot){ var dt=now-shot.t0;
+          if(dt<110) k=dt/110; else if(dt<190) k=1; else if(dt<480) k=1-(dt-190)/290; else { shot=null; F.show=false; setTimeout(function(){ F.show=true; },1600+Math.random()*1800); nextShot=now+3800+Math.random()*3000; }
+          if(shot&&dt>=110){ F.show=false; }
+          if(shot){ var X=MX+(shot.x-MX)*k, Y=MY+(shot.y-MY)*k; tg.setAttribute('x2',X.toFixed(1)); tg.setAttribute('y2',Y.toFixed(1)); tip.setAttribute('cx',X.toFixed(1)); tip.setAttribute('cy',Y.toFixed(1)); tip.setAttribute('r',k>0?7.5:0);
+            if(dt>=110&&dt<480){ fly.style.opacity=1; fly.setAttribute('transform','translate('+X.toFixed(1)+' '+Y.toFixed(1)+') scale(1.5)'); } } }
+        if(!shot){ tg.setAttribute('x2',MX); tg.setAttribute('y2',MY); tip.setAttribute('r',0); }
+        requestAnimationFrame(fr2); };
+      liveC=watch(c,function(on,was){ if(on&&!was) requestAnimationFrame(fr2); }); }
+  })();
+
   // 4g) dust in the lamp light, on every page
   (function(){ var d=document.querySelector('.web-bg .dust'); if(!d||calm0) return;
     for(var i=0;i<22;i++){ var m=document.createElement('i'); m.style.left=(Math.random()*42)+'%'; m.style.top=(18+Math.random()*72)+'%';

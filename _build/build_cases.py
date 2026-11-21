@@ -698,7 +698,7 @@ def main():
     print(f"CHECK OK: {len(cases)} case(s) x {len(LANGS)} languages — numbers, labels, digits and sources consistent")
     if only_check:
         return
-    ver = date.today().strftime("%Y%m%d")
+    ver = __import__("datetime").datetime.now().strftime("%Y%m%d%H%M")
     (SITE / "assets" / "case").mkdir(parents=True, exist_ok=True)
     for name in ("case.css", "case.js"):
         shutil.copyfile(BUILD / "static" / name, SITE / "assets" / "case" / name)
