@@ -1,5 +1,5 @@
 {
- "n": "02", "ep": "EP 2", "yt": "4bmygw3PxK8", "world": "history", "updated": "2026-11-21",
+ "n": "02", "ep": "EP 2", "yt": "4bmygw3PxK8", "world": "prehistory", "updated": "2026-11-21",
  "claims": [
   {"id": "D2-C1", "label": "ESTIMATE", "sources": [{"name": "Pandas Lab compiled dataset (Mesozoic Travel v6.6.5), built on The Paleobiology Database occurrences plus genus-level published size estimates", "url": "https://paleobiodb.org/", "read": "data"}]},
   {"id": "D2-C2", "label": "ESTIMATE", "sources": [{"name": "Hutchinson et al. 2011, PLoS ONE", "url": "https://doi.org/10.1371/journal.pone.0026037", "read": "full text"}]},

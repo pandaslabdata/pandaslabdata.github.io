@@ -5,7 +5,7 @@
  ],
  "case": "067",
  "engine_case": "Motore Vox/cases/case067.json",
- "world": "space",
+ "world": "physics",
  "status": "CLOSED",
  "updated": "2026-11-21",
  "dominant_label": "SIMULATION",

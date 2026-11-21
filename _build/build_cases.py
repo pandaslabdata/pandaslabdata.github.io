@@ -364,7 +364,7 @@ def make_board_old(cases, lang, h, ui):
     return items
 
 
-WORLD_KEYS = ["space", "earth", "life", "history"]
+WORLD_KEYS = ["space", "physics", "earth", "maps", "prehistory", "life", "body", "history", "money", "future"]
 WORLD_EMPTY = {"en": "This drawer is still empty. New cases are being filed.", "it": "Questo cassetto è ancora vuoto. Nuovi casi sono in archiviazione.",
                "de": "Diese Schublade ist noch leer. Neue Fälle werden gerade abgelegt.", "es": "Este cajón aún está vacío. Se están archivando nuevos casos.",
                "fr": "Ce tiroir est encore vide. De nouvelles affaires sont en cours de classement."}
@@ -410,6 +410,8 @@ def build_worlds(cases, ui_all, env, ver):
             out.write_text(page, encoding="utf-8")
 
 
+WORLD_FX = {"space": "stars", "physics": "prism", "earth": "fire", "maps": "glint", "prehistory": "dust", "life": "leaves",
+            "body": "pulse", "history": "dust", "money": "glint", "future": "fire"}   # how each world clipping's photo moves
 CASE_FX = {"067": "dust", "068": "stars"}   # the living-photo effect for each case photo (see case.js, 4d)
 
 
@@ -477,6 +479,15 @@ def build_home(cases, ui_all, env, ver):
         method = [{"key": k, "text": h["d"][k]} for k in LABELS]
         board = make_board(cases, lang, h, ui)
         wall, exps = make_wall(cases, dj, lang, h, ui, hj)
+        wj = json.loads((SITE / "assets" / "worlds" / "worlds.json").read_text(encoding="utf-8"))
+        worlds10 = []
+        for k in WORLD_KEYS:
+            fs = [w for w in wall if w["world"] == k]
+            g = wj["clips"][k]
+            worlds10.append({"key": k, "name": h["w"][k], "desc": h["wd"][k], "img": f"/assets/worlds/w_{k}.webp", "href": world_paths(k)[lang],
+                             "files": fs, "count": (h["soon"] if not fs else h["file_1"] if len(fs) == 1 else h["files_n"].replace("{n}", str(len(fs)))),
+                             "head": [4.5, g["head"][1] - 1, g["head"][2] + 1.5, g["photo"][1] + (g["photo"][3] - g["photo"][1]) * .7], "photo": [g["photo"][0], g["photo"][1], g["photo"][2] - 1.2, g["photo"][3]], "fx": WORLD_FX[k],
+                             "hf": round(min(1.0, 9.0 / max(len(w_) for w_ in h["w"][k].split())), 3)})
         n_files = len(wall)
         hero_img = f"/img/cases/{lc['case']}/{hj['_exp_img'].get(lc['case'], lc['images']['cover'])}"
         jsonld = js_safe({"@context": "https://schema.org", "@type": "WebSite", "name": "Pandas Lab", "url": BASE + "/",
@@ -487,7 +498,7 @@ def build_home(cases, ui_all, env, ver):
             seo_title=h["seo_title"], og_title=h["seo_title"], description=h["description"], og_type="website",
             og_image=latest["cover"], og_locale=OG_LOCALE[lang], jsonld=jsonld,
             h=h, g=geo, latest=latest, files=files, worlds=worlds, method=method, socials=SOCIALS, board=board,
-            wall=wall, exps=exps, n_files=n_files, hero_img=hero_img)
+            wall=wall, exps=exps, n_files=n_files, hero_img=hero_img, worlds10=worlds10)
         out = SITE / alts[lang].strip("/") / "index.html" if lang != "en" else SITE / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(page, encoding="utf-8")

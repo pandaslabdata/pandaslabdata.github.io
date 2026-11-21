@@ -16,19 +16,31 @@
   "on_youtube": "Watch on YouTube",
   "swipe": "Swipe the files",
   "swipe_m": "Swipe the labels",
-  "worlds_t": "The Drawers",
-  "worlds_p": "Every investigation is filed where the question takes you.",
+  "worlds_t": "Pick a world",
+  "worlds_p": "10 worlds · follow the red thread",
   "w": {
    "space": "Space",
-   "earth": "Earth",
-   "life": "Life",
-   "history": "History"
+   "physics": "Physics",
+   "earth": "Planet Earth",
+   "maps": "Maps & Geography",
+   "prehistory": "Prehistory",
+   "life": "Life & Animals",
+   "body": "Body & Mind",
+   "history": "History",
+   "money": "Money & Economy",
+   "future": "Future & Tech"
   },
   "wd": {
-   "space": "Moon, gravity, black holes",
-   "earth": "Tides, seasons, maps",
-   "life": "Bodies, evolution",
-   "history": "Dinosaurs, deep time"
+   "space": "planets, the Moon, meteorites, the universe",
+   "physics": "gravity, light, forces, extremes",
+   "earth": "earthquakes, volcanoes, oceans, climate",
+   "maps": "maps, borders, remote places, distances",
+   "prehistory": "dinosaurs, extinctions, deep time",
+   "life": "animals, evolution, adaptations",
+   "body": "the brain, blood, the limits of the body",
+   "history": "empires, inventions, turning points",
+   "money": "money, debt, wealth, real numbers",
+   "future": "rockets, energy, AI, the year 2100"
   },
   "method_t": "How we label the evidence",
   "method_p": "Every claim in a case carries one of five labels. A simulation never becomes a fact.",
@@ -69,7 +81,13 @@
     "face": "terrified",
     "text": "No Moon?! Who turns the lights off?"
    }
-  }
+  },
+  "files_n": "{n} FILES",
+  "file_1": "1 FILE",
+  "soon": "COMING SOON",
+  "soon_p": "Nothing filed here yet. The first cases of this world are on the way.",
+  "open_world": "open the world ↓",
+  "all_world": "the whole world →"
  },
  "it": {
   "board_sub": "Ogni caso parte da una domanda che non può accadere e finisce con prove che puoi controllare.",
@@ -88,19 +106,31 @@
   "on_youtube": "Guarda su YouTube",
   "swipe": "Scorri i fascicoli",
   "swipe_m": "Scorri le etichette",
-  "worlds_t": "I cassetti",
-  "worlds_p": "Ogni indagine è archiviata dove ti porta la domanda.",
+  "worlds_t": "Scegli un mondo",
+  "worlds_p": "10 mondi · segui il filo rosso",
   "w": {
    "space": "Spazio",
-   "earth": "Terra",
-   "life": "Vita",
-   "history": "Storia"
+   "physics": "Fisica",
+   "earth": "Pianeta Terra",
+   "maps": "Mappe e geografia",
+   "prehistory": "Preistoria",
+   "life": "Vita e animali",
+   "body": "Corpo e mente",
+   "history": "Storia",
+   "money": "Soldi ed economia",
+   "future": "Futuro e tecnologia"
   },
   "wd": {
-   "space": "Luna, gravità, buchi neri",
-   "earth": "Maree, stagioni, mappe",
-   "life": "Corpi, evoluzione",
-   "history": "Dinosauri, tempo profondo"
+   "space": "pianeti, Luna, meteoriti, universo",
+   "physics": "gravità, luce, forze, estremi",
+   "earth": "terremoti, vulcani, oceani, clima",
+   "maps": "mappe, confini, luoghi remoti, distanze",
+   "prehistory": "dinosauri, estinzioni, tempo profondo",
+   "life": "animali, evoluzione, adattamenti",
+   "body": "cervello, sangue, limiti del corpo",
+   "history": "imperi, invenzioni, svolte",
+   "money": "soldi, debito, ricchezza, numeri veri",
+   "future": "razzi, energia, IA, l'anno 2100"
   },
   "method_t": "Come etichettiamo le prove",
   "method_p": "Ogni affermazione di un caso porta una di cinque etichette. Una simulazione non diventa mai un fatto.",
@@ -141,7 +171,13 @@
     "face": "terrified",
     "text": "Niente Luna?! E chi spegne la luce?"
    }
-  }
+  },
+  "files_n": "{n} FASCICOLI",
+  "file_1": "1 FASCICOLO",
+  "soon": "IN ARRIVO",
+  "soon_p": "Qui non c'è ancora niente. I primi casi di questo mondo sono in arrivo.",
+  "open_world": "apri il mondo ↓",
+  "all_world": "tutto il mondo →"
  },
  "de": {
   "board_sub": "Jeder Fall beginnt mit einer Frage, die nicht passieren kann, und endet mit Beweisen, die du prüfen kannst.",
@@ -160,19 +196,31 @@
   "on_youtube": "Auf YouTube ansehen",
   "swipe": "Akten durchwischen",
   "swipe_m": "Labels durchwischen",
-  "worlds_t": "Die Schubladen",
-  "worlds_p": "Jede Ermittlung liegt dort, wohin die Frage führt.",
+  "worlds_t": "Wähle eine Welt",
+  "worlds_p": "10 Welten · folge dem roten Faden",
   "w": {
    "space": "Weltraum",
-   "earth": "Erde",
-   "life": "Leben",
-   "history": "Geschichte"
+   "physics": "Physik",
+   "earth": "Planet Erde",
+   "maps": "Karten & Geografie",
+   "prehistory": "Urzeit",
+   "life": "Leben & Tiere",
+   "body": "Körper & Geist",
+   "history": "Geschichte",
+   "money": "Geld & Wirtschaft",
+   "future": "Zukunft & Technik"
   },
   "wd": {
-   "space": "Mond, Schwerkraft, Schwarze Löcher",
-   "earth": "Gezeiten, Jahreszeiten, Karten",
-   "life": "Körper, Evolution",
-   "history": "Dinosaurier, Tiefenzeit"
+   "space": "Planeten, Mond, Meteoriten, Universum",
+   "physics": "Schwerkraft, Licht, Kräfte, Extreme",
+   "earth": "Erdbeben, Vulkane, Ozeane, Klima",
+   "maps": "Karten, Grenzen, entlegene Orte, Entfernungen",
+   "prehistory": "Dinosaurier, Aussterben, Tiefenzeit",
+   "life": "Tiere, Evolution, Anpassungen",
+   "body": "Gehirn, Blut, Grenzen des Körpers",
+   "history": "Imperien, Erfindungen, Wendepunkte",
+   "money": "Geld, Schulden, Reichtum, echte Zahlen",
+   "future": "Raketen, Energie, KI, das Jahr 2100"
   },
   "method_t": "Wie wir Beweise kennzeichnen",
   "method_p": "Jede Aussage eines Falls trägt eines von fünf Labels. Eine Simulation wird nie zur Tatsache.",
@@ -213,7 +261,13 @@
     "face": "terrified",
     "text": "Kein Mond?! Wer macht das Licht aus?"
    }
-  }
+  },
+  "files_n": "{n} AKTEN",
+  "file_1": "1 AKTE",
+  "soon": "DEMNÄCHST",
+  "soon_p": "Hier ist noch nichts abgelegt. Die ersten Fälle dieser Welt sind unterwegs.",
+  "open_world": "Welt öffnen ↓",
+  "all_world": "die ganze Welt →"
  },
  "es": {
   "board_sub": "Cada caso empieza con una pregunta que no puede ocurrir y termina con pruebas que puedes comprobar.",
@@ -232,19 +286,31 @@
   "on_youtube": "Ver en YouTube",
   "swipe": "Desliza los expedientes",
   "swipe_m": "Desliza las etiquetas",
-  "worlds_t": "Los cajones",
-  "worlds_p": "Cada investigación se archiva donde te lleva la pregunta.",
+  "worlds_t": "Elige un mundo",
+  "worlds_p": "10 mundos · sigue el hilo rojo",
   "w": {
    "space": "Espacio",
-   "earth": "Tierra",
-   "life": "Vida",
-   "history": "Historia"
+   "physics": "Física",
+   "earth": "Planeta Tierra",
+   "maps": "Mapas y geografía",
+   "prehistory": "Prehistoria",
+   "life": "Vida y animales",
+   "body": "Cuerpo y mente",
+   "history": "Historia",
+   "money": "Dinero y economía",
+   "future": "Futuro y tecnología"
   },
   "wd": {
-   "space": "Luna, gravedad, agujeros negros",
-   "earth": "Mareas, estaciones, mapas",
-   "life": "Cuerpos, evolución",
-   "history": "Dinosaurios, tiempo profundo"
+   "space": "planetas, Luna, meteoritos, universo",
+   "physics": "gravedad, luz, fuerzas, extremos",
+   "earth": "terremotos, volcanes, océanos, clima",
+   "maps": "mapas, fronteras, lugares remotos, distancias",
+   "prehistory": "dinosaurios, extinciones, tiempo profundo",
+   "life": "animales, evolución, adaptaciones",
+   "body": "cerebro, sangre, límites del cuerpo",
+   "history": "imperios, inventos, puntos de inflexión",
+   "money": "dinero, deuda, riqueza, cifras reales",
+   "future": "cohetes, energía, IA, el año 2100"
   },
   "method_t": "Cómo etiquetamos las pruebas",
   "method_p": "Cada afirmación de un caso lleva una de cinco etiquetas. Una simulación nunca se convierte en un hecho.",
@@ -285,7 +351,13 @@
     "face": "terrified",
     "text": "¿Sin Luna?! ¿Quién apaga la luz?"
    }
-  }
+  },
+  "files_n": "{n} EXPEDIENTES",
+  "file_1": "1 EXPEDIENTE",
+  "soon": "PRÓXIMAMENTE",
+  "soon_p": "Aquí aún no hay nada. Los primeros casos de este mundo están en camino.",
+  "open_world": "abrir el mundo ↓",
+  "all_world": "todo el mundo →"
  },
  "fr": {
   "board_sub": "Chaque affaire commence par une question qui ne peut pas arriver et se termine par des preuves vérifiables.",
@@ -304,19 +376,31 @@
   "on_youtube": "Voir sur YouTube",
   "swipe": "Fais glisser les dossiers",
   "swipe_m": "Fais glisser les étiquettes",
-  "worlds_t": "Les tiroirs",
-  "worlds_p": "Chaque enquête est classée là où la question te mène.",
+  "worlds_t": "Choisis un monde",
+  "worlds_p": "10 mondes · suis le fil rouge",
   "w": {
    "space": "Espace",
-   "earth": "Terre",
-   "life": "Vie",
-   "history": "Histoire"
+   "physics": "Physique",
+   "earth": "Planète Terre",
+   "maps": "Cartes et géographie",
+   "prehistory": "Préhistoire",
+   "life": "Vie et animaux",
+   "body": "Corps et esprit",
+   "history": "Histoire",
+   "money": "Argent et économie",
+   "future": "Futur et technologie"
   },
   "wd": {
-   "space": "Lune, gravité, trous noirs",
-   "earth": "Marées, saisons, cartes",
-   "life": "Corps, évolution",
-   "history": "Dinosaures, temps profond"
+   "space": "planètes, Lune, météorites, univers",
+   "physics": "gravité, lumière, forces, extrêmes",
+   "earth": "séismes, volcans, océans, climat",
+   "maps": "cartes, frontières, lieux isolés, distances",
+   "prehistory": "dinosaures, extinctions, temps profond",
+   "life": "animaux, évolution, adaptations",
+   "body": "cerveau, sang, limites du corps",
+   "history": "empires, inventions, tournants",
+   "money": "argent, dette, richesse, vrais chiffres",
+   "future": "fusées, énergie, IA, l'an 2100"
   },
   "method_t": "Comment nous étiquetons les preuves",
   "method_p": "Chaque affirmation d'une affaire porte l'une des cinq étiquettes. Une simulation ne devient jamais un fait.",
@@ -357,7 +441,13 @@
     "face": "terrified",
     "text": "Plus de Lune ?! Qui éteint la lumière ?"
    }
-  }
+  },
+  "files_n": "{n} DOSSIERS",
+  "file_1": "1 DOSSIER",
+  "soon": "BIENTÔT",
+  "soon_p": "Rien n'est encore classé ici. Les premières affaires de ce monde arrivent.",
+  "open_world": "ouvrir le monde ↓",
+  "all_world": "tout le monde →"
  },
  "_exp_img": {
   "067": "p02.jpg",

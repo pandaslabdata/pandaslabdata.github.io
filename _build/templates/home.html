@@ -1,49 +1,72 @@
 {% extends "base.html" %}
 {% block body %}
-<section class="wrap hero2" aria-label="{{ h.kicker }}">
-  <div class="title-sheet rv" style="--r:-1.5deg">
-    <span class="shade"></span>
-    <div class="torn-sheet" data-torn>
-      <span class="tagstamp">{{ h.case_files }}</span>
-      <h1 class="headline">{{ h.h1a }}<br><em>{{ h.h1b }}</em></h1>
-      <div class="cols" aria-hidden="true"></div>
-    </div>
-    <span class="pin2" style="left:10%"></span><span class="pin2" style="left:90%"></span>
-  </div>
-  <p class="hand-lede rv" style="--r:-1deg">{{ h.board_sub }}</p>
-  <a class="hero-photo rv" href="{{ latest.href }}" style="--r:2.5deg" aria-label="{{ latest.title }}">
-    <span class="frame-w"><span class="live" data-fx="{{ wall[0].fx }}"><img src="{{ hero_img }}" alt="" width="720" height="960"></span></span>
-    <span class="hand-cap">{{ h.latest_note }} {{ ui.case }} {{ latest.case }}</span>
-    <span class="tape2" style="left:-26px;top:-12px;--tr:-28deg"></span><span class="tape2" style="right:-26px;top:-8px;--tr:24deg"></span>
-  </a>
-</section>
+<div class="stage" data-stage>
+  <svg class="longweb" data-longweb aria-hidden="true"><path d=""/></svg>
 
-<section id="wall" class="wrap wall" data-wall>
-  <svg class="web" data-web aria-hidden="true"></svg>
-  <div class="wall-band rv" style="--r:-1deg" data-band><span class="pin2" style="left:4%"></span><span class="pin2" style="left:96%"></span><h2>{{ h.wall_t }}</h2><p>{{ h.wall_p|replace('{n}', n_files) }}</p></div>
-  {% for w in wall %}
-  <a class="clip rv {{ w.kind }}{% if loop.index > 6 %} more{% endif %}" href="{{ w.href }}" data-world="{{ w.world }}" style="--r:{{ w.r }}deg">
-    <span class="sway" style="animation-delay:-{{ w.sw }}s">
+  <section class="wrap hero3" aria-label="{{ h.kicker }}">
+    <div class="title-sheet rv" style="--r:-1.5deg">
       <span class="shade"></span>
-      {% if w.clip %}
-      <span class="realclip"><img src="{{ w.clip }}" alt="{{ w.head }}" loading="lazy"></span>
-      {% else %}
-      <span class="news" data-torn>
-        <span class="h3" style="--hf:{{ [1, 26 / (w.head|length)]|min|round(3) }}">{{ w.head }}</span>
-        <span class="ph live" data-fx="{{ w.fx }}"><img src="{{ w.img }}" alt="" loading="lazy" width="576" height="720"></span>
-        <span class="cols" aria-hidden="true"></span>
+      <div class="torn-sheet" data-torn>
+        <span class="tagstamp">{{ h.case_files }}</span>
+        <h1 class="headline">{{ h.h1a }}<br><em>{{ h.h1b }}</em></h1>
+      </div>
+      <span class="pin2" style="left:7%"></span><span class="pin2" style="left:93%"></span>
+    </div>
+    <p class="hand-lede rv" style="--r:-2deg">{{ h.board_sub }}</p>
+    <div class="comet rv" style="--r:1.5deg" aria-hidden="true">
+      <span class="comet-frame">
+        <span class="comet-win" data-comet>
+          <img class="c-plate" src="/assets/worlds/comet_plate.webp" alt="" width="1536" height="1024">
+          <span class="c-glow"></span>
+          <img class="c-layer" src="/assets/worlds/comet_layer.webp" alt="" width="1536" height="1024">
+          <canvas class="c-embers"></canvas>
+        </span>
       </span>
+      <span class="tape2" style="left:-22px;top:-12px;--tr:-26deg"></span><span class="tape2" style="right:-22px;top:-10px;--tr:24deg"></span>
+    </div>
+  </section>
+
+  <section id="wall" class="wrap wall worlds-wall" data-wall>
+    <svg class="web" data-web aria-hidden="true"></svg>
+    <div class="wall-band rv" style="--r:-1deg" data-band><span class="pin2" style="left:4%"></span><span class="pin2" style="left:96%"></span><h2>{{ h.worlds_t }}</h2><p>{{ h.worlds_p }}</p></div>
+    {% for w in worlds10 %}
+    <a class="clip wclip rv{% if not w.files %} soon{% endif %}" href="#w-{{ w.key }}" data-world="{{ w.key }}" data-open="{{ w.key }}" style="--r:{{ [-2.2, 1.4, -0.8, 2.0, -1.5, 1.1, -2.4, 0.7, -1.2, 1.8][loop.index0] }}deg">
+      <span class="sway" style="animation-delay:-{{ loop.index0 * 0.7 }}s">
+        <img class="wc-img" src="{{ w.img }}" alt="" width="900" height="517" loading="lazy">
+        <span class="wc-photo live" data-fx="{{ w.fx }}" style="left:{{ w.photo[0] }}%;top:{{ w.photo[1] }}%;width:{{ w.photo[2] - w.photo[0] }}%;height:{{ w.photo[3] - w.photo[1] }}%"></span>
+        <span class="wc-head" style="left:{{ w.head[0] }}%;top:{{ w.head[1] }}%;width:{{ w.head[2] - w.head[0] }}%;height:{{ w.head[3] - w.head[1] }}%;--hf:{{ w.hf }}"><b>{{ w.name }}</b><i>{{ w.count }}</i></span>
+        <span class="pin2"></span>
+      </span>
+    </a>
+    {% endfor %}
+  </section>
+
+  <div class="panels wrap" data-panels>
+    {% for w in worlds10 %}
+    <section class="wpanel" id="w-{{ w.key }}" data-panel="{{ w.key }}" hidden aria-label="{{ w.name }}">
+      <div class="wp-band"><span class="pin2" data-anchor style="left:50%"></span><h2>{{ w.name }}</h2><p>{{ w.desc }}</p></div>
+      {% if w.files %}
+      <div class="wp-files">
+        {% for f in w.files %}
+        <a class="clip wpf {{ f.kind }}" href="{{ f.href }}" style="--r:{{ [-1.6, 1.2, -0.6, 1.8, -1.1][loop.index0 % 5] }}deg">
+          <span class="sway" style="animation-delay:-{{ loop.index0 * 0.9 }}s">
+            <span class="shade"></span>
+            {% if f.clip %}<span class="realclip"><img src="{{ f.clip }}" alt="{{ f.head }}" loading="lazy"></span>
+            {% else %}<span class="news" data-torn><span class="h3" style="--hf:{{ [1, 26 / (f.head|length)]|min|round(3) }}">{{ f.head }}</span><span class="ph live" data-fx="{{ f.fx }}"><img src="{{ f.img }}" alt="" loading="lazy" width="576" height="720"></span><span class="cols" aria-hidden="true"></span></span>{% endif %}
+            <span class="pin2"></span>
+          </span>
+          <span class="meta">{{ f.meta }}</span>
+        </a>
+        {% endfor %}
+      </div>
+      <p class="wp-more"><a href="{{ w.href }}">{{ h.all_world }}</a></p>
+      {% else %}
+      <div class="wp-soon"><span class="pin2"></span><b>{{ h.soon }}</b><p>{{ h.soon_p }}</p><small>{{ w.desc }}</small></div>
       {% endif %}
-      <span class="pin2"></span>
-      {% if w.kind == 'dossier' and loop.index is divisibleby 3 %}<span class="stamp2">{{ w.stamp }}</span>{% endif %}
-    </span>
-    <span class="meta">{{ w.meta }}</span>
-  </a>
-  {% if loop.index == 3 %}<div class="note2 n-a dsk" data-at="2" style="--r:-3deg">{{ h.note_a }}<small><i>{{ h.note_a2 }}</i></small></div>{% endif %}
-  {% if loop.index == 7 %}<div class="note2 n-b dsk" data-at="6" style="--r:4deg">{{ h.note_b }}<small><i>{{ h.note_b2 }}</i></small></div>{% endif %}
-  {% endfor %}
-  {% if wall|length > 6 %}<button class="more-btn" type="button" data-more>{{ h.browse }} ({{ wall|length }}) ↓</button>{% endif %}
-</section>
+    </section>
+    {% endfor %}
+  </div>
+</div>
 
 {% if exps %}
 <section id="steve" class="wrap lab">
@@ -61,15 +84,6 @@
   </div>
 </section>
 {% endif %}
-
-<section id="worlds" class="wrap sec">
-  <div class="band rv" style="--r:-.5deg"><h2>{{ h.worlds_t }}</h2><p>{{ h.worlds_p }}</p></div>
-  <div class="drawers rv">
-    <img src="/assets/board/drawers.webp" alt="" width="1200" height="800" loading="lazy">
-    {% for w in worlds %}<a class="drawer" href="{{ w.href }}" style="--ax:{{ w.area[0]*100 }}%;--ay:{{ w.area[1]*100 }}%;--aw:{{ (w.area[2]-w.area[0])*100 }}%;--ah:{{ (w.area[3]-w.area[1])*100 }}%;--rx:{{ w.rel[0] }}%;--ry:{{ w.rel[1] }}%;--rw:{{ w.rel[2] }}%;--rh:{{ w.rel[3] }}%;--fit:{{ w.fit }}"><span class="d-lab">{{ w.name }}</span><span class="d-desc">{{ w.desc }}</span></a>{% endfor %}
-  </div>
-  <div class="drawer-list">{% for w in worlds %}<a href="{{ w.href }}"><b>{{ w.name }}</b><span>{{ w.desc }}</span></a>{% endfor %}</div>
-</section>
 
 <section id="method" class="wrap sec">
   <div class="band rv" style="--r:.8deg"><h2>{{ h.method_t }}</h2><p>{{ h.method_p }}</p></div>

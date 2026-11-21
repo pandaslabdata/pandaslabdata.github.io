@@ -4,7 +4,7 @@
   {
    "n": "10",
    "ep": "EP 10",
-   "world": "earth",
+   "world": "maps",
    "tags": "map",
    "dur": "11:44",
    "title": "What If You Were Stranded at Point Nemo?",
@@ -112,7 +112,7 @@
   {
    "n": "06",
    "ep": "EP 6",
-   "world": "earth",
+   "world": "space",
    "tags": "space map",
    "dur": "12:14",
    "title": "Why 68% of All Meteorites Are Found in One Place",
@@ -163,7 +163,7 @@
   {
    "n": "04",
    "ep": "EP 4",
-   "world": "history",
+   "world": "maps",
    "tags": "map dino",
    "dur": "9:22",
    "title": "The Geography of Dinosaur Discoveries (It's Not What You Think)",
@@ -189,7 +189,7 @@
   {
    "n": "03",
    "ep": "EP 3",
-   "world": "history",
+   "world": "prehistory",
    "tags": "dino",
    "dur": "8:21",
    "title": "Why T. Rex Keeps the Crown (Even If It's Not the Biggest)",
@@ -213,7 +213,7 @@
   {
    "n": "02",
    "ep": "EP 2",
-   "world": "history",
+   "world": "prehistory",
    "tags": "dino",
    "dur": "10:06",
    "title": "What If the Biggest Dinosaur Ever… Is Missing?",
@@ -236,7 +236,7 @@
   {
    "n": "01",
    "ep": "EP 1",
-   "world": "history",
+   "world": "prehistory",
    "tags": "dino evo",
    "dur": "10:37",
    "title": "Stegosaurus vs. T. rex: A tale of two eras",
