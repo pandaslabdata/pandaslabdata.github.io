@@ -357,7 +357,8 @@ footer a{color:var(--gold);text-decoration:none}
 
 /* =================== DOSSIER pages =================== */
 .cardsx{grid-template-columns:repeat(2,1fr)}
-.xcard{position:relative;min-height:230px;padding:42px 22px 18px;background:url("/assets/board/card.webp") center/100% 100% no-repeat;filter:drop-shadow(0 8px 10px rgba(0,0,0,.25))}
+.xcard{position:relative;isolation:isolate;min-height:230px;padding:42px 22px 18px}
+.xcard::before{content:"";position:absolute;inset:0;z-index:-1;background:url("/assets/board/card.webp") center/100% 100% no-repeat;filter:drop-shadow(0 8px 10px rgba(0,0,0,.25))}
 .xcard .bgimg{display:none}
 .xcard:nth-child(odd){transform:rotate(-1deg)}.xcard:nth-child(even){transform:rotate(1deg)}
 .xcard .pin-c{position:absolute;left:50%;top:-8px;width:17px;transform:translateX(-50%)}
