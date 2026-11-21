@@ -510,11 +510,11 @@ def build_pages(ui_all, env, ver):
 
 # ---------- DOSSIERS (the long episodes, re-checked) ----------
 ERRATA = {
-    "en": ("Corrections", "Re-checking the episode against the sources, we found things the published video got wrong or overstated. Here is the correct version."),
-    "it": ("Correzioni", "Ricontrollando l'episodio sulle fonti abbiamo trovato punti che il video pubblicato diceva in modo sbagliato o esagerato. Ecco la versione corretta."),
-    "de": ("Korrekturen", "Beim erneuten Prüfen der Folge anhand der Quellen haben wir Stellen gefunden, die das veröffentlichte Video falsch oder übertrieben darstellt. Hier ist die korrekte Fassung."),
-    "es": ("Correcciones", "Al volver a comprobar el episodio con las fuentes encontramos puntos que el vídeo publicado decía mal o exageraba. Esta es la versión correcta."),
-    "fr": ("Corrections", "En revérifiant l'épisode sur les sources, nous avons trouvé des points que la vidéo publiée présentait de façon erronée ou exagérée. Voici la version correcte."),
+    "en": ("Update", "Dossier update, November 2026. We went back over every figure in the episode with the sources and the latest data. Point by point, here is where the numbers stand today."),
+    "it": ("Aggiornamento", "Aggiornamento del fascicolo, novembre 2026. Abbiamo ripreso ogni numero dell'episodio con le fonti e i dati più recenti. Punto per punto, ecco come stanno oggi."),
+    "de": ("Aktualisierung", "Aktualisierung der Akte, November 2026. Wir haben jede Zahl der Folge mit den Quellen und den neuesten Daten noch einmal durchgesehen. Punkt für Punkt: So ist der Stand heute."),
+    "es": ("Actualización", "Actualización del expediente, noviembre de 2026. Repasamos cada cifra del episodio con las fuentes y los datos más recientes. Punto por punto, así están hoy."),
+    "fr": ("Mise à jour", "Mise à jour du dossier, novembre 2026. Nous avons repris chaque chiffre de l'épisode avec les sources et les données les plus récentes. Point par point, voici où en sont les chiffres aujourd'hui."),
 }
 READ_KEY = {"full text": "read_full", "abstract only": "read_abstract", "data": "read_data"}
 
