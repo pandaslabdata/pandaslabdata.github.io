@@ -2,7 +2,7 @@
 {% block body %}
 <div class="dossier-head"><div class="wrap">
   <div>
-    <div class="crumb"><a href="{{ prefix }}/cases/">{{ ui.nav_cases }}</a> / {{ ui.worlds[c.world] }} / {{ c.case }}</div>
+    <div class="crumb"><a href="{{ prefix }}/cases/">{{ ui.nav_cases }}</a> / <a href="{{ prefix }}/worlds/{{ c.world }}/">{{ ui.worlds[c.world] }}</a> / {{ c.case }}</div>
     <h1 class="slab{% if t.title|length > 40 %} long{% endif %}">{{ t.title_html|safe }}</h1>
     <p class="lede">{{ t.lede|safe }}</p>
     <div class="facts"><span>{{ ui.case }} {{ c.case }}</span><span>{{ ui.world }}: {{ ui.worlds[c.world] }}</span><span>{{ claims_line }}</span><span>{{ ui.updated }} {{ updated }}</span></div>

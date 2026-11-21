@@ -305,6 +305,13 @@ footer a{color:var(--gold);text-decoration:none}
 .related a{flex:0 0 140px;text-decoration:none;color:var(--ink);font:13px/1.3 "Special Elite"}
 .related img{aspect-ratio:3/4;object-fit:cover;object-position:top;border:6px solid #f3ead6;box-shadow:0 4px 8px rgba(0,0,0,.3);margin-bottom:6px;transform:rotate(-2deg)}
 
+/* world pages: one drawer each */
+.world-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 8px}
+.world-tabs a{font:14px "Special Elite";text-decoration:none;color:var(--ink);background:var(--paper-d);padding:9px 16px 8px;min-height:44px;display:inline-flex;align-items:center;
+  border-radius:8px 8px 2px 2px;box-shadow:0 3px 6px rgba(0,0,0,.35)}
+.world-tabs a.on{background:var(--gold);color:var(--night)}
+.empty-drawer{position:relative;max-width:520px;margin:30px auto;padding:34px 26px;text-align:center}
+.empty-drawer p{font-size:16px;color:var(--ink)}
 /* =================== DOSSIER pages =================== */
 .cardsx{grid-template-columns:repeat(2,1fr)}
 .xcard{position:relative;min-height:230px;padding:42px 22px 18px;background:url("/assets/board/card.webp") center/100% 100% no-repeat;filter:drop-shadow(0 8px 10px rgba(0,0,0,.25))}

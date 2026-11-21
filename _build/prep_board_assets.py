@@ -125,7 +125,8 @@ def main():
     geo["cork_16x9"] = [0.12, 0.06, 0.855, 0.62]
     geo["cork_9x16"] = [0.09, 0.06, 0.90, 0.79]
     geo["polaroid_window"] = [0.09, 0.08, 0.91, 0.76]
-    geo["drawer_labels"] = [[0.24, 0.22, 0.37, 0.30], [0.585, 0.30, 0.71, 0.37], [0.24, 0.61, 0.37, 0.69], [0.58, 0.62, 0.71, 0.69]]
+    # top two measured on the pixels (cream card detection, 21/11 evening); bottom two derived from them on a screenshot
+    geo["drawer_labels"] = [[0.245, 0.233, 0.365, 0.292], [0.656, 0.314, 0.762, 0.368], [0.245, 0.633, 0.365, 0.693], [0.641, 0.640, 0.747, 0.695]]
     geo["drawer_areas"] = [[0.12, 0.13, 0.48, 0.49], [0.52, 0.10, 0.90, 0.50], [0.12, 0.54, 0.48, 0.89], [0.52, 0.54, 0.88, 0.89]]
     (BUILD / "board_geometry.json").write_text(json.dumps(geo, indent=1), encoding="utf-8")
     print("\n".join(report))

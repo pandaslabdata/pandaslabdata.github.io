@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="arch-head"><div class="wrap">
+  <div class="crumb"><a href="{{ prefix }}/#worlds">{{ worlds_t }}</a> / {{ name }}</div>
+  <h1 class="slab">{{ name }}</h1>
+  <p class="lede">{{ desc }}</p>
+  <div class="world-tabs">{% for w in all_worlds %}<a href="{{ w.href }}"{% if w.key == key %} class="on" aria-current="page"{% endif %}>{{ w.name }}</a>{% endfor %}</div>
+  {% if files %}
+  <div class="swipe-hint light"><span>{{ swipe }}</span><span class="arrow">→</span><span class="dots"></span></div>
+  <div class="cabinet rail">
+    {% for f in files %}<a class="folder-card rv" href="{{ f.href }}">
+      <img class="bgimg" src="/assets/board/folder.webp" alt="" width="438" height="410" loading="lazy">
+      <span class="f-photo{% if f.wide %} wide{% endif %}"><img src="{{ f.img }}" alt="" loading="lazy"></span>
+      <img class="f-clip" src="/assets/board/{% if f.wide %}tape2{% else %}clip{% endif %}.webp" alt="" loading="lazy">
+      <span class="f-label"><b>{{ f.kind }} {{ f.n }}</b>{{ f.title }}</span>
+      <span class="stamp anim{% if f.navy %} navy{% endif %}">{{ f.stamp }}</span>
+    </a>{% endfor %}
+  </div>
+  {% else %}
+  <div class="empty-drawer paper"><img class="pin-a" src="/assets/board/pin1.webp" alt="" width="73" height="155"><p class="typed">{{ empty }}</p></div>
+  {% endif %}
+</div></div>
+{% endblock %}

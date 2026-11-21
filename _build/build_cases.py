@@ -323,6 +323,52 @@ def make_board(cases, lang, h, ui):
     return items
 
 
+WORLD_KEYS = ["space", "earth", "life", "history"]
+WORLD_EMPTY = {"en": "This drawer is still empty. New cases are being filed.", "it": "Questo cassetto è ancora vuoto. Nuovi casi sono in archiviazione.",
+               "de": "Diese Schublade ist noch leer. Neue Fälle werden gerade abgelegt.", "es": "Este cajón aún está vacío. Se están archivando nuevos casos.",
+               "fr": "Ce tiroir est encore vide. De nouvelles affaires sont en cours de classement."}
+
+
+def world_paths(key):
+    return {l: (f"/worlds/{key}/" if l == "en" else f"/{l}/worlds/{key}/") for l in LANGS}
+
+
+def world_files(cases, lang, key, ui, h):
+    """the folders filed in one drawer: cases first (newest first), then re-checked dossiers"""
+    dj = json.loads((BUILD / "dossiers.json").read_text(encoding="utf-8"))
+    out = []
+    for c, _ in sorted(cases, key=lambda ce: ce[0]["case"], reverse=True):
+        if c["world"] == key:
+            out.append({"href": case_paths(c["case"])[lang], "img": f"/img/cases/{c['case']}/{c['images']['cover']}", "kind": ui["case"],
+                        "n": c["case"], "title": c["i18n"][lang]["title"], "stamp": ui["status"][c["status"]], "navy": False, "wide": False})
+    for d in dj["dossiers"]:
+        dp = BUILD / "dossiers" / f"D{d['n']}.json"
+        if d["world"] == key and dp.exists():
+            dd = json.loads(dp.read_text(encoding="utf-8"))
+            out.append({"href": dossier_paths(d["n"])[lang], "img": d["thumb"], "kind": h["dossier"], "n": d["n"],
+                        "title": dd["i18n"][lang]["title"], "stamp": "RE-CHECKED", "navy": True, "wide": True})
+    return out
+
+
+def build_worlds(cases, ui_all, env, ver):
+    hj = json.loads((BUILD / "ui_home.json").read_text(encoding="utf-8"))
+    for lang in LANGS:
+        ui, h = dict(ui_all[lang], worlds_nav=WORLDS_NAV[lang]), hj[lang]
+        all_w = [{"key": k, "name": h["w"][k], "href": world_paths(k)[lang]} for k in WORLD_KEYS]
+        for k in WORLD_KEYS:
+            alts = world_paths(k)
+            page = env.get_template("world.html").render(
+                lang=lang, langs=LANGS, lang_names=LANG_NAMES, ui=ui, base=BASE, alts=alts, alts_json=js_safe(alts),
+                prefix="" if lang == "en" else f"/{lang}", page_kind="world", ver=ver,
+                seo_title=f"{h['w'][k]} · {h['worlds_t']} | Pandas Lab", og_title=h["w"][k], description=h["wd"][k],
+                og_type="website", og_image="/assets/board/drawers.webp", og_locale=OG_LOCALE[lang], jsonld=None,
+                key=k, name=h["w"][k], desc=h["wd"][k], worlds_t=h["worlds_t"], all_worlds=all_w, swipe=h["swipe"],
+                files=world_files(cases, lang, k, ui, h), empty=WORLD_EMPTY[lang])
+            out = SITE / alts[lang].strip("/") / "index.html"
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(page, encoding="utf-8")
+
+
 def build_home(cases, ui_all, env, ver):
     """the investigation room: board with the latest case, the filing cabinet, the drawers, the method"""
     hj = json.loads((BUILD / "ui_home.json").read_text(encoding="utf-8"))
@@ -355,7 +401,7 @@ def build_home(cases, ui_all, env, ver):
                    round((l[2] - l[0]) / aw * 100, 2), round((l[3] - l[1]) / ah * 100, 2)]   # label box inside the drawer, %
             k_fit = round(min(1.0, 5.0 / len(h["w"][k])), 3)        # long words (Geschichte, Histoire) shrink to fit the holder
             pre = "" if lang == "en" else f"/{lang}"
-            worlds.append({"name": h["w"][k], "desc": h["wd"][k], "href": pre + dj["world_links"][k], "area": a, "rel": rel, "fit": k_fit})
+            worlds.append({"name": h["w"][k], "desc": h["wd"][k], "href": world_paths(k)[lang], "area": a, "rel": rel, "fit": k_fit})
         method = [{"key": k, "text": h["d"][k]} for k in LABELS]
         board = make_board(cases, lang, h, ui)
         jsonld = js_safe({"@context": "https://schema.org", "@type": "WebSite", "name": "Pandas Lab", "url": BASE + "/",
@@ -589,7 +635,8 @@ def main():
     groups = [(archive_paths(), "0.8")] + [(case_paths(c["case"]), "0.9") for c, _ in cases]
     if "--home" in sys.argv:            # the investigation-room home replaces the old one only when asked
         build_home(cases, ui_all, env, ver)
-        groups = [(home_paths(), "1.0")] + groups
+        build_worlds(cases, ui_all, env, ver)
+        groups = [(home_paths(), "1.0")] + groups + [(world_paths(k), "0.7") for k in WORLD_KEYS]
     if "--dossiers" in sys.argv:        # the long episodes, re-checked, 5 languages
         done = build_dossiers(ui_all, env, ver)
         groups += [(dossier_paths(n), "0.9") for n in done]

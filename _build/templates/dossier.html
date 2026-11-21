@@ -2,7 +2,7 @@
 {% block body %}
 <div class="dossier-head"><div class="wrap">
   <div>
-    <div class="crumb"><a href="{{ prefix }}/stories.html">{{ ui.nav_stories }}</a> / {{ ui.worlds[d.world] }} / {{ dossier_word }} {{ d.n }}</div>
+    <div class="crumb"><a href="{{ prefix }}/stories.html">{{ ui.nav_stories }}</a> / <a href="{{ prefix }}/worlds/{{ d.world }}/">{{ ui.worlds[d.world] }}</a> / {{ dossier_word }} {{ d.n }}</div>
     <h1 class="slab{% if t.title|length > 40 %} long{% endif %}">{{ t.title }}</h1>
     <p class="lede">{{ t.lede }}</p>
     <div class="facts"><span>{{ dossier_word }} {{ d.n }} · {{ d.ep }}</span><span>{{ ui.world }}: {{ ui.worlds[d.world] }}</span><span>{{ claims_line }}</span><span>{{ ui.updated }} {{ updated }}</span></div>
