@@ -29,7 +29,7 @@
   <div class="hdr-r"><div class="langs">{% for l in langs %}<a href="{{ alts[l] }}" hreflang="{{ l }}" data-setlang="{{ l }}"{% if l == lang %} class="on" aria-current="true"{% endif %}>{{ l|upper }}</a>{% endfor %}</div></div>
 </div></header>
 
-{% block body %}{% endblock %}
+{% if page_kind in ('archive', 'stories', 'about', 'shop', 'kit', 'world') %}<div class="stage page-stage">{% endif %}{% block body %}{% endblock %}{% if page_kind in ('archive', 'stories', 'about', 'shop', 'kit', 'world') %}</div>{% endif %}
 
 <footer><div class="wrap"><div>PANDAS LAB · IMPOSSIBLE QUESTIONS, REAL SCIENCE</div><div>{% block footer_extra %}{% endblock %}<a href="mailto:info@pandaslab.it">info@pandaslab.it</a></div></div></footer>
 

@@ -774,3 +774,23 @@ footer a{color:var(--gold);text-decoration:none}
 .ul-svg.off path{opacity:0}
 .wc-head b .ul-svg{opacity:0;transition:opacity .3s}
 .wc-head b.ul-on .ul-svg{opacity:1}
+
+/* inner pages wear the home look: lamp & ferns background, torn title sheet, handwritten lede, clippings */
+.page-stage{padding-bottom:40px}
+.page-hero{padding-top:34px;padding-bottom:6px}
+.page-hero .title-sheet{width:fit-content;min-width:min(420px,94%);max-width:min(700px,94%);margin-left:40px}
+.page-hero .page-h1{font-size:clamp(34px,4.4vw,62px);margin:12px 0 0}
+.page-hero .hand-lede{margin:16px 0 22px 64px;max-width:620px}
+.page-hero .crumb{margin:0 0 12px 40px;font:14px "Special Elite";color:#f1e1bd;letter-spacing:.06em}
+.page-hero .crumb a{color:var(--gold)}
+.arch-body{padding-top:6px}
+.sgrid{margin-top:10px}
+.sfile.hide{display:none}
+.snote{display:block;position:relative;margin:16px 8px 0;padding:22px 18px 16px;background:#ecdcb8 url("/assets/board/paper1.webp") center/cover;color:#2b1a10;box-shadow:0 8px 16px rgba(0,0,0,.4);transform:rotate(var(--r))}
+.snote .typed{display:block;font:12px "Special Elite";letter-spacing:.06em;color:#8d1d17}
+.snote b{display:block;font:600 17px/1.3 "Source Serif 4";margin:6px 0 10px}
+.snote .sbtns{display:flex;flex-wrap:wrap;gap:8px}
+.snote .btn{font-size:13px;padding:8px 12px;min-height:0}
+@media (max-width:820px){.page-hero .title-sheet{margin-left:0;max-width:100%}.page-hero .hand-lede{margin:12px 6px 16px}.page-hero .crumb{margin-left:4px}}
+
+.snote .btn.ghost{color:#2b1a10;border-color:rgba(43,26,16,.55);background:rgba(255,255,255,.25)}

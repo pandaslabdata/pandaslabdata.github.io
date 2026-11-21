@@ -404,7 +404,8 @@ def build_worlds(cases, ui_all, env, ver):
                 seo_title=f"{h['w'][k]} · {h['worlds_t']} | Pandas Lab", og_title=h["w"][k], description=h["wd"][k],
                 og_type="website", og_image="/assets/board/drawers.webp", og_locale=OG_LOCALE[lang], jsonld=None,
                 key=k, name=h["w"][k], desc=h["wd"][k], worlds_t=h["worlds_t"], all_worlds=all_w, swipe=h["swipe"],
-                files=world_files(cases, lang, k, ui, h), empty=WORLD_EMPTY[lang])
+                files=world_files(cases, lang, k, ui, h), empty=WORLD_EMPTY[lang],
+                world_word={"en": "WORLD", "it": "MONDO", "de": "WELT", "es": "MUNDO", "fr": "MONDE"}[lang])
             out = SITE / alts[lang].strip("/") / "index.html"
             out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text(page, encoding="utf-8")
@@ -530,7 +531,7 @@ def build_pages(ui_all, env, ver):
         pages = {
             "stories": dict(kicker=PAGE_KICKER["stories"][lang], title=o["st_title"], intro=o["st_intro"],
                             open_file={"en": "Open the file", "it": "Apri il fascicolo", "de": "Akte öffnen", "es": "Abrir el expediente", "fr": "Ouvrir le dossier"}[lang],
-                            topics=[{"key": k, "name": o["t_" + k]} for k in ("all", "dino", "space", "map", "evo")],
+                            topics=[{"key": "all", "name": o["t_all"]}] + [{"key": k, "name": hj[lang]["w"][k]} for k in WORLD_KEYS if any(x["world"] == k for x in dj["dossiers"])],
                             dossiers=[dict(x, page=dossier_paths(x["n"])[lang] if (BUILD / "dossiers" / f"D{x['n']}.json").exists() else None) for x in dj["dossiers"]],
                             coming=dj["coming"]),
             "about": dict(kicker=PAGE_KICKER["about"][lang], title=o["ab_title"], intro=o["ab_intro"],

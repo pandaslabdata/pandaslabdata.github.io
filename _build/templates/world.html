@@ -1,9 +1,8 @@
 {% extends "base.html" %}
+{% from "_hero.html" import hero %}
 {% block body %}
-<div class="arch-head"><div class="wrap">
-  <div class="crumb"><a href="{{ prefix }}/#worlds">{{ worlds_t }}</a> / {{ name }}</div>
-  <h1 class="slab">{{ name }}</h1>
-  <p class="lede">{{ desc }}</p>
+{{ hero(world_word, name, desc, '<a href="' ~ prefix ~ '/#worlds">' ~ worlds_t ~ '</a> / ' ~ name) }}
+<div class="arch-body"><div class="wrap">
   <div class="world-tabs">{% for w in all_worlds %}<a href="{{ w.href }}"{% if w.key == key %} class="on" aria-current="page"{% endif %}>{{ w.name }}</a>{% endfor %}</div>
   {% if files %}
   <div class="swipe-hint light"><span>{{ swipe }}</span><span class="arrow">→</span><span class="dots"></span></div>

@@ -1,0 +1,14 @@
+{% macro hero(kicker, title, intro, crumb=None) %}
+<section class="wrap page-hero">
+  {% if crumb %}<div class="crumb">{{ crumb|safe }}</div>{% endif %}
+  <div class="title-sheet rv" style="--r:-1.2deg">
+    <span class="shade"></span>
+    <div class="torn-sheet" data-torn>
+      <span class="tagstamp">{{ kicker }}</span>
+      <h1 class="headline page-h1">{{ title }}</h1>
+    </div>
+    <span class="pin2" style="left:7%"></span><span class="pin2" style="left:93%"></span>
+  </div>
+  {% if intro %}<p class="hand-lede rv" style="--r:-1.5deg">{{ intro }}</p>{% endif %}
+</section>
+{% endmacro %}

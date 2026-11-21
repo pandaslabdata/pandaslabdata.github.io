@@ -375,7 +375,7 @@
   // 4m) titles underline themselves: a red marker stroke draws under each title when it comes into view,
   //     then now and then lifts and is drawn again, a little differently each time. (World names stay clean: their stamp sits right under them.)
   (function(){
-    var SEL='.band h2, .wall-band h2, .lab-band h2, .wp-band h2, h1.slab, h2.slab, .headline em', HOV='.no-hover-underline';
+    var SEL='.band h2, .wall-band h2, .lab-band h2, .wp-band h2, h1.slab, h2.slab, .headline em, h1.page-h1', HOV='.no-hover-underline';
     var NS='http://www.w3.org/2000/svg', seed=7, rnd=function(){ seed=(seed*9301+49297)%233280; return seed/233280; };
     var line=function(el){ var sv=el.querySelector(':scope > .ul-svg'); if(sv) sv.style.display='none'; var r=document.createRange(); r.selectNodeContents(el); var rs=[].slice.call(r.getClientRects()).filter(function(q){ return q.width>1; }); if(sv) sv.style.display=''; if(!rs.length) return null;
       var b=el.getBoundingClientRect(), last=rs[rs.length-1], y=last.bottom, L=Infinity, R=-Infinity;
@@ -426,7 +426,7 @@
   var tabs=document.querySelectorAll('.ftab');
   if(tabs.length){
     var pick=function(t){ tabs.forEach(function(b){ b.classList.toggle('on',b.dataset.t===t); });
-      document.querySelectorAll('.dfile').forEach(function(f){ f.classList.toggle('hide', t!=='all' && (' '+f.dataset.tags+' ').indexOf(' '+t+' ')<0); }); };
+      document.querySelectorAll('.dfile,.sfile').forEach(function(f){ f.classList.toggle('hide', t!=='all' && (' '+f.dataset.tags+' ').indexOf(' '+t+' ')<0); }); };
     tabs.forEach(function(b){ b.addEventListener('click',function(){ pick(b.dataset.t); history.replaceState(null,'',b.dataset.t==='all'?location.pathname:'#'+b.dataset.t); }); });
     var h=location.hash.slice(1); if(h && document.querySelector('.ftab[data-t="'+h+'"]')) pick(h);
   }

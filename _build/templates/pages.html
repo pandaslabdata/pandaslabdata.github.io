@@ -1,31 +1,25 @@
 {% extends "base.html" %}
+{% from "_hero.html" import hero %}
 {% block body %}
-<div class="arch-head"><div class="wrap">
-  <div class="kicker">{{ kicker }}</div>
-  <h1 class="slab">{{ title }}</h1>
-  <p class="lede">{{ intro }}</p>
-</div></div>
+{{ hero(kicker, title, intro) }}
 
 {% if page == 'stories' %}
 <div class="wrap">
   <div class="tabs" role="toolbar">{% for t in topics %}<button type="button" class="ftab{% if loop.first %} on{% endif %}" data-t="{{ t.key }}">{{ t.name }}</button>{% endfor %}</div>
-  <div class="dgrid">
-    {% for d in dossiers %}<article class="dfile paper rv" data-tags="{{ d.tags }}">
-      <img class="tape-a" src="/assets/board/tape2.webp" alt="" width="240" height="75">
-      <a class="dphoto" href="{{ d.page or d.url }}"{% if not d.page %} target="_blank" rel="noopener"{% endif %}><img src="{{ d.thumb }}" alt="{{ d.title }}" loading="lazy" width="480" height="360"><span class="play">▶</span></a>
-      <div class="dbody">
-        <div class="dmeta typed">{{ d.ep }} · {{ d.dur }}</div>
-        <h2><a href="{{ d.page or d.url }}"{% if not d.page %} target="_blank" rel="noopener"{% endif %}>{{ d.title }}</a></h2>
-        {% if d.page %}<a class="btn" href="{{ d.page }}">{{ open_file }} →</a> {% endif %}<a class="btn{% if d.page %} ghost{% endif %}" href="{{ d.url }}" target="_blank" rel="noopener">{{ o.watch }} →</a>
-        {% if not d.page %}<details class="dsrc"><summary>{{ o.src }}</summary><ul>{% for s in d.sources %}<li>{{ s|safe }}</li>{% endfor %}</ul></details>{% endif %}
+  <div class="wp-files sgrid">
+    {% for d in dossiers %}<article class="sfile" data-tags="{{ d.world }}">
+      <a class="clip wpf rv" href="{{ d.page or d.url }}"{% if not d.page %} target="_blank" rel="noopener"{% endif %} style="--r:{{ [-1.6, 1.2, -0.6, 1.8, -1.1][loop.index0 % 5] }}deg">
+        <span class="sway" style="animation-delay:-{{ loop.index0 * 0.9 }}s">
+          <span class="shade"></span>
+          <span class="news" data-torn><span class="h3" style="--hf:{{ [1, 26 / (d.clip[lang]|length)]|min|round(3) }}">{{ d.clip[lang] }}</span><span class="ph live"><img src="{{ d.clip_img }}" alt="" loading="lazy"></span><span class="cols" aria-hidden="true"></span></span>
+          <span class="pin2"></span>
+        </span>
+      </a>
+      <div class="snote rv" style="--r:{{ [1.2, -0.8, 0.6][loop.index0 % 3] }}deg">
+        <span class="typed">{{ dossier_word|upper }} {{ d.n }} · {{ d.ep }} · {{ d.dur }}</span>
+        <b>{{ d.title }}</b>
+        <span class="sbtns">{% if d.page %}<a class="btn" href="{{ d.page }}">{{ open_file }} →</a>{% endif %}<a class="btn ghost" href="{{ d.url }}" target="_blank" rel="noopener">{{ o.watch }} →</a></span>
       </div>
-      <span class="stamp anim navy">{{ dossier_word }} {{ d.n }}</span>
-    </article>{% endfor %}
-    {% for c in coming %}<article class="dfile paper rv soon" data-tags="{{ c.tags }}">
-      <img class="tape-a" src="/assets/board/tape3.webp" alt="" width="240" height="79">
-      <span class="dphoto"><img src="{{ c.img }}" alt="{{ c.title }}" loading="lazy"></span>
-      <div class="dbody"><div class="dmeta typed">· · ·</div><h2>{{ c.title }}</h2></div>
-      <span class="stamp anim">{{ o.soon|upper }}</span>
     </article>{% endfor %}
   </div>
 </div>
