@@ -1,0 +1,194 @@
+{
+ "n": "05", "ep": "EP 5", "yt": "OXJaJOZGDf0", "world": "earth", "updated": "2026-11-21",
+ "claims": [
+  {"id": "D5-C1", "label": "OBSERVED", "sources": [
+   {"name": "L. W. Alvarez (1983), PNAS 80(2):627–642, read as LBL-14809 preprint (1982)", "url": "https://escholarship.org/uc/item/78v5q84c", "read": "full text"},
+   {"name": "Alvarez, Alvarez, Asaro & Michel (1980), Science 208:1095–1108", "url": "https://doi.org/10.1126/science.208.4448.1095", "read": "abstract only"}]},
+  {"id": "D5-C2", "label": "OBSERVED", "sources": [
+   {"name": "Alvarez, Alvarez, Asaro & Michel (1980), Science 208:1095–1108", "url": "https://doi.org/10.1126/science.208.4448.1095", "read": "abstract only"},
+   {"name": "L. W. Alvarez (1983), PNAS 80(2):627–642, read as LBL-14809 preprint (1982)", "url": "https://escholarship.org/uc/item/78v5q84c", "read": "full text"}]},
+  {"id": "D5-C3", "label": "ESTIMATE", "sources": [
+   {"name": "Alvarez, Alvarez, Asaro & Michel (1980), Science 208:1095–1108", "url": "https://doi.org/10.1126/science.208.4448.1095", "read": "abstract only"},
+   {"name": "Asaro, Michel, Alvarez & Alvarez (1980), LBL report for the 1980 ACS Symposium 'Nuclear and Chemical Dating Techniques'", "url": "https://www.osti.gov/servlets/purl/1077843", "read": "full text"},
+   {"name": "L. W. Alvarez (1983), PNAS 80(2):627–642, read as LBL-14809 preprint (1982)", "url": "https://escholarship.org/uc/item/78v5q84c", "read": "full text"}]},
+  {"id": "D5-C4", "label": "OBSERVED", "sources": [
+   {"name": "Urrutia-Fucugauchi, Camargo-Zanoguera, Pérez-Cruz & Pérez-Cruz (2011), Geofísica Internacional 50(1)", "url": "https://doi.org/10.22201/igeof.00167169p.2011.50.1.125", "read": "full text"}]},
+  {"id": "D5-C5", "label": "ESTIMATE", "sources": [
+   {"name": "Hildebrand et al. (1991), Geology 19(9):867–871", "url": "https://doi.org/10.1130/0091-7613(1991)019%3C0867:CCAPCT%3E2.3.CO;2", "read": "abstract only"},
+   {"name": "Schmieder & Kring (2020), Astrobiology 20(1):91–141", "url": "https://doi.org/10.1089/ast.2019.2085", "read": "full text"},
+   {"name": "Urrutia-Fucugauchi et al. (2011), Geofísica Internacional 50(1)", "url": "https://doi.org/10.22201/igeof.00167169p.2011.50.1.125", "read": "full text"}]},
+  {"id": "D5-C6", "label": "OBSERVED", "sources": [
+   {"name": "Schmieder & Kring (2020), Astrobiology 20(1):91–141, Table 1", "url": "https://doi.org/10.1089/ast.2019.2085", "read": "full text"}]},
+  {"id": "D5-C7", "label": "OBSERVED", "sources": [
+   {"name": "Urrutia-Fucugauchi et al. (2011), Geofísica Internacional 50(1)", "url": "https://doi.org/10.22201/igeof.00167169p.2011.50.1.125", "read": "full text"},
+   {"name": "Whalen et al. (2020), Marine Geology 430:106368", "url": "https://doi.org/10.1016/j.margeo.2020.106368", "read": "full text"}]},
+  {"id": "D5-C8", "label": "OBSERVED", "sources": [
+   {"name": "Schmieder & Kring (2020), Astrobiology 20(1):91–141", "url": "https://doi.org/10.1089/ast.2019.2085", "read": "full text"},
+   {"name": "Schmieder & Kring (2020), Table 1, transcribed in craters_schmieder_kring_2020.tsv (2026-09-28)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6987741/", "read": "data"}]},
+  {"id": "D5-C9", "label": "ESTIMATE", "sources": [
+   {"name": "Schmieder & Kring (2020), Astrobiology 20(1):91–141, Section 4.2 and Fig. 6", "url": "https://doi.org/10.1089/ast.2019.2085", "read": "full text"}]},
+  {"id": "D5-C10", "label": "ESTIMATE", "sources": [
+   {"name": "Schmieder & Kring (2020), Astrobiology 20(1):91–141, Section 4.2", "url": "https://doi.org/10.1089/ast.2019.2085", "read": "full text"}]},
+  {"id": "D5-C11", "label": "OBSERVED", "sources": [
+   {"name": "NASA/JPL CNEOS Fireball Data (API v1.2, downloaded 2026-09-28)", "url": "https://cneos.jpl.nasa.gov/fireballs/", "read": "data"},
+   {"name": "NASA/JPL CNEOS, Fireball and Bolide Data – Introduction", "url": "https://cneos.jpl.nasa.gov/fireballs/intro.html", "read": "full text"}]},
+  {"id": "D5-C12", "label": "ESTIMATE", "sources": [
+   {"name": "NASA/JPL CNEOS Fireball Data (API v1.2, downloaded 2026-09-28)", "url": "https://cneos.jpl.nasa.gov/fireballs/", "read": "data"},
+   {"name": "NASA/JPL CNEOS, Fireball and Bolide Data – Introduction", "url": "https://cneos.jpl.nasa.gov/fireballs/intro.html", "read": "full text"}]},
+  {"id": "D5-C13", "label": "ESTIMATE", "sources": [
+   {"name": "Evatt, Smedley, Joy et al., EGU General Assembly 2019, abstract EGU2019-1216", "url": "https://meetingorganizer.copernicus.org/EGU2019/EGU2019-1216.pdf", "read": "abstract only"},
+   {"name": "Evatt et al. (2020), Geology 48(7):683–687", "url": "https://doi.org/10.1130/G46733.1", "read": "abstract only"}]},
+  {"id": "D5-C14", "label": "OBSERVED", "sources": [
+   {"name": "The Paleobiology Database – Telmatornis occurrences", "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Telmatornis&show=strat,loc", "read": "data"},
+   {"name": "Pandas Lab dataset Mesozoic_travel_v6_6_5 (PBDB export)", "url": "https://paleobiodb.org/", "read": "data"},
+   {"name": "Longrich, Tokaryk & Field (2011), PNAS 108(37):15253–15257", "url": "https://doi.org/10.1073/pnas.1110395108", "read": "abstract only"}]}
+ ],
+ "exhibits": ["D5-C3", "D5-C7", "D5-C10", "D5-C12"],
+ "i18n": {
+  "en": {
+   "title": "Chicxulub Crater: Why You Can't See the World's Most Famous Impact",
+   "lede": "A clay layer about 1 centimeter thick at Gubbio, Italy, led scientists in 1980 to predict an asteroid about 10 km wide, before any matching crater was known. The crater, Chicxulub, was identified in 1991, buried under about 1 km of younger carbonate sediments.",
+   "question": "Why can't we see Chicxulub, the impact crater linked to the end of the dinosaurs?",
+   "claims": {
+    "D5-C1": "At Gubbio, Italy, a clay layer about 1 centimeter thick marks the Cretaceous–Paleogene boundary; its iridium concentration is about 30 times the background level.",
+    "D5-C2": "At Stevns Klint in Denmark, the same boundary layer shows an iridium increase of about 160 times background, according to the 1980 study.",
+    "D5-C3": "In 1980, Luis and Walter Alvarez, Frank Asaro and Helen Michel proposed an asteroid impact; four independent estimates gave 10 ± 4 km across. No matching crater was known.",
+    "D5-C4": "Mexico's oil company Pemex had recorded a large circular gravity anomaly in Yucatán since the 1950s; Penfield and Camargo presented it as a possible impact structure in 1981.",
+    "D5-C5": "In 1991, Hildebrand and colleagues identified the buried Yucatán structure as an impact crater about 180 km across; some later studies put its rim near 200 km.",
+    "D5-C6": "Argon–argon dating gives Chicxulub an age of 66.052 ± 0.043 million years, matching the Cretaceous–Paleogene boundary.",
+    "D5-C7": "Chicxulub has no visible rim because it lies beneath about 1 km of younger carbonate sediments; at the surface, its outline shows mainly as a ring of sinkholes (cenotes).",
+    "D5-C8": "Schmieder and Kring (2020) list 200 proven impact structures, none on today's seafloor; about 116 are under 10 km across, and only five reach 100 km.",
+    "D5-C9": "That surviving record is estimated to represent only about 15–25% of the impact craters produced on Earth over the past ~2 billion years.",
+    "D5-C10": "In Schmieder and Kring's first-order estimate, Chicxulub alone accounts for about 70% of the impactor mass in the preserved Phanerozoic crater record (172 structures).",
+    "D5-C11": "NASA/JPL's CNEOS table lists 1,073 fireballs from April 1988 to September 2026, averaging about 35 per year in 2007–2025; earlier years are less complete.",
+    "D5-C12": "Chelyabinsk (February 15, 2013) has the highest estimated impact energy in the CNEOS table: 441 kilotons, nine times the runner-up (49 kilotons, December 2018).",
+    "D5-C13": "About 17,600 meteorite falls heavier than 50 grams are estimated to reach Earth's surface each year; a single fall can produce several meteorites.",
+    "D5-C14": "In our PBDB-based dataset of 1,354 dinosaur genera, only the bird Telmatornis has fossil records whose age range straddles the 66-million-year boundary—a dating uncertainty, not proof of survival."
+   },
+   "verdict": "The episode's core story holds up: a centimeter-scale, iridium-rich clay layer led to a 10 ± 4 km impactor prediction in 1980, and the Chicxulub crater, about 180 km across and dated to 66.05 million years ago, was identified as an impact crater in 1991. Chicxulub is hard to see because it is buried under about a kilometer of carbonate sediments, and Earth keeps only a small fraction of its craters. A few details needed correcting: the Yucatán anomaly was known from oil surveys since the 1950s, the yearly figure of about 17,600 counts falls rather than individual meteorites, and the dataset's lone 'surviving' genus reflects dating uncertainty, not proven survival.",
+   "errata": [
+    "The video said the Gubbio clay held more than 30 times the iridium of the surrounding rock and gave exact concentration values. The data show about 30 times; the exact values could not be checked against the full text of the 1980 study.",
+    "The video presented the Yucatán anomaly as a find made around the time of the Alvarez study. The data show Pemex had recorded the gravity anomaly since the 1950s, and Penfield and Camargo presented it as a possible impact structure in 1981.",
+    "The video said roughly 17,000 meteorites reach the ground each year. The data show the estimate by Evatt and colleagues is about 17,600 falls heavier than 50 grams per year, and a single fall can produce several meteorites.",
+    "The video said one genus, the bird Telmatornis, made it to the other side of the boundary. The data show it crosses the line only because some of its records carry an age range spanning the boundary, a dating uncertainty rather than proof of survival; the birds that did survive were the ancestors of modern birds.",
+    "The video presented the 15–25% crater survival figure and Chicxulub's 70% share of impactor mass as results of our own analysis. The sources show both are estimates published by Schmieder and Kring in 2020."
+   ]
+  },
+  "it": {
+   "title": "Cratere di Chicxulub: perché non si vede l'impatto più famoso del mondo",
+   "lede": "Uno strato di argilla spesso circa 1 centimetro a Gubbio portò gli scienziati, nel 1980, a prevedere un asteroide largo circa 10 km, prima che si conoscesse un cratere compatibile. Il cratere, Chicxulub, fu identificato nel 1991, sepolto sotto circa 1 km di sedimenti carbonatici più recenti.",
+   "question": "Perché non riusciamo a vedere Chicxulub, il cratere d'impatto legato alla fine dei dinosauri?",
+   "claims": {
+    "D5-C1": "A Gubbio, in Italia, uno strato di argilla spesso circa 1 centimetro segna il limite Cretaceo–Paleogene; la sua concentrazione di iridio è circa 30 volte il livello di fondo.",
+    "D5-C2": "A Stevns Klint, in Danimarca, lo stesso strato di confine mostra un aumento dell'iridio di circa 160 volte il fondo, secondo lo studio del 1980.",
+    "D5-C3": "Nel 1980 Luis e Walter Alvarez, Frank Asaro e Helen Michel proposero l'impatto di un asteroide; quattro stime indipendenti davano un diametro di 10 ± 4 km. Non si conosceva alcun cratere compatibile.",
+    "D5-C4": "La compagnia petrolifera messicana Pemex registrava dagli anni 1950 una grande anomalia gravimetrica circolare nello Yucatán; Penfield e Camargo la presentarono come possibile struttura d'impatto nel 1981.",
+    "D5-C5": "Nel 1991 Hildebrand e colleghi identificarono la struttura sepolta dello Yucatán come un cratere d'impatto largo circa 180 km; alcuni studi successivi collocano il bordo vicino ai 200 km.",
+    "D5-C6": "La datazione argon–argon assegna a Chicxulub un'età di 66,052 ± 0,043 milioni di anni, coincidente con il limite Cretaceo–Paleogene.",
+    "D5-C7": "Chicxulub non ha un bordo visibile perché si trova sotto circa 1 km di sedimenti carbonatici più recenti; in superficie il suo contorno si vede soprattutto come un anello di doline (cenote).",
+    "D5-C8": "Schmieder e Kring (2020) elencano 200 strutture d'impatto accertate, nessuna sull'attuale fondale oceanico; circa 116 sono larghe meno di 10 km e solo cinque arrivano a 100 km.",
+    "D5-C9": "Si stima che questo archivio superstite rappresenti solo il 15–25% circa dei crateri d'impatto prodotti sulla Terra negli ultimi ~2 miliardi di anni.",
+    "D5-C10": "Nella stima di primo ordine di Schmieder e Kring, il solo Chicxulub rappresenta circa il 70% della massa degli impattori nell'archivio conservato dei crateri del Fanerozoico (172 strutture).",
+    "D5-C11": "La tabella CNEOS della NASA/JPL elenca 1.073 bolidi da aprile 1988 a settembre 2026, con una media di circa 35 l'anno nel 2007–2025; gli anni precedenti sono meno completi.",
+    "D5-C12": "Chelyabinsk (15 febbraio 2013) ha l'energia d'impatto stimata più alta della tabella CNEOS: 441 kilotoni, nove volte il secondo (49 kilotoni, dicembre 2018).",
+    "D5-C13": "Si stima che ogni anno raggiungano la superficie terrestre circa 17.600 cadute di meteoriti più pesanti di 50 grammi; una singola caduta può produrre diversi meteoriti.",
+    "D5-C14": "Nel nostro dataset basato su PBDB, con 1.354 generi di dinosauri, solo l'uccello Telmatornis ha record fossili il cui intervallo d'età scavalca il limite dei 66 milioni di anni: un'incertezza di datazione, non una prova di sopravvivenza."
+   },
+   "verdict": "Il nucleo della storia dell'episodio regge: uno strato di argilla di scala centimetrica, ricco di iridio, portò nel 1980 a prevedere un impattore di 10 ± 4 km, e il cratere di Chicxulub, largo circa 180 km e datato a 66,05 milioni di anni fa, fu identificato come cratere d'impatto nel 1991. Chicxulub è difficile da vedere perché è sepolto sotto circa un chilometro di sedimenti carbonatici, e la Terra conserva solo una piccola parte dei suoi crateri. Alcuni dettagli andavano corretti: l'anomalia dello Yucatán era nota dalle prospezioni petrolifere fin dagli anni 1950, la cifra annua di circa 17.600 conta le cadute e non i singoli meteoriti, e l'unico genere 'sopravvissuto' del dataset riflette un'incertezza di datazione, non una sopravvivenza dimostrata.",
+   "errata": [
+    "Il video diceva che l'argilla di Gubbio conteneva più di 30 volte l'iridio della roccia circostante e dava valori di concentrazione precisi. I dati mostrano circa 30 volte; i valori precisi non si sono potuti verificare sul testo completo dello studio del 1980.",
+    "Il video presentava l'anomalia dello Yucatán come una scoperta avvenuta all'epoca dello studio di Alvarez. I dati mostrano che Pemex registrava l'anomalia gravimetrica dagli anni 1950 e che Penfield e Camargo la presentarono come possibile struttura d'impatto nel 1981.",
+    "Il video diceva che ogni anno raggiungono il suolo circa 17.000 meteoriti. I dati mostrano che la stima di Evatt e colleghi è di circa 17.600 cadute più pesanti di 50 grammi l'anno, e una singola caduta può produrre diversi meteoriti.",
+    "Il video diceva che un genere, l'uccello Telmatornis, era arrivato dall'altra parte del limite. I dati mostrano che attraversa la linea solo perché alcuni suoi record hanno un intervallo d'età a cavallo del limite, un'incertezza di datazione e non una prova di sopravvivenza; a sopravvivere furono gli antenati degli uccelli moderni.",
+    "Il video presentava la quota del 15–25% di crateri sopravvissuti e il 70% della massa degli impattori attribuito a Chicxulub come risultati di una nostra analisi. Le fonti mostrano che sono entrambe stime pubblicate da Schmieder e Kring nel 2020."
+   ]
+  },
+  "de": {
+   "title": "Chicxulub-Krater: Warum man den berühmtesten Einschlag der Welt nicht sieht",
+   "lede": "Eine etwa 1 Zentimeter dicke Tonschicht in Gubbio, Italien, brachte Forschende 1980 dazu, einen etwa 10 km großen Asteroiden vorherzusagen, bevor ein passender Krater bekannt war. Der Krater, Chicxulub, wurde 1991 identifiziert, begraben unter etwa 1 km jüngerer Karbonatsedimente.",
+   "question": "Warum können wir Chicxulub nicht sehen, den Einschlagkrater, der mit dem Ende der Dinosaurier verbunden ist?",
+   "claims": {
+    "D5-C1": "In Gubbio, Italien, markiert eine etwa 1 Zentimeter dicke Tonschicht die Kreide-Paläogen-Grenze; ihre Iridiumkonzentration liegt beim etwa 30-Fachen des Hintergrundwerts.",
+    "D5-C2": "In Stevns Klint in Dänemark zeigt dieselbe Grenzschicht laut der Studie von 1980 einen Iridiumanstieg auf etwa das 160-Fache des Hintergrunds.",
+    "D5-C3": "1980 schlugen Luis und Walter Alvarez, Frank Asaro und Helen Michel einen Asteroideneinschlag vor; vier unabhängige Schätzungen ergaben einen Durchmesser von 10 ± 4 km. Ein passender Krater war nicht bekannt.",
+    "D5-C4": "Der mexikanische Ölkonzern Pemex hatte seit den 1950er-Jahren eine große kreisförmige Schwereanomalie in Yucatán erfasst; Penfield und Camargo stellten sie 1981 als mögliche Einschlagstruktur vor.",
+    "D5-C5": "1991 identifizierten Hildebrand und Kollegen die verborgene Struktur in Yucatán als Einschlagkrater mit etwa 180 km Durchmesser; einige spätere Studien setzen den Rand bei fast 200 km an.",
+    "D5-C6": "Die Argon-Argon-Datierung ergibt für Chicxulub ein Alter von 66,052 ± 0,043 Millionen Jahren, passend zur Kreide-Paläogen-Grenze.",
+    "D5-C7": "Chicxulub hat keinen sichtbaren Rand, weil er unter etwa 1 km jüngerer Karbonatsedimente liegt; an der Oberfläche zeigt sich sein Umriss vor allem als Ring aus Dolinen (Cenoten).",
+    "D5-C8": "Schmieder und Kring (2020) führen 200 nachgewiesene Einschlagstrukturen auf, keine davon auf dem heutigen Meeresboden; etwa 116 sind kleiner als 10 km, und nur fünf erreichen 100 km.",
+    "D5-C9": "Dieser erhaltene Bestand macht schätzungsweise nur etwa 15–25 % der Einschlagkrater aus, die in den letzten ~2 Milliarden Jahren auf der Erde entstanden sind.",
+    "D5-C10": "In der Schätzung erster Ordnung von Schmieder und Kring entfallen allein auf Chicxulub etwa 70 % der Impaktormasse im erhaltenen phanerozoischen Kraterbestand (172 Strukturen).",
+    "D5-C11": "Die CNEOS-Tabelle von NASA/JPL listet 1.073 Feuerkugeln von April 1988 bis September 2026 auf, im Schnitt etwa 35 pro Jahr im Zeitraum 2007–2025; frühere Jahre sind weniger vollständig.",
+    "D5-C12": "Tscheljabinsk (15. Februar 2013) hat die höchste geschätzte Einschlagenergie in der CNEOS-Tabelle: 441 Kilotonnen, neunmal so viel wie der Zweitplatzierte (49 Kilotonnen, Dezember 2018).",
+    "D5-C13": "Schätzungsweise erreichen jedes Jahr etwa 17.600 Meteoritenfälle von mehr als 50 Gramm die Erdoberfläche; ein einzelner Fall kann mehrere Meteoriten liefern.",
+    "D5-C14": "In unserem auf der PBDB beruhenden Datensatz mit 1.354 Dinosauriergattungen hat nur der Vogel Telmatornis Fossilfunde, deren Altersspanne über die 66-Millionen-Jahre-Grenze reicht – eine Datierungsunsicherheit, kein Beweis für ein Überleben."
+   },
+   "verdict": "Der Kern der Geschichte hält: Eine zentimeterdünne, iridiumreiche Tonschicht führte 1980 zur Vorhersage eines Impaktors von 10 ± 4 km, und der Chicxulub-Krater, etwa 180 km groß und 66,05 Millionen Jahre alt, wurde 1991 als Einschlagkrater identifiziert. Chicxulub ist schwer zu sehen, weil er unter etwa einem Kilometer Karbonatsedimenten begraben liegt, und die Erde bewahrt nur einen kleinen Teil ihrer Krater. Einige Details mussten korrigiert werden: Die Anomalie in Yucatán war seit den 1950er-Jahren aus Ölerkundungen bekannt, die Jahreszahl von etwa 17.600 zählt Fälle und nicht einzelne Meteoriten, und die einzige „überlebende“ Gattung des Datensatzes spiegelt eine Datierungsunsicherheit wider, kein nachgewiesenes Überleben.",
+   "errata": [
+    "Das Video sagte, der Ton von Gubbio enthalte mehr als das 30-Fache an Iridium des umgebenden Gesteins, und nannte genaue Konzentrationswerte. Die Daten zeigen etwa das 30-Fache; die genauen Werte ließen sich nicht am Volltext der Studie von 1980 überprüfen.",
+    "Das Video stellte die Anomalie in Yucatán als Entdeckung aus der Zeit der Alvarez-Studie dar. Die Daten zeigen, dass Pemex die Schwereanomalie seit den 1950er-Jahren erfasst hatte und Penfield und Camargo sie 1981 als mögliche Einschlagstruktur vorstellten.",
+    "Das Video sagte, jedes Jahr erreichten rund 17.000 Meteoriten den Boden. Die Daten zeigen, dass die Schätzung von Evatt und Kollegen bei etwa 17.600 Fällen über 50 Gramm pro Jahr liegt, und ein einzelner Fall kann mehrere Meteoriten liefern.",
+    "Das Video sagte, eine Gattung, der Vogel Telmatornis, habe es auf die andere Seite der Grenze geschafft. Die Daten zeigen, dass sie die Linie nur überschreitet, weil einige ihrer Funde eine Altersspanne über die Grenze hinweg tragen – eine Datierungsunsicherheit, kein Beweis für ein Überleben; überlebt haben die Vorfahren der modernen Vögel.",
+    "Das Video stellte den Anteil von 15–25 % erhaltener Krater und den Anteil von 70 % der Impaktormasse für Chicxulub als Ergebnisse unserer eigenen Analyse dar. Die Quellen zeigen, dass beides Schätzungen sind, die Schmieder und Kring 2020 veröffentlicht haben."
+   ]
+  },
+  "es": {
+   "title": "Cráter de Chicxulub: por qué no se ve el impacto más famoso del mundo",
+   "lede": "Una capa de arcilla de alrededor de 1 centímetro de espesor en Gubbio, Italia, llevó a los científicos en 1980 a predecir un asteroide de unos 10 km de ancho, antes de que se conociera un cráter compatible. El cráter, Chicxulub, se identificó en 1991, enterrado bajo cerca de 1 km de sedimentos carbonatados más recientes.",
+   "question": "¿Por qué no podemos ver Chicxulub, el cráter de impacto vinculado al final de los dinosaurios?",
+   "claims": {
+    "D5-C1": "En Gubbio, Italia, una capa de arcilla de alrededor de 1 centímetro de espesor marca el límite Cretácico–Paleógeno; su concentración de iridio es unas 30 veces el nivel de fondo.",
+    "D5-C2": "En Stevns Klint, Dinamarca, la misma capa límite muestra un aumento de iridio de unas 160 veces el fondo, según el estudio de 1980.",
+    "D5-C3": "En 1980, Luis y Walter Alvarez, Frank Asaro y Helen Michel propusieron el impacto de un asteroide; cuatro estimaciones independientes dieron 10 ± 4 km de diámetro. No se conocía ningún cráter compatible.",
+    "D5-C4": "La petrolera mexicana Pemex había registrado una gran anomalía gravimétrica circular en Yucatán desde los años 1950; Penfield y Camargo la presentaron como posible estructura de impacto en 1981.",
+    "D5-C5": "En 1991, Hildebrand y sus colegas identificaron la estructura enterrada de Yucatán como un cráter de impacto de unos 180 km de diámetro; algunos estudios posteriores sitúan su borde cerca de los 200 km.",
+    "D5-C6": "La datación argón–argón da a Chicxulub una edad de 66,052 ± 0,043 millones de años, que coincide con el límite Cretácico–Paleógeno.",
+    "D5-C7": "Chicxulub no tiene un borde visible porque yace bajo cerca de 1 km de sedimentos carbonatados más recientes; en la superficie, su contorno se ve sobre todo como un anillo de dolinas (cenotes).",
+    "D5-C8": "Schmieder y Kring (2020) recogen 200 estructuras de impacto comprobadas, ninguna en el fondo oceánico actual; unas 116 miden menos de 10 km y solo cinco alcanzan los 100 km.",
+    "D5-C9": "Se estima que ese registro superviviente representa solo alrededor del 15–25 % de los cráteres de impacto producidos en la Tierra en los últimos ~2 mil millones de años.",
+    "D5-C10": "En la estimación de primer orden de Schmieder y Kring, solo Chicxulub representa cerca del 70 % de la masa de los impactores en el registro conservado de cráteres del Fanerozoico (172 estructuras).",
+    "D5-C11": "La tabla CNEOS de la NASA/JPL recoge 1.073 bólidos de abril de 1988 a septiembre de 2026, con una media de unos 35 al año en 2007–2025; los años anteriores están menos completos.",
+    "D5-C12": "Cheliábinsk (15 de febrero de 2013) tiene la mayor energía de impacto estimada de la tabla CNEOS: 441 kilotones, nueve veces la del segundo (49 kilotones, diciembre de 2018).",
+    "D5-C13": "Se estima que cada año llegan a la superficie terrestre unas 17.600 caídas de meteoritos de más de 50 gramos; una sola caída puede producir varios meteoritos.",
+    "D5-C14": "En nuestro conjunto de datos basado en la PBDB, con 1.354 géneros de dinosaurios, solo el ave Telmatornis tiene registros fósiles cuyo rango de edad cruza el límite de los 66 millones de años: una incertidumbre de datación, no una prueba de supervivencia."
+   },
+   "verdict": "El núcleo de la historia del episodio se sostiene: una capa de arcilla de escala centimétrica y rica en iridio llevó en 1980 a predecir un impactor de 10 ± 4 km, y el cráter de Chicxulub, de unos 180 km de diámetro y con una edad de 66,05 millones de años, se identificó como cráter de impacto en 1991. Chicxulub es difícil de ver porque está enterrado bajo cerca de un kilómetro de sedimentos carbonatados, y la Tierra conserva solo una pequeña parte de sus cráteres. Algunos detalles necesitaban corrección: la anomalía de Yucatán se conocía por las prospecciones petroleras desde los años 1950, la cifra anual de unas 17.600 cuenta caídas y no meteoritos individuales, y el único género «superviviente» del conjunto de datos refleja una incertidumbre de datación, no una supervivencia demostrada.",
+   "errata": [
+    "El vídeo dijo que la arcilla de Gubbio tenía más de 30 veces el iridio de la roca circundante y dio valores de concentración exactos. Los datos muestran unas 30 veces; los valores exactos no pudieron comprobarse en el texto completo del estudio de 1980.",
+    "El vídeo presentó la anomalía de Yucatán como un hallazgo de la época del estudio de Alvarez. Los datos muestran que Pemex registraba la anomalía gravimétrica desde los años 1950 y que Penfield y Camargo la presentaron como posible estructura de impacto en 1981.",
+    "El vídeo dijo que cada año llegan al suelo unos 17.000 meteoritos. Los datos muestran que la estimación de Evatt y sus colegas es de unas 17.600 caídas de más de 50 gramos al año, y una sola caída puede producir varios meteoritos.",
+    "El vídeo dijo que un género, el ave Telmatornis, llegó al otro lado del límite. Los datos muestran que cruza la línea solo porque algunos de sus registros tienen un rango de edad que abarca el límite, una incertidumbre de datación y no una prueba de supervivencia; las aves que sobrevivieron fueron los antepasados de las aves modernas.",
+    "El vídeo presentó la cifra del 15–25 % de cráteres conservados y el 70 % de la masa de los impactores atribuido a Chicxulub como resultados de un análisis propio. Las fuentes muestran que ambas son estimaciones publicadas por Schmieder y Kring en 2020."
+   ]
+  },
+  "fr": {
+   "title": "Cratère de Chicxulub : pourquoi on ne voit pas l'impact le plus célèbre",
+   "lede": "Une couche d'argile d'environ 1 centimètre d'épaisseur à Gubbio, en Italie, a conduit les scientifiques en 1980 à prédire un astéroïde d'environ 10 km de large, avant qu'aucun cratère correspondant ne soit connu. Le cratère, Chicxulub, a été identifié en 1991, enfoui sous environ 1 km de sédiments carbonatés plus récents.",
+   "question": "Pourquoi ne voit-on pas Chicxulub, le cratère d'impact lié à la fin des dinosaures ?",
+   "claims": {
+    "D5-C1": "À Gubbio, en Italie, une couche d'argile d'environ 1 centimètre d'épaisseur marque la limite Crétacé–Paléogène ; sa concentration en iridium est environ 30 fois supérieure au niveau de fond.",
+    "D5-C2": "À Stevns Klint, au Danemark, la même couche limite montre une hausse de l'iridium d'environ 160 fois le niveau de fond, selon l'étude de 1980.",
+    "D5-C3": "En 1980, Luis et Walter Alvarez, Frank Asaro et Helen Michel ont proposé l'impact d'un astéroïde ; quatre estimations indépendantes donnaient 10 ± 4 km de diamètre. Aucun cratère correspondant n'était connu.",
+    "D5-C4": "La compagnie pétrolière mexicaine Pemex avait enregistré une grande anomalie gravimétrique circulaire dans le Yucatán depuis les années 1950 ; Penfield et Camargo l'ont présentée comme une possible structure d'impact en 1981.",
+    "D5-C5": "En 1991, Hildebrand et ses collègues ont identifié la structure enfouie du Yucatán comme un cratère d'impact d'environ 180 km de diamètre ; certaines études ultérieures placent son bord vers 200 km.",
+    "D5-C6": "La datation argon–argon donne à Chicxulub un âge de 66,052 ± 0,043 millions d'années, qui correspond à la limite Crétacé–Paléogène.",
+    "D5-C7": "Chicxulub n'a pas de bord visible car il se trouve sous environ 1 km de sédiments carbonatés plus récents ; en surface, son contour apparaît surtout comme un anneau de dolines (cénotes).",
+    "D5-C8": "Schmieder et Kring (2020) recensent 200 structures d'impact avérées, aucune sur le plancher océanique actuel ; environ 116 font moins de 10 km, et seules cinq atteignent 100 km.",
+    "D5-C9": "Ce registre préservé ne représenterait qu'environ 15–25 % des cratères d'impact produits sur Terre au cours des derniers ~2 milliards d'années.",
+    "D5-C10": "Dans l'estimation de premier ordre de Schmieder et Kring, Chicxulub représente à lui seul environ 70 % de la masse des impacteurs dans le registre préservé des cratères du Phanérozoïque (172 structures).",
+    "D5-C11": "La table CNEOS de la NASA/JPL recense 1 073 bolides d'avril 1988 à septembre 2026, soit en moyenne environ 35 par an sur 2007–2025 ; les années antérieures sont moins complètes.",
+    "D5-C12": "Tcheliabinsk (15 février 2013) a l'énergie d'impact estimée la plus élevée de la table CNEOS : 441 kilotonnes, neuf fois celle du deuxième (49 kilotonnes, décembre 2018).",
+    "D5-C13": "On estime qu'environ 17 600 chutes de météorites de plus de 50 grammes atteignent chaque année la surface de la Terre ; une seule chute peut produire plusieurs météorites.",
+    "D5-C14": "Dans notre jeu de données issu de la PBDB, qui compte 1 354 genres de dinosaures, seul l'oiseau Telmatornis a des données fossiles dont la fourchette d'âge chevauche la limite des 66 millions d'années : une incertitude de datation, pas une preuve de survie."
+   },
+   "verdict": "Le cœur de l'histoire tient : une couche d'argile centimétrique riche en iridium a conduit en 1980 à prédire un impacteur de 10 ± 4 km, et le cratère de Chicxulub, d'environ 180 km de diamètre et daté de 66,05 millions d'années, a été identifié comme cratère d'impact en 1991. Chicxulub est difficile à voir car il est enfoui sous environ un kilomètre de sédiments carbonatés, et la Terre ne conserve qu'une petite partie de ses cratères. Quelques détails devaient être corrigés : l'anomalie du Yucatán était connue grâce aux prospections pétrolières depuis les années 1950, le chiffre annuel d'environ 17 600 compte des chutes et non des météorites isolées, et l'unique genre « survivant » du jeu de données reflète une incertitude de datation, pas une survie démontrée.",
+   "errata": [
+    "La vidéo affirmait que l'argile de Gubbio contenait plus de 30 fois l'iridium de la roche environnante et donnait des valeurs de concentration précises. Les données montrent environ 30 fois ; les valeurs précises n'ont pas pu être vérifiées dans le texte intégral de l'étude de 1980.",
+    "La vidéo présentait l'anomalie du Yucatán comme une découverte de l'époque de l'étude d'Alvarez. Les données montrent que Pemex enregistrait l'anomalie gravimétrique depuis les années 1950 et que Penfield et Camargo l'ont présentée comme une possible structure d'impact en 1981.",
+    "La vidéo affirmait qu'environ 17 000 météorites atteignent le sol chaque année. Les données montrent que l'estimation d'Evatt et de ses collègues porte sur environ 17 600 chutes de plus de 50 grammes par an, et qu'une seule chute peut produire plusieurs météorites.",
+    "La vidéo affirmait qu'un genre, l'oiseau Telmatornis, avait franchi la limite. Les données montrent qu'il ne la franchit que parce que certaines de ses données ont une fourchette d'âge à cheval sur la limite, une incertitude de datation et non une preuve de survie ; ce sont les ancêtres des oiseaux modernes qui ont survécu.",
+    "La vidéo présentait le chiffre de 15–25 % de cratères préservés et la part de 70 % de la masse des impacteurs attribuée à Chicxulub comme les résultats de notre propre analyse. Les sources montrent qu'il s'agit d'estimations publiées par Schmieder et Kring en 2020."
+   ]
+  }
+ }
+}

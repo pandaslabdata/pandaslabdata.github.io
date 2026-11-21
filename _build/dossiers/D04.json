@@ -1,0 +1,190 @@
+{
+ "n": "04", "ep": "EP 4", "yt": "IS_AozDs8ww", "world": "history", "updated": "2026-11-21",
+ "claims": [
+  {"id": "D4-C1", "label": "OBSERVED", "sources": [
+   {"name": "Mesozoic Travel v6.6.5, Pandas Lab extract of the Paleobiology Database (9 Antarctic records)", "url": "https://paleobiodb.org", "read": "data"},
+   {"name": "Paleobiology Database API, non-avian Mesozoic dinosaur species in Antarctica (queried 2026-11-21)", "url": "https://paleobiodb.org/data1.2/occs/taxa.json?base_name=Dinosauria%5EAves&interval=Mesozoic&taxon_reso=species&rank=species&cc=AQ", "read": "data"}]},
+  {"id": "D4-C2", "label": "OBSERVED", "sources": [
+   {"name": "Mesozoic Travel v6.6.5, Pandas Lab extract of the Paleobiology Database (CC BY 4.0)", "url": "https://paleobiodb.org", "read": "data"}]},
+  {"id": "D4-C3", "label": "OBSERVED", "sources": [
+   {"name": "Mesozoic Travel v6.6.5 (Paleobiology Database extract)", "url": "https://paleobiodb.org", "read": "data"},
+   {"name": "Paleobiology Database API, species-level non-avian Mesozoic dinosaur occurrences (downloaded 2026-11-21)", "url": "https://paleobiodb.org/data1.2/occs/list.csv?base_name=Dinosauria%5EAves&interval=Mesozoic&taxon_reso=species&show=coords,loc", "read": "data"}]},
+  {"id": "D4-C4", "label": "OBSERVED", "sources": [
+   {"name": "Mesozoic Travel v6.6.5 (Paleobiology Database extract)", "url": "https://paleobiodb.org", "read": "data"},
+   {"name": "Paleobiology Database API, species-level non-avian Mesozoic dinosaur occurrences (downloaded 2026-11-21)", "url": "https://paleobiodb.org/data1.2/occs/list.csv?base_name=Dinosauria%5EAves&interval=Mesozoic&taxon_reso=species&show=coords,loc", "read": "data"}]},
+  {"id": "D4-C5", "label": "OBSERVED", "sources": [
+   {"name": "Mesozoic Travel v6.6.5 (Paleobiology Database extract)", "url": "https://paleobiodb.org", "read": "data"},
+   {"name": "Paleobiology Database API, per-country counts of non-avian Mesozoic dinosaur occurrences (queried 2026-11-21)", "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Dinosauria%5EAves&interval=Mesozoic&cc=SD&limit=0&rowcount", "read": "data"},
+   {"name": "Wikipedia, List of countries and dependencies by area (ranking used for the top 40)", "url": "https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_area", "read": "full text"}]},
+  {"id": "D4-C6", "label": "OBSERVED", "sources": [
+   {"name": "Mesozoic Travel v6.6.5 (Paleobiology Database extract)", "url": "https://paleobiodb.org", "read": "data"},
+   {"name": "Paleobiology Database API, species-level non-avian Mesozoic dinosaur occurrences (downloaded 2026-11-21)", "url": "https://paleobiodb.org/data1.2/occs/list.csv?base_name=Dinosauria%5EAves&interval=Mesozoic&taxon_reso=species&show=coords,loc", "read": "data"}]},
+  {"id": "D4-C7", "label": "HYPOTHESIS", "sources": [
+   {"name": "Dean et al. 2025, The structure of the end-Cretaceous dinosaur fossil record in North America, Current Biology 35:1973–1988", "url": "https://doi.org/10.1016/j.cub.2025.03.025", "read": "full text"},
+   {"name": "Raja et al. 2022, Colonial history and global economics distort our understanding of deep-time biodiversity, Nature Ecology & Evolution 6:145–154", "url": "https://doi.org/10.1038/s41559-021-01608-8", "read": "abstract only"}]},
+  {"id": "D4-C8", "label": "OBSERVED", "sources": [
+   {"name": "Mesozoic Travel v6.6.5 (Paleobiology Database extract)", "url": "https://paleobiodb.org", "read": "data"},
+   {"name": "Paleobiology Database API, species-level non-avian Mesozoic dinosaur occurrences (downloaded 2026-11-21)", "url": "https://paleobiodb.org/data1.2/occs/list.csv?base_name=Dinosauria%5EAves&interval=Mesozoic&taxon_reso=species&show=coords,loc", "read": "data"}]},
+  {"id": "D4-C9", "label": "OBSERVED", "sources": [
+   {"name": "Drexel University News Blog, Digging Deeper into Dreadnoughtus: Dinosaur Interview Part 2 (2014)", "url": "https://newsblog.drexel.edu/2014/09/10/digging-deeper-into-dreadnoughtus-dinosaur-interview-part-2/", "read": "full text"}]},
+  {"id": "D4-C10", "label": "OBSERVED", "sources": [
+   {"name": "Mesozoic Travel v6.6.5 (Paleobiology Database extract)", "url": "https://paleobiodb.org", "read": "data"}]},
+  {"id": "D4-C11", "label": "ESTIMATE", "sources": [
+   {"name": "Bohm 2026, Worlds That Were: The Tendaguru Dinosaurs and the Imperial Past in (Post)Colonial Germany, Central European History 59(2):213–233 (CC BY)", "url": "https://doi.org/10.1017/S0008938926101447", "read": "full text"},
+   {"name": "Heumann 2026, Taking nature: Collecting and the exercise of colonial power, Science in Context (CC BY)", "url": "https://doi.org/10.1017/S0269889725100951", "read": "full text"}]},
+  {"id": "D4-C12", "label": "OBSERVED", "sources": [
+   {"name": "Mesozoic Travel v6.6.5 (Paleobiology Database extract)", "url": "https://paleobiodb.org", "read": "data"},
+   {"name": "Paleobiology Database API, species-level non-avian Mesozoic dinosaur occurrences (downloaded 2026-11-21)", "url": "https://paleobiodb.org/data1.2/occs/list.csv?base_name=Dinosauria%5EAves&interval=Mesozoic&taxon_reso=species&show=coords,loc", "read": "data"}]},
+  {"id": "D4-C13", "label": "OBSERVED", "sources": [
+   {"name": "Mesozoic Travel v6.6.5 (Paleobiology Database extract)", "url": "https://paleobiodb.org", "read": "data"},
+   {"name": "Paleobiology Database API, species-level non-avian Mesozoic dinosaur occurrences (downloaded 2026-11-21)", "url": "https://paleobiodb.org/data1.2/occs/list.csv?base_name=Dinosauria%5EAves&interval=Mesozoic&taxon_reso=species&show=coords,loc", "read": "data"}]}
+ ],
+ "exhibits": ["D4-C12", "D4-C4", "D4-C6", "D4-C5"],
+ "i18n": {
+  "en": {
+   "title": "Where Dinosaurs Are Found: What the Map of Discoveries Really Shows",
+   "lede": "In our archive of 3,640 records drawn from the Paleobiology Database, three countries hold 59% of all finds and 73% sit between 30° and 60° north. Canada and China have similar numbers of finds, yet China's records contain about four times as many species.",
+   "question": "Does the dinosaur map show where dinosaurs lived, or where we managed to find them?",
+   "claims": {
+    "D4-C1": "Our archive lists six named non-avian dinosaur species from Antarctica, all from rock exposed at Mount Kirkpatrick and on James Ross Island, plus three Cretaceous birds.",
+    "D4-C2": "Our archive holds 3,640 records, each one species at one site: 1,505 species from 56 countries, extracted from the Paleobiology Database.",
+    "D4-C3": "Ten 5°-by-5° grid squares hold 47% of our archive's records; in the raw Paleobiology Database, the ten densest squares hold about 42%.",
+    "D4-C4": "Three countries hold 59% of our archive: United States 1,058 records, China 546, Canada 537. Adding Argentina (220) and Mongolia (212) brings it to 71%.",
+    "D4-C5": "18 of the 40 largest countries have no records in our species-level archive; in the full Paleobiology Database, only 5 of them lack any Mesozoic dinosaur record.",
+    "D4-C6": "73% of our archive's records lie between 30° and 60° north (present-day latitudes). The tropics hold 9%, the whole Southern Hemisphere 16%.",
+    "D4-C7": "To be found, a dinosaur needs rock of the right age, exposed at the surface, and someone searching. In North America, outcrop area and modern land cover drive detection.",
+    "D4-C8": "In our archive, 166 of Argentina's 220 records (75%) come from four Patagonian provinces: Neuquén, Río Negro, Chubut and Santa Cruz.",
+    "D4-C9": "Paleontologist Kenneth Lacovara has said he went to southern Patagonia because almost all Patagonian dinosaur species had come from the north and center. There he found Dreadnoughtus.",
+    "D4-C10": "Tanzania has 105 records in our archive; 100 of them, covering 12 species, come from the Tendaguru quarries.",
+    "D4-C11": "The German Tendaguru expedition of 1909–1913 shipped more than 225 metric tons of fossils to Berlin; some estimates reach 250. They are still held at Berlin's Museum für Naturkunde.",
+    "D4-C12": "In our archive, Canada has 537 records from 99 species and China 546 records from 411 species: similar piles, about four times the species.",
+    "D4-C13": "In our archive, Canada's most-recorded dinosaur, Saurornitholestes langstoni, appears 56 times, while 85% of China's 411 species appear only once."
+   },
+   "verdict": "The episode's central point holds: in both our archive and the full Paleobiology Database, finds cluster in a few countries and in the northern mid-latitudes, and equal piles of records can hide very different numbers of species. The patterns track where suitable rock is exposed and where people have searched, though blank countries are often 'not identified to species' rather than truly empty. A few lines overstated the case: the Antarctic fossils came from exposed rock, the Tendaguru tonnage is an estimate, and the Lacovara quote could not be verified.",
+   "errata": [
+    "The video said six dinosaurs were found in Antarctica, under the ice. The data show six named species, from rock exposed at Mount Kirkpatrick or on ice-free ground in the James Ross Island area, not from beneath the ice.",
+    "The video said 18 of the 40 largest countries were blank and the entire Congo Basin had zero finds. The data show this is true only for our species-level archive: in the full Paleobiology Database just 5 of the 18 lack any dinosaur record, Sudan has 18 records, Libya 11, Bolivia 140 (mostly footprints) and DR Congo 1.",
+    "The video said, quoting Kenneth Lacovara, that no other paleontologist was within 1,000 kilometers. The sources show that line could not be verified; in a 2014 Drexel interview he says he chose southern Patagonia because almost all Patagonian species came from the north and center.",
+    "The video said 225 metric tons of bones were shipped to Berlin. The sources show 225 metric tons is the lowest estimate, with others reaching 250, and the shipment was fossils with their surrounding rock, not bones alone.",
+    "The video said Canada's 537 finds and China's 546 were practically identical. The data show that holds in our curated archive, while the raw Paleobiology Database has 778 and 912; the species contrast (135 versus 558 there) still holds.",
+    "The video said ten grid squares hold almost half of all finds. The data show 47% in our archive and 42% in the raw Paleobiology Database, and the share depends on where the 5° grid is placed."
+   ]
+  },
+  "it": {
+   "title": "Dove troviamo i dinosauri: cosa mostra davvero la mappa delle scoperte",
+   "lede": "Nel nostro archivio di 3.640 record tratti dalla Paleobiology Database, tre paesi contengono il 59% di tutti i ritrovamenti e il 73% si trova tra 30° e 60° nord. Canada e Cina hanno un numero simile di ritrovamenti, ma i record cinesi contengono circa quattro volte più specie.",
+   "question": "La mappa dei dinosauri mostra dove vivevano i dinosauri o dove siamo riusciti a trovarli?",
+   "claims": {
+    "D4-C1": "Il nostro archivio elenca sei specie nominate di dinosauri non aviani dell'Antartide, tutte da roccia affiorante al Monte Kirkpatrick e sull'isola di James Ross, più tre uccelli del Cretaceo.",
+    "D4-C2": "Il nostro archivio contiene 3.640 record, ciascuno una specie in un sito: 1.505 specie da 56 paesi, estratte dalla Paleobiology Database.",
+    "D4-C3": "Dieci quadrati di griglia da 5° per 5° contengono il 47% dei record del nostro archivio; nella Paleobiology Database grezza, i dieci quadrati più densi ne contengono circa il 42%.",
+    "D4-C4": "Tre paesi contengono il 59% del nostro archivio: Stati Uniti 1.058 record, Cina 546, Canada 537. Aggiungendo Argentina (220) e Mongolia (212) si arriva al 71%.",
+    "D4-C5": "18 dei 40 paesi più grandi non hanno record nel nostro archivio a livello di specie; nella Paleobiology Database completa, solo 5 di loro non hanno alcun record di dinosauri mesozoici.",
+    "D4-C6": "Il 73% dei record del nostro archivio si trova tra 30° e 60° nord (latitudini attuali). I tropici ne contengono il 9%, l'intero emisfero australe il 16%.",
+    "D4-C7": "Per essere trovato, un dinosauro ha bisogno di roccia dell'età giusta, esposta in superficie, e di qualcuno che cerchi. In Nord America sono l'estensione degli affioramenti e la copertura del suolo attuale a determinare il rilevamento.",
+    "D4-C8": "Nel nostro archivio, 166 dei 220 record dell'Argentina (75%) vengono da quattro province patagoniche: Neuquén, Río Negro, Chubut e Santa Cruz.",
+    "D4-C9": "Il paleontologo Kenneth Lacovara ha raccontato di essere andato nella Patagonia meridionale perché quasi tutte le specie di dinosauri patagoniche venivano dal nord e dal centro. Lì ha trovato Dreadnoughtus.",
+    "D4-C10": "La Tanzania ha 105 record nel nostro archivio; 100 di questi, relativi a 12 specie, vengono dalle cave di Tendaguru.",
+    "D4-C11": "La spedizione tedesca a Tendaguru del 1909–1913 spedì a Berlino più di 225 tonnellate di fossili; alcune stime arrivano a 250. Sono ancora conservati al Museum für Naturkunde di Berlino.",
+    "D4-C12": "Nel nostro archivio il Canada ha 537 record di 99 specie e la Cina 546 record di 411 specie: mucchi simili, circa quattro volte le specie.",
+    "D4-C13": "Nel nostro archivio il dinosauro più registrato del Canada, Saurornitholestes langstoni, compare 56 volte, mentre l'85% delle 411 specie cinesi compare una sola volta."
+   },
+   "verdict": "Il punto centrale dell'episodio regge: sia nel nostro archivio sia nella Paleobiology Database completa, i ritrovamenti si concentrano in pochi paesi e alle medie latitudini settentrionali, e mucchi uguali di record possono nascondere numeri di specie molto diversi. Gli schemi seguono dove affiora la roccia adatta e dove si è cercato, anche se i paesi vuoti spesso sono 'non identificati a livello di specie' più che davvero vuoti. Alcune frasi hanno forzato i fatti: i fossili antartici venivano da roccia affiorante, il tonnellaggio di Tendaguru è una stima e la citazione di Lacovara non è stata verificata.",
+   "errata": [
+    "Il video diceva sei dinosauri in Antartide, sotto il ghiaccio. I dati mostrano sei specie nominate, da roccia affiorante al Monte Kirkpatrick o da terreno libero dai ghiacci nell'area dell'isola di James Ross, non da sotto il ghiaccio.",
+    "Il video diceva che 18 dei 40 paesi più grandi erano vuoti e che l'intero bacino del Congo aveva zero ritrovamenti. I dati mostrano che vale solo per il nostro archivio a livello di specie: nella Paleobiology Database completa solo 5 dei 18 non hanno alcun record di dinosauri, il Sudan ne ha 18, la Libia 11, la Bolivia 140 (soprattutto orme) e la RD del Congo 1.",
+    "Il video diceva, citando Kenneth Lacovara, che nessun altro paleontologo si trovava nel raggio di 1.000 chilometri. Le fonti mostrano che la frase non è verificabile; in un'intervista Drexel del 2014 Lacovara spiega di aver scelto la Patagonia meridionale perché quasi tutte le specie patagoniche venivano dal nord e dal centro.",
+    "Il video diceva 225 tonnellate di ossa spedite a Berlino. Le fonti mostrano che 225 tonnellate è la stima più bassa, con altre che arrivano a 250, e che si trattava di fossili con la loro roccia, non solo di ossa.",
+    "Il video diceva che i 537 ritrovamenti del Canada e i 546 della Cina erano praticamente identici. I dati mostrano che vale nel nostro archivio curato, mentre la Paleobiology Database grezza ne ha 778 e 912; il contrasto tra le specie (lì 135 contro 558) resta valido.",
+    "Il video diceva che dieci quadrati contengono quasi metà di tutti i ritrovamenti. I dati mostrano il 47% nel nostro archivio e il 42% nella Paleobiology Database grezza, e la quota dipende da dove si posa la griglia di 5°."
+   ]
+  },
+  "de": {
+   "title": "Wo Dinosaurier gefunden werden: Was die Fundkarte wirklich zeigt",
+   "lede": "In unserem Archiv mit 3.640 Einträgen aus der Paleobiology Database entfallen 59 % aller Funde auf drei Länder, und 73 % liegen zwischen 30° und 60° Nord. Kanada und China haben ähnlich viele Funde, doch Chinas Einträge umfassen etwa viermal so viele Arten.",
+   "question": "Zeigt die Dinosaurierkarte, wo Dinosaurier lebten, oder wo es uns gelungen ist, sie zu finden?",
+   "claims": {
+    "D4-C1": "Unser Archiv führt sechs benannte Arten von Nicht-Vogel-Dinosauriern aus der Antarktis, alle aus freiliegendem Gestein am Mount Kirkpatrick und auf der James-Ross-Insel, dazu drei Vögel aus der Kreidezeit.",
+    "D4-C2": "Unser Archiv umfasst 3.640 Einträge, jeder steht für eine Art an einem Fundort: 1.505 Arten aus 56 Ländern, entnommen aus der Paleobiology Database.",
+    "D4-C3": "Zehn Rasterfelder von 5° mal 5° enthalten 47 % der Einträge unseres Archivs; in der unbearbeiteten Paleobiology Database enthalten die zehn dichtesten Felder etwa 42 %.",
+    "D4-C4": "Auf drei Länder entfallen 59 % unseres Archivs: USA 1.058 Einträge, China 546, Kanada 537. Mit Argentinien (220) und der Mongolei (212) sind es 71 %.",
+    "D4-C5": "18 der 40 größten Länder haben keine Einträge in unserem Archiv auf Artebene; in der vollständigen Paleobiology Database fehlt nur bei 5 von ihnen jeder Nachweis mesozoischer Dinosaurier.",
+    "D4-C6": "73 % der Einträge unseres Archivs liegen zwischen 30° und 60° Nord (heutige Breitengrade). Auf die Tropen entfallen 9 %, auf die gesamte Südhalbkugel 16 %.",
+    "D4-C7": "Um gefunden zu werden, braucht ein Dinosaurier Gestein des richtigen Alters, das an der Oberfläche freiliegt, und jemanden, der sucht. In Nordamerika bestimmen Aufschlussfläche und heutige Landbedeckung, ob Dinosaurier entdeckt werden.",
+    "D4-C8": "In unserem Archiv stammen 166 der 220 Einträge Argentiniens (75 %) aus vier patagonischen Provinzen: Neuquén, Río Negro, Chubut und Santa Cruz.",
+    "D4-C9": "Der Paläontologe Kenneth Lacovara hat erzählt, er sei nach Südpatagonien gegangen, weil fast alle patagonischen Dinosaurierarten aus dem Norden und der Mitte stammten. Dort fand er Dreadnoughtus.",
+    "D4-C10": "Tansania hat 105 Einträge in unserem Archiv; 100 davon, die 12 Arten abdecken, stammen aus den Steinbrüchen von Tendaguru.",
+    "D4-C11": "Die deutsche Tendaguru-Expedition von 1909–1913 verschiffte mehr als 225 Tonnen Fossilien nach Berlin; manche Schätzungen reichen bis 250. Sie befinden sich bis heute im Berliner Museum für Naturkunde.",
+    "D4-C12": "In unserem Archiv hat Kanada 537 Einträge von 99 Arten und China 546 Einträge von 411 Arten: ähnlich große Stapel, etwa viermal so viele Arten.",
+    "D4-C13": "In unserem Archiv taucht Kanadas am häufigsten erfasster Dinosaurier, Saurornitholestes langstoni, 56-mal auf, während 85 % der 411 chinesischen Arten nur einmal vorkommen."
+   },
+   "verdict": "Die Kernaussage der Folge hält: Sowohl in unserem Archiv als auch in der vollständigen Paleobiology Database ballen sich die Funde in wenigen Ländern und in den nördlichen mittleren Breiten, und gleich große Stapel von Einträgen können sehr unterschiedliche Artenzahlen verbergen. Die Muster folgen dem, wo geeignetes Gestein freiliegt und wo gesucht wurde, auch wenn leere Länder oft eher „nicht auf Artebene bestimmt“ als wirklich leer sind. Einige Sätze gingen zu weit: Die antarktischen Fossilien stammen aus freiliegendem Gestein, die Tonnage von Tendaguru ist eine Schätzung, und das Lacovara-Zitat ließ sich nicht überprüfen.",
+   "errata": [
+    "Das Video sprach von sechs Dinosauriern in der Antarktis, unter dem Eis. Die Daten zeigen sechs benannte Arten, aus freiliegendem Gestein am Mount Kirkpatrick oder von eisfreiem Boden im Gebiet der James-Ross-Insel, nicht unter dem Eis.",
+    "Das Video sagte, 18 der 40 größten Länder seien leer und das gesamte Kongobecken habe null Funde. Die Daten zeigen, dass das nur für unser Archiv auf Artebene gilt: In der vollständigen Paleobiology Database fehlt nur bei 5 der 18 jeder Dinosauriernachweis, der Sudan hat 18 Einträge, Libyen 11, Bolivien 140 (vor allem Fußspuren) und die DR Kongo 1.",
+    "Das Video sagte unter Berufung auf Kenneth Lacovara, im Umkreis von 1.000 Kilometern sei kein anderer Paläontologe gewesen. Die Quellen zeigen, dass sich dieser Satz nicht überprüfen lässt; in einem Drexel-Interview von 2014 erklärt er, er habe Südpatagonien gewählt, weil fast alle patagonischen Arten aus dem Norden und der Mitte stammten.",
+    "Das Video sprach von 225 Tonnen Knochen, die nach Berlin verschifft wurden. Die Quellen zeigen, dass 225 Tonnen die niedrigste Schätzung ist, andere reichen bis 250, und dass es sich um Fossilien samt umgebendem Gestein handelte, nicht nur um Knochen.",
+    "Das Video sagte, Kanadas 537 Funde und Chinas 546 seien praktisch identisch. Die Daten zeigen, dass das in unserem kuratierten Archiv gilt, während die unbearbeitete Paleobiology Database 778 und 912 enthält; der Kontrast bei den Arten (dort 135 gegenüber 558) bleibt bestehen.",
+    "Das Video sagte, zehn Rasterfelder enthielten fast die Hälfte aller Funde. Die Daten zeigen 47 % in unserem Archiv und 42 % in der unbearbeiteten Paleobiology Database, und der Anteil hängt davon ab, wo das 5°-Raster liegt."
+   ]
+  },
+  "es": {
+   "title": "Dónde se encuentran los dinosaurios: lo que de verdad muestra el mapa",
+   "lede": "En nuestro archivo de 3.640 registros extraídos de la Paleobiology Database, tres países reúnen el 59% de todos los hallazgos y el 73% se sitúa entre los 30° y los 60° norte. Canadá y China tienen un número similar de hallazgos, pero los registros de China contienen unas cuatro veces más especies.",
+   "question": "¿El mapa de los dinosaurios muestra dónde vivieron o dónde hemos logrado encontrarlos?",
+   "claims": {
+    "D4-C1": "Nuestro archivo recoge seis especies con nombre de dinosaurios no avianos de la Antártida, todas procedentes de roca expuesta en el monte Kirkpatrick y en la isla James Ross, además de tres aves del Cretácico.",
+    "D4-C2": "Nuestro archivo contiene 3.640 registros, cada uno una especie en un yacimiento: 1.505 especies de 56 países, extraídas de la Paleobiology Database.",
+    "D4-C3": "Diez cuadrículas de 5° por 5° reúnen el 47% de los registros de nuestro archivo; en la Paleobiology Database sin filtrar, las diez cuadrículas más densas reúnen alrededor del 42%.",
+    "D4-C4": "Tres países reúnen el 59% de nuestro archivo: Estados Unidos 1.058 registros, China 546, Canadá 537. Si se suman Argentina (220) y Mongolia (212), se llega al 71%.",
+    "D4-C5": "18 de los 40 países más grandes no tienen registros en nuestro archivo a nivel de especie; en la Paleobiology Database completa, solo 5 de ellos carecen de cualquier registro de dinosaurios mesozoicos.",
+    "D4-C6": "El 73% de los registros de nuestro archivo se sitúa entre los 30° y los 60° norte (latitudes actuales). Los trópicos reúnen el 9% y todo el hemisferio sur, el 16%.",
+    "D4-C7": "Para ser encontrado, un dinosaurio necesita roca de la edad adecuada, expuesta en la superficie, y alguien que busque. En Norteamérica, la superficie de afloramientos y la cobertura actual del suelo determinan la detección.",
+    "D4-C8": "En nuestro archivo, 166 de los 220 registros de Argentina (75%) proceden de cuatro provincias patagónicas: Neuquén, Río Negro, Chubut y Santa Cruz.",
+    "D4-C9": "El paleontólogo Kenneth Lacovara ha contado que fue al sur de la Patagonia porque casi todas las especies de dinosaurios patagónicos procedían del norte y del centro. Allí encontró a Dreadnoughtus.",
+    "D4-C10": "Tanzania tiene 105 registros en nuestro archivo; 100 de ellos, correspondientes a 12 especies, proceden de las canteras de Tendaguru.",
+    "D4-C11": "La expedición alemana a Tendaguru de 1909–1913 envió a Berlín más de 225 toneladas de fósiles; algunas estimaciones llegan a 250. Todavía se conservan en el Museum für Naturkunde de Berlín.",
+    "D4-C12": "En nuestro archivo, Canadá tiene 537 registros de 99 especies y China 546 registros de 411 especies: montones parecidos, unas cuatro veces más especies.",
+    "D4-C13": "En nuestro archivo, el dinosaurio más registrado de Canadá, Saurornitholestes langstoni, aparece 56 veces, mientras que el 85% de las 411 especies de China aparece una sola vez."
+   },
+   "verdict": "La idea central del episodio se sostiene: tanto en nuestro archivo como en la Paleobiology Database completa, los hallazgos se concentran en pocos países y en las latitudes medias del norte, y montones iguales de registros pueden esconder números de especies muy distintos. Los patrones siguen los lugares donde aflora la roca adecuada y donde se ha buscado, aunque los países en blanco a menudo están «no identificados a nivel de especie» más que realmente vacíos. Algunas frases exageraron: los fósiles antárticos procedían de roca expuesta, el tonelaje de Tendaguru es una estimación y la cita de Lacovara no se pudo verificar.",
+   "errata": [
+    "El vídeo hablaba de seis dinosaurios en la Antártida, bajo el hielo. Los datos muestran seis especies con nombre, procedentes de roca expuesta en el monte Kirkpatrick o de terreno libre de hielo en la zona de la isla James Ross, no de debajo del hielo.",
+    "El vídeo dijo que 18 de los 40 países más grandes estaban en blanco y que toda la cuenca del Congo tenía cero hallazgos. Los datos muestran que eso solo vale para nuestro archivo a nivel de especie: en la Paleobiology Database completa solo 5 de los 18 carecen de cualquier registro de dinosaurios, Sudán tiene 18 registros, Libia 11, Bolivia 140 (sobre todo huellas) y la RD del Congo 1.",
+    "El vídeo dijo, citando a Kenneth Lacovara, que no había ningún otro paleontólogo en 1.000 kilómetros a la redonda. Las fuentes muestran que esa frase no se pudo verificar; en una entrevista de Drexel de 2014 él explica que eligió el sur de la Patagonia porque casi todas las especies patagónicas procedían del norte y del centro.",
+    "El vídeo habló de 225 toneladas de huesos enviadas a Berlín. Las fuentes muestran que 225 toneladas es la estimación más baja, con otras que llegan a 250, y que se trataba de fósiles con su roca, no solo de huesos.",
+    "El vídeo dijo que los 537 hallazgos de Canadá y los 546 de China eran prácticamente idénticos. Los datos muestran que eso vale en nuestro archivo curado, mientras que la Paleobiology Database sin filtrar tiene 778 y 912; el contraste de especies (allí 135 frente a 558) se mantiene.",
+    "El vídeo dijo que diez cuadrículas reúnen casi la mitad de todos los hallazgos. Los datos muestran un 47% en nuestro archivo y un 42% en la Paleobiology Database sin filtrar, y la proporción depende de dónde se coloque la cuadrícula de 5°."
+   ]
+  },
+  "fr": {
+   "title": "Où l'on trouve les dinosaures : ce que montre vraiment la carte",
+   "lede": "Dans notre archive de 3 640 enregistrements tirés de la Paleobiology Database, trois pays concentrent 59 % de toutes les découvertes et 73 % se situent entre 30° et 60° nord. Le Canada et la Chine ont un nombre comparable de découvertes, mais les enregistrements chinois comptent environ quatre fois plus d'espèces.",
+   "question": "La carte des dinosaures montre-t-elle où ils vivaient, ou bien où nous avons réussi à les trouver ?",
+   "claims": {
+    "D4-C1": "Notre archive répertorie six espèces nommées de dinosaures non aviens en Antarctique, toutes issues de roches affleurantes au mont Kirkpatrick et sur l'île James Ross, plus trois oiseaux du Crétacé.",
+    "D4-C2": "Notre archive compte 3 640 enregistrements, chacun correspondant à une espèce sur un site : 1 505 espèces de 56 pays, extraites de la Paleobiology Database.",
+    "D4-C3": "Dix carrés de grille de 5° sur 5° regroupent 47 % des enregistrements de notre archive ; dans la Paleobiology Database brute, les dix carrés les plus denses en regroupent environ 42 %.",
+    "D4-C4": "Trois pays regroupent 59 % de notre archive : États-Unis 1 058 enregistrements, Chine 546, Canada 537. Avec l'Argentine (220) et la Mongolie (212), on atteint 71 %.",
+    "D4-C5": "18 des 40 plus grands pays n'ont aucun enregistrement dans notre archive au niveau de l'espèce ; dans la Paleobiology Database complète, seuls 5 d'entre eux n'ont aucun enregistrement de dinosaure mésozoïque.",
+    "D4-C6": "73 % des enregistrements de notre archive se situent entre 30° et 60° nord (latitudes actuelles). Les tropiques en regroupent 9 %, l'ensemble de l'hémisphère Sud 16 %.",
+    "D4-C7": "Pour être trouvé, un dinosaure a besoin d'une roche du bon âge, exposée en surface, et de quelqu'un qui cherche. En Amérique du Nord, la surface d'affleurement et l'occupation actuelle des sols déterminent la détection.",
+    "D4-C8": "Dans notre archive, 166 des 220 enregistrements argentins (75 %) proviennent de quatre provinces de Patagonie : Neuquén, Río Negro, Chubut et Santa Cruz.",
+    "D4-C9": "Le paléontologue Kenneth Lacovara a raconté être allé dans le sud de la Patagonie parce que presque toutes les espèces de dinosaures patagoniens venaient du nord et du centre. C'est là qu'il a trouvé Dreadnoughtus.",
+    "D4-C10": "La Tanzanie compte 105 enregistrements dans notre archive ; 100 d'entre eux, couvrant 12 espèces, proviennent des carrières de Tendaguru.",
+    "D4-C11": "L'expédition allemande de Tendaguru de 1909–1913 a envoyé à Berlin plus de 225 tonnes de fossiles ; certaines estimations atteignent 250. Ils sont toujours conservés au Museum für Naturkunde de Berlin.",
+    "D4-C12": "Dans notre archive, le Canada compte 537 enregistrements pour 99 espèces et la Chine 546 enregistrements pour 411 espèces : des piles comparables, environ quatre fois plus d'espèces.",
+    "D4-C13": "Dans notre archive, le dinosaure le plus enregistré du Canada, Saurornitholestes langstoni, apparaît 56 fois, tandis que 85 % des 411 espèces chinoises n'apparaissent qu'une seule fois."
+   },
+   "verdict": "Le propos central de l'épisode tient : dans notre archive comme dans la Paleobiology Database complète, les découvertes se concentrent dans quelques pays et aux latitudes moyennes de l'hémisphère Nord, et des piles d'enregistrements égales peuvent cacher des nombres d'espèces très différents. Ces schémas suivent les endroits où une roche adaptée affleure et où l'on a cherché, même si les pays vides sont souvent « non identifiés au niveau de l'espèce » plutôt que réellement vides. Quelques phrases allaient trop loin : les fossiles antarctiques venaient de roches affleurantes, le tonnage de Tendaguru est une estimation et la citation de Lacovara n'a pas pu être vérifiée.",
+   "errata": [
+    "La vidéo parlait de six dinosaures en Antarctique, sous la glace. Les données montrent six espèces nommées, issues de roches affleurantes au mont Kirkpatrick ou de terrains libres de glace dans la région de l'île James Ross, et non de sous la glace.",
+    "La vidéo affirmait que 18 des 40 plus grands pays étaient vides et que tout le bassin du Congo comptait zéro découverte. Les données montrent que cela ne vaut que pour notre archive au niveau de l'espèce : dans la Paleobiology Database complète, seuls 5 des 18 n'ont aucun enregistrement de dinosaure, le Soudan en a 18, la Libye 11, la Bolivie 140 (surtout des empreintes) et la RD Congo 1.",
+    "La vidéo affirmait, en citant Kenneth Lacovara, qu'aucun autre paléontologue ne se trouvait à moins de 1 000 kilomètres. Les sources montrent que cette phrase n'a pas pu être vérifiée ; dans un entretien Drexel de 2014, il explique avoir choisi le sud de la Patagonie parce que presque toutes les espèces patagoniennes venaient du nord et du centre.",
+    "La vidéo parlait de 225 tonnes d'os expédiées à Berlin. Les sources montrent que 225 tonnes est l'estimation la plus basse, d'autres atteignant 250, et qu'il s'agissait de fossiles avec leur roche, pas seulement d'os.",
+    "La vidéo affirmait que les 537 découvertes du Canada et les 546 de la Chine étaient pratiquement identiques. Les données montrent que cela vaut dans notre archive organisée, alors que la Paleobiology Database brute en compte 778 et 912 ; le contraste entre espèces (là, 135 contre 558) reste valable.",
+    "La vidéo affirmait que dix carrés regroupent près de la moitié de toutes les découvertes. Les données montrent 47 % dans notre archive et 42 % dans la Paleobiology Database brute, et la part dépend de l'endroit où l'on pose la grille de 5°."
+   ]
+  }
+ }
+}

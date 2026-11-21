@@ -1,0 +1,205 @@
+{
+  "n": "03",
+  "ep": "EP 3",
+  "yt": "k_eJcF2WMfw",
+  "world": "history",
+  "updated": "2026-11-21",
+  "claims": [
+    {"id": "D3-C1", "label": "OBSERVED", "sources": [
+      {"name": "The Paleobiology Database (source of the archive export)", "url": "https://paleobiodb.org/", "read": "data"}
+    ]},
+    {"id": "D3-C2", "label": "ESTIMATE", "sources": [
+      {"name": "The Paleobiology Database (source of the archive export)", "url": "https://paleobiodb.org/", "read": "data"}
+    ]},
+    {"id": "D3-C3", "label": "OBSERVED", "sources": [
+      {"name": "The Paleobiology Database (source of the archive export)", "url": "https://paleobiodb.org/", "read": "data"},
+      {"name": "Paleobiology Database API, taxon summary for the four genera (live, Nov 2026)", "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Tyrannosaurus,Giganotosaurus,Spinosaurus,Carcharodontosaurus&show=attr,app&vocab=pbdb", "read": "data"}
+    ]},
+    {"id": "D3-C4", "label": "ESTIMATE", "sources": [
+      {"name": "Ibrahim et al. 2014, Science 345:1613 (Semiaquatic adaptations in a giant predatory dinosaur)", "url": "https://doi.org/10.1126/science.1258750", "read": "abstract only"},
+      {"name": "AAAS / Science press release on Ibrahim et al. 2014 ('more than 49 feet (15 meters) long')", "url": "https://www.aaas.org/news/science-giant-predators-fossils-represent-first-aquatic-dinosaur", "read": "full text"},
+      {"name": "Sereno et al. 2022, eLife 11:e80092 (Spinosaurus is not an aquatic dinosaur)", "url": "https://doi.org/10.7554/eLife.80092", "read": "full text"}
+    ]},
+    {"id": "D3-C5", "label": "ESTIMATE", "sources": [
+      {"name": "Coria & Salgado 1995, Nature 377:224-226 (A new giant carnivorous dinosaur from the Cretaceous of Patagonia)", "url": "https://doi.org/10.1038/377224a0", "read": "abstract only"}
+    ]},
+    {"id": "D3-C6", "label": "ESTIMATE", "sources": [
+      {"name": "Sereno et al. 1996, Science 272:986-991 (Predatory dinosaurs from the Sahara and Late Cretaceous faunal differentiation)", "url": "https://doi.org/10.1126/science.272.5264.986", "read": "abstract only"},
+      {"name": "Sereno Lab, University of Chicago: Carcharodontosaurus fact page (length 45 ft)", "url": "https://paulsereno.uchicago.edu/discoveries/carcharodontosaurus/", "read": "full text"}
+    ]},
+    {"id": "D3-C7", "label": "ESTIMATE", "sources": [
+      {"name": "Hutchinson et al. 2011, PLoS ONE 6:e26037 (A computational analysis of limb and body dimensions in Tyrannosaurus rex)", "url": "https://doi.org/10.1371/journal.pone.0026037", "read": "full text"},
+      {"name": "Brochu 2003, Journal of Vertebrate Paleontology 22(sup4) (Osteology of Tyrannosaurus rex)", "url": "https://doi.org/10.1080/02724634.2003.10010947", "read": "abstract only"}
+    ]},
+    {"id": "D3-C8", "label": "ESTIMATE", "sources": [
+      {"name": "Hutchinson et al. 2011, PLoS ONE", "url": "https://doi.org/10.1371/journal.pone.0026037", "read": "full text"},
+      {"name": "Sereno et al. 2022, eLife", "url": "https://doi.org/10.7554/eLife.80092", "read": "full text"},
+      {"name": "Coria & Salgado 1995, Nature", "url": "https://doi.org/10.1038/377224a0", "read": "abstract only"}
+    ]},
+    {"id": "D3-C9", "label": "OBSERVED", "sources": [
+      {"name": "Osborn 1905, Bulletin of the American Museum of Natural History 21:259-265 (Tyrannosaurus and other Cretaceous carnivorous dinosaurs)", "url": "https://doi.org/10.5281/zenodo.814935", "read": "full text"},
+      {"name": "Kellermann, Cuesta & Rauhut 2025, PLoS ONE 20:e0311096 (Re-evaluation of the Bahariya Formation carcharodontosaurid)", "url": "https://doi.org/10.1371/journal.pone.0311096", "read": "full text"},
+      {"name": "Coria & Salgado 1995, Nature", "url": "https://doi.org/10.1038/377224a0", "read": "abstract only"},
+      {"name": "Paleobiology Database API, taxon attributions", "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Tyrannosaurus,Giganotosaurus,Spinosaurus,Carcharodontosaurus&show=attr,app&vocab=pbdb", "read": "data"}
+    ]},
+    {"id": "D3-C10", "label": "OBSERVED", "sources": [
+      {"name": "Osborn 1905, Bulletin AMNH 21:259-265", "url": "https://doi.org/10.5281/zenodo.814935", "read": "full text"},
+      {"name": "Coria & Salgado 1995, Nature", "url": "https://doi.org/10.1038/377224a0", "read": "abstract only"}
+    ]},
+    {"id": "D3-C11", "label": "OBSERVED", "sources": [
+      {"name": "Smith et al. 2006, Journal of Paleontology 80(2):400-406 (New information regarding the holotype of Spinosaurus aegyptiacus Stromer, 1915)", "url": "https://researchdiscovery.drexel.edu/esploro/outputs/journalArticle/New-information-regarding-the-holotype-of/991022196560904721", "read": "abstract only"},
+      {"name": "Sereno Lab, University of Chicago: Carcharodontosaurus page ('On the night of April 24, 1944...')", "url": "https://paulsereno.uchicago.edu/discoveries/carcharodontosaurus/", "read": "full text"},
+      {"name": "Kellermann, Cuesta & Rauhut 2025, PLoS ONE", "url": "https://doi.org/10.1371/journal.pone.0311096", "read": "full text"}
+    ]},
+    {"id": "D3-C12", "label": "OBSERVED", "sources": [
+      {"name": "Sereno Lab, University of Chicago: Carcharodontosaurus page ('unearthed ... in 1995')", "url": "https://paulsereno.uchicago.edu/discoveries/carcharodontosaurus/", "read": "full text"},
+      {"name": "Sereno et al. 1996, Science 272:986-991", "url": "https://doi.org/10.1126/science.272.5264.986", "read": "abstract only"},
+      {"name": "Kellermann, Cuesta & Rauhut 2025, PLoS ONE", "url": "https://doi.org/10.1371/journal.pone.0311096", "read": "full text"}
+    ]},
+    {"id": "D3-C13", "label": "OBSERVED", "sources": [
+      {"name": "Sereno et al. 2022, eLife (Spinosaurus: Cenomanian, ca. 95 Ma)", "url": "https://doi.org/10.7554/eLife.80092", "read": "full text"},
+      {"name": "Sereno et al. 1996, Science (Kem Kem Carcharodontosaurus: Cenomanian)", "url": "https://doi.org/10.1126/science.272.5264.986", "read": "abstract only"},
+      {"name": "Dalman et al. 2024, Scientific Reports (T. rex 'appeared suddenly in the latest Maastrichtian')", "url": "https://doi.org/10.1038/s41598-023-47011-0", "read": "full text"},
+      {"name": "Paleobiology Database API: Giganotosaurus placed in the Albian, 113.2-106.3 Ma", "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Tyrannosaurus,Giganotosaurus,Spinosaurus,Carcharodontosaurus&show=attr,app&vocab=pbdb", "read": "data"},
+      {"name": "International Chronostratigraphic Chart (Cenomanian 100.5-93.9 Ma; Maastrichtian 72.1-66.0 Ma)", "url": "https://stratigraphy.org/chart", "read": "data"}
+    ]}
+  ],
+  "exhibits": ["D3-C3", "D3-C8", "D3-C9", "D3-C13"],
+  "i18n": {
+    "en": {
+      "title": "Why T. Rex Keeps the Crown, Even If It's Not the Longest",
+      "lede": "By published length estimates, T. rex ranks fourth of four giant predators, though the margins are small and every figure is an estimate. What it leads is history: named in 1905, 90 years before Giganotosaurus, it appears 63 times in our archive against 3.",
+      "question": "Was T. rex really the biggest meat-eating dinosaur, or just the most famous one?",
+      "claims": {
+        "D3-C1": "Our archive, built from a Paleobiology Database export, holds 1,050 meat-eating dinosaur occurrences belonging to 343 genera.",
+        "D3-C2": "Across the 310 carnivore genera in our archive with a published length estimate, the median is about 3.4 meters (11 feet). Giants are the rare exception.",
+        "D3-C3": "Occurrences in our archive, by genus: Tyrannosaurus 63, Carcharodontosaurus 27, Spinosaurus 16, Giganotosaurus 3.",
+        "D3-C4": "Spinosaurus is the longest of the four: about 15 meters in a 2014 reconstruction, revised to just under 14 meters in 2022. Both are estimates.",
+        "D3-C5": "Giganotosaurus: the 1995 type specimen was estimated at 12.5 meters. A second, larger jaw fragment suggests individuals of about 13 meters.",
+        "D3-C6": "Carcharodontosaurus: published length estimates fall around 12 to 14 meters; our archive uses 12.5 meters. Its 1995 skull alone is about 1.6 meters long.",
+        "D3-C7": "T. rex: the largest well-known specimen, Sue (FMNH PR 2081), measures about 12.3 meters from snout to tail tip in a 3D skeletal model.",
+        "D3-C8": "Ranked by these length estimates, T. rex comes fourth of the four. The gaps to Giganotosaurus and Carcharodontosaurus are under one meter, within estimate uncertainty.",
+        "D3-C9": "Year each genus was named: Tyrannosaurus 1905 (Osborn), Spinosaurus 1915 (Stromer), Carcharodontosaurus 1931 (Stromer), Giganotosaurus 1995 (Coria and Salgado).",
+        "D3-C10": "Tyrannosaurus was named 90 years before Giganotosaurus (1905 versus 1995), a long head start for museums, books and films.",
+        "D3-C11": "Stromer's original Spinosaurus specimen was destroyed when an Allied bombing raid hit Munich's state paleontology collection on the night of April 24-25, 1944.",
+        "D3-C12": "Carcharodontosaurus's Egyptian bones were lost in the same 1944 raid. A new skull was found in Morocco in 1995, published in 1996.",
+        "D3-C13": "They never met. T. rex lived about 68-66 million years ago; Spinosaurus and Carcharodontosaurus about 100-94 million; Giganotosaurus probably even earlier. The gap: at least 26 million years."
+      },
+      "verdict": "By published length estimates, T. rex is not the longest meat-eating dinosaur: Spinosaurus clearly is, while Giganotosaurus and Carcharodontosaurus edge it by less than a meter, within the uncertainty of the estimates. None of this crowns a new 'biggest ever,' because the rivals are known from partial or lost skeletons. What T. rex truly leads is history: named first, in 1905, and found far more often, which is a crown for fame, not size.",
+      "errata": [
+        "The video said all three rivals lived between 99 and 94 million years ago, about 30 million years before T. rex. The data show this holds for Spinosaurus and Carcharodontosaurus, but Giganotosaurus probably dates to 113-106 million years ago, so the gap is at least 26 million years, and more than 40 for Giganotosaurus.",
+        "The video said Spinosaurus was 15 meters long, as a single figure. The data show that is the 2014 estimate; a 2022 reconstruction gives just under 14 meters, still the longest of the four.",
+        "The video gave Giganotosaurus a precise length above 13 meters. The data show that figure is extrapolated from a single jaw fragment; the type specimen was estimated at 12.5 meters, nearly level with Sue's 12.3 meters, so its lead over T. rex is within the uncertainty.",
+        "The video gave a median length of 3.4 meters right after counting 1,050 finds. The data show 3.4 meters is the median across 310 genera; counted per find, the median is 3.5 meters."
+      ]
+    },
+    "it": {
+      "title": "Perché il T. rex tiene la corona, anche se non è il più lungo",
+      "lede": "Secondo le stime di lunghezza pubblicate, il T. rex è quarto su quattro grandi predatori, ma i margini sono piccoli e ogni cifra è una stima. Dove primeggia è la storia: battezzato nel 1905, 90 anni prima di Giganotosaurus, compare 63 volte nel nostro archivio contro 3.",
+      "question": "Il T. rex era davvero il dinosauro carnivoro più grande, o solo il più famoso?",
+      "claims": {
+        "D3-C1": "Il nostro archivio, costruito da un'esportazione del Paleobiology Database, contiene 1.050 occorrenze di dinosauri carnivori appartenenti a 343 generi.",
+        "D3-C2": "Tra i 310 generi carnivori del nostro archivio con una stima di lunghezza pubblicata, la mediana è di circa 3,4 metri (11 piedi). I giganti sono la rara eccezione.",
+        "D3-C3": "Occorrenze nel nostro archivio, per genere: Tyrannosaurus 63, Carcharodontosaurus 27, Spinosaurus 16, Giganotosaurus 3.",
+        "D3-C4": "Spinosaurus è il più lungo dei quattro: circa 15 metri in una ricostruzione del 2014, rivista a poco meno di 14 metri nel 2022. Entrambe sono stime.",
+        "D3-C5": "Giganotosaurus: l'olotipo del 1995 fu stimato in 12,5 metri. Un secondo frammento di mandibola, più grande, suggerisce individui di circa 13 metri.",
+        "D3-C6": "Carcharodontosaurus: le stime di lunghezza pubblicate stanno intorno ai 12-14 metri; il nostro archivio usa 12,5 metri. Il solo cranio trovato nel 1995 è lungo circa 1,6 metri.",
+        "D3-C7": "T. rex: il più grande esemplare ben conosciuto, Sue (FMNH PR 2081), misura circa 12,3 metri dal muso alla punta della coda in un modello scheletrico 3D.",
+        "D3-C8": "In base a queste stime di lunghezza, il T. rex è quarto su quattro. Lo scarto da Giganotosaurus e Carcharodontosaurus è inferiore a un metro, dentro l'incertezza delle stime.",
+        "D3-C9": "Anno in cui ciascun genere ricevette il nome: Tyrannosaurus 1905 (Osborn), Spinosaurus 1915 (Stromer), Carcharodontosaurus 1931 (Stromer), Giganotosaurus 1995 (Coria e Salgado).",
+        "D3-C10": "Tyrannosaurus ricevette il nome 90 anni prima di Giganotosaurus (1905 contro 1995): un lungo vantaggio per musei, libri e film.",
+        "D3-C11": "L'esemplare originale di Spinosaurus descritto da Stromer andò distrutto quando un bombardamento alleato colpì la collezione paleontologica statale di Monaco nella notte tra il 24 e il 25 aprile 1944.",
+        "D3-C12": "Le ossa egiziane di Carcharodontosaurus andarono perdute nello stesso bombardamento del 1944. Un nuovo cranio fu trovato in Marocco nel 1995 e pubblicato nel 1996.",
+        "D3-C13": "Non si sono mai incontrati. Il T. rex visse circa 68-66 milioni di anni fa; Spinosaurus e Carcharodontosaurus circa 100-94 milioni; Giganotosaurus probabilmente ancora prima. La distanza: almeno 26 milioni di anni."
+      },
+      "verdict": "Secondo le stime di lunghezza pubblicate, il T. rex non è il dinosauro carnivoro più lungo: Spinosaurus lo è nettamente, mentre Giganotosaurus e Carcharodontosaurus lo superano di meno di un metro, dentro l'incertezza delle stime. Niente di tutto questo incorona un nuovo «più grande di sempre», perché i rivali sono noti da scheletri parziali o perduti. Dove il T. rex primeggia davvero è la storia: battezzato per primo, nel 1905, e trovato molto più spesso, una corona di fama, non di taglia.",
+      "errata": [
+        "Il video diceva che tutti e tre i rivali vissero tra 99 e 94 milioni di anni fa, circa 30 milioni di anni prima del T. rex. I dati mostrano che vale per Spinosaurus e Carcharodontosaurus, ma Giganotosaurus risale probabilmente a 113-106 milioni di anni fa: la distanza è quindi di almeno 26 milioni di anni, e di oltre 40 per Giganotosaurus.",
+        "Il video dava per Spinosaurus 15 metri, come valore unico. I dati mostrano che è la stima del 2014; una ricostruzione del 2022 dà poco meno di 14 metri, e resta comunque il più lungo dei quattro.",
+        "Il video attribuiva a Giganotosaurus una lunghezza precisa superiore a 13 metri. I dati mostrano che quella cifra è estrapolata da un solo frammento di mandibola; l'olotipo fu stimato in 12,5 metri, quasi pari ai 12,3 metri di Sue, quindi il vantaggio sul T. rex sta dentro l'incertezza.",
+        "Il video indicava una lunghezza mediana di 3,4 metri subito dopo aver contato 1.050 ritrovamenti. I dati mostrano che 3,4 metri è la mediana sui 310 generi; contata per ritrovamento, la mediana è 3,5 metri."
+      ]
+    },
+    "de": {
+      "title": "Warum T. rex die Krone behält, auch wenn er nicht der Längste ist",
+      "lede": "Nach veröffentlichten Längenschätzungen ist T. rex der vierte von vier großen Raubsauriern, doch die Abstände sind klein und jede Zahl ist eine Schätzung. Vorne liegt er in der Geschichte: 1905 benannt, 90 Jahre vor Giganotosaurus, taucht er in unserem Archiv 63-mal auf, gegenüber 3.",
+      "question": "War T. rex wirklich der größte fleischfressende Dinosaurier oder nur der berühmteste?",
+      "claims": {
+        "D3-C1": "Unser Archiv, aufgebaut aus einem Export der Paleobiology Database, enthält 1.050 Fundnachweise fleischfressender Dinosaurier aus 343 Gattungen.",
+        "D3-C2": "Über die 310 Raubdinosaurier-Gattungen unseres Archivs mit veröffentlichter Längenschätzung liegt der Median bei etwa 3,4 Metern (11 Fuß). Riesen sind die seltene Ausnahme.",
+        "D3-C3": "Fundnachweise in unserem Archiv, nach Gattung: Tyrannosaurus 63, Carcharodontosaurus 27, Spinosaurus 16, Giganotosaurus 3.",
+        "D3-C4": "Spinosaurus ist der längste der vier: etwa 15 Meter in einer Rekonstruktion von 2014, 2022 auf knapp unter 14 Meter korrigiert. Beides sind Schätzungen.",
+        "D3-C5": "Giganotosaurus: Das Typusexemplar von 1995 wurde auf 12,5 Meter geschätzt. Ein zweites, größeres Unterkieferfragment deutet auf Tiere von etwa 13 Metern hin.",
+        "D3-C6": "Carcharodontosaurus: Veröffentlichte Längenschätzungen liegen bei etwa 12 bis 14 Metern; unser Archiv verwendet 12,5 Meter. Allein sein 1995 gefundener Schädel ist etwa 1,6 Meter lang.",
+        "D3-C7": "T. rex: Das größte gut bekannte Exemplar, Sue (FMNH PR 2081), misst in einem 3D-Skelettmodell etwa 12,3 Meter von der Schnauze bis zur Schwanzspitze.",
+        "D3-C8": "Nach diesen Längenschätzungen landet T. rex auf dem vierten von vier Plätzen. Der Abstand zu Giganotosaurus und Carcharodontosaurus beträgt weniger als einen Meter und liegt innerhalb der Schätzunsicherheit.",
+        "D3-C9": "Jahr der Benennung jeder Gattung: Tyrannosaurus 1905 (Osborn), Spinosaurus 1915 (Stromer), Carcharodontosaurus 1931 (Stromer), Giganotosaurus 1995 (Coria und Salgado).",
+        "D3-C10": "Tyrannosaurus wurde 90 Jahre vor Giganotosaurus benannt (1905 gegenüber 1995), ein langer Vorsprung für Museen, Bücher und Filme.",
+        "D3-C11": "Stromers Original-Exemplar von Spinosaurus wurde zerstört, als ein alliierter Bombenangriff in der Nacht vom 24. auf den 25. April 1944 die staatliche paläontologische Sammlung in München traf.",
+        "D3-C12": "Die ägyptischen Knochen von Carcharodontosaurus gingen beim selben Angriff 1944 verloren. Ein neuer Schädel wurde 1995 in Marokko gefunden und 1996 veröffentlicht.",
+        "D3-C13": "Sie sind sich nie begegnet. T. rex lebte vor etwa 68-66 Millionen Jahren, Spinosaurus und Carcharodontosaurus vor etwa 100-94 Millionen, Giganotosaurus wahrscheinlich noch früher. Der Abstand: mindestens 26 Millionen Jahre."
+      },
+      "verdict": "Nach veröffentlichten Längenschätzungen ist T. rex nicht der längste fleischfressende Dinosaurier: Spinosaurus ist es eindeutig, während Giganotosaurus und Carcharodontosaurus ihn um weniger als einen Meter übertreffen, innerhalb der Unsicherheit der Schätzungen. Nichts davon krönt einen neuen „Größten aller Zeiten“, denn die Rivalen sind nur durch unvollständige oder verlorene Skelette bekannt. Wirklich vorne liegt T. rex in der Geschichte: als Erster benannt, 1905, und weit häufiger gefunden, eine Krone für Ruhm, nicht für Größe.",
+      "errata": [
+        "Das Video sagte, alle drei Rivalen hätten vor 99 bis 94 Millionen Jahren gelebt, etwa 30 Millionen Jahre vor T. rex. Die Daten zeigen, dass das für Spinosaurus und Carcharodontosaurus gilt, Giganotosaurus aber wahrscheinlich auf 113-106 Millionen Jahre zurückgeht; der Abstand beträgt also mindestens 26 Millionen Jahre, bei Giganotosaurus mehr als 40.",
+        "Das Video nannte für Spinosaurus 15 Meter als einzigen Wert. Die Daten zeigen, dass dies die Schätzung von 2014 ist; eine Rekonstruktion von 2022 ergibt knapp unter 14 Meter, womit er immer noch der längste der vier ist.",
+        "Das Video gab für Giganotosaurus eine genaue Länge von über 13 Metern an. Die Daten zeigen, dass dieser Wert aus einem einzigen Unterkieferfragment hochgerechnet ist; das Typusexemplar wurde auf 12,5 Meter geschätzt, fast gleichauf mit Sues 12,3 Metern, sodass sein Vorsprung vor T. rex innerhalb der Unsicherheit liegt.",
+        "Das Video nannte einen Median der Länge von 3,4 Metern direkt nach der Zählung von 1.050 Funden. Die Daten zeigen, dass 3,4 Meter der Median über 310 Gattungen sind; pro Fund gezählt liegt der Median bei 3,5 Metern."
+      ]
+    },
+    "es": {
+      "title": "Por qué T. rex conserva la corona, aunque no sea el más largo",
+      "lede": "Según las estimaciones de longitud publicadas, T. rex es el cuarto de cuatro grandes depredadores, aunque los márgenes son pequeños y cada cifra es una estimación. Donde lidera es en la historia: nombrado en 1905, 90 años antes que Giganotosaurus, aparece 63 veces en nuestro archivo frente a 3.",
+      "question": "¿Era T. rex realmente el dinosaurio carnívoro más grande, o solo el más famoso?",
+      "claims": {
+        "D3-C1": "Nuestro archivo, construido a partir de una exportación de la Paleobiology Database, reúne 1.050 registros de dinosaurios carnívoros pertenecientes a 343 géneros.",
+        "D3-C2": "Entre los 310 géneros carnívoros de nuestro archivo con una estimación de longitud publicada, la mediana es de unos 3,4 metros (11 pies). Los gigantes son la rara excepción.",
+        "D3-C3": "Registros en nuestro archivo, por género: Tyrannosaurus 63, Carcharodontosaurus 27, Spinosaurus 16, Giganotosaurus 3.",
+        "D3-C4": "Spinosaurus es el más largo de los cuatro: unos 15 metros en una reconstrucción de 2014, revisada a poco menos de 14 metros en 2022. Ambas son estimaciones.",
+        "D3-C5": "Giganotosaurus: el ejemplar tipo de 1995 se estimó en 12,5 metros. Un segundo fragmento de mandíbula, más grande, sugiere individuos de unos 13 metros.",
+        "D3-C6": "Carcharodontosaurus: las estimaciones de longitud publicadas rondan los 12 a 14 metros; nuestro archivo usa 12,5 metros. Solo su cráneo de 1995 mide unos 1,6 metros.",
+        "D3-C7": "T. rex: el mayor ejemplar bien conocido, Sue (FMNH PR 2081), mide unos 12,3 metros del hocico a la punta de la cola en un modelo esquelético 3D.",
+        "D3-C8": "Según estas estimaciones de longitud, T. rex queda cuarto de cuatro. La diferencia con Giganotosaurus y Carcharodontosaurus es inferior a un metro, dentro de la incertidumbre de las estimaciones.",
+        "D3-C9": "Año en que se nombró cada género: Tyrannosaurus 1905 (Osborn), Spinosaurus 1915 (Stromer), Carcharodontosaurus 1931 (Stromer), Giganotosaurus 1995 (Coria y Salgado).",
+        "D3-C10": "Tyrannosaurus recibió su nombre 90 años antes que Giganotosaurus (1905 frente a 1995), una larga ventaja para museos, libros y películas.",
+        "D3-C11": "El ejemplar original de Spinosaurus de Stromer fue destruido cuando un bombardeo aliado alcanzó la colección paleontológica estatal de Múnich en la noche del 24 al 25 de abril de 1944.",
+        "D3-C12": "Los huesos egipcios de Carcharodontosaurus se perdieron en el mismo bombardeo de 1944. En 1995 se halló un nuevo cráneo en Marruecos, publicado en 1996.",
+        "D3-C13": "Nunca se encontraron. T. rex vivió hace unos 68-66 millones de años; Spinosaurus y Carcharodontosaurus, hace unos 100-94 millones; Giganotosaurus, probablemente aún antes. La distancia: al menos 26 millones de años."
+      },
+      "verdict": "Según las estimaciones de longitud publicadas, T. rex no es el dinosaurio carnívoro más largo: Spinosaurus lo es claramente, mientras que Giganotosaurus y Carcharodontosaurus lo superan por menos de un metro, dentro de la incertidumbre de las estimaciones. Nada de esto corona a un nuevo «más grande de la historia», porque los rivales se conocen por esqueletos parciales o perdidos. Lo que T. rex lidera de verdad es la historia: nombrado primero, en 1905, y hallado con mucha más frecuencia, una corona de fama, no de tamaño.",
+      "errata": [
+        "El video decía que los tres rivales vivieron hace entre 99 y 94 millones de años, unos 30 millones de años antes que T. rex. Los datos muestran que eso vale para Spinosaurus y Carcharodontosaurus, pero Giganotosaurus data probablemente de hace 113-106 millones de años, así que la distancia es de al menos 26 millones de años, y de más de 40 para Giganotosaurus.",
+        "El video daba para Spinosaurus 15 metros, como cifra única. Los datos muestran que es la estimación de 2014; una reconstrucción de 2022 da poco menos de 14 metros, y sigue siendo el más largo de los cuatro.",
+        "El video atribuía a Giganotosaurus una longitud precisa de más de 13 metros. Los datos muestran que esa cifra se extrapola de un solo fragmento de mandíbula; el ejemplar tipo se estimó en 12,5 metros, casi a la par de los 12,3 metros de Sue, así que su ventaja sobre T. rex está dentro de la incertidumbre.",
+        "El video daba una longitud mediana de 3,4 metros justo después de contar 1.050 hallazgos. Los datos muestran que 3,4 metros es la mediana de 310 géneros; contada por hallazgo, la mediana es de 3,5 metros."
+      ]
+    },
+    "fr": {
+      "title": "Pourquoi T. rex garde la couronne, même s'il n'est pas le plus long",
+      "lede": "D'après les estimations de longueur publiées, T. rex est quatrième sur quatre grands prédateurs, même si les écarts sont faibles et que chaque chiffre est une estimation. Là où il domine, c'est l'histoire : nommé en 1905, 90 ans avant Giganotosaurus, il apparaît 63 fois dans notre archive, contre 3.",
+      "question": "T. rex était-il vraiment le plus grand dinosaure carnivore, ou seulement le plus célèbre ?",
+      "claims": {
+        "D3-C1": "Notre archive, construite à partir d'un export de la Paleobiology Database, compte 1 050 occurrences de dinosaures carnivores réparties en 343 genres.",
+        "D3-C2": "Parmi les 310 genres carnivores de notre archive dotés d'une estimation de longueur publiée, la médiane est d'environ 3,4 mètres (11 pieds). Les géants sont la rare exception.",
+        "D3-C3": "Occurrences dans notre archive, par genre : Tyrannosaurus 63, Carcharodontosaurus 27, Spinosaurus 16, Giganotosaurus 3.",
+        "D3-C4": "Spinosaurus est le plus long des quatre : environ 15 mètres dans une reconstitution de 2014, révisée à un peu moins de 14 mètres en 2022. Ce sont deux estimations.",
+        "D3-C5": "Giganotosaurus : le spécimen type de 1995 a été estimé à 12,5 mètres. Un second fragment de mâchoire, plus grand, suggère des individus d'environ 13 mètres.",
+        "D3-C6": "Carcharodontosaurus : les estimations de longueur publiées tournent autour de 12 à 14 mètres ; notre archive retient 12,5 mètres. Son crâne de 1995 mesure à lui seul environ 1,6 mètre.",
+        "D3-C7": "T. rex : le plus grand spécimen bien connu, Sue (FMNH PR 2081), mesure environ 12,3 mètres du museau au bout de la queue dans un modèle squelettique 3D.",
+        "D3-C8": "Classé selon ces estimations de longueur, T. rex arrive quatrième sur quatre. Les écarts avec Giganotosaurus et Carcharodontosaurus sont inférieurs à un mètre, dans la marge d'incertitude des estimations.",
+        "D3-C9": "Année de dénomination de chaque genre : Tyrannosaurus 1905 (Osborn), Spinosaurus 1915 (Stromer), Carcharodontosaurus 1931 (Stromer), Giganotosaurus 1995 (Coria et Salgado).",
+        "D3-C10": "Tyrannosaurus a été nommé 90 ans avant Giganotosaurus (1905 contre 1995), une longue avance pour les musées, les livres et les films.",
+        "D3-C11": "Le spécimen original de Spinosaurus décrit par Stromer a été détruit lorsqu'un bombardement allié a frappé la collection paléontologique d'État de Munich, dans la nuit du 24 au 25 avril 1944.",
+        "D3-C12": "Les os égyptiens de Carcharodontosaurus ont été perdus lors du même bombardement de 1944. Un nouveau crâne a été découvert au Maroc en 1995 et publié en 1996.",
+        "D3-C13": "Ils ne se sont jamais croisés. T. rex a vécu il y a environ 68-66 millions d'années ; Spinosaurus et Carcharodontosaurus, il y a environ 100-94 millions ; Giganotosaurus, probablement plus tôt encore. L'écart : au moins 26 millions d'années."
+      },
+      "verdict": "D'après les estimations de longueur publiées, T. rex n'est pas le plus long dinosaure carnivore : Spinosaurus l'est clairement, tandis que Giganotosaurus et Carcharodontosaurus le dépassent de moins d'un mètre, dans la marge d'incertitude des estimations. Rien de tout cela ne couronne un nouveau « plus grand de tous les temps », car les rivaux ne sont connus que par des squelettes partiels ou perdus. Ce que T. rex domine vraiment, c'est l'histoire : nommé le premier, en 1905, et retrouvé bien plus souvent, une couronne de célébrité, pas de taille.",
+      "errata": [
+        "La vidéo affirmait que les trois rivaux avaient vécu il y a 99 à 94 millions d'années, environ 30 millions d'années avant T. rex. Les données montrent que c'est vrai pour Spinosaurus et Carcharodontosaurus, mais Giganotosaurus date probablement d'il y a 113-106 millions d'années : l'écart est donc d'au moins 26 millions d'années, et de plus de 40 pour Giganotosaurus.",
+        "La vidéo donnait 15 mètres pour Spinosaurus, comme chiffre unique. Les données montrent qu'il s'agit de l'estimation de 2014 ; une reconstitution de 2022 donne un peu moins de 14 mètres, ce qui en fait toujours le plus long des quatre.",
+        "La vidéo attribuait à Giganotosaurus une longueur précise de plus de 13 mètres. Les données montrent que ce chiffre est extrapolé d'un seul fragment de mâchoire ; le spécimen type a été estimé à 12,5 mètres, presque à égalité avec les 12,3 mètres de Sue, si bien que son avance sur T. rex reste dans la marge d'incertitude.",
+        "La vidéo donnait une longueur médiane de 3,4 mètres juste après avoir compté 1 050 découvertes. Les données montrent que 3,4 mètres est la médiane sur 310 genres ; comptée par découverte, la médiane est de 3,5 mètres."
+      ]
+    }
+  }
+}

@@ -462,7 +462,7 @@ def build_dossiers(ui_all, env, ver, write=True):
                               "citation": sorted({s["url"] for c in d["claims"] for s in c["sources"]})})
             page = env.get_template("dossier.html").render(
                 lang=lang, langs=LANGS, lang_names=LANG_NAMES, ui=ui, base=BASE, alts=alts, alts_json=js_safe(alts),
-                prefix="" if lang == "en" else f"/{lang}", page_kind="case", ver=ver,
+                prefix="" if lang == "en" else f"/{lang}", page_kind="dossier", ver=ver,
                 seo_title=f"{t['title']} | {hj[lang]['dossier']} {d['n']} | Pandas Lab", og_title=t["title"], description=t["lede"],
                 og_type="article", og_image=f"https://i.ytimg.com/vi/{d['yt']}/hqdefault.jpg", og_locale=OG_LOCALE[lang],
                 jsonld=jsonld, d=d, t={**t, "lede": fr(t["lede"]), "question": fr(t["question"]), "verdict": fr(t["verdict"]),

@@ -1,0 +1,213 @@
+{
+  "n": "01",
+  "ep": "EP 1",
+  "yt": "E4gdm25XoI8",
+  "world": "history",
+  "updated": "2026-11-21",
+  "claims": [
+    {"id": "D1-C1", "label": "OBSERVED", "sources": [
+      {"name": "Trujillo & Kowallis 2015, Geology of the Intermountain West 2:1-8 (recalibrated Morrison Formation ages)", "url": "https://doi.org/10.31711/giw.v2.pp1-8", "read": "full text"},
+      {"name": "Natural History Museum London, Dino Directory: Stegosaurus", "url": "https://www.nhm.ac.uk/discover/dino-directory/stegosaurus.html", "read": "full text"},
+      {"name": "International Commission on Stratigraphy, International Chronostratigraphic Chart v2024/12", "url": "https://stratigraphy.org/ICSchart/ChronostratChart2024-12.pdf", "read": "full text"},
+      {"name": "The Paleobiology Database, Stegosaurus occurrences (API query, 21 Nov 2026)", "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Stegosaurus&show=strat", "read": "data"}
+    ]},
+    {"id": "D1-C2", "label": "OBSERVED", "sources": [
+      {"name": "The Paleobiology Database, Stegosaurus occurrences (API query, 21 Nov 2026)", "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Stegosaurus&show=strat", "read": "data"},
+      {"name": "Escaso et al. 2007, Naturwissenschaften 94: Stegosaurus from Portugal", "url": "https://doi.org/10.1007/s00114-006-0209-8", "read": "abstract only"}
+    ]},
+    {"id": "D1-C3", "label": "ESTIMATE", "sources": [
+      {"name": "Brassey, Maidment & Barrett 2015, Biology Letters 11: 20140984", "url": "https://doi.org/10.1098/rsbl.2014.0984", "read": "full text"},
+      {"name": "Benson et al. 2014, PLOS Biology 12: e1001853 (text and Dataset S1)", "url": "https://doi.org/10.1371/journal.pbio.1001853", "read": "full text"},
+      {"name": "Natural History Museum London, Dino Directory: Stegosaurus", "url": "https://www.nhm.ac.uk/discover/dino-directory/stegosaurus.html", "read": "full text"}
+    ]},
+    {"id": "D1-C4", "label": "OBSERVED", "sources": [
+      {"name": "The Paleobiology Database, occurrences by genus in the Morrison Formation (API query, 21 Nov 2026)", "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Allosaurus,Diplodocus,Brachiosaurus,Brontosaurus,Camarasaurus,Ceratosaurus&formation=Morrison&show=strat", "read": "data"}
+    ]},
+    {"id": "D1-C5", "label": "OBSERVED", "sources": [
+      {"name": "Natural History Museum London, Dino Directory: Tyrannosaurus", "url": "https://www.nhm.ac.uk/discover/dino-directory/tyrannosaurus.html", "read": "full text"},
+      {"name": "International Commission on Stratigraphy, International Chronostratigraphic Chart v2024/12", "url": "https://stratigraphy.org/ICSchart/ChronostratChart2024-12.pdf", "read": "full text"},
+      {"name": "The Paleobiology Database, Tyrannosaurus occurrences (API query, 21 Nov 2026)", "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Tyrannosaurus&show=loc,strat", "read": "data"}
+    ]},
+    {"id": "D1-C6", "label": "ESTIMATE", "sources": [
+      {"name": "Field Museum, How well do you know SUE?", "url": "https://www.fieldmuseum.org/blog/how-well-do-you-know-sue", "read": "full text"},
+      {"name": "Hutchinson et al. 2011, PLOS ONE 6: e26037", "url": "https://doi.org/10.1371/journal.pone.0026037", "read": "full text"}
+    ]},
+    {"id": "D1-C7", "label": "OBSERVED", "sources": [
+      {"name": "The Paleobiology Database, Tyrannosaurus occurrences (API query, 21 Nov 2026)", "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Tyrannosaurus&show=loc,strat", "read": "data"},
+      {"name": "The Paleobiology Database, occurrence 1199943 (Mexico, Lomas Coloradas Fm., teeth)", "url": "https://paleobiodb.org/data1.2/occs/single.json?id=1199943&show=ident,rem,ref", "read": "data"}
+    ]},
+    {"id": "D1-C8", "label": "OBSERVED", "sources": [
+      {"name": "Trujillo & Kowallis 2015, Geology of the Intermountain West 2:1-8", "url": "https://doi.org/10.31711/giw.v2.pp1-8", "read": "full text"},
+      {"name": "Natural History Museum London, Dino Directory: Tyrannosaurus", "url": "https://www.nhm.ac.uk/discover/dino-directory/tyrannosaurus.html", "read": "full text"}
+    ]},
+    {"id": "D1-C9", "label": "OBSERVED", "sources": [
+      {"name": "International Commission on Stratigraphy, International Chronostratigraphic Chart v2024/12", "url": "https://stratigraphy.org/ICSchart/ChronostratChart2024-12.pdf", "read": "full text"}
+    ]},
+    {"id": "D1-C10", "label": "OBSERVED", "sources": [
+      {"name": "Natural History Museum London, Dino Directory: Stegosaurus", "url": "https://www.nhm.ac.uk/discover/dino-directory/stegosaurus.html", "read": "full text"},
+      {"name": "Natural History Museum London, Dino Directory: Tyrannosaurus", "url": "https://www.nhm.ac.uk/discover/dino-directory/tyrannosaurus.html", "read": "full text"},
+      {"name": "Trujillo & Kowallis 2015, Geology of the Intermountain West 2:1-8", "url": "https://doi.org/10.31711/giw.v2.pp1-8", "read": "full text"}
+    ]},
+    {"id": "D1-C11", "label": "OBSERVED", "sources": [
+      {"name": "Natural History Museum London, Dino Directory: Stegosaurus", "url": "https://www.nhm.ac.uk/discover/dino-directory/stegosaurus.html", "read": "full text"},
+      {"name": "International Commission on Stratigraphy, International Chronostratigraphic Chart v2024/12", "url": "https://stratigraphy.org/ICSchart/ChronostratChart2024-12.pdf", "read": "full text"}
+    ]},
+    {"id": "D1-C12", "label": "OBSERVED", "sources": [
+      {"name": "The Paleobiology Database, Dinosauria species-level occurrences 155-145 Ma (API query, timerule=major, 21 Nov 2026)", "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Dinosauria&max_ma=155&min_ma=145&timerule=major&idreso=species", "read": "data"},
+      {"name": "The Paleobiology Database, Dinosauria species-level occurrences 72.2-66 Ma (API query, timerule=major, 21 Nov 2026)", "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Dinosauria&max_ma=72.2&min_ma=66&timerule=major&idreso=species", "read": "data"},
+      {"name": "Larson & Currie 2013, PLOS ONE 8: e54329", "url": "https://doi.org/10.1371/journal.pone.0054329", "read": "full text"}
+    ]},
+    {"id": "D1-C13", "label": "OBSERVED", "sources": [
+      {"name": "The Paleobiology Database, Stegosaurus collections (API query, 21 Nov 2026)", "url": "https://paleobiodb.org/data1.2/colls/list.json?base_name=Stegosaurus", "read": "data"},
+      {"name": "The Paleobiology Database, Tyrannosaurus collections (API query, 21 Nov 2026)", "url": "https://paleobiodb.org/data1.2/colls/list.json?base_name=Tyrannosaurus", "read": "data"}
+    ]}
+  ],
+  "exhibits": ["D1-C10", "D1-C11", "D1-C12", "D1-C13"],
+  "i18n": {
+    "en": {
+      "title": "Stegosaurus vs. T. rex: A tale of two eras",
+      "lede": "Stegosaurus lived roughly 155 to 145 million years ago, in the Late Jurassic; T. rex lived about 68 to 66 million years ago, in the latest Cretaceous. At least 77 million years separate them, more than the 66 million between the last T. rex and us.",
+      "question": "Is T. rex closer in time to your iPhone than to Stegosaurus?",
+      "claims": {
+        "D1-C1": "Stegosaurus lived in the Late Jurassic, roughly 155 to 145 million years ago. Dated ash beds in its Morrison Formation rocks span about 157 to 150 million years.",
+        "D1-C2": "Stegosaurus fossils come from the western United States and Portugal. The Paleobiology Database lists 84 Late Jurassic occurrences: 82 in the US, 2 in Portugal.",
+        "D1-C3": "Stegosaurus reached about 9 meters long. Mass estimates vary with method: about 1.6 tonnes for a young adult, up to roughly 7 tonnes for the largest specimen.",
+        "D1-C4": "Allosaurus, Diplodocus, Brachiosaurus, Brontosaurus, Camarasaurus and Ceratosaurus all occur in the Morrison Formation, the same rock unit that yields most Stegosaurus fossils.",
+        "D1-C5": "Tyrannosaurus rex lived about 68 to 66 million years ago, at the end of the Cretaceous, in western North America.",
+        "D1-C6": "SUE, the largest known T. rex, measures 12.3 meters (40.5 feet) and may have weighed about 9 to 9.5 tonnes; most adults are estimated at 6 to 8 tonnes.",
+        "D1-C7": "The Paleobiology Database lists 68 end-Cretaceous occurrences identified as T. rex: 63 in the US, 4 in Canada and 1 in Mexico, a set of teeth from Sonora.",
+        "D1-C8": "Taking the middle of each time range, about 150 and 67 million years ago, Stegosaurus and T. rex are separated by roughly 83 million years.",
+        "D1-C9": "The Cretaceous ended 66.0 million years ago, so the last T. rex lived about 66 million years before us.",
+        "D1-C10": "Even comparing the youngest possible Stegosaurus (145 million years ago) with the oldest T. rex (68 million years ago), the gap is at least 77 million years.",
+        "D1-C11": "When T. rex lived, the youngest Stegosaurus had been dead for at least 77 million years, longer than the 66 million years separating T. rex from us.",
+        "D1-C12": "A Paleobiology Database query finds 147 dinosaur species around Stegosaurus's time and 356 in the latest Cretaceous; no valid species appears in both.",
+        "D1-C13": "No fossil site in the Paleobiology Database has yielded both Stegosaurus and Tyrannosaurus: 76 Stegosaurus collections, 82 Tyrannosaurus collections, zero in common."
+      },
+      "verdict": "We know that Stegosaurus and T. rex never met: they are separated by at least 77 million years, more than the 66 million years between the last T. rex and us, and no fossil site or valid species links their two worlds. Their dates come from dated rock layers and international timescales, so the size of the gap is solid even though each boundary carries uncertainty of up to a few million years. What remains uncertain is how big these animals were: body-mass estimates depend on method and specimen, ranging from about 1.6 to 7 tonnes for Stegosaurus and 6 to 9.5 tonnes for adult T. rex.",
+      "errata": [
+        "The video said our dataset had 15 Stegosaurus finds. The data show 84 Late Jurassic occurrences in the Paleobiology Database (82 in the US, 2 in Portugal); 15 is only the subset identified to species.",
+        "The video gave 12.3 meters and about 9 tonnes as the size of T. rex in general. The data show these are the figures for SUE, the largest known specimen, while most adults are estimated at 6 to 8 tonnes.",
+        "The video said Stegosaurus weighed about 5 tonnes, without saying this was an estimate. The data show published estimates from about 1.6 to roughly 7 tonnes, depending on method and specimen; 5 falls inside that range.",
+        "The video said no species appears in both worlds. The data show one species in both intervals, Richardoestesia gilmorei, a name based on isolated teeth, so the zero holds only for valid species, a condition the video did not state aloud.",
+        "The video counted 168 species in the world of Stegosaurus and 290 in that of T. rex, from an internal dataset that cannot be reproduced. The data show 147 and 356 in a documented Paleobiology Database query, and the conclusion does not change.",
+        "The video said our dataset had 63 T. rex finds across the United States, Canada and Mexico. The data show 68 occurrences today (63 in the US, 4 in Canada, 1 in Mexico), and the Mexican record is a single set of isolated teeth."
+      ]
+    },
+    "it": {
+      "title": "Stegosaurus contro T. rex: storia di due ere",
+      "lede": "Lo Stegosaurus visse circa 155-145 milioni di anni fa, nel Giurassico superiore; il T. rex visse circa 68-66 milioni di anni fa, alla fine del Cretaceo. Li separano almeno 77 milioni di anni, più dei 66 milioni che dividono l'ultimo T. rex da noi.",
+      "question": "Il T. rex è più vicino nel tempo al tuo iPhone che allo Stegosaurus?",
+      "claims": {
+        "D1-C1": "Lo Stegosaurus visse nel Giurassico superiore, all'incirca tra 155 e 145 milioni di anni fa. I livelli di cenere datati nelle rocce della Formazione Morrison che lo contengono coprono circa da 157 a 150 milioni di anni fa.",
+        "D1-C2": "I fossili di Stegosaurus provengono dagli Stati Uniti occidentali e dal Portogallo. La Paleobiology Database elenca 84 occorrenze del Giurassico superiore: 82 negli Stati Uniti, 2 in Portogallo.",
+        "D1-C3": "Lo Stegosaurus arrivava a circa 9 metri di lunghezza. Le stime della massa cambiano con il metodo: circa 1,6 tonnellate per un giovane adulto, fino a circa 7 tonnellate per l'esemplare più grande.",
+        "D1-C4": "Allosaurus, Diplodocus, Brachiosaurus, Brontosaurus, Camarasaurus e Ceratosaurus compaiono tutti nella Formazione Morrison, la stessa unità rocciosa da cui proviene la maggior parte dei fossili di Stegosaurus.",
+        "D1-C5": "Il Tyrannosaurus rex visse circa 68-66 milioni di anni fa, alla fine del Cretaceo, nel Nord America occidentale.",
+        "D1-C6": "SUE, il più grande T. rex conosciuto, misura 12,3 metri (40,5 piedi) e potrebbe aver pesato circa 9-9,5 tonnellate; la maggior parte degli adulti è stimata tra 6 e 8 tonnellate.",
+        "D1-C7": "La Paleobiology Database elenca 68 occorrenze della fine del Cretaceo identificate come T. rex: 63 negli Stati Uniti, 4 in Canada e 1 in Messico, un gruppo di denti dalla Sonora.",
+        "D1-C8": "Prendendo il punto medio di ciascun intervallo, circa 150 e 67 milioni di anni fa, Stegosaurus e T. rex sono separati da circa 83 milioni di anni.",
+        "D1-C9": "Il Cretaceo finì 66,0 milioni di anni fa, quindi l'ultimo T. rex visse circa 66 milioni di anni prima di noi.",
+        "D1-C10": "Anche confrontando lo Stegosaurus più recente possibile (145 milioni di anni fa) con il T. rex più antico (68 milioni di anni fa), la distanza è di almeno 77 milioni di anni.",
+        "D1-C11": "Quando visse il T. rex, l'ultimo Stegosaurus era scomparso da almeno 77 milioni di anni, più dei 66 milioni di anni che separano il T. rex da noi.",
+        "D1-C12": "Una query sulla Paleobiology Database trova 147 specie di dinosauri all'epoca dello Stegosaurus e 356 alla fine del Cretaceo; nessuna specie valida compare in entrambi i gruppi.",
+        "D1-C13": "Nessun sito fossilifero della Paleobiology Database ha restituito sia Stegosaurus sia Tyrannosaurus: 76 collezioni con Stegosaurus, 82 con Tyrannosaurus, nessuna in comune."
+      },
+      "verdict": "Sappiamo che Stegosaurus e T. rex non si sono mai incontrati: li separano almeno 77 milioni di anni, più dei 66 milioni di anni tra l'ultimo T. rex e noi, e nessun sito fossilifero né alcuna specie valida collega i loro due mondi. Le loro date vengono da strati rocciosi datati e da scale dei tempi internazionali, quindi l'ampiezza della distanza è solida anche se ogni limite porta con sé un'incertezza fino a qualche milione di anni. Resta incerto quanto fossero grandi questi animali: le stime della massa dipendono dal metodo e dall'esemplare, e vanno da circa 1,6 a 7 tonnellate per lo Stegosaurus e da 6 a 9,5 tonnellate per il T. rex adulto.",
+      "errata": [
+        "Il video diceva che il nostro dataset conteneva 15 ritrovamenti di Stegosaurus. I dati mostrano 84 occorrenze del Giurassico superiore nella Paleobiology Database (82 negli Stati Uniti, 2 in Portogallo); 15 è solo il sottoinsieme identificato a livello di specie.",
+        "Il video indicava 12,3 metri e circa 9 tonnellate come dimensioni del T. rex in generale. I dati mostrano che sono i valori di SUE, il più grande esemplare conosciuto, mentre la maggior parte degli adulti è stimata tra 6 e 8 tonnellate.",
+        "Il video diceva che lo Stegosaurus pesava circa 5 tonnellate, senza precisare che si tratta di una stima. I dati mostrano stime pubblicate da circa 1,6 a circa 7 tonnellate, a seconda del metodo e dell'esemplare; il 5 rientra in questa forchetta.",
+        "Il video diceva che nessuna specie compare in entrambi i mondi. I dati mostrano una specie presente in entrambi gli intervalli, Richardoestesia gilmorei, un nome basato su denti isolati: lo zero vale quindi solo per le specie valide, una condizione che il video non diceva a voce.",
+        "Il video contava 168 specie nel mondo dello Stegosaurus e 290 in quello del T. rex, da un dataset interno non riproducibile. I dati mostrano 147 e 356 in una query documentata sulla Paleobiology Database, e la conclusione non cambia.",
+        "Il video diceva che il nostro dataset conteneva 63 ritrovamenti di T. rex tra Stati Uniti, Canada e Messico. I dati mostrano oggi 68 occorrenze (63 negli Stati Uniti, 4 in Canada, 1 in Messico), e il record messicano è un solo gruppo di denti isolati."
+      ]
+    },
+    "de": {
+      "title": "Stegosaurus gegen T. rex: Geschichte zweier Erdzeitalter",
+      "lede": "Stegosaurus lebte vor etwa 155 bis 145 Millionen Jahren im Oberjura; T. rex lebte vor etwa 68 bis 66 Millionen Jahren, ganz am Ende der Kreidezeit. Mindestens 77 Millionen Jahre trennen die beiden, mehr als die 66 Millionen zwischen dem letzten T. rex und uns.",
+      "question": "Liegt T. rex zeitlich näher an deinem iPhone als an Stegosaurus?",
+      "claims": {
+        "D1-C1": "Stegosaurus lebte im Oberjura, vor etwa 155 bis 145 Millionen Jahren. Datierte Ascheschichten in den Gesteinen der Morrison-Formation, aus denen er stammt, umfassen etwa 157 bis 150 Millionen Jahre.",
+        "D1-C2": "Stegosaurus-Fossilien stammen aus dem Westen der USA und aus Portugal. Die Paleobiology Database verzeichnet 84 Vorkommen aus dem Oberjura: 82 in den USA, 2 in Portugal.",
+        "D1-C3": "Stegosaurus wurde etwa 9 Meter lang. Die Schätzungen der Körpermasse hängen von der Methode ab: etwa 1,6 Tonnen für ein junges erwachsenes Tier, bis zu rund 7 Tonnen für das größte Exemplar.",
+        "D1-C4": "Allosaurus, Diplodocus, Brachiosaurus, Brontosaurus, Camarasaurus und Ceratosaurus kommen alle in der Morrison-Formation vor, derselben Gesteinseinheit, aus der die meisten Stegosaurus-Fossilien stammen.",
+        "D1-C5": "Tyrannosaurus rex lebte vor etwa 68 bis 66 Millionen Jahren, am Ende der Kreidezeit, im westlichen Nordamerika.",
+        "D1-C6": "SUE, der größte bekannte T. rex, misst 12,3 Meter (40,5 Fuß) und wog vielleicht etwa 9 bis 9,5 Tonnen; die meisten erwachsenen Tiere werden auf 6 bis 8 Tonnen geschätzt.",
+        "D1-C7": "Die Paleobiology Database verzeichnet 68 Vorkommen vom Ende der Kreidezeit, die als T. rex bestimmt sind: 63 in den USA, 4 in Kanada und 1 in Mexiko, eine Gruppe von Zähnen aus Sonora.",
+        "D1-C8": "Nimmt man jeweils die Mitte der beiden Zeitspannen, etwa vor 150 und vor 67 Millionen Jahren, liegen zwischen Stegosaurus und T. rex rund 83 Millionen Jahre.",
+        "D1-C9": "Die Kreidezeit endete vor 66,0 Millionen Jahren; der letzte T. rex lebte also etwa 66 Millionen Jahre vor uns.",
+        "D1-C10": "Selbst wenn man den jüngstmöglichen Stegosaurus (vor 145 Millionen Jahren) mit dem ältesten T. rex (vor 68 Millionen Jahren) vergleicht, beträgt der Abstand mindestens 77 Millionen Jahre.",
+        "D1-C11": "Als T. rex lebte, war der letzte Stegosaurus seit mindestens 77 Millionen Jahren tot, länger als die 66 Millionen Jahre, die T. rex von uns trennen.",
+        "D1-C12": "Eine Abfrage der Paleobiology Database findet 147 Dinosaurierarten aus der Zeit von Stegosaurus und 356 aus der späten Oberkreide; keine gültige Art kommt in beiden vor.",
+        "D1-C13": "Keine Fundstelle in der Paleobiology Database hat sowohl Stegosaurus als auch Tyrannosaurus geliefert: 76 Sammlungen mit Stegosaurus, 82 mit Tyrannosaurus, keine gemeinsame."
+      },
+      "verdict": "Wir wissen, dass sich Stegosaurus und T. rex nie begegnet sind: Zwischen ihnen liegen mindestens 77 Millionen Jahre, mehr als die 66 Millionen Jahre zwischen dem letzten T. rex und uns, und keine Fundstelle und keine gültige Art verbindet ihre beiden Welten. Ihre Daten stammen aus datierten Gesteinsschichten und internationalen Zeitskalen, daher ist die Größe des Abstands belastbar, auch wenn jede Grenze eine Unsicherheit von bis zu einigen Millionen Jahren trägt. Unsicher bleibt, wie groß diese Tiere waren: Schätzungen der Körpermasse hängen von Methode und Exemplar ab und reichen von etwa 1,6 bis 7 Tonnen für Stegosaurus und von 6 bis 9,5 Tonnen für erwachsene T. rex.",
+      "errata": [
+        "Das Video sagte, unser Datensatz enthalte 15 Stegosaurus-Funde. Die Daten zeigen 84 Vorkommen aus dem Oberjura in der Paleobiology Database (82 in den USA, 2 in Portugal); 15 ist nur die bis zur Art bestimmte Teilmenge.",
+        "Das Video nannte 12,3 Meter und etwa 9 Tonnen als Größe von T. rex im Allgemeinen. Die Daten zeigen, dass dies die Werte von SUE sind, dem größten bekannten Exemplar, während die meisten erwachsenen Tiere auf 6 bis 8 Tonnen geschätzt werden.",
+        "Das Video sagte, Stegosaurus habe etwa 5 Tonnen gewogen, ohne zu erwähnen, dass es sich um eine Schätzung handelt. Die Daten zeigen veröffentlichte Schätzungen von etwa 1,6 bis rund 7 Tonnen, je nach Methode und Exemplar; die 5 liegen in diesem Bereich.",
+        "Das Video sagte, keine Art komme in beiden Welten vor. Die Daten zeigen eine Art in beiden Zeitabschnitten, Richardoestesia gilmorei, ein Name, der auf isolierten Zähnen beruht; die Null gilt also nur für gültige Arten, eine Bedingung, die das Video nicht aussprach.",
+        "Das Video zählte 168 Arten in der Welt von Stegosaurus und 290 in der von T. rex, aus einem internen Datensatz, der sich nicht reproduzieren lässt. Die Daten zeigen 147 und 356 in einer dokumentierten Abfrage der Paleobiology Database, und die Schlussfolgerung ändert sich nicht.",
+        "Das Video sagte, unser Datensatz enthalte 63 T.-rex-Funde in den USA, Kanada und Mexiko. Die Daten zeigen heute 68 Vorkommen (63 in den USA, 4 in Kanada, 1 in Mexiko), und der mexikanische Nachweis ist eine einzelne Gruppe isolierter Zähne."
+      ]
+    },
+    "es": {
+      "title": "Stegosaurus contra T. rex: historia de dos eras",
+      "lede": "Stegosaurus vivió hace unos 155 a 145 millones de años, en el Jurásico Superior; T. rex vivió hace unos 68 a 66 millones de años, al final del Cretácico. Los separan al menos 77 millones de años, más que los 66 millones entre el último T. rex y nosotros.",
+      "question": "¿Está T. rex más cerca en el tiempo de tu iPhone que de Stegosaurus?",
+      "claims": {
+        "D1-C1": "Stegosaurus vivió en el Jurásico Superior, hace aproximadamente entre 155 y 145 millones de años. Las capas de ceniza datadas en las rocas de la Formación Morrison donde aparece abarcan de unos 157 a 150 millones de años.",
+        "D1-C2": "Los fósiles de Stegosaurus proceden del oeste de Estados Unidos y de Portugal. La Paleobiology Database registra 84 hallazgos del Jurásico Superior: 82 en Estados Unidos y 2 en Portugal.",
+        "D1-C3": "Stegosaurus alcanzaba unos 9 metros de largo. Las estimaciones de masa varían según el método: unas 1,6 toneladas para un adulto joven y hasta unas 7 toneladas para el ejemplar más grande.",
+        "D1-C4": "Allosaurus, Diplodocus, Brachiosaurus, Brontosaurus, Camarasaurus y Ceratosaurus aparecen todos en la Formación Morrison, la misma unidad rocosa que proporciona la mayoría de los fósiles de Stegosaurus.",
+        "D1-C5": "Tyrannosaurus rex vivió hace unos 68 a 66 millones de años, al final del Cretácico, en el oeste de Norteamérica.",
+        "D1-C6": "SUE, el T. rex más grande conocido, mide 12,3 metros (40,5 pies) y pudo pesar entre 9 y 9,5 toneladas; la mayoría de los adultos se estiman en 6 a 8 toneladas.",
+        "D1-C7": "La Paleobiology Database registra 68 hallazgos del final del Cretácico identificados como T. rex: 63 en Estados Unidos, 4 en Canadá y 1 en México, un conjunto de dientes de Sonora.",
+        "D1-C8": "Tomando el punto medio de cada intervalo, hace unos 150 y 67 millones de años, Stegosaurus y T. rex están separados por unos 83 millones de años.",
+        "D1-C9": "El Cretácico terminó hace 66,0 millones de años, así que el último T. rex vivió unos 66 millones de años antes que nosotros.",
+        "D1-C10": "Incluso comparando el Stegosaurus más reciente posible (hace 145 millones de años) con el T. rex más antiguo (hace 68 millones de años), la distancia es de al menos 77 millones de años.",
+        "D1-C11": "Cuando vivió T. rex, el último Stegosaurus llevaba muerto al menos 77 millones de años, más que los 66 millones de años que separan a T. rex de nosotros.",
+        "D1-C12": "Una consulta a la Paleobiology Database encuentra 147 especies de dinosaurios de la época de Stegosaurus y 356 del final del Cretácico; ninguna especie válida aparece en ambos grupos.",
+        "D1-C13": "Ningún yacimiento de la Paleobiology Database ha proporcionado a la vez Stegosaurus y Tyrannosaurus: 76 colecciones con Stegosaurus, 82 con Tyrannosaurus, ninguna en común."
+      },
+      "verdict": "Sabemos que Stegosaurus y T. rex nunca se encontraron: los separan al menos 77 millones de años, más que los 66 millones de años entre el último T. rex y nosotros, y ningún yacimiento ni ninguna especie válida une sus dos mundos. Sus fechas proceden de capas de roca datadas y de escalas temporales internacionales, así que el tamaño de la distancia es sólido aunque cada límite tenga una incertidumbre de hasta unos pocos millones de años. Lo que sigue siendo incierto es el tamaño de estos animales: las estimaciones de masa dependen del método y del ejemplar, y van de unas 1,6 a 7 toneladas para Stegosaurus y de 6 a 9,5 toneladas para un T. rex adulto.",
+      "errata": [
+        "El video dijo que nuestro conjunto de datos tenía 15 hallazgos de Stegosaurus. Los datos muestran 84 hallazgos del Jurásico Superior en la Paleobiology Database (82 en Estados Unidos y 2 en Portugal); 15 es solo el subconjunto identificado a nivel de especie.",
+        "El video dio 12,3 metros y unas 9 toneladas como el tamaño de T. rex en general. Los datos muestran que son las cifras de SUE, el ejemplar más grande conocido, mientras que la mayoría de los adultos se estiman en 6 a 8 toneladas.",
+        "El video dijo que Stegosaurus pesaba unas 5 toneladas, sin aclarar que era una estimación. Los datos muestran estimaciones publicadas de unas 1,6 a unas 7 toneladas, según el método y el ejemplar; el 5 está dentro de ese rango.",
+        "El video dijo que ninguna especie aparece en ambos mundos. Los datos muestran una especie en ambos intervalos, Richardoestesia gilmorei, un nombre basado en dientes aislados, así que el cero solo vale para las especies válidas, una condición que el video no dijo en voz alta.",
+        "El video contó 168 especies en el mundo de Stegosaurus y 290 en el de T. rex, a partir de un conjunto de datos interno que no se puede reproducir. Los datos muestran 147 y 356 en una consulta documentada a la Paleobiology Database, y la conclusión no cambia.",
+        "El video dijo que nuestro conjunto de datos tenía 63 hallazgos de T. rex en Estados Unidos, Canadá y México. Los datos muestran hoy 68 hallazgos (63 en Estados Unidos, 4 en Canadá y 1 en México), y el registro mexicano es un único conjunto de dientes aislados."
+      ]
+    },
+    "fr": {
+      "title": "Stegosaurus contre T. rex : histoire de deux ères",
+      "lede": "Stegosaurus a vécu il y a environ 155 à 145 millions d'années, au Jurassique supérieur ; T. rex a vécu il y a environ 68 à 66 millions d'années, à la toute fin du Crétacé. Au moins 77 millions d'années les séparent, plus que les 66 millions entre le dernier T. rex et nous.",
+      "question": "T. rex est-il plus proche dans le temps de ton iPhone que de Stegosaurus ?",
+      "claims": {
+        "D1-C1": "Stegosaurus a vécu au Jurassique supérieur, il y a environ 155 à 145 millions d'années. Les couches de cendres datées dans les roches de la formation de Morrison qui le contiennent couvrent environ 157 à 150 millions d'années.",
+        "D1-C2": "Les fossiles de Stegosaurus proviennent de l'ouest des États-Unis et du Portugal. La Paleobiology Database recense 84 occurrences du Jurassique supérieur : 82 aux États-Unis, 2 au Portugal.",
+        "D1-C3": "Stegosaurus atteignait environ 9 mètres de long. Les estimations de masse varient selon la méthode : environ 1,6 tonne pour un jeune adulte, jusqu'à environ 7 tonnes pour le plus grand spécimen.",
+        "D1-C4": "Allosaurus, Diplodocus, Brachiosaurus, Brontosaurus, Camarasaurus et Ceratosaurus sont tous présents dans la formation de Morrison, la même unité rocheuse qui livre la plupart des fossiles de Stegosaurus.",
+        "D1-C5": "Tyrannosaurus rex a vécu il y a environ 68 à 66 millions d'années, à la fin du Crétacé, dans l'ouest de l'Amérique du Nord.",
+        "D1-C6": "SUE, le plus grand T. rex connu, mesure 12,3 mètres (40,5 pieds) et pesait peut-être environ 9 à 9,5 tonnes ; la plupart des adultes sont estimés entre 6 et 8 tonnes.",
+        "D1-C7": "La Paleobiology Database recense 68 occurrences de la fin du Crétacé identifiées comme T. rex : 63 aux États-Unis, 4 au Canada et 1 au Mexique, un lot de dents provenant du Sonora.",
+        "D1-C8": "En prenant le milieu de chaque intervalle, soit environ 150 et 67 millions d'années, Stegosaurus et T. rex sont séparés par environ 83 millions d'années.",
+        "D1-C9": "Le Crétacé s'est terminé il y a 66,0 millions d'années ; le dernier T. rex a donc vécu environ 66 millions d'années avant nous.",
+        "D1-C10": "Même en comparant le Stegosaurus le plus récent possible (il y a 145 millions d'années) avec le T. rex le plus ancien (il y a 68 millions d'années), l'écart est d'au moins 77 millions d'années.",
+        "D1-C11": "Quand T. rex vivait, le dernier Stegosaurus était mort depuis au moins 77 millions d'années, plus longtemps que les 66 millions d'années qui séparent T. rex de nous.",
+        "D1-C12": "Une requête dans la Paleobiology Database trouve 147 espèces de dinosaures à l'époque de Stegosaurus et 356 à la fin du Crétacé ; aucune espèce valide n'apparaît dans les deux.",
+        "D1-C13": "Aucun gisement de la Paleobiology Database n'a livré à la fois Stegosaurus et Tyrannosaurus : 76 collections avec Stegosaurus, 82 avec Tyrannosaurus, aucune en commun."
+      },
+      "verdict": "Nous savons que Stegosaurus et T. rex ne se sont jamais rencontrés : au moins 77 millions d'années les séparent, plus que les 66 millions d'années entre le dernier T. rex et nous, et aucun gisement ni aucune espèce valide ne relie leurs deux mondes. Leurs dates proviennent de couches rocheuses datées et d'échelles de temps internationales ; l'ampleur de l'écart est donc solide, même si chaque limite comporte une incertitude pouvant atteindre quelques millions d'années. Ce qui reste incertain, c'est la taille de ces animaux : les estimations de masse dépendent de la méthode et du spécimen, et vont d'environ 1,6 à 7 tonnes pour Stegosaurus et de 6 à 9,5 tonnes pour un T. rex adulte.",
+      "errata": [
+        "La vidéo disait que notre jeu de données comptait 15 découvertes de Stegosaurus. Les données montrent 84 occurrences du Jurassique supérieur dans la Paleobiology Database (82 aux États-Unis, 2 au Portugal) ; 15 n'est que le sous-ensemble identifié au niveau de l'espèce.",
+        "La vidéo donnait 12,3 mètres et environ 9 tonnes comme taille de T. rex en général. Les données montrent qu'il s'agit des valeurs de SUE, le plus grand spécimen connu, alors que la plupart des adultes sont estimés entre 6 et 8 tonnes.",
+        "La vidéo disait que Stegosaurus pesait environ 5 tonnes, sans préciser qu'il s'agissait d'une estimation. Les données montrent des estimations publiées allant d'environ 1,6 à environ 7 tonnes, selon la méthode et le spécimen ; le 5 se situe dans cette fourchette.",
+        "La vidéo disait qu'aucune espèce n'apparaît dans les deux mondes. Les données montrent une espèce dans les deux intervalles, Richardoestesia gilmorei, un nom fondé sur des dents isolées : le zéro ne vaut donc que pour les espèces valides, une condition que la vidéo n'énonçait pas à voix haute.",
+        "La vidéo comptait 168 espèces dans le monde de Stegosaurus et 290 dans celui de T. rex, à partir d'un jeu de données interne impossible à reproduire. Les données montrent 147 et 356 dans une requête documentée de la Paleobiology Database, et la conclusion ne change pas.",
+        "La vidéo disait que notre jeu de données comptait 63 découvertes de T. rex aux États-Unis, au Canada et au Mexique. Les données montrent aujourd'hui 68 occurrences (63 aux États-Unis, 4 au Canada, 1 au Mexique), et l'enregistrement mexicain n'est qu'un seul lot de dents isolées."
+      ]
+    }
+  }
+}

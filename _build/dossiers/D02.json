@@ -1,0 +1,198 @@
+{
+ "n": "02", "ep": "EP 2", "yt": "4bmygw3PxK8", "world": "history", "updated": "2026-11-21",
+ "claims": [
+  {"id": "D2-C1", "label": "ESTIMATE", "sources": [{"name": "Pandas Lab compiled dataset (Mesozoic Travel v6.6.5), built on The Paleobiology Database occurrences plus genus-level published size estimates", "url": "https://paleobiodb.org/", "read": "data"}]},
+  {"id": "D2-C2", "label": "ESTIMATE", "sources": [{"name": "Hutchinson et al. 2011, PLoS ONE", "url": "https://doi.org/10.1371/journal.pone.0026037", "read": "full text"}]},
+  {"id": "D2-C3", "label": "ESTIMATE", "sources": [
+   {"name": "Lovelace, Hartman & Wahl 2007, Arquivos do Museu Nacional 65(4): 527–544", "url": "https://www.biodiversitylibrary.org/part/279840", "read": "full text"},
+   {"name": "Sellers et al. 2013, PLoS ONE", "url": "https://doi.org/10.1371/journal.pone.0078733", "read": "full text"}]},
+  {"id": "D2-C4", "label": "ESTIMATE", "sources": [
+   {"name": "Lovelace, Hartman & Wahl 2007, Arquivos do Museu Nacional (Morrison Formation, Late Jurassic)", "url": "https://www.biodiversitylibrary.org/part/279840", "read": "full text"},
+   {"name": "Simón & Salgado 2023, Acta Palaeontologica Polonica (Huincul Formation, upper Cenomanian)", "url": "https://doi.org/10.4202/app.01086.2023", "read": "full text"}]},
+  {"id": "D2-C5", "label": "ESTIMATE", "sources": [
+   {"name": "Simón & Salgado 2023, Acta Palaeontologica Polonica 68(4)", "url": "https://doi.org/10.4202/app.01086.2023", "read": "full text"},
+   {"name": "Carballido et al. 2017, Proceedings of the Royal Society B", "url": "https://doi.org/10.1098/rspb.2017.1219", "read": "full text"},
+   {"name": "Pandas Lab compiled dataset (Mesozoic Travel v6.6.5) on The Paleobiology Database", "url": "https://paleobiodb.org/", "read": "data"}]},
+  {"id": "D2-C6", "label": "OBSERVED", "sources": [
+   {"name": "Pandas Lab compiled dataset (Mesozoic Travel v6.6.5) on The Paleobiology Database", "url": "https://paleobiodb.org/", "read": "data"},
+   {"name": "The Paleobiology Database, live occurrence query (Nov 2026)", "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Tyrannosaurus&rowcount", "read": "data"}]},
+  {"id": "D2-C7", "label": "OBSERVED", "sources": [{"name": "Carballido et al. 2017, Proceedings of the Royal Society B", "url": "https://doi.org/10.1098/rspb.2017.1219", "read": "full text"}]},
+  {"id": "D2-C8", "label": "OBSERVED", "sources": [{"name": "Lacovara et al. 2014, Scientific Reports", "url": "https://doi.org/10.1038/srep06196", "read": "full text"}]},
+  {"id": "D2-C9", "label": "OBSERVED", "sources": [{"name": "Lacovara et al. 2014, Scientific Reports", "url": "https://doi.org/10.1038/srep06196", "read": "full text"}]},
+  {"id": "D2-C10", "label": "OBSERVED", "sources": [{"name": "Carpenter 2018, Geology of the Intermountain West 5: 227–244", "url": "https://doi.org/10.31711/giw.v5.pp227-244", "read": "full text"}]},
+  {"id": "D2-C11", "label": "ESTIMATE", "sources": [{"name": "Carpenter 2018, Geology of the Intermountain West 5: 227–244", "url": "https://doi.org/10.31711/giw.v5.pp227-244", "read": "full text"}]},
+  {"id": "D2-C12", "label": "ESTIMATE", "sources": [
+   {"name": "González Riga et al. 2016, Scientific Reports (Supplementary Information)", "url": "https://doi.org/10.1038/srep19165", "read": "full text"},
+   {"name": "Benson et al. 2014, PLoS Biology", "url": "https://doi.org/10.1371/journal.pbio.1001853", "read": "full text"},
+   {"name": "Sellers et al. 2013, PLoS ONE", "url": "https://doi.org/10.1371/journal.pone.0078733", "read": "full text"}]},
+  {"id": "D2-C13", "label": "ESTIMATE", "sources": [
+   {"name": "Carballido et al. 2017, Proceedings of the Royal Society B", "url": "https://doi.org/10.1098/rspb.2017.1219", "read": "full text"},
+   {"name": "Otero, Carballido & Pérez Moreno 2020, Journal of Vertebrate Paleontology", "url": "https://doi.org/10.1080/02724634.2020.1793158", "read": "abstract only"}]},
+  {"id": "D2-C14", "label": "ESTIMATE", "sources": [
+   {"name": "Lacovara et al. 2014, Scientific Reports", "url": "https://doi.org/10.1038/srep06196", "read": "full text"},
+   {"name": "Bates et al. 2015, Biology Letters", "url": "https://doi.org/10.1098/rsbl.2015.0215", "read": "full text"}]}
+ ],
+ "exhibits": ["D2-C8", "D2-C10", "D2-C12", "D2-C14"],
+ "i18n": {
+  "en": {
+   "title": "What If the Biggest Dinosaur Ever… Is Missing?",
+   "lede": "Argentinosaurus tops most rankings of the heaviest dinosaurs, yet it is known from just 13 bones, about 5.1% of a titanosaur skeleton. Its published mass estimates span roughly 60 to 96 tonnes, wider than the gaps between the giants it supposedly beats.",
+   "question": "What was the biggest dinosaur ever, and how much evidence actually stands behind the record?",
+   "claims": {
+    "D2-C1": "In our PBDB-based dataset built for this episode, 1,132 species carry a published mass estimate; the median genus weighs about one tonne, and only seven genera exceed 50 tonnes.",
+    "D2-C2": "Adult Tyrannosaurus rex is usually estimated at about 6 to 8 tonnes; the largest known specimen, Sue, perhaps around 9.5 tonnes.",
+    "D2-C3": "'Biggest' is ambiguous: Supersaurus was long but comparatively light, about 33–34 m and 35–40 tonnes in its main peer-reviewed study, while Argentinosaurus was far heavier.",
+    "D2-C4": "The two 'champions' never met: Supersaurus lived in the Late Jurassic, about 150 million years ago, Argentinosaurus in the early Late Cretaceous, roughly 50–55 million years later.",
+    "D2-C5": "In our PBDB-based dataset the top three are Argentinosaurus 75, Patagotitan 70 and Bustingorrytitan 67.3 tonnes, but Bustingorrytitan's own published estimate carries a ±17.2-tonne standard error.",
+    "D2-C6": "Six of the nine heaviest genera in our PBDB-based dataset are known from a single site each; together the nine account for 38 occurrence records, against 63 for Tyrannosaurus alone.",
+    "D2-C7": "Patagotitan is unusually well documented for a giant: at least six individuals were found in the same quarry on the La Flecha ranch, Chubut, Argentina.",
+    "D2-C8": "Argentinosaurus is known from about 13 bones, including a 1.55 m fibula: roughly 5.1% of a titanosaur skeleton. No skull, neck, tail or feet have been found.",
+    "D2-C9": "Dreadnoughtus is the most completely known giant titanosaur: its two specimens preserve 116 bones, about 45.3% of a titanosaur skeleton.",
+    "D2-C10": "In 1878 Edward Drinker Cope described a single, gigantic partial vertebra from Garden Park, Colorado. The specimen was later lost; only Cope's publication and drawing remain.",
+    "D2-C11": "Size estimates for Maraapunisaurus swing wildly: Carpenter proposed about 58 m in 2006, then about 30–32 m in 2018 after reclassifying it as a rebbachisaurid.",
+    "D2-C12": "Published masses for Argentinosaurus range from about 60 to 96.4 tonnes. The top point estimate, 96.4 t, rests on an isolated femur only tentatively referred to it.",
+    "D2-C13": "Patagotitan's mass depends on the method: 69 ± 17 tonnes from limb-bone scaling, 45 to 77 tonnes from 3D volumetric models, and about 57 tonnes in a 2020 revision.",
+    "D2-C14": "Different methods give very different masses for the same skeleton: Dreadnoughtus was estimated at 59.3 tonnes from limb bones, then 22 to 38 tonnes from volumetric models."
+   },
+   "verdict": "We know that a handful of Patagonian titanosaurs, led by Argentinosaurus and Patagotitan, were among the heaviest land animals ever, and that Patagotitan and Dreadnoughtus are the best documented of them. What we cannot say is which one was heaviest: the gaps between them are smaller than the error bars and method differences of single estimates, and the record holder is known from about 5.1% of a skeleton. Maraapunisaurus might once have rivaled them all, but its only bone is lost, and estimates of its size have shrunk from about 58 m to about 30–32 m.",
+   "errata": [
+    "The video said Supersaurus was about 39 m long. The data show the main peer-reviewed estimate is 33–34 m and 35–40 tonnes (Lovelace et al. 2007); the 39 m figure comes from later reassessments not published in a journal.",
+    "The video called 96.4 tonnes the highest value ever given to Argentinosaurus. The data show it is the highest point estimate among the sources we used, not the highest ever proposed: Benson et al. 2014 give 90 tonnes with a 95% interval reaching 124 tonnes.",
+    "The video presented 50.1 to 84.5 tonnes for Bustingorrytitan as a range of published estimates. The data show it is a single estimate, 67.3 tonnes, with its own ±25.6% prediction error, calculated from a reconstructed femur.",
+    "The video said Tyrannosaurus rex weighed about 9 tonnes. The data show typical adult estimates of 6–8 tonnes, with the largest specimen, Sue, perhaps around 9.5 tonnes (Hutchinson et al. 2011).",
+    "The video gave Argentinosaurus a length of about 36 m. The data show no neck or tail has been found, and published length estimates run from about 30 to about 40 m.",
+    "The video said Patagotitan is known from more than a hundred bones. The data show Carballido et al. 2017 report at least six individuals, but we could not confirm that bone count in their main text.",
+    "The video gave Patagotitan's mass as 42 to 77.6 tonnes. The data show the main text of Carballido et al. 2017 gives 77 tonnes as the top volumetric value, and the 42-tonne figure comes from a 2020 revision we could read only as an abstract.",
+    "The video stated as fact that Maraapunisaurus's preserved spine stands about 1.5 m tall and that a 2006 estimate reached 122 tonnes. The data show 1.5 m is Cope's reported measurement, which some researchers consider a likely typo for 1.05 m, and we could not verify the 122 tonnes in the primary source."
+   ]
+  },
+  "it": {
+   "title": "E se il dinosauro più grande di sempre… mancasse all'appello?",
+   "lede": "Argentinosaurus è in cima a quasi tutte le classifiche dei dinosauri più pesanti, eppure lo conosciamo da appena 13 ossa, circa il 5,1% di uno scheletro di titanosauro. Le stime pubblicate della sua massa vanno da circa 60 a 96 tonnellate, una forbice più ampia delle distanze dai giganti che dovrebbe battere.",
+   "question": "Qual è stato il dinosauro più grande di sempre, e quante prove reggono davvero il record?",
+   "claims": {
+    "D2-C1": "Nel nostro dataset basato sulla PBDB, costruito per questo episodio, 1.132 specie hanno una stima di massa pubblicata; il genere mediano pesa circa una tonnellata e solo sette generi superano le 50 tonnellate.",
+    "D2-C2": "Per un Tyrannosaurus rex adulto si stimano di solito da 6 a 8 tonnellate; per l'esemplare più grande conosciuto, Sue, forse circa 9,5 tonnellate.",
+    "D2-C3": "«Il più grande» è ambiguo: Supersaurus era lungo ma relativamente leggero, circa 33–34 m e 35–40 tonnellate nel suo principale studio peer-reviewed, mentre Argentinosaurus era molto più pesante.",
+    "D2-C4": "I due «campioni» non si sono mai incontrati: Supersaurus visse nel Giurassico superiore, circa 150 milioni di anni fa, Argentinosaurus all'inizio del Cretaceo superiore, circa 50–55 milioni di anni dopo.",
+    "D2-C5": "Nel nostro dataset basato sulla PBDB il podio è Argentinosaurus 75, Patagotitan 70 e Bustingorrytitan 67,3 tonnellate, ma la stima pubblicata di Bustingorrytitan ha da sola un errore standard di ±17,2 tonnellate.",
+    "D2-C6": "Sei dei nove generi più pesanti del nostro dataset basato sulla PBDB sono noti ciascuno da un solo sito; insieme i nove contano 38 record di ritrovamento, contro i 63 del solo Tyrannosaurus.",
+    "D2-C7": "Patagotitan è insolitamente ben documentato per un gigante: almeno sei individui sono stati trovati nella stessa cava, nella tenuta La Flecha, a Chubut, in Argentina.",
+    "D2-C8": "Argentinosaurus è noto da circa 13 ossa, tra cui una fibula di 1,55 m: circa il 5,1% di uno scheletro di titanosauro. Non sono mai stati trovati cranio, collo, coda o piedi.",
+    "D2-C9": "Dreadnoughtus è il titanosauro gigante conosciuto in modo più completo: i suoi due esemplari conservano 116 ossa, circa il 45,3% di uno scheletro di titanosauro.",
+    "D2-C10": "Nel 1878 Edward Drinker Cope descrisse una singola, gigantesca vertebra parziale proveniente da Garden Park, in Colorado. L'esemplare andò poi perduto: restano solo la pubblicazione e il disegno di Cope.",
+    "D2-C11": "Le stime di taglia di Maraapunisaurus oscillano moltissimo: Carpenter propose circa 58 m nel 2006, poi circa 30–32 m nel 2018, dopo averlo riclassificato come rebbachisauride.",
+    "D2-C12": "Le masse pubblicate per Argentinosaurus vanno da circa 60 a 96,4 tonnellate. La stima puntuale più alta, 96,4 t, poggia su un femore isolato attribuito all'animale solo in via provvisoria.",
+    "D2-C13": "La massa di Patagotitan dipende dal metodo: 69 ± 17 tonnellate dalle proporzioni delle ossa degli arti, da 45 a 77 tonnellate dai modelli volumetrici 3D e circa 57 tonnellate in una revisione del 2020.",
+    "D2-C14": "Metodi diversi danno masse molto diverse per lo stesso scheletro: Dreadnoughtus è stato stimato 59,3 tonnellate dalle ossa degli arti, poi da 22 a 38 tonnellate con modelli volumetrici."
+   },
+   "verdict": "Sappiamo che un pugno di titanosauri della Patagonia, guidati da Argentinosaurus e Patagotitan, furono tra gli animali terrestri più pesanti di sempre, e che Patagotitan e Dreadnoughtus sono i meglio documentati. Non possiamo dire quale fosse il più pesante: le distanze tra loro sono più piccole delle barre d'errore e delle differenze di metodo delle singole stime, e il detentore del record è noto da circa il 5,1% dello scheletro. Maraapunisaurus un tempo avrebbe potuto rivaleggiare con tutti loro, ma il suo unico osso è perduto e le stime della sua taglia sono scese da circa 58 m a circa 30–32 m.",
+   "errata": [
+    "Il video diceva che Supersaurus era lungo circa 39 m. I dati mostrano che la principale stima peer-reviewed è di 33–34 m e 35–40 tonnellate (Lovelace et al. 2007); i 39 m vengono da rivalutazioni successive non pubblicate in rivista.",
+    "Il video definiva 96,4 tonnellate il valore più alto mai attribuito ad Argentinosaurus. I dati mostrano che è la stima puntuale più alta tra le fonti che abbiamo usato, non la più alta mai proposta: Benson et al. 2014 danno 90 tonnellate con un intervallo al 95% che arriva a 124 tonnellate.",
+    "Il video presentava da 50,1 a 84,5 tonnellate per Bustingorrytitan come un intervallo di stime pubblicate. I dati mostrano che si tratta di una sola stima, 67,3 tonnellate, con il suo errore di predizione di ±25,6%, calcolata su un femore ricostruito.",
+    "Il video diceva che il Tyrannosaurus rex pesava circa 9 tonnellate. I dati mostrano stime tipiche di 6–8 tonnellate per un adulto, con l'esemplare più grande, Sue, forse intorno alle 9,5 tonnellate (Hutchinson et al. 2011).",
+    "Il video attribuiva ad Argentinosaurus una lunghezza di circa 36 m. I dati mostrano che collo e coda non sono mai stati trovati e che le stime pubblicate della lunghezza vanno da circa 30 a circa 40 m.",
+    "Il video diceva che Patagotitan è noto da più di cento ossa. I dati mostrano che Carballido et al. 2017 riportano almeno sei individui, ma non abbiamo potuto confermare quel numero di ossa nel loro testo principale.",
+    "Il video indicava per Patagotitan una massa da 42 a 77,6 tonnellate. I dati mostrano che il testo principale di Carballido et al. 2017 dà 77 tonnellate come valore volumetrico più alto, e che le 42 tonnellate vengono da una revisione del 2020 che abbiamo potuto leggere solo come abstract.",
+    "Il video dava per certi una spina conservata di circa 1,5 m per Maraapunisaurus e una stima del 2006 di 122 tonnellate. I dati mostrano che 1,5 m è la misura riportata da Cope, che alcuni ricercatori considerano un probabile refuso per 1,05 m, e che non abbiamo potuto verificare le 122 tonnellate nella fonte primaria."
+   ]
+  },
+  "de": {
+   "title": "Was, wenn der größte Dinosaurier aller Zeiten… fehlt?",
+   "lede": "Argentinosaurus führt die meisten Ranglisten der schwersten Dinosaurier an, ist aber nur durch 13 Knochen bekannt, etwa 5,1 % eines Titanosaurier-Skeletts. Die veröffentlichten Massenschätzungen reichen von rund 60 bis 96 Tonnen, eine Spanne, die größer ist als die Abstände zu den Riesen, die er angeblich übertrifft.",
+   "question": "Was war der größte Dinosaurier aller Zeiten, und wie viele Belege stehen wirklich hinter dem Rekord?",
+   "claims": {
+    "D2-C1": "In unserem auf der PBDB basierenden Datensatz, den wir für diese Folge erstellt haben, haben 1.132 Arten eine veröffentlichte Massenschätzung; die Mediangattung wiegt etwa eine Tonne, und nur sieben Gattungen überschreiten 50 Tonnen.",
+    "D2-C2": "Ein ausgewachsener Tyrannosaurus rex wird meist auf etwa 6 bis 8 Tonnen geschätzt; das größte bekannte Exemplar, Sue, vielleicht auf rund 9,5 Tonnen.",
+    "D2-C3": "„Größter“ ist mehrdeutig: Supersaurus war lang, aber vergleichsweise leicht, etwa 33–34 m und 35–40 Tonnen in seiner wichtigsten begutachteten Studie, während Argentinosaurus weit schwerer war.",
+    "D2-C4": "Die beiden „Champions“ sind sich nie begegnet: Supersaurus lebte im Oberjura vor etwa 150 Millionen Jahren, Argentinosaurus in der frühen Oberkreide, rund 50–55 Millionen Jahre später.",
+    "D2-C5": "In unserem auf der PBDB basierenden Datensatz sind die ersten drei Argentinosaurus mit 75, Patagotitan mit 70 und Bustingorrytitan mit 67,3 Tonnen, doch die veröffentlichte Schätzung für Bustingorrytitan hat für sich allein einen Standardfehler von ±17,2 Tonnen.",
+    "D2-C6": "Sechs der neun schwersten Gattungen in unserem auf der PBDB basierenden Datensatz sind jeweils nur von einem einzigen Fundort bekannt; zusammen kommen die neun auf 38 Fundeinträge, gegenüber 63 allein für Tyrannosaurus.",
+    "D2-C7": "Patagotitan ist für einen Riesen ungewöhnlich gut dokumentiert: Mindestens sechs Individuen wurden im selben Steinbruch auf der Farm La Flecha in Chubut, Argentinien, gefunden.",
+    "D2-C8": "Argentinosaurus ist durch etwa 13 Knochen bekannt, darunter ein 1,55 m langes Wadenbein: rund 5,1 % eines Titanosaurier-Skeletts. Schädel, Hals, Schwanz oder Füße wurden nie gefunden.",
+    "D2-C9": "Dreadnoughtus ist der am vollständigsten bekannte riesige Titanosaurier: Seine zwei Exemplare bewahren 116 Knochen, etwa 45,3 % eines Titanosaurier-Skeletts.",
+    "D2-C10": "1878 beschrieb Edward Drinker Cope einen einzelnen, gigantischen Teilwirbel aus Garden Park, Colorado. Das Fundstück ging später verloren; erhalten sind nur Copes Veröffentlichung und seine Zeichnung.",
+    "D2-C11": "Die Größenschätzungen für Maraapunisaurus schwanken stark: Carpenter schlug 2006 etwa 58 m vor, 2018 dann etwa 30–32 m, nachdem er ihn als Rebbachisauriden neu eingeordnet hatte.",
+    "D2-C12": "Die veröffentlichten Massen für Argentinosaurus reichen von etwa 60 bis 96,4 Tonnen. Die höchste Punktschätzung, 96,4 t, beruht auf einem isolierten Oberschenkelknochen, der ihm nur vorläufig zugeordnet wird.",
+    "D2-C13": "Die Masse von Patagotitan hängt von der Methode ab: 69 ± 17 Tonnen aus der Skalierung der Gliedmaßenknochen, 45 bis 77 Tonnen aus volumetrischen 3D-Modellen und etwa 57 Tonnen in einer Revision von 2020.",
+    "D2-C14": "Verschiedene Methoden liefern für dasselbe Skelett sehr unterschiedliche Massen: Dreadnoughtus wurde aus den Gliedmaßenknochen auf 59,3 Tonnen geschätzt, mit volumetrischen Modellen dann auf 22 bis 38 Tonnen."
+   },
+   "verdict": "Wir wissen, dass eine Handvoll patagonischer Titanosaurier, angeführt von Argentinosaurus und Patagotitan, zu den schwersten Landtieren aller Zeiten gehörte und dass Patagotitan und Dreadnoughtus die am besten dokumentierten unter ihnen sind. Welcher der schwerste war, können wir nicht sagen: Die Abstände zwischen ihnen sind kleiner als die Fehlerbalken und Methodenunterschiede einzelner Schätzungen, und der Rekordhalter ist nur durch etwa 5,1 % eines Skeletts bekannt. Maraapunisaurus hätte es einst vielleicht mit ihnen allen aufnehmen können, doch sein einziger Knochen ist verloren, und die Schätzungen seiner Größe sind von etwa 58 m auf etwa 30–32 m geschrumpft.",
+   "errata": [
+    "Im Video hieß es, Supersaurus sei etwa 39 m lang gewesen. Die Daten zeigen, dass die wichtigste begutachtete Schätzung bei 33–34 m und 35–40 Tonnen liegt (Lovelace et al. 2007); die 39 m stammen aus späteren Neubewertungen, die nicht in einer Fachzeitschrift erschienen sind.",
+    "Im Video wurden 96,4 Tonnen als höchster je für Argentinosaurus angegebener Wert bezeichnet. Die Daten zeigen, dass es die höchste Punktschätzung unter unseren Quellen ist, nicht die höchste je vorgeschlagene: Benson et al. 2014 nennen 90 Tonnen mit einem 95-%-Intervall bis 124 Tonnen.",
+    "Im Video wurden 50,1 bis 84,5 Tonnen für Bustingorrytitan als Spanne veröffentlichter Schätzungen dargestellt. Die Daten zeigen, dass es sich um eine einzige Schätzung von 67,3 Tonnen mit ihrem eigenen Vorhersagefehler von ±25,6 % handelt, berechnet an einem rekonstruierten Oberschenkelknochen.",
+    "Im Video hieß es, Tyrannosaurus rex habe etwa 9 Tonnen gewogen. Die Daten zeigen typische Schätzungen von 6–8 Tonnen für Erwachsene, wobei das größte Exemplar, Sue, vielleicht rund 9,5 Tonnen erreichte (Hutchinson et al. 2011).",
+    "Im Video wurde Argentinosaurus eine Länge von etwa 36 m zugeschrieben. Die Daten zeigen, dass weder Hals noch Schwanz gefunden wurden und die veröffentlichten Längenschätzungen von etwa 30 bis etwa 40 m reichen.",
+    "Im Video hieß es, Patagotitan sei durch mehr als hundert Knochen bekannt. Die Daten zeigen, dass Carballido et al. 2017 mindestens sechs Individuen beschreiben, wir diese Knochenzahl in ihrem Haupttext aber nicht bestätigen konnten.",
+    "Im Video wurde für Patagotitan eine Masse von 42 bis 77,6 Tonnen angegeben. Die Daten zeigen, dass der Haupttext von Carballido et al. 2017 77 Tonnen als höchsten volumetrischen Wert nennt und die 42 Tonnen aus einer Revision von 2020 stammen, die wir nur als Abstract lesen konnten.",
+    "Im Video wurden ein erhaltener Dornfortsatz von etwa 1,5 m bei Maraapunisaurus und eine Schätzung von 122 Tonnen aus dem Jahr 2006 als Tatsachen dargestellt. Die Daten zeigen, dass 1,5 m Copes angegebenes Maß ist, das manche Forscher für einen wahrscheinlichen Druckfehler für 1,05 m halten, und dass wir die 122 Tonnen in der Primärquelle nicht überprüfen konnten."
+   ]
+  },
+  "es": {
+   "title": "¿Y si el dinosaurio más grande de la historia… estuviera desaparecido?",
+   "lede": "Argentinosaurus encabeza la mayoría de las clasificaciones de los dinosaurios más pesados, pero solo se conoce por 13 huesos, alrededor del 5,1% de un esqueleto de titanosaurio. Sus estimaciones de masa publicadas van de unas 60 a 96 toneladas, un margen mayor que las diferencias con los gigantes a los que supuestamente supera.",
+   "question": "¿Cuál fue el dinosaurio más grande de la historia, y cuántas pruebas respaldan realmente el récord?",
+   "claims": {
+    "D2-C1": "En nuestro conjunto de datos basado en la PBDB, elaborado para este episodio, 1.132 especies tienen una estimación de masa publicada; el género mediano pesa alrededor de una tonelada y solo siete géneros superan las 50 toneladas.",
+    "D2-C2": "Un Tyrannosaurus rex adulto suele estimarse en unas 6 a 8 toneladas; el ejemplar más grande conocido, Sue, quizá en torno a 9,5 toneladas.",
+    "D2-C3": "«El más grande» es ambiguo: Supersaurus era largo pero comparativamente ligero, unos 33–34 m y 35–40 toneladas en su principal estudio revisado por pares, mientras que Argentinosaurus era mucho más pesado.",
+    "D2-C4": "Los dos «campeones» nunca se encontraron: Supersaurus vivió en el Jurásico Superior, hace unos 150 millones de años, y Argentinosaurus a comienzos del Cretácico Superior, unos 50–55 millones de años después.",
+    "D2-C5": "En nuestro conjunto de datos basado en la PBDB, el podio es Argentinosaurus con 75, Patagotitan con 70 y Bustingorrytitan con 67,3 toneladas, pero la propia estimación publicada de Bustingorrytitan tiene un error estándar de ±17,2 toneladas.",
+    "D2-C6": "Seis de los nueve géneros más pesados de nuestro conjunto de datos basado en la PBDB se conocen cada uno de un solo yacimiento; juntos, los nueve suman 38 registros de hallazgos, frente a 63 solo de Tyrannosaurus.",
+    "D2-C7": "Patagotitan está inusualmente bien documentado para un gigante: se hallaron al menos seis individuos en la misma cantera, en la estancia La Flecha, Chubut, Argentina.",
+    "D2-C8": "Argentinosaurus se conoce por unos 13 huesos, entre ellos un peroné de 1,55 m: aproximadamente el 5,1% de un esqueleto de titanosaurio. Nunca se han encontrado cráneo, cuello, cola ni patas.",
+    "D2-C9": "Dreadnoughtus es el titanosaurio gigante conocido de forma más completa: sus dos ejemplares conservan 116 huesos, alrededor del 45,3% de un esqueleto de titanosaurio.",
+    "D2-C10": "En 1878, Edward Drinker Cope describió una única y gigantesca vértebra parcial de Garden Park, Colorado. El ejemplar se perdió después; solo quedan la publicación y el dibujo de Cope.",
+    "D2-C11": "Las estimaciones de tamaño de Maraapunisaurus oscilan muchísimo: Carpenter propuso unos 58 m en 2006 y luego unos 30–32 m en 2018, tras reclasificarlo como rebaquisáurido.",
+    "D2-C12": "Las masas publicadas para Argentinosaurus van de unas 60 a 96,4 toneladas. La estimación puntual más alta, 96,4 t, se basa en un fémur aislado que se le atribuye solo de forma provisional.",
+    "D2-C13": "La masa de Patagotitan depende del método: 69 ± 17 toneladas a partir del escalado de los huesos de las extremidades, de 45 a 77 toneladas con modelos volumétricos 3D y unas 57 toneladas en una revisión de 2020.",
+    "D2-C14": "Métodos distintos dan masas muy distintas para el mismo esqueleto: Dreadnoughtus se estimó en 59,3 toneladas a partir de los huesos de las extremidades y luego en 22 a 38 toneladas con modelos volumétricos."
+   },
+   "verdict": "Sabemos que un puñado de titanosaurios patagónicos, encabezados por Argentinosaurus y Patagotitan, estuvieron entre los animales terrestres más pesados de la historia, y que Patagotitan y Dreadnoughtus son los mejor documentados. Lo que no podemos decir es cuál fue el más pesado: las diferencias entre ellos son menores que las barras de error y las diferencias de método de cada estimación, y el poseedor del récord se conoce por cerca del 5,1% de un esqueleto. Maraapunisaurus quizá pudo rivalizar con todos ellos, pero su único hueso se perdió y las estimaciones de su tamaño han bajado de unos 58 m a unos 30–32 m.",
+   "errata": [
+    "El video dijo que Supersaurus medía unos 39 m. Los datos muestran que la principal estimación revisada por pares es de 33–34 m y 35–40 toneladas (Lovelace et al. 2007); los 39 m proceden de revaluaciones posteriores no publicadas en una revista.",
+    "El video llamó a las 96,4 toneladas el valor más alto jamás dado a Argentinosaurus. Los datos muestran que es la estimación puntual más alta entre las fuentes que usamos, no la más alta jamás propuesta: Benson et al. 2014 dan 90 toneladas con un intervalo del 95% que llega a 124 toneladas.",
+    "El video presentó de 50,1 a 84,5 toneladas para Bustingorrytitan como un rango de estimaciones publicadas. Los datos muestran que es una sola estimación, de 67,3 toneladas, con su propio error de predicción de ±25,6%, calculada a partir de un fémur reconstruido.",
+    "El video dijo que Tyrannosaurus rex pesaba unas 9 toneladas. Los datos muestran estimaciones típicas de 6–8 toneladas para un adulto, con el ejemplar más grande, Sue, quizá en torno a 9,5 toneladas (Hutchinson et al. 2011).",
+    "El video atribuyó a Argentinosaurus una longitud de unos 36 m. Los datos muestran que no se han encontrado ni el cuello ni la cola, y que las estimaciones de longitud publicadas van de unos 30 a unos 40 m.",
+    "El video dijo que Patagotitan se conoce por más de cien huesos. Los datos muestran que Carballido et al. 2017 describen al menos seis individuos, pero no pudimos confirmar esa cifra de huesos en su texto principal.",
+    "El video dio para Patagotitan una masa de 42 a 77,6 toneladas. Los datos muestran que el texto principal de Carballido et al. 2017 da 77 toneladas como valor volumétrico más alto, y que las 42 toneladas proceden de una revisión de 2020 que solo pudimos leer como resumen.",
+    "El video presentó como hechos una espina conservada de unos 1,5 m en Maraapunisaurus y una estimación de 122 toneladas de 2006. Los datos muestran que 1,5 m es la medida que dio Cope, que algunos investigadores consideran una probable errata por 1,05 m, y que no pudimos verificar las 122 toneladas en la fuente primaria."
+   ]
+  },
+  "fr": {
+   "title": "Et si le plus grand dinosaure de tous les temps… avait disparu ?",
+   "lede": "Argentinosaurus domine la plupart des classements des dinosaures les plus lourds, mais il n'est connu que par 13 os, environ 5,1 % d'un squelette de titanosaure. Ses estimations de masse publiées vont d'environ 60 à 96 tonnes, un écart plus large que ceux qui le séparent des géants qu'il est censé battre.",
+   "question": "Quel fut le plus grand dinosaure de tous les temps, et combien de preuves soutiennent réellement ce record ?",
+   "claims": {
+    "D2-C1": "Dans notre jeu de données fondé sur la PBDB, construit pour cet épisode, 1 132 espèces ont une estimation de masse publiée ; le genre médian pèse environ une tonne, et seuls sept genres dépassent 50 tonnes.",
+    "D2-C2": "Un Tyrannosaurus rex adulte est généralement estimé à environ 6 à 8 tonnes ; le plus grand spécimen connu, Sue, peut-être à environ 9,5 tonnes.",
+    "D2-C3": "« Le plus grand » est ambigu : Supersaurus était long mais relativement léger, environ 33–34 m et 35–40 tonnes dans sa principale étude évaluée par les pairs, alors qu'Argentinosaurus était bien plus lourd.",
+    "D2-C4": "Les deux « champions » ne se sont jamais croisés : Supersaurus vivait au Jurassique supérieur, il y a environ 150 millions d'années, Argentinosaurus au début du Crétacé supérieur, quelque 50–55 millions d'années plus tard.",
+    "D2-C5": "Dans notre jeu de données fondé sur la PBDB, le podium est Argentinosaurus avec 75, Patagotitan avec 70 et Bustingorrytitan avec 67,3 tonnes, mais l'estimation publiée de Bustingorrytitan comporte à elle seule une erreur standard de ±17,2 tonnes.",
+    "D2-C6": "Six des neuf genres les plus lourds de notre jeu de données fondé sur la PBDB ne sont connus chacun que d'un seul site ; ensemble, les neuf totalisent 38 occurrences, contre 63 pour le seul Tyrannosaurus.",
+    "D2-C7": "Patagotitan est exceptionnellement bien documenté pour un géant : au moins six individus ont été trouvés dans la même carrière, dans le ranch La Flecha, à Chubut, en Argentine.",
+    "D2-C8": "Argentinosaurus est connu par environ 13 os, dont une fibula de 1,55 m : environ 5,1 % d'un squelette de titanosaure. Aucun crâne, cou, queue ni pied n'a été retrouvé.",
+    "D2-C9": "Dreadnoughtus est le titanosaure géant connu de la façon la plus complète : ses deux spécimens conservent 116 os, environ 45,3 % d'un squelette de titanosaure.",
+    "D2-C10": "En 1878, Edward Drinker Cope décrivit une vertèbre partielle unique et gigantesque provenant de Garden Park, au Colorado. Le spécimen fut ensuite perdu ; il ne reste que la publication et le dessin de Cope.",
+    "D2-C11": "Les estimations de taille de Maraapunisaurus varient énormément : Carpenter proposa environ 58 m en 2006, puis environ 30–32 m en 2018, après l'avoir reclassé parmi les rebbachisauridés.",
+    "D2-C12": "Les masses publiées pour Argentinosaurus vont d'environ 60 à 96,4 tonnes. L'estimation ponctuelle la plus élevée, 96,4 t, repose sur un fémur isolé qui ne lui est attribué qu'à titre provisoire.",
+    "D2-C13": "La masse de Patagotitan dépend de la méthode : 69 ± 17 tonnes d'après la mise à l'échelle des os des membres, de 45 à 77 tonnes d'après des modèles volumétriques 3D, et environ 57 tonnes dans une révision de 2020.",
+    "D2-C14": "Des méthodes différentes donnent des masses très différentes pour le même squelette : Dreadnoughtus a été estimé à 59,3 tonnes d'après les os des membres, puis entre 22 et 38 tonnes avec des modèles volumétriques."
+   },
+   "verdict": "Nous savons qu'une poignée de titanosaures de Patagonie, menés par Argentinosaurus et Patagotitan, comptaient parmi les animaux terrestres les plus lourds de tous les temps, et que Patagotitan et Dreadnoughtus sont les mieux documentés d'entre eux. Ce que nous ne pouvons pas dire, c'est lequel était le plus lourd : les écarts entre eux sont plus petits que les barres d'erreur et les différences de méthode des estimations individuelles, et le détenteur du record n'est connu que par environ 5,1 % d'un squelette. Maraapunisaurus aurait peut-être pu tous les égaler, mais son unique os est perdu, et les estimations de sa taille sont passées d'environ 58 m à environ 30–32 m.",
+   "errata": [
+    "La vidéo disait que Supersaurus mesurait environ 39 m. Les données montrent que la principale estimation évaluée par les pairs est de 33–34 m et 35–40 tonnes (Lovelace et al. 2007) ; les 39 m proviennent de réévaluations ultérieures non publiées dans une revue.",
+    "La vidéo présentait 96,4 tonnes comme la valeur la plus élevée jamais attribuée à Argentinosaurus. Les données montrent que c'est l'estimation ponctuelle la plus élevée parmi nos sources, pas la plus élevée jamais proposée : Benson et al. 2014 donnent 90 tonnes avec un intervalle à 95 % allant jusqu'à 124 tonnes.",
+    "La vidéo présentait 50,1 à 84,5 tonnes pour Bustingorrytitan comme une fourchette d'estimations publiées. Les données montrent qu'il s'agit d'une seule estimation, 67,3 tonnes, avec sa propre erreur de prédiction de ±25,6 %, calculée sur un fémur reconstitué.",
+    "La vidéo disait que Tyrannosaurus rex pesait environ 9 tonnes. Les données montrent des estimations typiques de 6–8 tonnes pour un adulte, le plus grand spécimen, Sue, atteignant peut-être environ 9,5 tonnes (Hutchinson et al. 2011).",
+    "La vidéo attribuait à Argentinosaurus une longueur d'environ 36 m. Les données montrent que ni le cou ni la queue n'ont été retrouvés, et que les estimations de longueur publiées vont d'environ 30 à environ 40 m.",
+    "La vidéo disait que Patagotitan est connu par plus d'une centaine d'os. Les données montrent que Carballido et al. 2017 décrivent au moins six individus, mais nous n'avons pas pu confirmer ce nombre d'os dans leur texte principal.",
+    "La vidéo donnait pour Patagotitan une masse de 42 à 77,6 tonnes. Les données montrent que le texte principal de Carballido et al. 2017 donne 77 tonnes comme valeur volumétrique la plus élevée, et que les 42 tonnes proviennent d'une révision de 2020 que nous n'avons pu lire que sous forme de résumé.",
+    "La vidéo présentait comme des faits une épine conservée d'environ 1,5 m chez Maraapunisaurus et une estimation de 122 tonnes datant de 2006. Les données montrent que 1,5 m est la mesure rapportée par Cope, que certains chercheurs considèrent comme une probable coquille pour 1,05 m, et que nous n'avons pas pu vérifier les 122 tonnes dans la source primaire."
+   ]
+  }
+ }
+}
