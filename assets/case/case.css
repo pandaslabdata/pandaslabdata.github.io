@@ -794,3 +794,10 @@ footer a{color:var(--gold);text-decoration:none}
 @media (max-width:820px){.page-hero .title-sheet{margin-left:0;max-width:100%}.page-hero .hand-lede{margin:12px 6px 16px}.page-hero .crumb{margin-left:4px}}
 
 .snote .btn.ghost{color:#2b1a10;border-color:rgba(43,26,16,.55);background:rgba(255,255,255,.25)}
+
+/* the lamp flickers (4n): light layers over the lamp of the background, same frame as .stage::before */
+.lamp-fx{--bx:6.6%;--by:11.3%;position:absolute;left:0;right:0;top:0;height:calc(100vw * .6667);z-index:-1;pointer-events:none;-webkit-mask:linear-gradient(#000 72%,transparent);mask:linear-gradient(#000 72%,transparent)}
+.lamp-fx i{position:absolute;inset:0;display:block}
+.lf-glow{mix-blend-mode:screen;opacity:.28;background:radial-gradient(circle at var(--bx) var(--by),rgba(255,226,160,.85) 0,rgba(255,186,96,.35) 3.5%,transparent 16%),radial-gradient(ellipse 26% 42% at calc(var(--bx) + 9%) calc(var(--by) + 22%),rgba(255,184,100,.32),transparent 72%)}
+.lf-dark{mix-blend-mode:multiply;opacity:0;background:radial-gradient(circle at var(--bx) var(--by),rgba(20,14,10,.95) 0,rgba(20,14,10,.75) 5%,transparent 20%),radial-gradient(ellipse 30% 48% at calc(var(--bx) + 10%) calc(var(--by) + 24%),rgba(14,12,20,.75),transparent 75%)}
+@media (max-width:820px){.lamp-fx{--bx:11.6%;--by:8.1%;height:calc(100vw * 1.5)}}

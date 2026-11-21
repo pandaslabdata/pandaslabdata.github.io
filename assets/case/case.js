@@ -409,6 +409,24 @@
     (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(go);
   })();
 
+  // 4n) the lamp flickers: on every page with the lamp background, the bulb hums with a faint shimmer and,
+  //     every few seconds, stutters (the light cone dims and comes back in quick, uneven steps).
+  (function(){
+    var stages=[].slice.call(document.querySelectorAll('.stage')); if(!stages.length) return;
+    var L=stages.map(function(s){ var d=document.createElement('div'); d.className='lamp-fx'; d.setAttribute('aria-hidden','true');
+      d.innerHTML='<i class="lf-dark"></i><i class="lf-glow"></i>'; s.insertBefore(d,s.firstChild); return d; });
+    if(calm0) return;
+    var I=1, burst=[], next=performance.now()+1500+Math.random()*2500, last=0;
+    var set=function(v){ var g=Math.max(0,Math.min(1,.28+(v-1)*4)), k=Math.max(0,Math.min(.92,(1-v)*1.15));
+      L.forEach(function(d){ d.firstChild.style.opacity=k.toFixed(3); d.lastChild.style.opacity=g.toFixed(3); }); };
+    var tick=function(now){
+      if(!burst.length&&now>next){ var n=4+Math.random()*9|0; for(var i=0;i<n;i++) burst.push({v:.15+Math.random()*.8,d:35+Math.random()*90}); burst.push({v:1.08,d:120}); next=now+2800+Math.random()*6500; last=now; }
+      if(burst.length){ if(now-last>burst[0].d){ last=now; burst.shift(); } I=burst.length?burst[0].v:1; }
+      else I=1+Math.sin(now/90)*.012+Math.sin(now/37)*.01+(Math.random()-.5)*.02;
+      set(I); requestAnimationFrame(tick); };
+    requestAnimationFrame(tick);
+  })();
+
   // 4g) dust in the lamp light, on every page
   (function(){ var d=document.querySelector('.web-bg .dust'); if(!d||calm0) return;
     for(var i=0;i<22;i++){ var m=document.createElement('i'); m.style.left=(Math.random()*42)+'%'; m.style.top=(18+Math.random()*72)+'%';
