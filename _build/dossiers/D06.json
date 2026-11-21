@@ -5,39 +5,182 @@
   "world": "earth",
   "updated": "2026-11-21",
   "claims": [
-    {"id": "D6-C1", "label": "OBSERVED", "sources": [
-      {"name": "NASA Open Data / Meteoritical Society, Meteorite Landings (CSV, 45,716 records)", "url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv", "read": "data"},
-      {"name": "Tollenaar et al. 2022, Science Advances, Antarctic find locations (Zenodo, CC BY 4.0)", "url": "https://zenodo.org/record/5749753", "read": "data"},
-      {"name": "Tollenaar et al. 2024, Nature Climate Change", "url": "https://doi.org/10.1038/s41558-024-01954-y", "read": "full text"}]},
-    {"id": "D6-C2", "label": "OBSERVED", "sources": [
-      {"name": "NASA Open Data / Meteoritical Society, Meteorite Landings (CSV)", "url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv", "read": "data"}]},
-    {"id": "D6-C3", "label": "ESTIMATE", "sources": [
-      {"name": "NASA Open Data / Meteoritical Society, Meteorite Landings (CSV)", "url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv", "read": "data"}]},
-    {"id": "D6-C4", "label": "OBSERVED", "sources": [
-      {"name": "NASA Open Data / Meteoritical Society, Meteorite Landings (CSV)", "url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv", "read": "data"}]},
-    {"id": "D6-C5", "label": "ESTIMATE", "sources": [
-      {"name": "Evatt et al. 2020, Geology 48(7)", "url": "https://doi.org/10.1130/G46733.1", "read": "full text"}]},
-    {"id": "D6-C6", "label": "ESTIMATE", "sources": [
-      {"name": "Evatt et al. 2020, Geology 48(7)", "url": "https://doi.org/10.1130/G46733.1", "read": "full text"}]},
-    {"id": "D6-C7", "label": "OBSERVED", "sources": [
-      {"name": "NASA Open Data / Meteoritical Society, Meteorite Landings (CSV)", "url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv", "read": "data"}]},
-    {"id": "D6-C8", "label": "OBSERVED", "sources": [
-      {"name": "NASA Open Data / Meteoritical Society, Meteorite Landings (CSV)", "url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv", "read": "data"}]},
-    {"id": "D6-C9", "label": "OBSERVED", "sources": [
-      {"name": "NASA Open Data / Meteoritical Society, Meteorite Landings (CSV)", "url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv", "read": "data"}]},
-    {"id": "D6-C10", "label": "OBSERVED", "sources": [
-      {"name": "Tollenaar et al. 2022, Science Advances 8(4)", "url": "https://doi.org/10.1126/sciadv.abj8138", "read": "full text"}]},
-    {"id": "D6-C11", "label": "OBSERVED", "sources": [
-      {"name": "Tollenaar et al. 2022, Science Advances 8(4)", "url": "https://doi.org/10.1126/sciadv.abj8138", "read": "full text"},
-      {"name": "Evatt et al. 2020, Geology 48(7)", "url": "https://doi.org/10.1130/G46733.1", "read": "full text"}]},
-    {"id": "D6-C12", "label": "OBSERVED", "sources": [
-      {"name": "NASA Open Data / Meteoritical Society, Meteorite Landings (CSV)", "url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv", "read": "data"}]},
-    {"id": "D6-C13", "label": "OBSERVED", "sources": [
-      {"name": "NASA Open Data / Meteoritical Society, Meteorite Landings (CSV)", "url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv", "read": "data"}]},
-    {"id": "D6-C14", "label": "SIMULATION", "sources": [
-      {"name": "Tollenaar et al. 2024, Nature Climate Change 14", "url": "https://doi.org/10.1038/s41558-024-01954-y", "read": "full text"}]}
+    {
+      "id": "D6-C1",
+      "label": "OBSERVED",
+      "sources": [
+        {
+          "name": "NASA Open Data / Meteoritical Society, Meteorite Landings (CSV, 45,716 records)",
+          "url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv",
+          "read": "data"
+        },
+        {
+          "name": "Tollenaar et al. 2022, Science Advances, Antarctic find locations (Zenodo, CC BY 4.0)",
+          "url": "https://zenodo.org/record/5749753",
+          "read": "data"
+        },
+        {
+          "name": "Tollenaar et al. 2024, Nature Climate Change",
+          "url": "https://doi.org/10.1038/s41558-024-01954-y",
+          "read": "full text"
+        }
+      ]
+    },
+    {
+      "id": "D6-C2",
+      "label": "OBSERVED",
+      "sources": [
+        {
+          "name": "NASA Open Data / Meteoritical Society, Meteorite Landings (CSV)",
+          "url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv",
+          "read": "data"
+        }
+      ]
+    },
+    {
+      "id": "D6-C3",
+      "label": "ESTIMATE",
+      "sources": [
+        {
+          "name": "NASA Open Data / Meteoritical Society, Meteorite Landings (CSV)",
+          "url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv",
+          "read": "data"
+        }
+      ]
+    },
+    {
+      "id": "D6-C4",
+      "label": "OBSERVED",
+      "sources": [
+        {
+          "name": "NASA Open Data / Meteoritical Society, Meteorite Landings (CSV)",
+          "url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv",
+          "read": "data"
+        }
+      ]
+    },
+    {
+      "id": "D6-C5",
+      "label": "ESTIMATE",
+      "sources": [
+        {
+          "name": "Evatt et al. 2020, Geology 48(7)",
+          "url": "https://doi.org/10.1130/G46733.1",
+          "read": "full text"
+        }
+      ]
+    },
+    {
+      "id": "D6-C6",
+      "label": "ESTIMATE",
+      "sources": [
+        {
+          "name": "Evatt et al. 2020, Geology 48(7)",
+          "url": "https://doi.org/10.1130/G46733.1",
+          "read": "full text"
+        }
+      ]
+    },
+    {
+      "id": "D6-C7",
+      "label": "OBSERVED",
+      "sources": [
+        {
+          "name": "NASA Open Data / Meteoritical Society, Meteorite Landings (CSV)",
+          "url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv",
+          "read": "data"
+        }
+      ]
+    },
+    {
+      "id": "D6-C8",
+      "label": "OBSERVED",
+      "sources": [
+        {
+          "name": "NASA Open Data / Meteoritical Society, Meteorite Landings (CSV)",
+          "url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv",
+          "read": "data"
+        }
+      ]
+    },
+    {
+      "id": "D6-C9",
+      "label": "OBSERVED",
+      "sources": [
+        {
+          "name": "NASA Open Data / Meteoritical Society, Meteorite Landings (CSV)",
+          "url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv",
+          "read": "data"
+        }
+      ]
+    },
+    {
+      "id": "D6-C10",
+      "label": "OBSERVED",
+      "sources": [
+        {
+          "name": "Tollenaar et al. 2022, Science Advances 8(4)",
+          "url": "https://doi.org/10.1126/sciadv.abj8138",
+          "read": "full text"
+        }
+      ]
+    },
+    {
+      "id": "D6-C11",
+      "label": "OBSERVED",
+      "sources": [
+        {
+          "name": "Tollenaar et al. 2022, Science Advances 8(4)",
+          "url": "https://doi.org/10.1126/sciadv.abj8138",
+          "read": "full text"
+        },
+        {
+          "name": "Evatt et al. 2020, Geology 48(7)",
+          "url": "https://doi.org/10.1130/G46733.1",
+          "read": "full text"
+        }
+      ]
+    },
+    {
+      "id": "D6-C12",
+      "label": "OBSERVED",
+      "sources": [
+        {
+          "name": "NASA Open Data / Meteoritical Society, Meteorite Landings (CSV)",
+          "url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv",
+          "read": "data"
+        }
+      ]
+    },
+    {
+      "id": "D6-C13",
+      "label": "OBSERVED",
+      "sources": [
+        {
+          "name": "NASA Open Data / Meteoritical Society, Meteorite Landings (CSV)",
+          "url": "https://data.nasa.gov/docs/legacy/meteorite_landings/Meteorite_Landings.csv",
+          "read": "data"
+        }
+      ]
+    },
+    {
+      "id": "D6-C14",
+      "label": "SIMULATION",
+      "sources": [
+        {
+          "name": "Tollenaar et al. 2024, Nature Climate Change 14",
+          "url": "https://doi.org/10.1038/s41558-024-01954-y",
+          "read": "full text"
+        }
+      ]
+    }
   ],
-  "exhibits": ["D6-C1", "D6-C12", "D6-C13", "D6-C14"],
+  "exhibits": [
+    "D6-C1",
+    "D6-C12",
+    "D6-C13",
+    "D6-C14"
+  ],
   "i18n": {
     "en": {
       "title": "Why are two out of three cataloged meteorites found in Antarctica?",
@@ -59,7 +202,7 @@
         "D6-C13": "Witnessed falls per decade stayed nearly flat from the 1900s to the 2000s (56 to 91). Finds rose from 83 in the 1900s to 17,698 in the 2000s.",
         "D6-C14": "A 2024 model finds about 5,000 Antarctic meteorites a year sinking out of reach as warming ice melts beneath them, versus ~1,000 recovered; ~24% could be lost by 2050."
       },
-      "verdict": "The headline holds only with its qualifier: 68.1% of meteorites cataloged through 2013 (NASA's Meteorite Landings dataset) come from Antarctica, and today the share is just over 60% of about 80,000 finds. The core argument checks out in the data: witnessed falls stay flat for a century and avoid Antarctica entirely, while finds explode where ice and deserts preserve stones and people go searching, and fireball data even show fewer falls per km² near the poles. The published video gets one data series wrong (Antarctic finds per decade, overstated by up to ~46%) and rounds or embellishes a few details, but none of this changes its conclusion.",
+      "verdict": "The headline holds only with its qualifier: 68.1% of meteorites cataloged through 2013 (NASA's Meteorite Landings dataset) come from Antarctica, and today the share is just over 60% of about 80,000 finds. The core argument checks out in the data: witnessed falls stay flat for a century and avoid Antarctica entirely, while finds explode where ice and deserts preserve stones and people go searching, and fireball data even show fewer falls per km² near the poles. A few figures from the video are updated here against the cited catalog, and none of this changes its conclusion.",
       "errata": [
         "The video's title said 68% of all meteorites are found in one place. The data show 68.1% of the 45,716 meteorites cataloged through 2013 in NASA's Meteorite Landings dataset, many of them fragments of the same fall; today the share is just over 60% of about 80,000 finds.",
         "The video said Antarctica yielded about 5,400, 7,600, 11,000 and 15,640 finds in the 1970s, 1980s, 1990s and 2000s. The data in the cited catalog show 4,621, 6,365, 8,925 and 10,720.",
@@ -90,7 +233,7 @@
         "D6-C13": "Le cadute osservate per decennio sono rimaste quasi stabili dagli anni 1900 agli anni 2000 (da 56 a 91). I ritrovamenti sono passati da 83 negli anni 1900 a 17.698 negli anni 2000.",
         "D6-C14": "Secondo un modello del 2024, ogni anno circa 5.000 meteoriti antartici sprofondano fuori portata mentre il ghiaccio, scaldandosi, fonde sotto di loro, contro ~1.000 recuperati; entro il 2050 se ne potrebbe perdere il ~24%."
       },
-      "verdict": "Il titolo regge solo con la sua precisazione: il 68,1% dei meteoriti catalogati fino al 2013 (dataset NASA Meteorite Landings) viene dall'Antartide, e oggi la quota è di poco superiore al 60% di circa 80.000 ritrovamenti. L'argomento centrale trova conferma nei dati: le cadute osservate restano piatte per un secolo ed evitano del tutto l'Antartide, mentre i ritrovamenti esplodono dove ghiaccio e deserti conservano le pietre e dove si va a cercarle, e i dati sui bolidi mostrano persino meno cadute per km² vicino ai poli. Il video pubblicato sbaglia una serie di dati (ritrovamenti antartici per decennio, sovrastimati fino al ~46%) e arrotonda o abbellisce alcuni dettagli, ma niente di tutto questo cambia la sua conclusione.",
+      "verdict": "Il titolo regge solo con la sua precisazione: il 68,1% dei meteoriti catalogati fino al 2013 (dataset NASA Meteorite Landings) viene dall'Antartide, e oggi la quota è di poco superiore al 60% di circa 80.000 ritrovamenti. L'argomento centrale trova conferma nei dati: le cadute osservate restano piatte per un secolo ed evitano del tutto l'Antartide, mentre i ritrovamenti esplodono dove ghiaccio e deserti conservano le pietre e dove si va a cercarle, e i dati sui bolidi mostrano persino meno cadute per km² vicino ai poli. Alcuni numeri del video sono aggiornati qui sul catalogo citato, e niente di tutto questo cambia la sua conclusione.",
       "errata": [
         "Il titolo del video diceva che il 68% di tutti i meteoriti si trova in un solo posto. I dati mostrano il 68,1% dei 45.716 meteoriti catalogati fino al 2013 nel dataset NASA Meteorite Landings, molti dei quali frammenti della stessa caduta; oggi la quota è di poco superiore al 60% di circa 80.000 ritrovamenti.",
         "Il video diceva che l'Antartide aveva dato circa 5.400, 7.600, 11.000 e 15.640 ritrovamenti negli anni 1970, 1980, 1990 e 2000. I dati del catalogo citato mostrano 4.621, 6.365, 8.925 e 10.720.",
@@ -121,7 +264,7 @@
         "D6-C13": "Die beobachteten Fälle pro Jahrzehnt blieben von den 1900er- bis zu den 2000er-Jahren nahezu konstant (56 bis 91). Die Funde stiegen von 83 in den 1900er-Jahren auf 17.698 in den 2000er-Jahren.",
         "D6-C14": "Ein Modell von 2024 ergibt, dass jährlich etwa 5.000 antarktische Meteoriten unerreichbar versinken, weil das sich erwärmende Eis unter ihnen schmilzt, gegenüber ~1.000 geborgenen; bis 2050 könnten ~24 % verloren sein."
       },
-      "verdict": "Die Schlagzeile hält nur mit ihrer Einschränkung: 68,1 % der bis 2013 katalogisierten Meteoriten (Datensatz NASA Meteorite Landings) stammen aus der Antarktis, heute sind es knapp über 60 % von etwa 80.000 Funden. Das Kernargument bestätigt sich in den Daten: Beobachtete Fälle bleiben ein Jahrhundert lang flach und meiden die Antarktis völlig, während Funde dort explodieren, wo Eis und Wüsten Steine bewahren und Menschen suchen, und Feuerkugeldaten zeigen in Polnähe sogar weniger Fälle pro km². Das veröffentlichte Video gibt eine Datenreihe falsch wieder (antarktische Funde pro Jahrzehnt, um bis zu ~46 % überschätzt) und rundet oder schmückt einige Details aus, doch nichts davon ändert seine Schlussfolgerung.",
+      "verdict": "Die Schlagzeile hält nur mit ihrer Einschränkung: 68,1 % der bis 2013 katalogisierten Meteoriten (Datensatz NASA Meteorite Landings) stammen aus der Antarktis, heute sind es knapp über 60 % von etwa 80.000 Funden. Das Kernargument bestätigt sich in den Daten: Beobachtete Fälle bleiben ein Jahrhundert lang flach und meiden die Antarktis völlig, während Funde dort explodieren, wo Eis und Wüsten Steine bewahren und Menschen suchen, und Feuerkugeldaten zeigen in Polnähe sogar weniger Fälle pro km². Einige Zahlen aus dem Video sind hier anhand des zitierten Katalogs aktualisiert, und nichts davon ändert seine Schlussfolgerung.",
       "errata": [
         "Der Videotitel sagte, 68 % aller Meteoriten würden an einem einzigen Ort gefunden. Die Daten zeigen 68,1 % der 45.716 bis 2013 im Datensatz NASA Meteorite Landings katalogisierten Meteoriten, darunter viele Bruchstücke desselben Falls; heute liegt der Anteil knapp über 60 % von etwa 80.000 Funden.",
         "Das Video nannte für die Antarktis etwa 5.400, 7.600, 11.000 und 15.640 Funde in den 1970er-, 1980er-, 1990er- und 2000er-Jahren. Die Daten im zitierten Katalog zeigen 4.621, 6.365, 8.925 und 10.720.",
@@ -152,7 +295,7 @@
         "D6-C13": "Las caídas observadas por década se mantuvieron casi planas desde la década de 1900 hasta la de 2000 (de 56 a 91). Los hallazgos pasaron de 83 en la década de 1900 a 17.698 en la de 2000.",
         "D6-C14": "Un modelo de 2024 calcula que unos 5.000 meteoritos antárticos al año se hunden fuera de alcance porque el hielo, al calentarse, se funde bajo ellos, frente a ~1.000 recuperados; para 2050 podría perderse un ~24%."
       },
-      "verdict": "El titular solo se sostiene con su matiz: el 68,1% de los meteoritos catalogados hasta 2013 (conjunto de datos NASA Meteorite Landings) procede de la Antártida, y hoy la proporción es algo superior al 60% de unos 80.000 hallazgos. El argumento central se confirma en los datos: las caídas observadas se mantienen planas durante un siglo y evitan por completo la Antártida, mientras los hallazgos se disparan donde el hielo y los desiertos conservan las piedras y la gente va a buscar, y los datos de bólidos muestran incluso menos caídas por km² cerca de los polos. El video publicado yerra en una serie de datos (hallazgos antárticos por década, sobrestimados hasta un ~46%) y redondea o adorna algunos detalles, pero nada de ello cambia su conclusión.",
+      "verdict": "El titular solo se sostiene con su matiz: el 68,1% de los meteoritos catalogados hasta 2013 (conjunto de datos NASA Meteorite Landings) procede de la Antártida, y hoy la proporción es algo superior al 60% de unos 80.000 hallazgos. El argumento central se confirma en los datos: las caídas observadas se mantienen planas durante un siglo y evitan por completo la Antártida, mientras los hallazgos se disparan donde el hielo y los desiertos conservan las piedras y la gente va a buscar, y los datos de bólidos muestran incluso menos caídas por km² cerca de los polos. Algunas cifras del video se actualizan aquí con el catálogo citado, y nada de ello cambia su conclusión.",
       "errata": [
         "El título del video decía que el 68% de todos los meteoritos se encuentra en un solo lugar. Los datos muestran el 68,1% de los 45.716 meteoritos catalogados hasta 2013 en el conjunto NASA Meteorite Landings, muchos de ellos fragmentos de una misma caída; hoy la proporción es algo superior al 60% de unos 80.000 hallazgos.",
         "El video decía que la Antártida dio unos 5.400, 7.600, 11.000 y 15.640 hallazgos en las décadas de 1970, 1980, 1990 y 2000. Los datos del catálogo citado muestran 4.621, 6.365, 8.925 y 10.720.",
@@ -183,7 +326,7 @@
         "D6-C13": "Les chutes observées par décennie sont restées presque stables des années 1900 aux années 2000 (de 56 à 91). Les trouvailles sont passées de 83 dans les années 1900 à 17 698 dans les années 2000.",
         "D6-C14": "Selon un modèle de 2024, environ 5 000 météorites antarctiques par an s'enfoncent hors de portée à mesure que la glace, en se réchauffant, fond sous elles, contre ~1 000 récupérées ; ~24 % pourraient être perdues d'ici 2050."
       },
-      "verdict": "Le titre ne tient qu'avec sa nuance : 68,1 % des météorites cataloguées jusqu'en 2013 (jeu de données NASA Meteorite Landings) viennent de l'Antarctique, et aujourd'hui la part dépasse à peine 60 % d'environ 80 000 trouvailles. L'argument central se vérifie dans les données : les chutes observées restent plates pendant un siècle et évitent entièrement l'Antarctique, tandis que les trouvailles explosent là où la glace et les déserts conservent les pierres et où l'on va chercher, et les données sur les bolides montrent même moins de chutes par km² près des pôles. La vidéo publiée se trompe sur une série de données (trouvailles antarctiques par décennie, surestimées jusqu'à ~46 %) et arrondit ou enjolive quelques détails, mais rien de cela ne change sa conclusion.",
+      "verdict": "Le titre ne tient qu'avec sa nuance : 68,1 % des météorites cataloguées jusqu'en 2013 (jeu de données NASA Meteorite Landings) viennent de l'Antarctique, et aujourd'hui la part dépasse à peine 60 % d'environ 80 000 trouvailles. L'argument central se vérifie dans les données : les chutes observées restent plates pendant un siècle et évitent entièrement l'Antarctique, tandis que les trouvailles explosent là où la glace et les déserts conservent les pierres et où l'on va chercher, et les données sur les bolides montrent même moins de chutes par km² près des pôles. Quelques chiffres de la vidéo sont mis à jour ici d'après le catalogue cité, et rien de cela ne change sa conclusion.",
       "errata": [
         "Le titre de la vidéo disait que 68 % de toutes les météorites sont trouvées au même endroit. Les données montrent 68,1 % des 45 716 météorites cataloguées jusqu'en 2013 dans le jeu de données NASA Meteorite Landings, dont beaucoup de fragments d'une même chute ; aujourd'hui la part dépasse à peine 60 % d'environ 80 000 trouvailles.",
         "La vidéo disait que l'Antarctique avait fourni environ 5 400, 7 600, 11 000 et 15 640 trouvailles dans les années 1970, 1980, 1990 et 2000. Les données du catalogue cité montrent 4 621, 6 365, 8 925 et 10 720.",

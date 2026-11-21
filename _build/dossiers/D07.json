@@ -1,0 +1,176 @@
+{
+  "n": "07",
+  "ep": "EP 7",
+  "yt": "tztlzKZKFX0",
+  "world": "earth",
+  "updated": "2026-11-21",
+  "claims": [
+    {"id": "D7-C1", "label": "OBSERVED", "sources": [
+      {"name": "ISC-GEM Global Instrumental Earthquake Catalogue v12.1 (ISC/GEM, CC BY-SA 3.0)", "url": "https://www.isc.ac.uk/iscgem/download.php", "read": "data"},
+      {"name": "USGS ComCat, event us6000qw60 (Kamchatka 2025)", "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000qw60&format=geojson", "read": "data"}]},
+    {"id": "D7-C2", "label": "ESTIMATE", "sources": [
+      {"name": "ISC-GEM Global Instrumental Earthquake Catalogue v12.1", "url": "https://www.isc.ac.uk/iscgem/download.php", "read": "data"},
+      {"name": "USGS, Earthquake Magnitude, Energy Release, and Shaking Intensity", "url": "https://www.usgs.gov/programs/earthquake-hazards/earthquake-magnitude-energy-release-and-shaking-intensity", "read": "full text"}]},
+    {"id": "D7-C3", "label": "ESTIMATE", "sources": [
+      {"name": "ISC-GEM Global Instrumental Earthquake Catalogue v12.1", "url": "https://www.isc.ac.uk/iscgem/download.php", "read": "data"},
+      {"name": "ISC-GEM catalogue description (ISC)", "url": "https://www.isc.ac.uk/iscgem/", "read": "full text"}]},
+    {"id": "D7-C4", "label": "OBSERVED", "sources": [
+      {"name": "ISC-GEM Global Instrumental Earthquake Catalogue v12.1", "url": "https://www.isc.ac.uk/iscgem/download.php", "read": "data"},
+      {"name": "Berkeley Seismology Lab, Today in Earthquake History: Chile 1960", "url": "https://seismo.berkeley.edu/blog/2015/05/22/today-in-earthquake-history-chile-1960.html", "read": "full text"}]},
+    {"id": "D7-C5", "label": "OBSERVED", "sources": [
+      {"name": "ISC-GEM Global Instrumental Earthquake Catalogue v12.1", "url": "https://www.isc.ac.uk/iscgem/download.php", "read": "data"}]},
+    {"id": "D7-C6", "label": "OBSERVED", "sources": [
+      {"name": "ISC-GEM Global Instrumental Earthquake Catalogue v12.1", "url": "https://www.isc.ac.uk/iscgem/download.php", "read": "data"}]},
+    {"id": "D7-C7", "label": "OBSERVED", "sources": [
+      {"name": "ISC-GEM Global Instrumental Earthquake Catalogue v12.1", "url": "https://www.isc.ac.uk/iscgem/download.php", "read": "data"}]},
+    {"id": "D7-C8", "label": "OBSERVED", "sources": [
+      {"name": "USGS, Volcano Watch: Are earthquakes on the rise?", "url": "https://www.usgs.gov/news/volcano-watch-are-earthquakes-rise", "read": "full text"}]},
+    {"id": "D7-C9", "label": "ESTIMATE", "sources": [
+      {"name": "Cifuentes 1989, Journal of Geophysical Research 94 (EarthRef record)", "url": "https://earthref.org/ERR/37962/", "read": "abstract only"},
+      {"name": "Kanamori & Cipar 1974, Physics of the Earth and Planetary Interiors 9", "url": "https://authors.library.caltech.edu/54902", "read": "abstract only"},
+      {"name": "Berkeley Seismology Lab, Today in Earthquake History: Chile 1960", "url": "https://seismo.berkeley.edu/blog/2015/05/22/today-in-earthquake-history-chile-1960.html", "read": "full text"},
+      {"name": "USGS FAQ, Can megaquakes really happen? Like a magnitude 10 or larger?", "url": "https://www.usgs.gov/faqs/can-megaquakes-really-happen-magnitude-10-or-larger", "read": "full text"}]},
+    {"id": "D7-C10", "label": "ESTIMATE", "sources": [
+      {"name": "USGS FAQ, Can megaquakes really happen? Like a magnitude 10 or larger?", "url": "https://www.usgs.gov/faqs/can-megaquakes-really-happen-magnitude-10-or-larger", "read": "full text"}]},
+    {"id": "D7-C11", "label": "SIMULATION", "sources": [
+      {"name": "NASA/JPL news release 2011-080, Japan Quake May Have Shortened Earth Days, Moved Axis", "url": "https://www.jpl.nasa.gov/news/japan-quake-may-have-shortened-earth-days-moved-axis/", "read": "full text"}]},
+    {"id": "D7-C12", "label": "OBSERVED", "sources": [
+      {"name": "USGS ComCat, event us6000qw60 (Kamchatka 2025)", "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000qw60&format=geojson", "read": "data"},
+      {"name": "USGS ComCat, all earthquakes Mw 8.5+ from March 12, 2011 to 2025", "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2011-03-12&endtime=2025-12-31&minmagnitude=8.5", "read": "data"},
+      {"name": "USGS, aftershock forecast for the M8.8 Kamchatka earthquake", "url": "https://www.usgs.gov/news/featured-story/usgs-releases-aftershock-forecast-m88-russian-kamchatka-peninsula-earthquake", "read": "full text"},
+      {"name": "ISC-GEM Global Instrumental Earthquake Catalogue v12.1", "url": "https://www.isc.ac.uk/iscgem/download.php", "read": "data"}]}
+  ],
+  "exhibits": ["D7-C2", "D7-C3", "D7-C5", "D7-C7"],
+  "i18n": {
+    "en": {
+      "title": "How strong can an earthquake get? The record is 9.55 ± 0.25",
+      "lede": "In the ISC-GEM catalog of 74,159 earthquakes (1904–2021), Valdivia, Chile, 1960 leads at magnitude 9.55 ± 0.25 and alone holds 22.1% of the computed energy. The ceiling is set by fault length: no known fault is long enough for a magnitude 10.",
+      "question": "How strong can an earthquake get, and what sets the limit?",
+      "claims": {
+        "D7-C1": "In the ISC-GEM catalog (v12.1, 1904–2021) plus USGS data for 2025, the ten strongest earthquakes run from Valdivia, Chile, 1960 (Mw 9.55) down to Mw 8.62. Next come Sumatra 2004 (9.31), Alaska 1964 (9.30) and Tōhoku 2011 (9.09).",
+        "D7-C2": "On an energy scale where 1 unit equals one magnitude 7 earthquake (energy grows about 32 times per magnitude step), Valdivia equals about 6,683 units, Sumatra 2,917, Alaska 2,818, Tōhoku 1,365 and Kamchatka 2025 about 501.",
+        "D7-C3": "Valdivia alone accounts for 22.1% of the energy computed from the magnitudes of all 74,159 earthquakes in the catalog (1904–2021); the top five together account for 47.5%. Smaller events below the catalog threshold are not included.",
+        "D7-C4": "On May 22, 1960 the catalog lists Mw 7.14 at 10:30 UTC, Mw 8.60 at 18:56 UTC and Mw 9.55 at 19:11 UTC, about 15 minutes later. In Chile (UTC−4) that was 06:30, 14:56 and 15:11 local time.",
+        "D7-C5": "The record is an estimate: Valdivia is Mw 9.55 ± 0.25 (quality B), Sumatra 9.31 ± 0.10 (quality A) and Alaska 9.30 ± 0.20 (quality B). The Valdivia and Sumatra intervals overlap.",
+        "D7-C6": "The catalog holds 92 earthquakes of Mw 8 or above, 16 of Mw 8.5 or above and 4 of Mw 9 or above (1960, 1964, 2004, 2011). Mapped, the largest events line up along plate boundaries, many around the Pacific.",
+        "D7-C7": "Across the complete decades from the 1910s to the 2010s, cataloged earthquakes rise from 639 to 17,401 (about 27 times as many), while Mw 7+ events stay between 87 and 142 per decade.",
+        "D7-C8": "Much of that rise reflects better listening: seismograph stations reporting to the USGS's National Earthquake Information Center grew from about 350 to over 4,000 in the 70 years up to about 2001.",
+        "D7-C9": "Seismological studies estimate the 1960 Valdivia rupture at about 800–1,000 km (920 ± 100 km from the aftershock zone); USGS describes the fault as almost 1,000 miles long. A larger magnitude needs a longer rupture.",
+        "D7-C10": "Magnitude grows with the length of the fault that breaks, and no known fault is long enough for a magnitude 10: one would have to extend around most of the planet. The limit comes from geology, not from the numbers on the scale.",
+        "D7-C11": "NASA/JPL calculations estimate that the 2011 Tōhoku earthquake shortened the day by about 1.8 microseconds, Chile 2010 by about 1.26 and Sumatra 2004 by about 6.8. These effects are smaller than the accuracy with which day length can be measured.",
+        "D7-C12": "The Kamchatka earthquake of July 29, 2025 (USGS Mw 8.8) is the strongest since 2011 and ranks sixth, below Kamchatka 1952 (Mw 8.84). Its epicenter lies about 34 km from the 1952 one; two events do not show that megaquakes cluster."
+      },
+      "verdict": "The answer holds: the strongest earthquake recorded by instruments is Valdivia, Chile, 1960, at Mw 9.55 ± 0.25 in ISC-GEM, and the catalog numbers in the video (ranking, energy units, 22.1%, 92 events, decade counts) reproduce exactly from the data file. The ceiling argument matches USGS: magnitude grows with fault length, and no known fault is long enough for a magnitude 10. The Update section adds the local times of May 22, 1960, the estimated rupture length, the 2025 ranking and the scope of the 22.1%.",
+      "errata": [
+        "The video said the May 22, 1960 earthquakes struck at 10:30 in the morning, then at 6:56 and 7:11 in the evening. The data show these are UTC times; in Chile (UTC−4) it was 06:30, 14:56 and 15:11 local time.",
+        "The video said Valdivia was a rupture of roughly 1,600 km. Seismological studies estimate the rupture at about 800–1,000 km (920 ± 100 km), while USGS describes the fault as almost 1,000 miles long.",
+        "The video said Kamchatka 2025 lands fifth or sixth, depending on the catalog. The data show sixth in both: below Kamchatka 1952 (Mw 8.84) in ISC-GEM, and tied for sixth in the USGS ranking.",
+        "The video said Valdivia released a fifth of all the energy measured since 1904. The data show 22.1% of the energy calculated from the magnitudes of the 74,159 cataloged earthquakes (1904–2021), which leave out smaller events."
+      ]
+    },
+    "it": {
+      "title": "Quanto può essere forte un terremoto? Il record è 9,55 ± 0,25",
+      "lede": "Nel catalogo ISC-GEM di 74.159 terremoti (1904–2021), Valdivia, Cile, 1960 è in testa con magnitudo 9,55 ± 0,25 e da solo vale il 22,1% dell'energia calcolata. Il tetto lo fissa la lunghezza delle faglie: nessuna faglia nota è abbastanza lunga per una magnitudo 10.",
+      "question": "Quanto può essere forte un terremoto, e che cosa fissa il limite?",
+      "claims": {
+        "D7-C1": "Nel catalogo ISC-GEM (v12.1, 1904–2021) più i dati USGS per il 2025, i dieci terremoti più forti vanno da Valdivia, Cile, 1960 (Mw 9,55) fino a Mw 8,62. Seguono Sumatra 2004 (9,31), Alaska 1964 (9,30) e Tōhoku 2011 (9,09).",
+        "D7-C2": "Su una scala di energia in cui 1 unità equivale a un terremoto di magnitudo 7 (l'energia cresce di circa 32 volte per ogni punto di magnitudo), Valdivia vale circa 6.683 unità, Sumatra 2.917, Alaska 2.818, Tōhoku 1.365 e Kamchatka 2025 circa 501.",
+        "D7-C3": "Valdivia da solo vale il 22,1% dell'energia calcolata dalle magnitudo di tutti i 74.159 terremoti del catalogo (1904–2021); i primi cinque insieme il 47,5%. Gli eventi più piccoli, sotto la soglia del catalogo, non sono inclusi.",
+        "D7-C4": "Il 22 maggio 1960 il catalogo registra Mw 7,14 alle 10:30 UTC, Mw 8,60 alle 18:56 UTC e Mw 9,55 alle 19:11 UTC, circa 15 minuti dopo. In Cile (UTC−4) erano le 06:30, le 14:56 e le 15:11 ora locale.",
+        "D7-C5": "Il record è una stima: Valdivia è Mw 9,55 ± 0,25 (qualità B), Sumatra 9,31 ± 0,10 (qualità A) e Alaska 9,30 ± 0,20 (qualità B). Gli intervalli di Valdivia e Sumatra si sovrappongono.",
+        "D7-C6": "Il catalogo contiene 92 terremoti di Mw 8 o più, 16 di Mw 8,5 o più e 4 di Mw 9 o più (1960, 1964, 2004, 2011). Sulla mappa, gli eventi più grandi si allineano lungo i confini di placca, molti attorno al Pacifico.",
+        "D7-C7": "Nei decenni completi dagli anni 1910 agli anni 2010, i terremoti catalogati passano da 639 a 17.401 (circa 27 volte tanti), mentre gli eventi di Mw 7+ restano tra 87 e 142 per decennio.",
+        "D7-C8": "Gran parte di quell'aumento riflette un ascolto migliore: le stazioni sismografiche che inviano dati al National Earthquake Information Center dell'USGS sono passate da circa 350 a oltre 4.000 nei 70 anni fino al 2001 circa.",
+        "D7-C9": "Gli studi sismologici stimano la rottura di Valdivia del 1960 in circa 800–1.000 km (920 ± 100 km dalla zona delle repliche); l'USGS descrive la faglia come lunga quasi 1.000 miglia. Una magnitudo maggiore richiede una rottura più lunga.",
+        "D7-C10": "La magnitudo cresce con la lunghezza della faglia che si rompe, e nessuna faglia nota è abbastanza lunga per una magnitudo 10: dovrebbe estendersi attorno a gran parte del pianeta. Il limite viene dalla geologia, non dai numeri della scala.",
+        "D7-C11": "Secondo i calcoli NASA/JPL, il terremoto di Tōhoku del 2011 ha accorciato il giorno di circa 1,8 microsecondi, il Cile 2010 di circa 1,26 e Sumatra 2004 di circa 6,8. Sono effetti più piccoli della precisione con cui si può misurare la durata del giorno.",
+        "D7-C12": "Il terremoto di Kamchatka del 29 luglio 2025 (USGS Mw 8,8) è il più forte dal 2011 ed è sesto, dietro Kamchatka 1952 (Mw 8,84). Il suo epicentro si trova a circa 34 km da quello del 1952; due eventi non mostrano che i megaterremoti arrivino a grappoli."
+      },
+      "verdict": "La risposta regge: il terremoto più forte registrato dagli strumenti è Valdivia, Cile, 1960, con Mw 9,55 ± 0,25 in ISC-GEM, e i numeri di catalogo del video (classifica, unità di energia, 22,1%, 92 eventi, conteggi per decennio) si riproducono esattamente dal file di dati. L'argomento del tetto coincide con l'USGS: la magnitudo cresce con la lunghezza della faglia, e nessuna faglia nota è abbastanza lunga per una magnitudo 10. La sezione Aggiornamento aggiunge gli orari locali del 22 maggio 1960, la lunghezza di rottura stimata, la posizione del 2025 e l'ambito del 22,1%.",
+      "errata": [
+        "Il video diceva che i terremoti del 22 maggio 1960 erano avvenuti alle 10:30 del mattino, poi alle 6:56 e alle 7:11 di sera. I dati mostrano che sono orari UTC; in Cile (UTC−4) erano le 06:30, le 14:56 e le 15:11 ora locale.",
+        "Il video diceva che Valdivia era stata una rottura di circa 1.600 km. Gli studi sismologici stimano la rottura in circa 800–1.000 km (920 ± 100 km), mentre l'USGS descrive la faglia come lunga quasi 1.000 miglia.",
+        "Il video diceva che Kamchatka 2025 si colloca al quinto o sesto posto, a seconda del catalogo. I dati lo mostrano sesto in entrambi: dietro Kamchatka 1952 (Mw 8,84) in ISC-GEM, e sesto a pari merito nella classifica USGS.",
+        "Il video diceva che Valdivia aveva liberato un quinto di tutta l'energia misurata dal 1904. I dati mostrano il 22,1% dell'energia calcolata dalle magnitudo dei 74.159 terremoti catalogati (1904–2021), che escludono gli eventi più piccoli."
+      ]
+    },
+    "de": {
+      "title": "Wie stark kann ein Erdbeben werden? Der Rekord: 9,55 ± 0,25",
+      "lede": "Im ISC-GEM-Katalog mit 74.159 Erdbeben (1904–2021) liegt Valdivia, Chile, 1960 mit Magnitude 9,55 ± 0,25 vorn und vereint allein 22,1 % der berechneten Energie. Die Obergrenze setzt die Länge der Verwerfungen: Keine bekannte Verwerfung ist lang genug für eine Magnitude 10.",
+      "question": "Wie stark kann ein Erdbeben werden, und was setzt die Grenze?",
+      "claims": {
+        "D7-C1": "Im ISC-GEM-Katalog (v12.1, 1904–2021) plus USGS-Daten für 2025 reichen die zehn stärksten Erdbeben von Valdivia, Chile, 1960 (Mw 9,55) bis Mw 8,62. Es folgen Sumatra 2004 (9,31), Alaska 1964 (9,30) und Tōhoku 2011 (9,09).",
+        "D7-C2": "Auf einer Energieskala, auf der 1 Einheit einem Erdbeben der Magnitude 7 entspricht (die Energie wächst pro Magnitudenstufe etwa um das 32-Fache), entspricht Valdivia etwa 6.683 Einheiten, Sumatra 2.917, Alaska 2.818, Tōhoku 1.365 und Kamtschatka 2025 etwa 501.",
+        "D7-C3": "Valdivia allein steht für 22,1 % der Energie, die aus den Magnituden aller 74.159 Erdbeben des Katalogs (1904–2021) berechnet wird; die fünf stärksten zusammen für 47,5 %. Kleinere Ereignisse unter der Katalogschwelle sind nicht enthalten.",
+        "D7-C4": "Am 22. Mai 1960 verzeichnet der Katalog Mw 7,14 um 10:30 UTC, Mw 8,60 um 18:56 UTC und Mw 9,55 um 19:11 UTC, etwa 15 Minuten später. In Chile (UTC−4) war es 06:30, 14:56 und 15:11 Ortszeit.",
+        "D7-C5": "Der Rekord ist eine Schätzung: Valdivia hat Mw 9,55 ± 0,25 (Qualität B), Sumatra 9,31 ± 0,10 (Qualität A) und Alaska 9,30 ± 0,20 (Qualität B). Die Intervalle von Valdivia und Sumatra überlappen sich.",
+        "D7-C6": "Der Katalog enthält 92 Erdbeben ab Mw 8, 16 ab Mw 8,5 und 4 ab Mw 9 (1960, 1964, 2004, 2011). Auf der Karte reihen sich die größten Ereignisse entlang der Plattengrenzen auf, viele rund um den Pazifik.",
+        "D7-C7": "Über die vollständigen Jahrzehnte von den 1910er- bis zu den 2010er-Jahren steigen die katalogisierten Erdbeben von 639 auf 17.401 (etwa 27-mal so viele), während Ereignisse ab Mw 7+ zwischen 87 und 142 pro Jahrzehnt bleiben.",
+        "D7-C8": "Ein Großteil dieses Anstiegs spiegelt besseres Zuhören wider: Die Seismografenstationen, die an das National Earthquake Information Center des USGS melden, wuchsen in den 70 Jahren bis etwa 2001 von rund 350 auf über 4.000.",
+        "D7-C9": "Seismologische Studien schätzen den Bruch von Valdivia 1960 auf etwa 800–1.000 km (920 ± 100 km aus der Nachbebenzone); der USGS beschreibt die Verwerfung als fast 1.000 Meilen lang. Eine größere Magnitude braucht einen längeren Bruch.",
+        "D7-C10": "Die Magnitude wächst mit der Länge der brechenden Verwerfung, und keine bekannte Verwerfung ist lang genug für eine Magnitude 10: Sie müsste sich um den größten Teil des Planeten erstrecken. Die Grenze kommt aus der Geologie, nicht aus den Zahlen der Skala.",
+        "D7-C11": "Laut Berechnungen von NASA/JPL verkürzte das Tōhoku-Beben 2011 den Tag um etwa 1,8 Mikrosekunden, Chile 2010 um etwa 1,26 und Sumatra 2004 um etwa 6,8. Diese Effekte sind kleiner als die Genauigkeit, mit der sich die Tageslänge messen lässt.",
+        "D7-C12": "Das Kamtschatka-Beben vom 29. Juli 2025 (USGS Mw 8,8) ist das stärkste seit 2011 und liegt auf Platz sechs, hinter Kamtschatka 1952 (Mw 8,84). Sein Epizentrum liegt etwa 34 km von dem von 1952 entfernt; zwei Ereignisse zeigen nicht, dass Megabeben gehäuft auftreten."
+      },
+      "verdict": "Die Antwort hält: Das stärkste instrumentell registrierte Erdbeben ist Valdivia, Chile, 1960, mit Mw 9,55 ± 0,25 in ISC-GEM, und die Katalogzahlen im Video (Rangliste, Energieeinheiten, 22,1 %, 92 Ereignisse, Zählungen pro Jahrzehnt) lassen sich aus der Datendatei exakt reproduzieren. Das Argument zur Obergrenze stimmt mit dem USGS überein: Die Magnitude wächst mit der Länge der Verwerfung, und keine bekannte Verwerfung ist lang genug für eine Magnitude 10. Der Abschnitt Update ergänzt die Ortszeiten vom 22. Mai 1960, die geschätzte Bruchlänge, den Rang von 2025 und den Bezugsrahmen der 22,1 %.",
+      "errata": [
+        "Das Video sagte, die Erdbeben vom 22. Mai 1960 hätten um 10:30 Uhr morgens, dann um 6:56 und 7:11 Uhr abends stattgefunden. Die Daten zeigen, dass dies UTC-Zeiten sind; in Chile (UTC−4) war es 06:30, 14:56 und 15:11 Uhr Ortszeit.",
+        "Das Video sagte, Valdivia sei ein Bruch von rund 1.600 km gewesen. Seismologische Studien schätzen den Bruch auf etwa 800–1.000 km (920 ± 100 km), während der USGS die Verwerfung als fast 1.000 Meilen lang beschreibt.",
+        "Das Video sagte, Kamtschatka 2025 lande je nach Katalog auf Platz fünf oder sechs. Die Daten zeigen in beiden Platz sechs: hinter Kamtschatka 1952 (Mw 8,84) in ISC-GEM und gleichauf auf Platz sechs in der USGS-Rangliste.",
+        "Das Video sagte, Valdivia habe ein Fünftel der gesamten seit 1904 gemessenen Energie freigesetzt. Die Daten zeigen 22,1 % der Energie, berechnet aus den Magnituden der 74.159 katalogisierten Erdbeben (1904–2021), ohne kleinere Ereignisse."
+      ]
+    },
+    "es": {
+      "title": "¿Qué tan fuerte puede ser un terremoto? El récord: 9,55 ± 0,25",
+      "lede": "En el catálogo ISC-GEM de 74.159 terremotos (1904–2021), Valdivia, Chile, 1960 encabeza la lista con magnitud 9,55 ± 0,25 y por sí solo reúne el 22,1% de la energía calculada. El techo lo fija la longitud de las fallas: ninguna falla conocida es lo bastante larga para una magnitud 10.",
+      "question": "¿Qué tan fuerte puede ser un terremoto, y qué fija el límite?",
+      "claims": {
+        "D7-C1": "En el catálogo ISC-GEM (v12.1, 1904–2021) más los datos del USGS para 2025, los diez terremotos más fuertes van desde Valdivia, Chile, 1960 (Mw 9,55) hasta Mw 8,62. Les siguen Sumatra 2004 (9,31), Alaska 1964 (9,30) y Tōhoku 2011 (9,09).",
+        "D7-C2": "En una escala de energía donde 1 unidad equivale a un terremoto de magnitud 7 (la energía crece unas 32 veces por cada punto de magnitud), Valdivia equivale a unas 6.683 unidades, Sumatra a 2.917, Alaska a 2.818, Tōhoku a 1.365 y Kamchatka 2025 a unas 501.",
+        "D7-C3": "Valdivia por sí solo representa el 22,1% de la energía calculada a partir de las magnitudes de los 74.159 terremotos del catálogo (1904–2021); los cinco primeros juntos, el 47,5%. No se incluyen los eventos menores, por debajo del umbral del catálogo.",
+        "D7-C4": "El 22 de mayo de 1960 el catálogo registra Mw 7,14 a las 10:30 UTC, Mw 8,60 a las 18:56 UTC y Mw 9,55 a las 19:11 UTC, unos 15 minutos después. En Chile (UTC−4) eran las 06:30, las 14:56 y las 15:11 hora local.",
+        "D7-C5": "El récord es una estimación: Valdivia tiene Mw 9,55 ± 0,25 (calidad B), Sumatra 9,31 ± 0,10 (calidad A) y Alaska 9,30 ± 0,20 (calidad B). Los intervalos de Valdivia y Sumatra se solapan.",
+        "D7-C6": "El catálogo reúne 92 terremotos de Mw 8 o más, 16 de Mw 8,5 o más y 4 de Mw 9 o más (1960, 1964, 2004, 2011). En el mapa, los mayores eventos se alinean a lo largo de los límites de placa, muchos alrededor del Pacífico.",
+        "D7-C7": "En las décadas completas de 1910 a 2010, los terremotos catalogados pasan de 639 a 17.401 (unas 27 veces más), mientras que los eventos de Mw 7+ se mantienen entre 87 y 142 por década.",
+        "D7-C8": "Gran parte de ese aumento refleja una mejor escucha: las estaciones sismográficas que envían datos al National Earthquake Information Center del USGS pasaron de unas 350 a más de 4.000 en los 70 años hasta cerca de 2001.",
+        "D7-C9": "Los estudios sismológicos estiman la ruptura de Valdivia de 1960 en unos 800–1.000 km (920 ± 100 km según la zona de réplicas); el USGS describe la falla como de casi 1.000 millas de largo. Una magnitud mayor requiere una ruptura más larga.",
+        "D7-C10": "La magnitud crece con la longitud de la falla que se rompe, y ninguna falla conocida es lo bastante larga para una magnitud 10: tendría que extenderse alrededor de buena parte del planeta. El límite viene de la geología, no de los números de la escala.",
+        "D7-C11": "Según los cálculos de NASA/JPL, el terremoto de Tōhoku de 2011 acortó el día unos 1,8 microsegundos, el de Chile 2010 unos 1,26 y el de Sumatra 2004 unos 6,8. Son efectos menores que la precisión con la que se puede medir la duración del día.",
+        "D7-C12": "El terremoto de Kamchatka del 29 de julio de 2025 (USGS Mw 8,8) es el más fuerte desde 2011 y ocupa el sexto puesto, por detrás de Kamchatka 1952 (Mw 8,84). Su epicentro está a unos 34 km del de 1952; dos eventos no demuestran que los megaterremotos lleguen en racimos."
+      },
+      "verdict": "La respuesta se sostiene: el terremoto más fuerte registrado por instrumentos es Valdivia, Chile, 1960, con Mw 9,55 ± 0,25 en ISC-GEM, y las cifras de catálogo del video (clasificación, unidades de energía, 22,1%, 92 eventos, recuentos por década) se reproducen exactamente a partir del archivo de datos. El argumento del techo coincide con el USGS: la magnitud crece con la longitud de la falla, y ninguna falla conocida es lo bastante larga para una magnitud 10. La sección Actualización añade las horas locales del 22 de mayo de 1960, la longitud de ruptura estimada, el puesto de 2025 y el alcance del 22,1%.",
+      "errata": [
+        "El video decía que los terremotos del 22 de mayo de 1960 ocurrieron a las 10:30 de la mañana y luego a las 6:56 y a las 7:11 de la tarde. Los datos muestran que son horas UTC; en Chile (UTC−4) eran las 06:30, las 14:56 y las 15:11 hora local.",
+        "El video decía que Valdivia fue una ruptura de unos 1.600 km. Los estudios sismológicos estiman la ruptura en unos 800–1.000 km (920 ± 100 km), mientras que el USGS describe la falla como de casi 1.000 millas de largo.",
+        "El video decía que Kamchatka 2025 queda quinto o sexto, según el catálogo. Los datos lo muestran sexto en ambos: por detrás de Kamchatka 1952 (Mw 8,84) en ISC-GEM, y empatado en el sexto puesto en la clasificación del USGS.",
+        "El video decía que Valdivia liberó una quinta parte de toda la energía medida desde 1904. Los datos muestran el 22,1% de la energía calculada a partir de las magnitudes de los 74.159 terremotos catalogados (1904–2021), que dejan fuera los eventos menores."
+      ]
+    },
+    "fr": {
+      "title": "Jusqu'où peut aller la force d'un séisme ? Le record : 9,55 ± 0,25",
+      "lede": "Dans le catalogue ISC-GEM de 74 159 séismes (1904–2021), Valdivia, Chili, 1960 arrive en tête avec une magnitude de 9,55 ± 0,25 et concentre à lui seul 22,1 % de l'énergie calculée. Le plafond est fixé par la longueur des failles : aucune faille connue n'est assez longue pour une magnitude 10.",
+      "question": "Jusqu'où peut aller la force d'un séisme, et qu'est-ce qui fixe la limite ?",
+      "claims": {
+        "D7-C1": "Dans le catalogue ISC-GEM (v12.1, 1904–2021) complété par les données de l'USGS pour 2025, les dix séismes les plus forts vont de Valdivia, Chili, 1960 (Mw 9,55) jusqu'à Mw 8,62. Viennent ensuite Sumatra 2004 (9,31), l'Alaska 1964 (9,30) et Tōhoku 2011 (9,09).",
+        "D7-C2": "Sur une échelle d'énergie où 1 unité équivaut à un séisme de magnitude 7 (l'énergie est multipliée par environ 32 à chaque point de magnitude), Valdivia vaut environ 6 683 unités, Sumatra 2 917, l'Alaska 2 818, Tōhoku 1 365 et le Kamtchatka 2025 environ 501.",
+        "D7-C3": "Valdivia représente à lui seul 22,1 % de l'énergie calculée à partir des magnitudes des 74 159 séismes du catalogue (1904–2021) ; les cinq premiers ensemble, 47,5 %. Les événements plus petits, sous le seuil du catalogue, ne sont pas inclus.",
+        "D7-C4": "Le 22 mai 1960, le catalogue enregistre Mw 7,14 à 10:30 UTC, Mw 8,60 à 18:56 UTC et Mw 9,55 à 19:11 UTC, environ 15 minutes plus tard. Au Chili (UTC−4), il était 06:30, 14:56 et 15:11, heure locale.",
+        "D7-C5": "Le record est une estimation : Valdivia est à Mw 9,55 ± 0,25 (qualité B), Sumatra à 9,31 ± 0,10 (qualité A) et l'Alaska à 9,30 ± 0,20 (qualité B). Les intervalles de Valdivia et de Sumatra se chevauchent.",
+        "D7-C6": "Le catalogue compte 92 séismes de Mw 8 ou plus, 16 de Mw 8,5 ou plus et 4 de Mw 9 ou plus (1960, 1964, 2004, 2011). Sur la carte, les plus grands événements s'alignent le long des limites de plaques, beaucoup autour du Pacifique.",
+        "D7-C7": "Sur les décennies complètes des années 1910 aux années 2010, les séismes catalogués passent de 639 à 17 401 (environ 27 fois plus), tandis que les événements de Mw 7+ restent entre 87 et 142 par décennie.",
+        "D7-C8": "Une grande partie de cette hausse reflète une meilleure écoute : les stations sismographiques qui transmettent leurs données au National Earthquake Information Center de l'USGS sont passées d'environ 350 à plus de 4 000 en 70 ans, jusque vers 2001.",
+        "D7-C9": "Les études sismologiques estiment la rupture de Valdivia en 1960 à environ 800–1 000 km (920 ± 100 km d'après la zone des répliques) ; l'USGS décrit la faille comme longue de près de 1 000 miles. Une magnitude plus grande exige une rupture plus longue.",
+        "D7-C10": "La magnitude croît avec la longueur de la faille qui rompt, et aucune faille connue n'est assez longue pour une magnitude 10 : elle devrait faire le tour d'une grande partie de la planète. La limite vient de la géologie, pas des chiffres de l'échelle.",
+        "D7-C11": "D'après les calculs de la NASA/JPL, le séisme de Tōhoku de 2011 a raccourci la journée d'environ 1,8 microseconde, celui du Chili en 2010 d'environ 1,26 et celui de Sumatra en 2004 d'environ 6,8. Ces effets sont inférieurs à la précision avec laquelle on peut mesurer la durée du jour.",
+        "D7-C12": "Le séisme du Kamtchatka du 29 juillet 2025 (USGS Mw 8,8) est le plus fort depuis 2011 et se classe sixième, derrière le Kamtchatka 1952 (Mw 8,84). Son épicentre se trouve à environ 34 km de celui de 1952 ; deux événements ne montrent pas que les mégaséismes arrivent en grappes."
+      },
+      "verdict": "La réponse tient : le séisme le plus fort enregistré par les instruments est celui de Valdivia, Chili, 1960, à Mw 9,55 ± 0,25 dans ISC-GEM, et les chiffres du catalogue cités dans la vidéo (classement, unités d'énergie, 22,1 %, 92 événements, comptages par décennie) se reproduisent exactement à partir du fichier de données. L'argument du plafond concorde avec l'USGS : la magnitude croît avec la longueur de la faille, et aucune faille connue n'est assez longue pour une magnitude 10. La section Mise à jour ajoute les heures locales du 22 mai 1960, la longueur de rupture estimée, le rang de 2025 et la portée des 22,1 %.",
+      "errata": [
+        "La vidéo disait que les séismes du 22 mai 1960 avaient eu lieu à 10:30 du matin, puis à 6:56 et 7:11 du soir. Les données montrent qu'il s'agit d'heures UTC ; au Chili (UTC−4), il était 06:30, 14:56 et 15:11, heure locale.",
+        "La vidéo disait que Valdivia avait été une rupture d'environ 1 600 km. Les études sismologiques estiment la rupture à environ 800–1 000 km (920 ± 100 km), tandis que l'USGS décrit la faille comme longue de près de 1 000 miles.",
+        "La vidéo disait que le Kamtchatka 2025 se classe cinquième ou sixième, selon le catalogue. Les données le placent sixième dans les deux : derrière le Kamtchatka 1952 (Mw 8,84) dans ISC-GEM, et sixième ex aequo dans le classement de l'USGS.",
+        "La vidéo disait que Valdivia avait libéré un cinquième de toute l'énergie mesurée depuis 1904. Les données montrent 22,1 % de l'énergie calculée à partir des magnitudes des 74 159 séismes catalogués (1904–2021), qui laissent de côté les événements plus petits."
+      ]
+    }
+  }
+}

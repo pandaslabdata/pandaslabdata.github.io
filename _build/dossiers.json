@@ -1,19 +1,178 @@
 {
- "_comment": "Long data episodes (EP1-EP6), filed as DOSSIER 01-06. Titles, URLs, durations, topic tags and source lists are copied from the published stories.html (21/11/2026). Each gets its own page only after a Science QA recheck: until then the folder links to the video.",
+ "_comment": "Long data episodes (EP1-EP10), filed as DOSSIER 01-10. Titles, URLs, durations, topic tags and source lists are copied from the published stories.html (21/11/2026). Each gets its own page only after a Science QA recheck: until then the folder links to the video.",
  "dossiers": [
-  {"n": "06", "ep": "EP 6", "world": "earth", "tags": "space map", "dur": "12:14", "title": "Why 68% of All Meteorites Are Found in One Place", "url": "https://www.youtube.com/watch?v=SGAB3sh-rvs", "thumb": "https://i.ytimg.com/vi/SGAB3sh-rvs/hqdefault.jpg",
-   "sources": ["NASA Open Data — Meteorite Landings (Meteoritical Society) — <a href=\"https://data.nasa.gov/dataset/meteorite-landings\" target=\"_blank\" rel=\"noopener\">data.nasa.gov/dataset/meteorite-landings</a>", "Tollenaar et al. 2022, Science Advances — dataset Zenodo (CC BY 4.0) — <a href=\"https://zenodo.org/record/5749753\" target=\"_blank\" rel=\"noopener\">zenodo.org/record/5749753</a>", "Meteoritical Bulletin Database — <a href=\"https://www.lpi.usra.edu/meteor/\" target=\"_blank\" rel=\"noopener\">www.lpi.usra.edu/meteor/</a>", "Evatt et al. 2020, Geology — <a href=\"https://doi.org/10.1130/G46733.1\" target=\"_blank\" rel=\"noopener\">doi.org/10.1130/G46733.1</a>", "Tollenaar et al. 2024, Nature Climate Change — <a href=\"https://doi.org/10.1038/s41558-024-01954-y\" target=\"_blank\" rel=\"noopener\">doi.org/10.1038/s41558-024-01954-y</a>"]},
-  {"n": "05", "ep": "EP 5", "world": "earth", "tags": "space dino", "dur": "10:00", "title": "Chicxulub Crater: Why You Can't See the World's Most Famous Impact", "url": "https://www.youtube.com/watch?v=OXJaJOZGDf0", "thumb": "https://i.ytimg.com/vi/OXJaJOZGDf0/hqdefault.jpg",
-   "sources": ["Schmieder & Kring 2020, Astrobiology 20(1), Table 1 (CC BY 4.0)", "NASA/JPL CNEOS Fireball Data — <a href=\"https://cneos.jpl.nasa.gov/fireballs/\" target=\"_blank\" rel=\"noopener\">cneos.jpl.nasa.gov/fireballs/</a>", "The Paleobiology Database (CC BY 4.0) — <a href=\"https://paleobiodb.org\" target=\"_blank\" rel=\"noopener\">paleobiodb.org</a>", "Alvarez et al. 1980 · Hildebrand et al. 1991 · Kring 1995 · Evatt et al. 2020"]},
-  {"n": "04", "ep": "EP 4", "world": "history", "tags": "map dino", "dur": "9:22", "title": "The Geography of Dinosaur Discoveries (It's Not What You Think)", "url": "https://www.youtube.com/watch?v=IS_AozDs8ww", "thumb": "https://i.ytimg.com/vi/IS_AozDs8ww/hqdefault.jpg",
-   "sources": ["The Paleobiology Database (CC BY 4.0) — <a href=\"https://paleobiodb.org\" target=\"_blank\" rel=\"noopener\">paleobiodb.org</a>", "Raja et al. 2022, Nature Ecology &amp; Evolution — <a href=\"https://doi.org/10.1038/s41559-021-01608-8\" target=\"_blank\" rel=\"noopener\">doi.org/10.1038/s41559-021-01608-8</a>", "Upchurch et al. 2011, Geol. Soc. London SP 358 — <a href=\"https://doi.org/10.1144/SP358.14\" target=\"_blank\" rel=\"noopener\">doi.org/10.1144/SP358.14</a>", "Dean et al. 2025, Current Biology — <a href=\"https://doi.org/10.1016/j.cub.2025.03.025\" target=\"_blank\" rel=\"noopener\">doi.org/10.1016/j.cub.2025.03.025</a>", "Hammer &amp; Hickerson 1994 · Cordes-Person et al. 2020 · Vennen et al. 2024"]},
-  {"n": "03", "ep": "EP 3", "world": "history", "tags": "dino", "dur": "8:21", "title": "Why T. Rex Keeps the Crown (Even If It's Not the Biggest)", "url": "https://www.youtube.com/watch?v=k_eJcF2WMfw", "thumb": "https://i.ytimg.com/vi/k_eJcF2WMfw/hqdefault.jpg",
-   "sources": ["The Paleobiology Database — <a href=\"https://paleobiodb.org\" target=\"_blank\" rel=\"noopener\">paleobiodb.org</a>", "Osborn 1905 · Stromer 1915, 1931 · Coria &amp; Salgado 1995", "Brochu 2003 · Sereno et al. 1996 · Calvo &amp; Coria 1998 · Ibrahim et al. 2014"]},
-  {"n": "02", "ep": "EP 2", "world": "history", "tags": "dino", "dur": "10:06", "title": "What If the Biggest Dinosaur Ever… Is Missing?", "url": "https://www.youtube.com/watch?v=4bmygw3PxK8", "thumb": "https://i.ytimg.com/vi/4bmygw3PxK8/hqdefault.jpg",
-   "sources": ["The Paleobiology Database — <a href=\"https://paleobiodb.org\" target=\"_blank\" rel=\"noopener\">paleobiodb.org</a>", "Mass estimates: Mazzetta 2004 · Sellers 2013 · Benson 2014 · González Riga 2016 · Carballido 2017 · Lacovara 2014 · Bates 2015 · Paul 2019 · Otero 2020 · Simón &amp; Salgado 2023"]},
-  {"n": "01", "ep": "EP 1", "world": "history", "tags": "dino evo", "dur": "10:37", "title": "Stegosaurus vs. T. rex: A tale of two eras", "url": "https://www.youtube.com/watch?v=E4gdm25XoI8", "thumb": "https://i.ytimg.com/vi/E4gdm25XoI8/hqdefault.jpg",
-   "sources": ["The Paleobiology Database (CC BY 4.0) — <a href=\"https://paleobiodb.org\" target=\"_blank\" rel=\"noopener\">paleobiodb.org</a>", "International Commission on Stratigraphy 2024", "Paul 2010 · Mazzetta 2004 · Benson et al. 2014 · Wang &amp; Dodson 2006 · Larson &amp; Currie 2013"]}
+  {
+   "n": "10",
+   "ep": "EP 10",
+   "world": "earth",
+   "tags": "map",
+   "dur": "11:44",
+   "title": "What If You Were Stranded at Point Nemo?",
+   "url": "https://www.youtube.com/watch?v=V8d7ZmnnJjo",
+   "thumb": "https://i.ytimg.com/vi/V8d7ZmnnJjo/hqdefault.jpg",
+   "sources": [
+    "Guinness World Records, Remotest spot from land — <a href=\"https://www.guinnessworldrecords.com/world-records/66641-remotest-spot-from-land\" target=\"_blank\" rel=\"noopener\">www.guinnessworldrecords.com/world-records/66641-remotest-spot-from-land</a>",
+    "NOAA National Ocean Service, Where is Point Nemo? — <a href=\"https://oceanservice.noaa.gov/facts/nemo.html\" target=\"_blank\" rel=\"noopener\">oceanservice.noaa.gov/facts/nemo.html</a>",
+    "Lukatela, Point Nemo, revisited (2022) — <a href=\"https://www.lukatela.com/pointNemoRevisited/index.html\" target=\"_blank\" rel=\"noopener\">www.lukatela.com/pointNemoRevisited/index.html</a>",
+    "Wessel &amp; Smith, GSHHG v2.3.7 full-resolution coastline (SOEST, University of Hawaii; LGPL) — <a href=\"https://www.soest.hawaii.edu/pwessel/gshhg/\" target=\"_blank\" rel=\"noopener\">www.soest.hawaii.edu/pwessel/gshhg/</a>",
+    "Wikipedia, Maher Island (USGS GNIS name entry) — <a href=\"https://en.wikipedia.org/wiki/Maher_Island\" target=\"_blank\" rel=\"noopener\">en.wikipedia.org/wiki/Maher_Island</a>",
+    "Wikipedia, Russia (area 17,098,246 km², infobox) — <a href=\"https://en.wikipedia.org/wiki/Russia\" target=\"_blank\" rel=\"noopener\">en.wikipedia.org/wiki/Russia</a>"
+   ]
+  },
+  {
+   "n": "09",
+   "ep": "EP 9",
+   "world": "space",
+   "tags": "space",
+   "dur": "12:00",
+   "title": "How Big Is the Universe? The True Scale, Explained",
+   "url": "https://www.youtube.com/watch?v=1oBH-4R2H2Q",
+   "thumb": "https://i.ytimg.com/vi/1oBH-4R2H2Q/hqdefault.jpg",
+   "sources": [
+    "NASA NSSDC, Planetary Fact Sheet — <a href=\"https://nssdc.gsfc.nasa.gov/planetary/factsheet/\" target=\"_blank\" rel=\"noopener\">nssdc.gsfc.nasa.gov/planetary/factsheet/</a>",
+    "NASA Science, Voyager 1 mission page — <a href=\"https://science.nasa.gov/mission/voyager/voyager-1/\" target=\"_blank\" rel=\"noopener\">science.nasa.gov/mission/voyager/voyager-1/</a>",
+    "NASA/JPL Horizons, Voyager 1 heliocentric vectors, 2026-10-11 — <a href=\"https://ssd.jpl.nasa.gov/api/horizons.api?format=text&amp;COMMAND=%27-31%27&amp;OBJ_DATA=%27NO%27&amp;MAKE_EPHEM=%27YES%27&amp;EPHEM_TYPE=%27VECTORS%27&amp;CENTER=%27500@10%27&amp;START_TIME=%272026-10-11%27&amp;STOP_TIME=%272026-10-12%27&amp;STEP_SIZE=%271d%27&amp;VEC_TABLE=%274%27&amp;OUT_UNITS=%27AU-D%27\" target=\"_blank\" rel=\"noopener\">ssd.jpl.nasa.gov/api/horizons.api?format=text&amp;COMMAND=%27-31%27&amp;OBJ_DATA=%27NO%27&amp;MAKE_EPHEM=%27YES%27&amp;EPHEM_TYPE=%27VECTORS%27&amp;CENTER=%27500@10%27&amp;START_TIME=%272026-10-11%27&amp;STOP_TIME=%272026-10-12%27&amp;STEP_SIZE=%271d%27&amp;VEC_TABLE=%274%27&amp;OUT_UNITS=%27AU-D%27</a>",
+    "NASA Science, Our Milky Way galaxy: how big is space? — <a href=\"https://science.nasa.gov/universe/exoplanets/our-milky-way-galaxy-how-big-is-space/\" target=\"_blank\" rel=\"noopener\">science.nasa.gov/universe/exoplanets/our-milky-way-galaxy-how-big-is-space/</a>",
+    "NASA Science, Hubble&#x27;s new shot of Proxima Centauri — <a href=\"https://science.nasa.gov/missions/hubble/hubbles-new-shot-of-proxima-centauri-our-nearest-neighbor\" target=\"_blank\" rel=\"noopener\">science.nasa.gov/missions/hubble/hubbles-new-shot-of-proxima-centauri-our-nearest-neighbor</a>",
+    "GRAVITY Collaboration 2019, Astronomy &amp; Astrophysics 625, L10 — <a href=\"https://arxiv.org/abs/1904.05721\" target=\"_blank\" rel=\"noopener\">arxiv.org/abs/1904.05721</a>"
+   ]
+  },
+  {
+   "n": "08",
+   "ep": "EP 8",
+   "world": "earth",
+   "tags": "map",
+   "dur": "9:39",
+   "title": "How Deep Is the Mariana Trench? (Everest Doesn't Even Reach the Bottom)",
+   "url": "https://www.youtube.com/watch?v=-YIGHsKeZwc",
+   "thumb": "https://i.ytimg.com/vi/-YIGHsKeZwc/hqdefault.jpg",
+   "sources": [
+    "CTBUH Skyscraper Center, Burj Khalifa — <a href=\"https://www.skyscrapercenter.com/building/burj-khalifa/3\" target=\"_blank\" rel=\"noopener\">www.skyscrapercenter.com/building/burj-khalifa/3</a>",
+    "NOAA, R.M.S. Titanic - History and Significance — <a href=\"https://noaa.gov/node/10822\" target=\"_blank\" rel=\"noopener\">noaa.gov/node/10822</a>",
+    "Al Jazeera, Nepal and China announce revised height of Everest (8 Dec 2020) — <a href=\"https://www.aljazeera.com/news/2020/12/8/mt-everest-nepal-china-announce-revised-height-at-8848-metres\" target=\"_blank\" rel=\"noopener\">www.aljazeera.com/news/2020/12/8/mt-everest-nepal-china-announce-revised-height-at-8848-metres</a>",
+    "Greenaway et al. 2021, Deep-Sea Research Part I 178 (NOAA Repository) — <a href=\"https://repository.library.noaa.gov/view/noaa/33477\" target=\"_blank\" rel=\"noopener\">repository.library.noaa.gov/view/noaa/33477</a>",
+    "Fujii et al. 2026, Scientific Data (Europe PMC full text) — <a href=\"https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13582998/fullTextXML\" target=\"_blank\" rel=\"noopener\">www.ebi.ac.uk/europepmc/webservices/rest/PMC13582998/fullTextXML</a>",
+    "Bongiovanni, Stewart &amp; Jamieson 2022, Geoscience Data Journal 9(1) (NORA) — <a href=\"https://nora.nerc.ac.uk/id/eprint/530930/\" target=\"_blank\" rel=\"noopener\">nora.nerc.ac.uk/id/eprint/530930/</a>"
+   ]
+  },
+  {
+   "n": "07",
+   "ep": "EP 7",
+   "world": "earth",
+   "tags": "map",
+   "dur": "10:33",
+   "title": "How Strong Can an Earthquake Get?",
+   "url": "https://www.youtube.com/watch?v=tztlzKZKFX0",
+   "thumb": "https://i.ytimg.com/vi/tztlzKZKFX0/hqdefault.jpg",
+   "sources": [
+    "ISC-GEM Global Instrumental Earthquake Catalogue v12.1 (ISC/GEM, CC BY-SA 3.0) — <a href=\"https://www.isc.ac.uk/iscgem/download.php\" target=\"_blank\" rel=\"noopener\">www.isc.ac.uk/iscgem/download.php</a>",
+    "USGS ComCat, event us6000qw60 (Kamchatka 2025) — <a href=\"https://earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000qw60&amp;format=geojson\" target=\"_blank\" rel=\"noopener\">earthquake.usgs.gov/fdsnws/event/1/query?eventid=us6000qw60&amp;format=geojson</a>",
+    "USGS, Earthquake Magnitude, Energy Release, and Shaking Intensity — <a href=\"https://www.usgs.gov/programs/earthquake-hazards/earthquake-magnitude-energy-release-and-shaking-intensity\" target=\"_blank\" rel=\"noopener\">www.usgs.gov/programs/earthquake-hazards/earthquake-magnitude-energy-release-and-shaking-intensity</a>",
+    "ISC-GEM catalogue description (ISC) — <a href=\"https://www.isc.ac.uk/iscgem/\" target=\"_blank\" rel=\"noopener\">www.isc.ac.uk/iscgem/</a>",
+    "Berkeley Seismology Lab, Today in Earthquake History: Chile 1960 — <a href=\"https://seismo.berkeley.edu/blog/2015/05/22/today-in-earthquake-history-chile-1960.html\" target=\"_blank\" rel=\"noopener\">seismo.berkeley.edu/blog/2015/05/22/today-in-earthquake-history-chile-1960.html</a>",
+    "USGS, Volcano Watch: Are earthquakes on the rise? — <a href=\"https://www.usgs.gov/news/volcano-watch-are-earthquakes-rise\" target=\"_blank\" rel=\"noopener\">www.usgs.gov/news/volcano-watch-are-earthquakes-rise</a>"
+   ]
+  },
+  {
+   "n": "06",
+   "ep": "EP 6",
+   "world": "earth",
+   "tags": "space map",
+   "dur": "12:14",
+   "title": "Why 68% of All Meteorites Are Found in One Place",
+   "url": "https://www.youtube.com/watch?v=SGAB3sh-rvs",
+   "thumb": "https://i.ytimg.com/vi/SGAB3sh-rvs/hqdefault.jpg",
+   "sources": [
+    "NASA Open Data — Meteorite Landings (Meteoritical Society) — <a href=\"https://data.nasa.gov/dataset/meteorite-landings\" target=\"_blank\" rel=\"noopener\">data.nasa.gov/dataset/meteorite-landings</a>",
+    "Tollenaar et al. 2022, Science Advances — dataset Zenodo (CC BY 4.0) — <a href=\"https://zenodo.org/record/5749753\" target=\"_blank\" rel=\"noopener\">zenodo.org/record/5749753</a>",
+    "Meteoritical Bulletin Database — <a href=\"https://www.lpi.usra.edu/meteor/\" target=\"_blank\" rel=\"noopener\">www.lpi.usra.edu/meteor/</a>",
+    "Evatt et al. 2020, Geology — <a href=\"https://doi.org/10.1130/G46733.1\" target=\"_blank\" rel=\"noopener\">doi.org/10.1130/G46733.1</a>",
+    "Tollenaar et al. 2024, Nature Climate Change — <a href=\"https://doi.org/10.1038/s41558-024-01954-y\" target=\"_blank\" rel=\"noopener\">doi.org/10.1038/s41558-024-01954-y</a>"
+   ]
+  },
+  {
+   "n": "05",
+   "ep": "EP 5",
+   "world": "earth",
+   "tags": "space dino",
+   "dur": "10:00",
+   "title": "Chicxulub Crater: Why You Can't See the World's Most Famous Impact",
+   "url": "https://www.youtube.com/watch?v=OXJaJOZGDf0",
+   "thumb": "https://i.ytimg.com/vi/OXJaJOZGDf0/hqdefault.jpg",
+   "sources": [
+    "Schmieder & Kring 2020, Astrobiology 20(1), Table 1 (CC BY 4.0)",
+    "NASA/JPL CNEOS Fireball Data — <a href=\"https://cneos.jpl.nasa.gov/fireballs/\" target=\"_blank\" rel=\"noopener\">cneos.jpl.nasa.gov/fireballs/</a>",
+    "The Paleobiology Database (CC BY 4.0) — <a href=\"https://paleobiodb.org\" target=\"_blank\" rel=\"noopener\">paleobiodb.org</a>",
+    "Alvarez et al. 1980 · Hildebrand et al. 1991 · Kring 1995 · Evatt et al. 2020"
+   ]
+  },
+  {
+   "n": "04",
+   "ep": "EP 4",
+   "world": "history",
+   "tags": "map dino",
+   "dur": "9:22",
+   "title": "The Geography of Dinosaur Discoveries (It's Not What You Think)",
+   "url": "https://www.youtube.com/watch?v=IS_AozDs8ww",
+   "thumb": "https://i.ytimg.com/vi/IS_AozDs8ww/hqdefault.jpg",
+   "sources": [
+    "The Paleobiology Database (CC BY 4.0) — <a href=\"https://paleobiodb.org\" target=\"_blank\" rel=\"noopener\">paleobiodb.org</a>",
+    "Raja et al. 2022, Nature Ecology &amp; Evolution — <a href=\"https://doi.org/10.1038/s41559-021-01608-8\" target=\"_blank\" rel=\"noopener\">doi.org/10.1038/s41559-021-01608-8</a>",
+    "Upchurch et al. 2011, Geol. Soc. London SP 358 — <a href=\"https://doi.org/10.1144/SP358.14\" target=\"_blank\" rel=\"noopener\">doi.org/10.1144/SP358.14</a>",
+    "Dean et al. 2025, Current Biology — <a href=\"https://doi.org/10.1016/j.cub.2025.03.025\" target=\"_blank\" rel=\"noopener\">doi.org/10.1016/j.cub.2025.03.025</a>",
+    "Hammer &amp; Hickerson 1994 · Cordes-Person et al. 2020 · Vennen et al. 2024"
+   ]
+  },
+  {
+   "n": "03",
+   "ep": "EP 3",
+   "world": "history",
+   "tags": "dino",
+   "dur": "8:21",
+   "title": "Why T. Rex Keeps the Crown (Even If It's Not the Biggest)",
+   "url": "https://www.youtube.com/watch?v=k_eJcF2WMfw",
+   "thumb": "https://i.ytimg.com/vi/k_eJcF2WMfw/hqdefault.jpg",
+   "sources": [
+    "The Paleobiology Database — <a href=\"https://paleobiodb.org\" target=\"_blank\" rel=\"noopener\">paleobiodb.org</a>",
+    "Osborn 1905 · Stromer 1915, 1931 · Coria &amp; Salgado 1995",
+    "Brochu 2003 · Sereno et al. 1996 · Calvo &amp; Coria 1998 · Ibrahim et al. 2014"
+   ]
+  },
+  {
+   "n": "02",
+   "ep": "EP 2",
+   "world": "history",
+   "tags": "dino",
+   "dur": "10:06",
+   "title": "What If the Biggest Dinosaur Ever… Is Missing?",
+   "url": "https://www.youtube.com/watch?v=4bmygw3PxK8",
+   "thumb": "https://i.ytimg.com/vi/4bmygw3PxK8/hqdefault.jpg",
+   "sources": [
+    "The Paleobiology Database — <a href=\"https://paleobiodb.org\" target=\"_blank\" rel=\"noopener\">paleobiodb.org</a>",
+    "Mass estimates: Mazzetta 2004 · Sellers 2013 · Benson 2014 · González Riga 2016 · Carballido 2017 · Lacovara 2014 · Bates 2015 · Paul 2019 · Otero 2020 · Simón &amp; Salgado 2023"
+   ]
+  },
+  {
+   "n": "01",
+   "ep": "EP 1",
+   "world": "history",
+   "tags": "dino evo",
+   "dur": "10:37",
+   "title": "Stegosaurus vs. T. rex: A tale of two eras",
+   "url": "https://www.youtube.com/watch?v=E4gdm25XoI8",
+   "thumb": "https://i.ytimg.com/vi/E4gdm25XoI8/hqdefault.jpg",
+   "sources": [
+    "The Paleobiology Database (CC BY 4.0) — <a href=\"https://paleobiodb.org\" target=\"_blank\" rel=\"noopener\">paleobiodb.org</a>",
+    "International Commission on Stratigraphy 2024",
+    "Paul 2010 · Mazzetta 2004 · Benson et al. 2014 · Wang &amp; Dodson 2006 · Larson &amp; Currie 2013"
+   ]
+  }
  ],
- "coming": [{"title": "Point Nemo", "img": "/topic-map.jpg", "tags": "space map"}],
- "world_links": {"space": "/stories.html#space", "earth": "/stories.html#map", "life": "/stories.html#evo", "history": "/stories.html#dino"}
+ "coming": [],
+ "world_links": {
+  "space": "/stories.html#space",
+  "earth": "/stories.html#map",
+  "life": "/stories.html#evo",
+  "history": "/stories.html#dino"
+ }
 }

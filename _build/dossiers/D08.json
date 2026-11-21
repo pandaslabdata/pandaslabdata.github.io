@@ -1,0 +1,177 @@
+{
+  "n": "08",
+  "ep": "EP 8",
+  "yt": "-YIGHsKeZwc",
+  "world": "earth",
+  "updated": "2026-11-21",
+  "claims": [
+    {"id": "D8-C1", "label": "OBSERVED", "sources": [
+      {"name": "CTBUH Skyscraper Center, Burj Khalifa", "url": "https://www.skyscrapercenter.com/building/burj-khalifa/3", "read": "data"},
+      {"name": "NOAA, R.M.S. Titanic - History and Significance", "url": "https://noaa.gov/node/10822", "read": "full text"},
+      {"name": "Al Jazeera, Nepal and China announce revised height of Everest (8 Dec 2020)", "url": "https://www.aljazeera.com/news/2020/12/8/mt-everest-nepal-china-announce-revised-height-at-8848-metres", "read": "full text"},
+      {"name": "Greenaway et al. 2021, Deep-Sea Research Part I 178 (NOAA Repository)", "url": "https://repository.library.noaa.gov/view/noaa/33477", "read": "abstract only"}]},
+    {"id": "D8-C2", "label": "OBSERVED", "sources": [
+      {"name": "Greenaway et al. 2021, Deep-Sea Research Part I 178 (NOAA Repository)", "url": "https://repository.library.noaa.gov/view/noaa/33477", "read": "abstract only"},
+      {"name": "Fujii et al. 2026, Scientific Data (Europe PMC full text)", "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13582998/fullTextXML", "read": "full text"}]},
+    {"id": "D8-C3", "label": "OBSERVED", "sources": [
+      {"name": "Fujii et al. 2026, Scientific Data (Europe PMC full text)", "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13582998/fullTextXML", "read": "full text"},
+      {"name": "Bongiovanni, Stewart & Jamieson 2022, Geoscience Data Journal 9(1) (NORA)", "url": "https://nora.nerc.ac.uk/id/eprint/530930/", "read": "abstract only"}]},
+    {"id": "D8-C4", "label": "OBSERVED", "sources": [
+      {"name": "Royal Museums Greenwich, Challenger Deep: the deepest point in the ocean", "url": "https://www.rmg.co.uk/stories/ocean/challenger-deep-deepest-point-ocean", "read": "full text"},
+      {"name": "Guinness World Records, Deepest point in the sea", "url": "https://www.guinnessworldrecords.com/world-records/deepest-point-in-the-sea", "read": "full text"}]},
+    {"id": "D8-C5", "label": "ESTIMATE", "sources": [
+      {"name": "GEBCO_2020 Grid, 15 arc-second (NOAA CoastWatch ERDDAP)", "url": "https://coastwatch.pfeg.noaa.gov/erddap/griddap/GEBCO_2020.html", "read": "data"}]},
+    {"id": "D8-C6", "label": "OBSERVED", "sources": [
+      {"name": "IHO, Global seabed mapping reaches new milestone (28 Apr 2026)", "url": "https://iho.int/en/global-seabed-mapping-reaches-new-milestone-as-five-million-square-kilometres-added-in-a-year", "read": "full text"},
+      {"name": "Seabed 2030, 2026 progress announcement (20 Apr 2026)", "url": "https://seabed2030.org/?p=3108", "read": "full text"},
+      {"name": "Fujii et al. 2026, Scientific Data (Europe PMC full text)", "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13582998/fullTextXML", "read": "full text"}]},
+    {"id": "D8-C7", "label": "OBSERVED", "sources": [
+      {"name": "Five Deeps Expedition, dive updates (June 2019)", "url": "https://fivedeeps.com/?p=3560", "read": "full text"},
+      {"name": "Bongiovanni, Stewart & Jamieson 2022, Geoscience Data Journal 9(1) (NORA)", "url": "https://nora.nerc.ac.uk/id/eprint/530930/", "read": "abstract only"}]},
+    {"id": "D8-C8", "label": "ESTIMATE", "sources": [
+      {"name": "GEBCO_2020 Grid, 15 arc-second (NOAA CoastWatch ERDDAP)", "url": "https://coastwatch.pfeg.noaa.gov/erddap/griddap/GEBCO_2020.html", "read": "data"},
+      {"name": "World Bank, Surface area (sq. km), Portugal", "url": "https://api.worldbank.org/v2/country/PRT/indicator/AG.SRF.TOTL.K2?format=json&date=2018:2022", "read": "data"}]},
+    {"id": "D8-C9", "label": "OBSERVED", "sources": [
+      {"name": "Office of Naval Research, Navy celebrates 60th anniversary of deepest ocean dive", "url": "https://www.onr.navy.mil/media-center/news-releases/lucky-day-navy-celebrates-60th-anniversary-deepest-ocean-dive", "read": "full text"},
+      {"name": "National Geographic, James Cameron returns from Challenger Deep (2012)", "url": "https://www.nationalgeographic.com/adventure/article/120325-james-cameron-mariana-trench-challenger-deepest-returns-science-sub", "read": "full text"}]},
+    {"id": "D8-C10", "label": "SIMULATION", "sources": [
+      {"name": "NASA Glenn Research Center, Terminal velocity", "url": "https://www.grc.nasa.gov/www/k-12/VirtualAero/BottleRocket/airplane/termv.html", "read": "full text"}]},
+    {"id": "D8-C11", "label": "OBSERVED", "sources": [
+      {"name": "Office of Naval Research, Navy celebrates 60th anniversary of deepest ocean dive", "url": "https://www.onr.navy.mil/media-center/news-releases/lucky-day-navy-celebrates-60th-anniversary-deepest-ocean-dive", "read": "full text"},
+      {"name": "Wikipedia, List of people who descended to Challenger Deep", "url": "https://en.wikipedia.org/wiki/List_of_people_who_descended_to_Challenger_Deep", "read": "data"}]},
+    {"id": "D8-C12", "label": "OBSERVED", "sources": [
+      {"name": "Caladan Oceanic, Ring of Fire Expedition, Series 2 – Challenger Deep Dives", "url": "https://caladanoceanic.com/expeditions/ringoffire/series2/", "read": "full text"},
+      {"name": "NASA Science, Moon Walkers", "url": "https://science.nasa.gov/moon/moon-walkers", "read": "full text"},
+      {"name": "Wikipedia, List of people who descended to Challenger Deep", "url": "https://en.wikipedia.org/wiki/List_of_people_who_descended_to_Challenger_Deep", "read": "data"}]},
+    {"id": "D8-C13", "label": "OBSERVED", "sources": [
+      {"name": "Wikipedia, List of people who descended to Challenger Deep", "url": "https://en.wikipedia.org/wiki/List_of_people_who_descended_to_Challenger_Deep", "read": "data"}]}
+  ],
+  "exhibits": ["D8-C2", "D8-C5", "D8-C8", "D8-C12"],
+  "i18n": {
+    "en": {
+      "title": "How deep is the Mariana Trench? Everest wouldn't reach the bottom",
+      "lede": "Challenger Deep lies about 10,935 m below sea level, so an upside-down Everest would stop about 2 km short of the bottom. At true scale the trench is a broad, gentle depression, and since 2020 more people have reached it than have walked on the Moon.",
+      "question": "How deep is the Mariana Trench, and how well do we really know its deepest point?",
+      "claims": {
+        "D8-C1": "From the surface: the Burj Khalifa is 828 m tall and the Titanic wreck lies at about 3,800 m. Flip Everest (8,848.86 m) into Challenger Deep and about 2,086 m of water would remain below its summit.",
+        "D8-C2": "The best current estimate puts Challenger Deep at 10,935 m below mean sea level, ± 6 m at 95% confidence, from pressure-based measurements taken by a crewed submersible in June 2020.",
+        "D8-C3": "Other modern surveys land close but not on the same number: 10,924 ± 15 m (multibeam sonar, 2019), 10,927 m (Japanese survey of 2023, range 10,914–10,932 m depending on the sound-speed model) and 10,984 m (2010 survey).",
+        "D8-C4": "In 1875 HMS Challenger measured 4,475 fathoms (about 8,184 m) with a weighted line. In 1957 the Soviet ship Vityaz reported 11,034 m, a figure still quoted today and about 99 m deeper than the 2021 estimate.",
+        "D8-C5": "At true scale the trench is a broad depression. In the GEBCO_2020 grid, a cross-section near Challenger Deep has walls averaging about 5–10° (locally steeper, up to about 18° over 2 km) and is about 11–13 km wide at 10,000 m below sea level.",
+        "D8-C6": "Depth is measured mostly with sound: ships time echoes from the seafloor, and where no ship has surveyed, grids fill in with satellite-derived estimates. As of April 2026, 28.7% of the global seafloor had been mapped (Seabed 2030); Challenger Deep itself has been surveyed repeatedly with full-ocean-depth multibeam sonar.",
+        "D8-C7": "The runner-up is Horizon Deep in the Tonga Trench: 10,823 m in the 2019 Five Deeps dive data, 10,816 ± 16 m by multibeam sonar. The gap with Challenger Deep is about 108–112 m, roughly 1% of the depth.",
+        "D8-C8": "Very little seafloor lies deeper than 10,000 m. In the GEBCO_2020 grid that zone covers about 1,480 km² in the Mariana Trench and about 975 km² in the Tonga Trench, less than Greater London (about 1,572 km²) and under 2% of Portugal's 92,230 km².",
+        "D8-C9": "The 1960 Trieste took nearly five hours (about 4 hours 47 minutes) to reach the bottom; Deepsea Challenger's 2012 descent took 2 hours and 36 minutes.",
+        "D8-C10": "A falling object's time depends on its size: in a simple drag model, a solid lead ball about 23 cm across sinks at roughly 7.9 m/s and reaches the bottom in about 23 minutes, while a 1 cm lead pellet would take nearly 2 hours.",
+        "D8-C11": "In January 1960 Don Walsh and Jacques Piccard became the first two people to reach Challenger Deep. James Cameron followed alone in 2012, and the count stayed at 3 until April 2019.",
+        "D8-C12": "On June 26, 2020, Jim Wigginton became the 13th person to reach Challenger Deep. Only 12 people have walked on the Moon, so more people had now been to the deepest point of the ocean.",
+        "D8-C13": "By July 2022, at least 27 people had reached Challenger Deep, 21 of them aboard the submersible Limiting Factor. The figure is a minimum count from the published list of descents."
+      },
+      "verdict": "The headline holds: the best current estimate puts Challenger Deep at 10,935 m ± 6 m, about 2 km deeper than Everest is tall. The data support the episode's main points: at true scale the trench is a broad depression, modern estimates still differ by meters to tens of meters, Horizon Deep in the Tonga Trench comes within about 1%, and since June 2020 more people have reached the bottom than have walked on the Moon. The trench width at 10,000 m and Deepsea Challenger's descent time differ from the values in the video, as noted in the Update.",
+      "errata": [
+        "The video said the trench is about 16 km wide at 10,000 m below sea level. In the GEBCO_2020 grid, a cross-section perpendicular to the trench axis near Challenger Deep measures about 11–13 km at that depth.",
+        "The video said a vehicle like Deepsea Challenger takes around 2 hours to reach the bottom. The data show that its 2012 descent took 2 hours and 36 minutes."
+      ]
+    },
+    "it": {
+      "title": "Quanto è profonda la Fossa delle Marianne? L'Everest non tocca il fondo",
+      "lede": "Il Challenger Deep si trova a circa 10.935 m sotto il livello del mare: un Everest capovolto si fermerebbe circa 2 km prima del fondo. In scala reale la fossa è una depressione ampia e dolce, e dal 2020 l'hanno raggiunta più persone di quante abbiano camminato sulla Luna.",
+      "question": "Quanto è profonda la Fossa delle Marianne, e quanto bene conosciamo davvero il suo punto più profondo?",
+      "claims": {
+        "D8-C1": "Partendo dalla superficie: il Burj Khalifa è alto 828 m e il relitto del Titanic giace a circa 3.800 m. Capovolgendo l'Everest (8.848,86 m) dentro il Challenger Deep, sotto la sua vetta resterebbero circa 2.086 m d'acqua.",
+        "D8-C2": "La migliore stima attuale colloca il Challenger Deep a 10.935 m sotto il livello medio del mare, ± 6 m con confidenza del 95%, da misure basate sulla pressione raccolte da un sommergibile con equipaggio nel giugno 2020.",
+        "D8-C3": "Altri rilievi moderni arrivano vicino, ma non allo stesso numero: 10.924 ± 15 m (sonar multifascio, 2019), 10.927 m (rilievo giapponese del 2023, intervallo 10.914–10.932 m a seconda del modello di velocità del suono) e 10.984 m (rilievo del 2010).",
+        "D8-C4": "Nel 1875 la HMS Challenger misurò 4.475 braccia (circa 8.184 m) con una sagola zavorrata. Nel 1957 la nave sovietica Vityaz riportò 11.034 m, un valore citato ancora oggi e di circa 99 m più profondo della stima del 2021.",
+        "D8-C5": "In scala reale la fossa è una depressione ampia. Nella griglia GEBCO_2020, una sezione vicino al Challenger Deep ha pareti con pendenza media di circa 5–10° (localmente più ripide, fino a circa 18° su 2 km) ed è larga circa 11–13 km a 10.000 m sotto il livello del mare.",
+        "D8-C6": "La profondità si misura soprattutto con il suono: le navi cronometrano l'eco del fondale e, dove nessuna nave ha rilevato, le griglie si completano con stime derivate dai satelliti. Ad aprile 2026 era mappato il 28,7% del fondale globale (Seabed 2030); il Challenger Deep è stato rilevato più volte con sonar multifascio a piena profondità.",
+        "D8-C7": "Il secondo classificato è l'Horizon Deep, nella Fossa delle Tonga: 10.823 m nei dati dell'immersione Five Deeps del 2019, 10.816 ± 16 m con il sonar multifascio. Lo scarto dal Challenger Deep è di circa 108–112 m, circa l'1% della profondità.",
+        "D8-C8": "Pochissimo fondale si trova sotto i 10.000 m. Nella griglia GEBCO_2020 quella zona copre circa 1.480 km² nella Fossa delle Marianne e circa 975 km² nella Fossa delle Tonga: meno della Grande Londra (circa 1.572 km²) e meno del 2% dei 92.230 km² del Portogallo.",
+        "D8-C9": "Nel 1960 il Trieste impiegò quasi cinque ore (circa 4 ore e 47 minuti) per raggiungere il fondo; la discesa del Deepsea Challenger nel 2012 durò 2 ore e 36 minuti.",
+        "D8-C10": "Il tempo di caduta di un oggetto dipende dalla sua dimensione: in un semplice modello di resistenza, una sfera di piombo pieno di circa 23 cm di diametro affonda a circa 7,9 m/s e tocca il fondo in circa 23 minuti, mentre un pallino di piombo di 1 cm impiegherebbe quasi 2 ore.",
+        "D8-C11": "Nel gennaio 1960 Don Walsh e Jacques Piccard furono le prime due persone a raggiungere il Challenger Deep. James Cameron li seguì da solo nel 2012, e il conteggio rimase fermo a 3 fino all'aprile 2019.",
+        "D8-C12": "Il 26 giugno 2020 Jim Wigginton divenne la 13ª persona a raggiungere il Challenger Deep. Solo 12 persone hanno camminato sulla Luna: da quel momento più persone erano state nel punto più profondo dell'oceano.",
+        "D8-C13": "A luglio 2022 almeno 27 persone avevano raggiunto il Challenger Deep, 21 delle quali a bordo del sommergibile Limiting Factor. La cifra è un conteggio minimo, basato sull'elenco pubblicato delle discese."
+      },
+      "verdict": "Il titolo regge: la migliore stima attuale colloca il Challenger Deep a 10.935 m ± 6 m, circa 2 km più dell'altezza dell'Everest. I dati confermano i punti principali dell'episodio: in scala reale la fossa è una depressione ampia, le stime moderne differiscono ancora di metri o decine di metri, l'Horizon Deep nella Fossa delle Tonga arriva entro circa l'1%, e dal giugno 2020 più persone hanno raggiunto il fondo di quante abbiano camminato sulla Luna. La larghezza della fossa a 10.000 m e il tempo di discesa del Deepsea Challenger differiscono dai valori del video, come indicato nell'Aggiornamento.",
+      "errata": [
+        "Il video diceva che la fossa è larga circa 16 km a 10.000 m sotto il livello del mare. Nella griglia GEBCO_2020, una sezione perpendicolare all'asse della fossa vicino al Challenger Deep misura circa 11–13 km a quella profondità.",
+        "Il video diceva che un mezzo come il Deepsea Challenger impiega circa 2 ore per raggiungere il fondo. I dati mostrano che la sua discesa del 2012 durò 2 ore e 36 minuti."
+      ]
+    },
+    "de": {
+      "title": "Wie tief ist der Marianengraben? Der Everest reicht nicht bis zum Grund",
+      "lede": "Das Challengertief liegt etwa 10.935 m unter dem Meeresspiegel: Ein umgedrehter Everest würde etwa 2 km vor dem Grund enden. Maßstabsgetreu ist der Graben eine breite, sanfte Senke, und seit 2020 haben ihn mehr Menschen erreicht, als auf dem Mond gelaufen sind.",
+      "question": "Wie tief ist der Marianengraben, und wie gut kennen wir seinen tiefsten Punkt wirklich?",
+      "claims": {
+        "D8-C1": "Von der Oberfläche aus: Der Burj Khalifa ist 828 m hoch, das Wrack der Titanic liegt in etwa 3.800 m Tiefe. Stellt man den Everest (8.848,86 m) kopfüber ins Challengertief, blieben unter seinem Gipfel noch etwa 2.086 m Wasser.",
+        "D8-C2": "Die beste aktuelle Schätzung verortet das Challengertief bei 10.935 m unter dem mittleren Meeresspiegel, ± 6 m bei 95 % Konfidenz, aus druckbasierten Messungen eines bemannten Tauchboots im Juni 2020.",
+        "D8-C3": "Andere moderne Vermessungen liegen nah dran, aber nicht beim selben Wert: 10.924 ± 15 m (Fächerecholot, 2019), 10.927 m (japanische Vermessung von 2023, Spanne 10.914–10.932 m je nach Schallgeschwindigkeitsmodell) und 10.984 m (Vermessung von 2010).",
+        "D8-C4": "1875 maß die HMS Challenger mit einer beschwerten Leine 4.475 Faden (etwa 8.184 m). 1957 meldete das sowjetische Schiff Vityaz 11.034 m, ein Wert, der bis heute zitiert wird und etwa 99 m tiefer liegt als die Schätzung von 2021.",
+        "D8-C5": "Maßstabsgetreu ist der Graben eine breite Senke. Im Gitter GEBCO_2020 hat ein Querschnitt nahe dem Challengertief Hänge mit durchschnittlich etwa 5–10° (stellenweise steiler, bis etwa 18° auf 2 km) und ist in 10.000 m Tiefe etwa 11–13 km breit.",
+        "D8-C6": "Tiefe wird vor allem mit Schall gemessen: Schiffe messen die Laufzeit des Echos vom Meeresboden, und wo kein Schiff vermessen hat, füllen satellitengestützte Schätzungen die Gitter. Im April 2026 waren 28,7 % des weltweiten Meeresbodens kartiert (Seabed 2030); das Challengertief selbst wurde mehrfach mit Fächerecholoten für volle Ozeantiefe vermessen.",
+        "D8-C7": "Auf Platz zwei liegt das Horizon-Tief im Tongagraben: 10.823 m in den Tauchdaten von Five Deeps 2019, 10.816 ± 16 m per Fächerecholot. Der Abstand zum Challengertief beträgt etwa 108–112 m, rund 1 % der Tiefe.",
+        "D8-C8": "Nur sehr wenig Meeresboden liegt tiefer als 10.000 m. Im Gitter GEBCO_2020 umfasst diese Zone etwa 1.480 km² im Marianengraben und etwa 975 km² im Tongagraben: weniger als Greater London (etwa 1.572 km²) und unter 2 % der 92.230 km² Portugals.",
+        "D8-C9": "Die Trieste brauchte 1960 fast fünf Stunden (etwa 4 Stunden 47 Minuten) bis zum Grund; der Abstieg der Deepsea Challenger 2012 dauerte 2 Stunden und 36 Minuten.",
+        "D8-C10": "Die Sinkzeit eines Objekts hängt von seiner Größe ab: In einem einfachen Widerstandsmodell sinkt eine massive Bleikugel von etwa 23 cm Durchmesser mit rund 7,9 m/s und erreicht den Grund in etwa 23 Minuten, ein Bleikügelchen von 1 cm bräuchte dagegen fast 2 Stunden.",
+        "D8-C11": "Im Januar 1960 erreichten Don Walsh und Jacques Piccard als erste zwei Menschen das Challengertief. James Cameron folgte 2012 allein, und die Zahl blieb bis April 2019 bei 3.",
+        "D8-C12": "Am 26. Juni 2020 erreichte Jim Wigginton als 13. Mensch das Challengertief. Nur 12 Menschen sind auf dem Mond gelaufen, damit waren nun mehr Menschen am tiefsten Punkt des Ozeans gewesen.",
+        "D8-C13": "Bis Juli 2022 hatten mindestens 27 Menschen das Challengertief erreicht, 21 davon an Bord des Tauchboots Limiting Factor. Die Zahl ist eine Mindestzählung aus der veröffentlichten Liste der Abstiege."
+      },
+      "verdict": "Die Schlagzeile hält: Die beste aktuelle Schätzung verortet das Challengertief bei 10.935 m ± 6 m, etwa 2 km tiefer, als der Everest hoch ist. Die Daten stützen die Kernaussagen der Folge: Maßstabsgetreu ist der Graben eine breite Senke, moderne Schätzungen weichen noch um Meter bis Dutzende Meter voneinander ab, das Horizon-Tief im Tongagraben kommt auf etwa 1 % heran, und seit Juni 2020 haben mehr Menschen den Grund erreicht, als auf dem Mond gelaufen sind. Die Breite des Grabens in 10.000 m Tiefe und die Abstiegszeit der Deepsea Challenger weichen von den Werten im Video ab, wie im Update vermerkt.",
+      "errata": [
+        "Das Video sagte, der Graben sei in 10.000 m Tiefe etwa 16 km breit. Im Gitter GEBCO_2020 misst ein Querschnitt senkrecht zur Grabenachse nahe dem Challengertief in dieser Tiefe etwa 11–13 km.",
+        "Das Video sagte, ein Fahrzeug wie die Deepsea Challenger brauche etwa 2 Stunden bis zum Grund. Die Daten zeigen, dass ihr Abstieg 2012 2 Stunden und 36 Minuten dauerte."
+      ]
+    },
+    "es": {
+      "title": "Fosa de las Marianas: ¿cuán profunda? El Everest no llega al fondo",
+      "lede": "El abismo Challenger está a unos 10.935 m bajo el nivel del mar: un Everest invertido se quedaría a unos 2 km del fondo. A escala real la fosa es una depresión amplia y suave, y desde 2020 la han alcanzado más personas de las que han caminado sobre la Luna.",
+      "question": "¿Qué profundidad tiene la fosa de las Marianas, y cuánto conocemos de verdad su punto más profundo?",
+      "claims": {
+        "D8-C1": "Desde la superficie: el Burj Khalifa mide 828 m y el pecio del Titanic yace a unos 3.800 m. Si se invierte el Everest (8.848,86 m) dentro del abismo Challenger, bajo su cima quedarían unos 2.086 m de agua.",
+        "D8-C2": "La mejor estimación actual sitúa el abismo Challenger a 10.935 m bajo el nivel medio del mar, ± 6 m con un 95% de confianza, a partir de mediciones basadas en la presión tomadas por un sumergible tripulado en junio de 2020.",
+        "D8-C3": "Otros levantamientos modernos se acercan, pero no dan la misma cifra: 10.924 ± 15 m (sonar multihaz, 2019), 10.927 m (levantamiento japonés de 2023, rango 10.914–10.932 m según el modelo de velocidad del sonido) y 10.984 m (levantamiento de 2010).",
+        "D8-C4": "En 1875 el HMS Challenger midió 4.475 brazas (unos 8.184 m) con una sonda lastrada. En 1957 el buque soviético Vityaz informó de 11.034 m, una cifra que todavía se cita hoy y que es unos 99 m más profunda que la estimación de 2021.",
+        "D8-C5": "A escala real la fosa es una depresión amplia. En la cuadrícula GEBCO_2020, una sección cerca del abismo Challenger tiene paredes con una pendiente media de unos 5–10° (localmente más empinadas, hasta unos 18° en 2 km) y mide unos 11–13 km de ancho a 10.000 m bajo el nivel del mar.",
+        "D8-C6": "La profundidad se mide sobre todo con sonido: los barcos cronometran el eco del fondo y, donde ningún barco ha medido, las cuadrículas se completan con estimaciones derivadas de satélites. En abril de 2026 estaba cartografiado el 28,7% del fondo marino mundial (Seabed 2030); el propio abismo Challenger se ha levantado varias veces con sonar multihaz de profundidad oceánica completa.",
+        "D8-C7": "El segundo es el abismo Horizon, en la fosa de Tonga: 10.823 m en los datos de la inmersión Five Deeps de 2019, 10.816 ± 16 m con sonar multihaz. La diferencia con el abismo Challenger es de unos 108–112 m, alrededor del 1% de la profundidad.",
+        "D8-C8": "Muy poco fondo marino está a más de 10.000 m. En la cuadrícula GEBCO_2020 esa zona cubre unos 1.480 km² en la fosa de las Marianas y unos 975 km² en la fosa de Tonga: menos que el Gran Londres (unos 1.572 km²) y menos del 2% de los 92.230 km² de Portugal.",
+        "D8-C9": "En 1960 el Trieste tardó casi cinco horas (unas 4 horas y 47 minutos) en llegar al fondo; el descenso del Deepsea Challenger en 2012 duró 2 horas y 36 minutos.",
+        "D8-C10": "El tiempo de caída de un objeto depende de su tamaño: en un modelo de arrastre sencillo, una bola maciza de plomo de unos 23 cm de diámetro se hunde a unos 7,9 m/s y llega al fondo en unos 23 minutos, mientras que un perdigón de plomo de 1 cm tardaría casi 2 horas.",
+        "D8-C11": "En enero de 1960 Don Walsh y Jacques Piccard fueron las dos primeras personas en llegar al abismo Challenger. James Cameron los siguió en solitario en 2012, y la cuenta se quedó en 3 hasta abril de 2019.",
+        "D8-C12": "El 26 de junio de 2020 Jim Wigginton se convirtió en la 13.ª persona en llegar al abismo Challenger. Solo 12 personas han caminado sobre la Luna, así que ya había más personas que habían estado en el punto más profundo del océano.",
+        "D8-C13": "Para julio de 2022, al menos 27 personas habían llegado al abismo Challenger, 21 de ellas a bordo del sumergible Limiting Factor. La cifra es un recuento mínimo basado en la lista publicada de descensos."
+      },
+      "verdict": "El titular se sostiene: la mejor estimación actual sitúa el abismo Challenger a 10.935 m ± 6 m, unos 2 km más de lo que mide el Everest. Los datos respaldan los puntos principales del episodio: a escala real la fosa es una depresión amplia, las estimaciones modernas aún difieren en metros o decenas de metros, el abismo Horizon en la fosa de Tonga queda a cerca del 1%, y desde junio de 2020 más personas han llegado al fondo de las que han caminado sobre la Luna. El ancho de la fosa a 10.000 m y el tiempo de descenso del Deepsea Challenger difieren de los valores del video, como se indica en la Actualización.",
+      "errata": [
+        "El video decía que la fosa mide unos 16 km de ancho a 10.000 m bajo el nivel del mar. En la cuadrícula GEBCO_2020, una sección perpendicular al eje de la fosa cerca del abismo Challenger mide unos 11–13 km a esa profundidad.",
+        "El video decía que un vehículo como el Deepsea Challenger tarda unas 2 horas en llegar al fondo. Los datos muestran que su descenso de 2012 duró 2 horas y 36 minutos."
+      ]
+    },
+    "fr": {
+      "title": "Fosse des Mariannes : plus profonde que l'Everest n'est haut",
+      "lede": "La fosse Challenger se trouve à environ 10 935 m sous le niveau de la mer : un Everest retourné s'arrêterait à environ 2 km du fond. À l'échelle réelle, la fosse est une dépression large et douce, et depuis 2020 plus de personnes l'ont atteinte qu'il n'y en a eu à marcher sur la Lune.",
+      "question": "Quelle est la profondeur de la fosse des Mariannes, et connaissons-nous vraiment bien son point le plus profond ?",
+      "claims": {
+        "D8-C1": "Depuis la surface : la Burj Khalifa mesure 828 m et l'épave du Titanic repose à environ 3 800 m. Si l'on retourne l'Everest (8 848,86 m) dans la fosse Challenger, il resterait environ 2 086 m d'eau sous son sommet.",
+        "D8-C2": "La meilleure estimation actuelle place la fosse Challenger à 10 935 m sous le niveau moyen de la mer, ± 6 m avec une confiance de 95 %, à partir de mesures fondées sur la pression prises par un submersible habité en juin 2020.",
+        "D8-C3": "D'autres levés modernes s'en approchent sans donner le même chiffre : 10 924 ± 15 m (sondeur multifaisceau, 2019), 10 927 m (levé japonais de 2023, plage de 10 914–10 932 m selon le modèle de vitesse du son) et 10 984 m (levé de 2010).",
+        "D8-C4": "En 1875, le HMS Challenger a mesuré 4 475 brasses (environ 8 184 m) avec une ligne lestée. En 1957, le navire soviétique Vityaz a annoncé 11 034 m, un chiffre encore cité aujourd'hui et plus profond d'environ 99 m que l'estimation de 2021.",
+        "D8-C5": "À l'échelle réelle, la fosse est une large dépression. Dans la grille GEBCO_2020, une coupe près de la fosse Challenger présente des parois d'une pente moyenne d'environ 5–10° (localement plus raides, jusqu'à environ 18° sur 2 km) et mesure environ 11–13 km de large à 10 000 m sous le niveau de la mer.",
+        "D8-C6": "La profondeur se mesure surtout par le son : les navires chronomètrent l'écho du fond et, là où aucun navire n'a effectué de levé, les grilles sont complétées par des estimations dérivées des satellites. En avril 2026, 28,7 % des fonds marins du globe étaient cartographiés (Seabed 2030) ; la fosse Challenger elle-même a été levée à plusieurs reprises au sondeur multifaisceau pleine profondeur.",
+        "D8-C7": "La deuxième place revient à la fosse Horizon, dans la fosse des Tonga : 10 823 m dans les données de plongée de Five Deeps en 2019, 10 816 ± 16 m au sondeur multifaisceau. L'écart avec la fosse Challenger est d'environ 108–112 m, soit environ 1 % de la profondeur.",
+        "D8-C8": "Très peu de fonds marins se trouvent à plus de 10 000 m. Dans la grille GEBCO_2020, cette zone couvre environ 1 480 km² dans la fosse des Mariannes et environ 975 km² dans la fosse des Tonga : moins que le Grand Londres (environ 1 572 km²) et moins de 2 % des 92 230 km² du Portugal.",
+        "D8-C9": "En 1960, le Trieste a mis près de cinq heures (environ 4 heures 47 minutes) pour atteindre le fond ; la descente du Deepsea Challenger en 2012 a duré 2 heures et 36 minutes.",
+        "D8-C10": "La durée de chute d'un objet dépend de sa taille : dans un modèle de traînée simple, une boule de plomb pleine d'environ 23 cm de diamètre coule à environ 7,9 m/s et atteint le fond en environ 23 minutes, alors qu'une bille de plomb de 1 cm mettrait près de 2 heures.",
+        "D8-C11": "En janvier 1960, Don Walsh et Jacques Piccard sont devenus les deux premières personnes à atteindre la fosse Challenger. James Cameron les a suivis en solitaire en 2012, et le compte est resté à 3 jusqu'en avril 2019.",
+        "D8-C12": "Le 26 juin 2020, Jim Wigginton est devenu la 13e personne à atteindre la fosse Challenger. Seules 12 personnes ont marché sur la Lune : davantage de personnes étaient désormais allées au point le plus profond de l'océan.",
+        "D8-C13": "En juillet 2022, au moins 27 personnes avaient atteint la fosse Challenger, dont 21 à bord du submersible Limiting Factor. Ce chiffre est un décompte minimal tiré de la liste publiée des descentes."
+      },
+      "verdict": "Le titre tient : la meilleure estimation actuelle place la fosse Challenger à 10 935 m ± 6 m, soit environ 2 km de plus que la hauteur de l'Everest. Les données confirment les points principaux de l'épisode : à l'échelle réelle la fosse est une large dépression, les estimations modernes diffèrent encore de quelques mètres à quelques dizaines de mètres, la fosse Horizon dans la fosse des Tonga s'en approche à environ 1 %, et depuis juin 2020 plus de personnes ont atteint le fond qu'il n'y en a eu à marcher sur la Lune. La largeur de la fosse à 10 000 m et la durée de descente du Deepsea Challenger diffèrent des valeurs de la vidéo, comme indiqué dans la Mise à jour.",
+      "errata": [
+        "La vidéo disait que la fosse mesure environ 16 km de large à 10 000 m sous le niveau de la mer. Dans la grille GEBCO_2020, une coupe perpendiculaire à l'axe de la fosse près de la fosse Challenger mesure environ 11–13 km à cette profondeur.",
+        "La vidéo disait qu'un engin comme le Deepsea Challenger met environ 2 heures pour atteindre le fond. Les données montrent que sa descente de 2012 a duré 2 heures et 36 minutes."
+      ]
+    }
+  }
+}

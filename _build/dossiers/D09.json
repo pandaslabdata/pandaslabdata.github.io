@@ -1,0 +1,173 @@
+{
+  "n": "09",
+  "ep": "EP 9",
+  "yt": "1oBH-4R2H2Q",
+  "world": "space",
+  "updated": "2026-11-21",
+  "claims": [
+    {"id": "D9-C1", "label": "OBSERVED", "sources": [
+      {"name": "NASA NSSDC, Planetary Fact Sheet", "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/", "read": "data"}]},
+    {"id": "D9-C2", "label": "OBSERVED", "sources": [
+      {"name": "NASA NSSDC, Planetary Fact Sheet", "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/", "read": "data"}]},
+    {"id": "D9-C3", "label": "OBSERVED", "sources": [
+      {"name": "NASA Science, Voyager 1 mission page", "url": "https://science.nasa.gov/mission/voyager/voyager-1/", "read": "full text"}]},
+    {"id": "D9-C4", "label": "OBSERVED", "sources": [
+      {"name": "NASA/JPL Horizons, Voyager 1 heliocentric vectors, 2026-10-11", "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27-31%27&OBJ_DATA=%27NO%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27VECTORS%27&CENTER=%27500@10%27&START_TIME=%272026-10-11%27&STOP_TIME=%272026-10-12%27&STEP_SIZE=%271d%27&VEC_TABLE=%274%27&OUT_UNITS=%27AU-D%27", "read": "data"}]},
+    {"id": "D9-C5", "label": "ESTIMATE", "sources": [
+      {"name": "NASA/JPL Horizons, Voyager 1 heliocentric vectors, 2026-10-11", "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%27-31%27&OBJ_DATA=%27NO%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27VECTORS%27&CENTER=%27500@10%27&START_TIME=%272026-10-11%27&STOP_TIME=%272026-10-12%27&STEP_SIZE=%271d%27&VEC_TABLE=%274%27&OUT_UNITS=%27AU-D%27", "read": "data"},
+      {"name": "NASA Science, Voyager 1 mission page", "url": "https://science.nasa.gov/mission/voyager/voyager-1/", "read": "full text"}]},
+    {"id": "D9-C6", "label": "OBSERVED", "sources": [
+      {"name": "NASA NSSDC, Planetary Fact Sheet", "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/", "read": "data"},
+      {"name": "NASA Science, Our Milky Way galaxy: how big is space?", "url": "https://science.nasa.gov/universe/exoplanets/our-milky-way-galaxy-how-big-is-space/", "read": "full text"},
+      {"name": "NASA Science, Hubble's new shot of Proxima Centauri", "url": "https://science.nasa.gov/missions/hubble/hubbles-new-shot-of-proxima-centauri-our-nearest-neighbor", "read": "full text"}]},
+    {"id": "D9-C7", "label": "OBSERVED", "sources": [
+      {"name": "GRAVITY Collaboration 2019, Astronomy & Astrophysics 625, L10", "url": "https://arxiv.org/abs/1904.05721", "read": "abstract only"}]},
+    {"id": "D9-C8", "label": "ESTIMATE", "sources": [
+      {"name": "NASA Science, Our Milky Way galaxy: how big is space?", "url": "https://science.nasa.gov/universe/exoplanets/our-milky-way-galaxy-how-big-is-space/", "read": "full text"}]},
+    {"id": "D9-C9", "label": "OBSERVED", "sources": [
+      {"name": "NASA Science, Hubble Messier catalog: Messier 31", "url": "https://science.nasa.gov/mission/hubble/science/explore-the-night-sky/hubble-messier-catalog/messier-31/", "read": "full text"},
+      {"name": "Mei et al. 2007, The Astrophysical Journal 655, 144", "url": "https://arxiv.org/abs/astro-ph/0702510", "read": "abstract only"}]},
+    {"id": "D9-C10", "label": "ESTIMATE", "sources": [
+      {"name": "Tully et al. 2014, Nature 513, 71", "url": "https://arxiv.org/abs/1409.0880", "read": "abstract only"},
+      {"name": "University of Hawaii at Manoa, news release (EurekAlert, 2014)", "url": "https://www.eurekalert.org/news-releases/500283", "read": "full text"}]},
+    {"id": "D9-C11", "label": "ESTIMATE", "sources": [
+      {"name": "ESA, Planck reveals an almost perfect Universe (2013)", "url": "https://www.esa.int/Science_Exploration/Space_Science/Planck/Planck_reveals_an_almost_perfect_Universe", "read": "full text"},
+      {"name": "Planck Collaboration 2018, Planck 2018 results VI: Cosmological parameters", "url": "https://arxiv.org/abs/1807.06209", "read": "abstract only"}]},
+    {"id": "D9-C12", "label": "ESTIMATE", "sources": [
+      {"name": "Planck Collaboration 2018, Planck 2018 results VI: Cosmological parameters", "url": "https://arxiv.org/abs/1807.06209", "read": "abstract only"},
+      {"name": "Davis & Lineweaver, Expanding Confusion (PASA 2004; arXiv v2)", "url": "https://arxiv.org/abs/astro-ph/0310808", "read": "full text"}]},
+    {"id": "D9-C13", "label": "ESTIMATE", "sources": [
+      {"name": "Davis & Lineweaver, Expanding Confusion (PASA 2004; arXiv v2)", "url": "https://arxiv.org/abs/astro-ph/0310808", "read": "full text"},
+      {"name": "Planck Collaboration 2018, Planck 2018 results VI: Cosmological parameters", "url": "https://arxiv.org/abs/1807.06209", "read": "abstract only"}]},
+    {"id": "D9-C14", "label": "HYPOTHESIS", "sources": [
+      {"name": "Davis & Lineweaver, Expanding Confusion (PASA 2004; arXiv v2)", "url": "https://arxiv.org/abs/astro-ph/0310808", "read": "full text"}]}
+  ],
+  "exhibits": ["D9-C4", "D9-C6", "D9-C12", "D9-C13"],
+  "i18n": {
+    "en": {
+      "title": "How big is the universe? At least 93 billion light-years across",
+      "lede": "A ladder of light-travel times climbs from the Moon (1.28 light-seconds) and Voyager 1 (23.8 light-hours) to an observable universe about 93 billion light-years wide. That width exceeds 13.8 billion years of light travel because space kept expanding while the light was on its way.",
+      "question": "If the universe is 13.8 billion years old, how can the part we see be about 93 billion light-years wide?",
+      "claims": {
+        "D9-C1": "The Moon is about 1.28 light-seconds from Earth (384,400 km), and the Sun about 8 minutes 20 seconds of light travel away (499 seconds for 1 AU).",
+        "D9-C2": "From the Sun, light takes about 43 minutes to reach Jupiter and about 4.2 hours to reach Neptune (mean distances of 778.5 and 4,515 million km). Crossing Neptune's orbit from side to side takes about 8.3 hours.",
+        "D9-C3": "NASA launched Voyager 1 on September 5, 1977. It crossed the heliopause into interstellar space on August 25, 2012, and no spacecraft has gone farther.",
+        "D9-C4": "On October 11, 2026, JPL's ephemeris placed Voyager 1 at 172.0 AU from the Sun: 23.8 hours of light travel, still short of one light-day (24 hours).",
+        "D9-C5": "At its speed relative to the Sun, about 16.9 km/s, Voyager 1 would need about 17,700 years to cover one light-year. It is a constant-speed comparison, not a flight plan.",
+        "D9-C6": "Neptune is about 4.2 light-hours from the Sun; Proxima Centauri, the nearest star, is about 4.2 light-years away. Same number, different unit: almost 9,000 times farther.",
+        "D9-C7": "The center of our galaxy is about 26,700 light-years away: in 2019 the GRAVITY Collaboration measured 8,178 parsecs, with 0.3% uncertainty.",
+        "D9-C8": "The Milky Way is about 100,000 light-years across and probably contains 100 to 400 billion stars.",
+        "D9-C9": "Andromeda is about 2.5 million light-years away. The Virgo Cluster lies at about 16.5 megaparsecs, roughly 54 million light-years.",
+        "D9-C10": "Laniakea, our home supercluster, spans about 160 megaparsecs, roughly 520 million light-years, with its boundary set by where galaxy flows part ways.",
+        "D9-C11": "Planck data put the age of the universe at about 13.8 billion years; our recomputation with Planck 2018 parameters gives 13.787 billion.",
+        "D9-C12": "The observable universe is estimated at about 93 billion light-years across today; our recomputation with Planck 2018 parameters gives a radius of 46.2 and a diameter of 92.4 billion light-years. It exceeds 13.8 billion light-years because space expanded while the light traveled.",
+        "D9-C13": "In the Davis & Lineweaver model, galaxies at redshift about 1.8 are now crossing our event horizon: a signal sent today will never reach them. The reachable sphere (radius about 16 billion light-years) holds about 4% of the observable volume (radius 46 billion); with Planck 2018 values, 4.6%.",
+        "D9-C14": "The observable universe is a horizon, not an edge. Nothing in the standard model says space ends there, and whether it is finite or infinite is still unknown."
+      },
+      "verdict": "The ladder holds: each rung, from the Moon at 1.28 light-seconds to Laniakea at about 520 million light-years, matches its source, and Voyager 1 was 172.0 AU from the Sun (23.8 light-hours) in October 2026. The 93 billion light-years is the estimated present-day diameter of the observable universe, not of the whole universe; our Planck 2018 recomputation gives 92.4. The reachable share of about 4% belongs to the Davis & Lineweaver model, and with Planck 2018 values it is 4.6%.",
+      "errata": [
+        "The video said light crosses our planetary backyard in about four hours. The data show that about 4.2 hours is the light travel time from the Sun to Neptune; crossing Neptune's orbit from side to side takes about 8.3 hours."
+      ]
+    },
+    "it": {
+      "title": "Quanto è grande l'universo? Almeno 93 miliardi di anni luce",
+      "lede": "Una scala di tempi-luce sale dalla Luna (1,28 secondi-luce) e da Voyager 1 (23,8 ore-luce) fino a un universo osservabile largo circa 93 miliardi di anni luce. Quella larghezza supera 13,8 miliardi di anni di viaggio della luce perché lo spazio ha continuato a espandersi mentre la luce era in cammino.",
+      "question": "Se l'universo ha 13,8 miliardi di anni, come può la parte che vediamo essere larga circa 93 miliardi di anni luce?",
+      "claims": {
+        "D9-C1": "La Luna è a circa 1,28 secondi-luce dalla Terra (384.400 km), e il Sole a circa 8 minuti e 20 secondi di viaggio della luce (499 secondi per 1 UA).",
+        "D9-C2": "Dal Sole, la luce impiega circa 43 minuti per raggiungere Giove e circa 4,2 ore per raggiungere Nettuno (distanze medie di 778,5 e 4.515 milioni di km). Attraversare l'orbita di Nettuno da parte a parte richiede circa 8,3 ore.",
+        "D9-C3": "La NASA ha lanciato Voyager 1 il 5 settembre 1977. Ha attraversato l'eliopausa entrando nello spazio interstellare il 25 agosto 2012, e nessuna sonda si è spinta più lontano.",
+        "D9-C4": "L'11 ottobre 2026 le effemeridi del JPL collocavano Voyager 1 a 172,0 UA dal Sole: 23,8 ore di viaggio della luce, ancora meno di un giorno-luce (24 ore).",
+        "D9-C5": "Alla sua velocità rispetto al Sole, circa 16,9 km/s, Voyager 1 impiegherebbe circa 17.700 anni per percorrere un anno luce. È un confronto a velocità costante, non un piano di volo.",
+        "D9-C6": "Nettuno è a circa 4,2 ore-luce dal Sole; Proxima Centauri, la stella più vicina, è a circa 4,2 anni luce. Stesso numero, unità diversa: quasi 9.000 volte più lontano.",
+        "D9-C7": "Il centro della nostra galassia è a circa 26.700 anni luce: nel 2019 la GRAVITY Collaboration ha misurato 8.178 parsec, con un'incertezza dello 0,3%.",
+        "D9-C8": "La Via Lattea misura circa 100.000 anni luce da un capo all'altro e contiene probabilmente da 100 a 400 miliardi di stelle.",
+        "D9-C9": "Andromeda è a circa 2,5 milioni di anni luce. L'ammasso della Vergine si trova a circa 16,5 megaparsec, cioè circa 54 milioni di anni luce.",
+        "D9-C10": "Laniakea, il nostro superammasso, si estende per circa 160 megaparsec, circa 520 milioni di anni luce, con un confine fissato dove i flussi di galassie si separano.",
+        "D9-C11": "I dati Planck fissano l'età dell'universo a circa 13,8 miliardi di anni; il nostro ricalcolo con i parametri Planck 2018 dà 13,787 miliardi.",
+        "D9-C12": "Oggi il diametro dell'universo osservabile è stimato in circa 93 miliardi di anni luce; il nostro ricalcolo con i parametri Planck 2018 dà un raggio di 46,2 e un diametro di 92,4 miliardi di anni luce. Supera 13,8 miliardi di anni luce perché lo spazio si è espanso mentre la luce viaggiava.",
+        "D9-C13": "Nel modello di Davis & Lineweaver, le galassie a redshift circa 1,8 stanno attraversando ora il nostro orizzonte degli eventi: un segnale inviato oggi non le raggiungerà mai. La sfera raggiungibile (raggio circa 16 miliardi di anni luce) contiene circa il 4% del volume osservabile (raggio 46 miliardi); con i valori Planck 2018, il 4,6%.",
+        "D9-C14": "L'universo osservabile è un orizzonte, non un bordo. Nulla nel modello standard dice che lo spazio finisca lì, e non sappiamo ancora se sia finito o infinito."
+      },
+      "verdict": "La scala regge: ogni gradino, dalla Luna a 1,28 secondi-luce a Laniakea a circa 520 milioni di anni luce, corrisponde alla sua fonte, e a ottobre 2026 Voyager 1 era a 172,0 UA dal Sole (23,8 ore-luce). I 93 miliardi di anni luce sono il diametro attuale stimato dell'universo osservabile, non dell'intero universo; il nostro ricalcolo Planck 2018 dà 92,4. La quota raggiungibile di circa il 4% appartiene al modello di Davis & Lineweaver, e con i valori Planck 2018 è il 4,6%.",
+      "errata": [
+        "Il video diceva che la luce attraversa il nostro cortile di pianeti in circa quattro ore. I dati mostrano che circa 4,2 ore è il tempo-luce dal Sole a Nettuno; attraversare l'orbita di Nettuno da parte a parte richiede circa 8,3 ore."
+      ]
+    },
+    "de": {
+      "title": "Wie groß ist das Universum? Mindestens 93 Milliarden Lichtjahre",
+      "lede": "Eine Leiter aus Lichtlaufzeiten führt vom Mond (1,28 Lichtsekunden) und Voyager 1 (23,8 Lichtstunden) bis zu einem beobachtbaren Universum von etwa 93 Milliarden Lichtjahren Durchmesser. Diese Breite übersteigt 13,8 Milliarden Jahre Lichtlaufzeit, weil sich der Raum weiter ausdehnte, während das Licht unterwegs war.",
+      "question": "Wenn das Universum 13,8 Milliarden Jahre alt ist, wie kann der Teil, den wir sehen, etwa 93 Milliarden Lichtjahre breit sein?",
+      "claims": {
+        "D9-C1": "Der Mond ist etwa 1,28 Lichtsekunden von der Erde entfernt (384.400 km), die Sonne etwa 8 Minuten und 20 Sekunden Lichtlaufzeit (499 Sekunden für 1 AE).",
+        "D9-C2": "Von der Sonne aus braucht Licht etwa 43 Minuten bis zum Jupiter und etwa 4,2 Stunden bis zum Neptun (mittlere Abstände von 778,5 und 4.515 Millionen km). Um die Neptunbahn von einer Seite zur anderen zu durchqueren, braucht es etwa 8,3 Stunden.",
+        "D9-C3": "Die NASA startete Voyager 1 am 5. September 1977. Die Sonde überquerte am 25. August 2012 die Heliopause in den interstellaren Raum, und keine Raumsonde ist weiter gekommen.",
+        "D9-C4": "Am 11. Oktober 2026 verortete die JPL-Ephemeride Voyager 1 in 172,0 AE Entfernung von der Sonne: 23,8 Stunden Lichtlaufzeit, noch weniger als ein Lichttag (24 Stunden).",
+        "D9-C5": "Mit ihrer Geschwindigkeit relativ zur Sonne, etwa 16,9 km/s, bräuchte Voyager 1 etwa 17.700 Jahre für ein Lichtjahr. Das ist ein Vergleich bei konstanter Geschwindigkeit, kein Flugplan.",
+        "D9-C6": "Neptun ist etwa 4,2 Lichtstunden von der Sonne entfernt; Proxima Centauri, der nächste Stern, etwa 4,2 Lichtjahre. Dieselbe Zahl, eine andere Einheit: fast 9.000-mal weiter.",
+        "D9-C7": "Das Zentrum unserer Galaxie ist etwa 26.700 Lichtjahre entfernt: 2019 maß die GRAVITY Collaboration 8.178 Parsec, mit 0,3 % Unsicherheit.",
+        "D9-C8": "Die Milchstraße misst etwa 100.000 Lichtjahre im Durchmesser und enthält wahrscheinlich 100 bis 400 Milliarden Sterne.",
+        "D9-C9": "Andromeda ist etwa 2,5 Millionen Lichtjahre entfernt. Der Virgo-Haufen liegt in etwa 16,5 Megaparsec, rund 54 Millionen Lichtjahren.",
+        "D9-C10": "Laniakea, unser Heimat-Superhaufen, erstreckt sich über etwa 160 Megaparsec, rund 520 Millionen Lichtjahre; seine Grenze liegt dort, wo sich die Galaxienströme trennen.",
+        "D9-C11": "Die Planck-Daten setzen das Alter des Universums auf etwa 13,8 Milliarden Jahre; unsere Neuberechnung mit den Planck-2018-Parametern ergibt 13,787 Milliarden.",
+        "D9-C12": "Der heutige Durchmesser des beobachtbaren Universums wird auf etwa 93 Milliarden Lichtjahre geschätzt; unsere Neuberechnung mit den Planck-2018-Parametern ergibt einen Radius von 46,2 und einen Durchmesser von 92,4 Milliarden Lichtjahren. Er übersteigt 13,8 Milliarden Lichtjahre, weil sich der Raum ausdehnte, während das Licht unterwegs war.",
+        "D9-C13": "Im Modell von Davis & Lineweaver überqueren Galaxien bei Rotverschiebung etwa 1,8 gerade unseren Ereignishorizont: Ein heute gesendetes Signal wird sie nie erreichen. Die erreichbare Kugel (Radius etwa 16 Milliarden Lichtjahre) umfasst etwa 4 % des beobachtbaren Volumens (Radius 46 Milliarden); mit den Planck-2018-Werten 4,6 %.",
+        "D9-C14": "Das beobachtbare Universum ist ein Horizont, kein Rand. Nichts im Standardmodell besagt, dass der Raum dort endet, und ob er endlich oder unendlich ist, weiß man noch nicht."
+      },
+      "verdict": "Die Leiter hält: Jede Sprosse, vom Mond bei 1,28 Lichtsekunden bis Laniakea bei etwa 520 Millionen Lichtjahren, stimmt mit ihrer Quelle überein, und Voyager 1 befand sich im Oktober 2026 in 172,0 AE Entfernung von der Sonne (23,8 Lichtstunden). Die 93 Milliarden Lichtjahre sind der geschätzte heutige Durchmesser des beobachtbaren Universums, nicht des gesamten Universums; unsere Planck-2018-Neuberechnung ergibt 92,4. Der erreichbare Anteil von etwa 4 % gehört zum Modell von Davis & Lineweaver, mit den Planck-2018-Werten sind es 4,6 %.",
+      "errata": [
+        "Das Video sagte, Licht durchquere unseren Planetenhinterhof in etwa vier Stunden. Die Daten zeigen, dass etwa 4,2 Stunden die Lichtlaufzeit von der Sonne zum Neptun sind; die Neptunbahn von einer Seite zur anderen zu durchqueren, dauert etwa 8,3 Stunden."
+      ]
+    },
+    "es": {
+      "title": "¿Qué tamaño tiene el universo? Al menos 93 mil millones de años luz",
+      "lede": "Una escalera de tiempos de luz sube desde la Luna (1,28 segundos luz) y la Voyager 1 (23,8 horas luz) hasta un universo observable de unos 93 mil millones de años luz de ancho. Ese ancho supera 13,8 mil millones de años de viaje de la luz porque el espacio siguió expandiéndose mientras la luz estaba en camino.",
+      "question": "Si el universo tiene 13,8 mil millones de años, ¿cómo puede la parte que vemos medir unos 93 mil millones de años luz de ancho?",
+      "claims": {
+        "D9-C1": "La Luna está a unos 1,28 segundos luz de la Tierra (384.400 km), y el Sol a unos 8 minutos y 20 segundos de viaje de la luz (499 segundos para 1 UA).",
+        "D9-C2": "Desde el Sol, la luz tarda unos 43 minutos en llegar a Júpiter y unas 4,2 horas en llegar a Neptuno (distancias medias de 778,5 y 4.515 millones de km). Cruzar la órbita de Neptuno de lado a lado lleva unas 8,3 horas.",
+        "D9-C3": "La NASA lanzó la Voyager 1 el 5 de septiembre de 1977. Cruzó la heliopausa hacia el espacio interestelar el 25 de agosto de 2012, y ninguna nave ha llegado más lejos.",
+        "D9-C4": "El 11 de octubre de 2026, las efemérides del JPL situaban a la Voyager 1 a 172,0 UA del Sol: 23,8 horas de viaje de la luz, todavía menos de un día luz (24 horas).",
+        "D9-C5": "A su velocidad respecto al Sol, unos 16,9 km/s, la Voyager 1 necesitaría unos 17.700 años para recorrer un año luz. Es una comparación a velocidad constante, no un plan de vuelo.",
+        "D9-C6": "Neptuno está a unas 4,2 horas luz del Sol; Próxima Centauri, la estrella más cercana, a unos 4,2 años luz. El mismo número, otra unidad: casi 9.000 veces más lejos.",
+        "D9-C7": "El centro de nuestra galaxia está a unos 26.700 años luz: en 2019 la GRAVITY Collaboration midió 8.178 pársecs, con un 0,3% de incertidumbre.",
+        "D9-C8": "La Vía Láctea mide unos 100.000 años luz de extremo a extremo y probablemente contiene entre 100 y 400 mil millones de estrellas.",
+        "D9-C9": "Andrómeda está a unos 2,5 millones de años luz. El cúmulo de Virgo se encuentra a unos 16,5 megapársecs, unos 54 millones de años luz.",
+        "D9-C10": "Laniakea, nuestro supercúmulo, abarca unos 160 megapársecs, unos 520 millones de años luz, con un límite fijado donde los flujos de galaxias se separan.",
+        "D9-C11": "Los datos de Planck sitúan la edad del universo en unos 13,8 mil millones de años; nuestro recálculo con los parámetros de Planck 2018 da 13,787 mil millones.",
+        "D9-C12": "Hoy se estima que el universo observable mide unos 93 mil millones de años luz de diámetro; nuestro recálculo con los parámetros de Planck 2018 da un radio de 46,2 y un diámetro de 92,4 mil millones de años luz. Supera los 13,8 mil millones de años luz porque el espacio se expandió mientras la luz viajaba.",
+        "D9-C13": "En el modelo de Davis & Lineweaver, las galaxias con corrimiento al rojo de alrededor de 1,8 están cruzando ahora nuestro horizonte de eventos: una señal enviada hoy nunca las alcanzará. La esfera alcanzable (radio de unos 16 mil millones de años luz) contiene cerca del 4% del volumen observable (radio de 46 mil millones); con los valores de Planck 2018, el 4,6%.",
+        "D9-C14": "El universo observable es un horizonte, no un borde. Nada en el modelo estándar dice que el espacio termine ahí, y aún no se sabe si es finito o infinito."
+      },
+      "verdict": "La escalera se sostiene: cada peldaño, desde la Luna a 1,28 segundos luz hasta Laniakea a unos 520 millones de años luz, coincide con su fuente, y en octubre de 2026 la Voyager 1 estaba a 172,0 UA del Sol (23,8 horas luz). Los 93 mil millones de años luz son el diámetro actual estimado del universo observable, no del universo entero; nuestro recálculo con Planck 2018 da 92,4 mil millones. La fracción alcanzable de cerca del 4% corresponde al modelo de Davis & Lineweaver, y con los valores de Planck 2018 es el 4,6%.",
+      "errata": [
+        "El video decía que la luz cruza nuestro patio de planetas en unas cuatro horas. Los datos muestran que unas 4,2 horas es el tiempo de luz del Sol a Neptuno; cruzar la órbita de Neptuno de lado a lado lleva unas 8,3 horas."
+      ]
+    },
+    "fr": {
+      "title": "Quelle est la taille de l'univers ? Au moins 93 milliards d'années-lumière",
+      "lede": "Une échelle de temps-lumière monte de la Lune (1,28 seconde-lumière) et de Voyager 1 (23,8 heures-lumière) jusqu'à un univers observable d'environ 93 milliards d'années-lumière de large. Cette largeur dépasse 13,8 milliards d'années de trajet de la lumière parce que l'espace a continué de s'étendre pendant que la lumière était en route.",
+      "question": "Si l'univers a 13,8 milliards d'années, comment la partie que nous voyons peut-elle mesurer environ 93 milliards d'années-lumière de large ?",
+      "claims": {
+        "D9-C1": "La Lune est à environ 1,28 seconde-lumière de la Terre (384 400 km), et le Soleil à environ 8 minutes et 20 secondes de trajet de la lumière (499 secondes pour 1 UA).",
+        "D9-C2": "Depuis le Soleil, la lumière met environ 43 minutes pour atteindre Jupiter et environ 4,2 heures pour atteindre Neptune (distances moyennes de 778,5 et 4 515 millions de km). Traverser l'orbite de Neptune d'un bord à l'autre prend environ 8,3 heures.",
+        "D9-C3": "La NASA a lancé Voyager 1 le 5 septembre 1977. La sonde a franchi l'héliopause vers l'espace interstellaire le 25 août 2012, et aucun engin n'est allé plus loin.",
+        "D9-C4": "Le 11 octobre 2026, les éphémérides du JPL plaçaient Voyager 1 à 172,0 UA du Soleil : 23,8 heures de trajet de la lumière, encore moins d'un jour-lumière (24 heures).",
+        "D9-C5": "À sa vitesse par rapport au Soleil, environ 16,9 km/s, Voyager 1 mettrait environ 17 700 ans à parcourir une année-lumière. C'est une comparaison à vitesse constante, pas un plan de vol.",
+        "D9-C6": "Neptune est à environ 4,2 heures-lumière du Soleil ; Proxima du Centaure, l'étoile la plus proche, à environ 4,2 années-lumière. Même nombre, autre unité : presque 9 000 fois plus loin.",
+        "D9-C7": "Le centre de notre galaxie est à environ 26 700 années-lumière : en 2019, la GRAVITY Collaboration a mesuré 8 178 parsecs, avec 0,3 % d'incertitude.",
+        "D9-C8": "La Voie lactée mesure environ 100 000 années-lumière d'un bord à l'autre et contient probablement de 100 à 400 milliards d'étoiles.",
+        "D9-C9": "Andromède est à environ 2,5 millions d'années-lumière. L'amas de la Vierge se trouve à environ 16,5 mégaparsecs, soit environ 54 millions d'années-lumière.",
+        "D9-C10": "Laniakea, notre superamas, s'étend sur environ 160 mégaparsecs, soit environ 520 millions d'années-lumière, avec une frontière fixée là où les flux de galaxies se séparent.",
+        "D9-C11": "Les données Planck situent l'âge de l'univers à environ 13,8 milliards d'années ; notre recalcul avec les paramètres Planck 2018 donne 13,787 milliards.",
+        "D9-C12": "Le diamètre actuel de l'univers observable est estimé à environ 93 milliards d'années-lumière ; notre recalcul avec les paramètres Planck 2018 donne un rayon de 46,2 et un diamètre de 92,4 milliards d'années-lumière. Il dépasse 13,8 milliards d'années-lumière parce que l'espace s'est étendu pendant que la lumière voyageait.",
+        "D9-C13": "Dans le modèle de Davis & Lineweaver, les galaxies de décalage vers le rouge d'environ 1,8 franchissent en ce moment notre horizon des événements : un signal envoyé aujourd'hui ne les atteindra jamais. La sphère atteignable (rayon d'environ 16 milliards d'années-lumière) contient environ 4 % du volume observable (rayon de 46 milliards) ; avec les valeurs Planck 2018, 4,6 %.",
+        "D9-C14": "L'univers observable est un horizon, pas un bord. Rien dans le modèle standard ne dit que l'espace s'arrête là, et l'on ignore encore s'il est fini ou infini."
+      },
+      "verdict": "L'échelle tient : chaque barreau, de la Lune à 1,28 seconde-lumière jusqu'à Laniakea à environ 520 millions d'années-lumière, correspond à sa source, et Voyager 1 était à 172,0 UA du Soleil (23,8 heures-lumière) en octobre 2026. Les 93 milliards d'années-lumière sont le diamètre actuel estimé de l'univers observable, pas de l'univers entier ; notre recalcul Planck 2018 donne 92,4. La part atteignable d'environ 4 % relève du modèle de Davis & Lineweaver, et avec les valeurs Planck 2018 elle est de 4,6 %.",
+      "errata": [
+        "La vidéo disait que la lumière traverse notre jardin de planètes en environ quatre heures. Les données montrent qu'environ 4,2 heures est le temps-lumière du Soleil à Neptune ; traverser l'orbite de Neptune d'un bord à l'autre prend environ 8,3 heures."
+      ]
+    }
+  }
+}

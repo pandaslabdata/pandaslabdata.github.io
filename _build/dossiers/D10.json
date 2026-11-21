@@ -1,0 +1,179 @@
+{
+  "n": "10",
+  "ep": "EP 10",
+  "yt": "V8d7ZmnnJjo",
+  "world": "earth",
+  "updated": "2026-11-21",
+  "claims": [
+    {"id": "D10-C1", "label": "ESTIMATE", "sources": [
+      {"name": "Guinness World Records, Remotest spot from land", "url": "https://www.guinnessworldrecords.com/world-records/66641-remotest-spot-from-land", "read": "full text"},
+      {"name": "NOAA National Ocean Service, Where is Point Nemo?", "url": "https://oceanservice.noaa.gov/facts/nemo.html", "read": "full text"},
+      {"name": "Lukatela, Point Nemo, revisited (2022)", "url": "https://www.lukatela.com/pointNemoRevisited/index.html", "read": "full text"}]},
+    {"id": "D10-C2", "label": "ESTIMATE", "sources": [
+      {"name": "Wessel & Smith, GSHHG v2.3.7 full-resolution coastline (SOEST, University of Hawaii; LGPL)", "url": "https://www.soest.hawaii.edu/pwessel/gshhg/", "read": "data"}]},
+    {"id": "D10-C3", "label": "OBSERVED", "sources": [
+      {"name": "Wessel & Smith, GSHHG v2.3.7 full-resolution coastline", "url": "https://www.soest.hawaii.edu/pwessel/gshhg/", "read": "data"},
+      {"name": "Wikipedia, Maher Island (USGS GNIS name entry)", "url": "https://en.wikipedia.org/wiki/Maher_Island", "read": "full text"},
+      {"name": "NOAA National Ocean Service, Where is Point Nemo?", "url": "https://oceanservice.noaa.gov/facts/nemo.html", "read": "full text"}]},
+    {"id": "D10-C4", "label": "ESTIMATE", "sources": [
+      {"name": "Lukatela, Point Nemo, revisited (2022)", "url": "https://www.lukatela.com/pointNemoRevisited/index.html", "read": "full text"}]},
+    {"id": "D10-C5", "label": "ESTIMATE", "sources": [
+      {"name": "Wessel & Smith, GSHHG v2.3.7 full-resolution coastline", "url": "https://www.soest.hawaii.edu/pwessel/gshhg/", "read": "data"}]},
+    {"id": "D10-C6", "label": "ESTIMATE", "sources": [
+      {"name": "Wessel & Smith, GSHHG v2.3.7 full-resolution coastline", "url": "https://www.soest.hawaii.edu/pwessel/gshhg/", "read": "data"},
+      {"name": "Wikipedia, Russia (area 17,098,246 km², infobox)", "url": "https://en.wikipedia.org/wiki/Russia", "read": "data"},
+      {"name": "Wikipedia, Maher Island (USGS GNIS name entry)", "url": "https://en.wikipedia.org/wiki/Maher_Island", "read": "full text"}]},
+    {"id": "D10-C7", "label": "ESTIMATE", "sources": [
+      {"name": "Wessel & Smith, GSHHG v2.3.7 full-resolution coastline", "url": "https://www.soest.hawaii.edu/pwessel/gshhg/", "read": "data"}]},
+    {"id": "D10-C8", "label": "ESTIMATE", "sources": [
+      {"name": "Wessel & Smith, GSHHG v2.3.7 full-resolution coastline", "url": "https://www.soest.hawaii.edu/pwessel/gshhg/", "read": "data"}]},
+    {"id": "D10-C9", "label": "OBSERVED", "sources": [
+      {"name": "NASA, International Space Station reference page (altitude, inclination)", "url": "https://www.nasa.gov/reference/international-space-station/", "read": "data"},
+      {"name": "NASA, International Space Station", "url": "https://www.nasa.gov/international-space-station/", "read": "data"}]},
+    {"id": "D10-C10", "label": "ESTIMATE", "sources": [
+      {"name": "NASA, International Space Station reference page (altitude, inclination)", "url": "https://www.nasa.gov/reference/international-space-station/", "read": "data"}]},
+    {"id": "D10-C11", "label": "OBSERVED", "sources": [
+      {"name": "NASA History (J. Uri, 2021), 20 Years Ago: Space Station Mir Reenters Earth's Atmosphere", "url": "https://www.nasa.gov/history/20-years-ago-space-station-mir-reenters-earths-atmosphere/", "read": "full text"}]},
+    {"id": "D10-C12", "label": "ESTIMATE", "sources": [
+      {"name": "AFP via Phys.org (2018), Point Nemo, Earth's watery graveyard for spacecraft", "url": "https://phys.org/news/2018-03-nemo-earth-watery-graveyard-spacecraft.html", "read": "full text"},
+      {"name": "McDowell, GCAT General Catalog of Artificial Space Objects, column definitions (CC BY)", "url": "https://planet4589.org/space/gcat/web/cat/cols.html", "read": "data"}]},
+    {"id": "D10-C13", "label": "OBSERVED", "sources": [
+      {"name": "NASA release 24-090 (June 26, 2024), NASA Selects International Space Station US Deorbit Vehicle", "url": "https://www.nasa.gov/news-release/nasa-selects-international-space-station-us-deorbit-vehicle", "read": "full text"},
+      {"name": "NASA, FAQs: The International Space Station Transition Plan", "url": "https://www.nasa.gov/faqs-the-international-space-station-transition-plan/", "read": "full text"}]},
+    {"id": "D10-C14", "label": "OBSERVED", "sources": [
+      {"name": "Wessel & Smith, GSHHG v2.3.7 full-resolution coastline", "url": "https://www.soest.hawaii.edu/pwessel/gshhg/", "read": "data"}]}
+  ],
+  "exhibits": ["D10-C2", "D10-C3", "D10-C7", "D10-C10"],
+  "i18n": {
+    "en": {
+      "title": "What if you were stranded at Point Nemo, 2,688 km from land?",
+      "lede": "Point Nemo, the ocean point farthest from land, sits about 2,688 km from three islands in the published record, or 2,704.5 km on a coastline that omits tiny Maher Island. There, astronauts on the ISS, 370–460 km up, can be closer than anyone ashore.",
+      "question": "How far from land is the ocean's most remote point, and who would be your nearest neighbors there?",
+      "claims": {
+        "D10-C1": "Point Nemo, the ocean point farthest from land, is listed at 48°52.6'S 123°23.6'W, about 2,688 km from three islands: Ducie (Pitcairn), Motu Nui (Easter Island) and Maher (Antarctica). Guinness World Records credits Hrvoje Lukatela with first identifying it in 1992.",
+        "D10-C2": "Recomputed on the GSHHG full-resolution coastline (v2.3.7, 2017), the farthest point from land sits at about 49°01.7'S 123°25.6'W, 2,704.5 km from Motu Nui, Ducie Island and the Antarctic coast near Siple Island, 17 km from the published point.",
+        "D10-C3": "Maher Island, about 1 km long, is missing from the GSHHG coastline. Measured to Maher's listed position, the published point sits 2,688 km from all three islands, so most of the 16 km gap comes from what each map includes.",
+        "D10-C4": "Coastline datasets disagree: a 2022 recalculation by Lukatela on OpenStreetMap gives 2,701 km, and Maher's position differs by about 33 km between datasets. The exact distance depends on the map used.",
+        "D10-C5": "On the GSHHG coastline, the published point lies 2,688 km from land on the WGS84 ellipsoid (2,691 km on a sphere), against 2,704.5 km at the recomputed point: a gap of about 16 km, or 0.6%.",
+        "D10-C6": "A circle of 2,704.5 km radius around the recomputed point covers about 22.6 million km², about 32% more than Russia (17.1 million km²); at 2,688 km it covers 22.4 million km². Maher Island lies about 2,671 km from the recomputed point, inside that circle.",
+        "D10-C7": "With the same method and dataset, the Atlantic's most remote point (24.2°N 43.4°W) is 2,034 km from land and the Indian Ocean's (47.6°S 100.0°E) is 1,939 km. The Pacific's 2,704.5 km is the largest.",
+        "D10-C8": "The nearest inhabited land is Rapa Nui (Easter Island), about 2,710 km from the recomputed point, with Pitcairn about 2,720 km away.",
+        "D10-C9": "The International Space Station orbits 370–460 km up (NASA: about 250 miles) with a 51.6° inclination, so its ground track reaches latitudes beyond Point Nemo's 48.9°S.",
+        "D10-C10": "Geometry check: whenever the ISS is above Point Nemo's horizon, it is at most about 2,200–2,460 km away, closer than any land; directly overhead, 370–460 km. With no ship nearby, its crew can be the nearest humans.",
+        "D10-C11": "On March 23, 2001, after 15 years in orbit, Russia's Mir space station made a controlled re-entry; its debris fell into the South Pacific east of New Zealand.",
+        "D10-C12": "Press reports estimate that 250 to 300 spacecraft have been brought down in this region. Public catalogs such as GCAT list re-entry dates but no re-entry coordinates, so no complete public map of impact sites could be found.",
+        "D10-C13": "In June 2024 NASA selected SpaceX to build the U.S. Deorbit Vehicle (contract value up to $843 million). NASA plans to operate the ISS through 2030, then make a controlled, targeted re-entry into a remote ocean area; its FAQ does not name Point Nemo.",
+        "D10-C14": "The GSHHG full-resolution coastline used holds about 9.7 million land and Antarctic ice-front points worldwide, about 1.5 million of them in the South Pacific search area; Antarctica's coast is taken as the ice front."
+      },
+      "verdict": "Point Nemo's published position, about 2,688 km from Ducie, Motu Nui and Maher islands, holds up, and the channel's 2,704.5 km recalculation reproduces on the GSHHG coastline, where the difference comes mostly from Maher Island being absent. Two other ocean poles (2,034 km and 1,939 km) confirm the Pacific's lead, and simple geometry shows that ISS astronauts, 370–460 km up, can be the nearest humans whenever the station is above the horizon and no ship is closer. Mir's 2001 re-entry east of New Zealand and NASA's plan for a remote-ocean re-entry of the ISS after 2030 are documented, while spacecraft cemetery counts remain press estimates.",
+      "errata": [
+        "The video said the original 1992 point lies 2,691 km from land in the modern dataset, about 13 km short of the new maximum. The data show 2,688 km on the same WGS84 ellipsoid used for the 2,704.5 km maximum (2,691 km is the value on a sphere), a gap of about 16 km.",
+        "The video said the 22.6 million km² circle around the recomputed point holds no mapped island. The data show Maher Island, absent from the GSHHG coastline but listed by NOAA, about 2,671 km from that point, inside the circle."
+      ]
+    },
+    "it": {
+      "title": "E se restassi bloccato a Point Nemo, a 2.688 km dalla terra?",
+      "lede": "Point Nemo, il punto dell'oceano più lontano dalla terra, dista circa 2.688 km da tre isole secondo il record pubblicato, oppure 2.704,5 km su una mappa costiera che omette la minuscola Maher Island. Lì gli astronauti della ISS, a 370–460 km di quota, possono essere più vicini di chiunque sulla terraferma.",
+      "question": "Quanto è lontano dalla terra il punto più remoto dell'oceano, e chi sarebbero lì i tuoi vicini più prossimi?",
+      "claims": {
+        "D10-C1": "Point Nemo, il punto dell'oceano più lontano dalla terra, è indicato a 48°52,6'S 123°23,6'O, a circa 2.688 km da tre isole: Ducie (Pitcairn), Motu Nui (Isola di Pasqua) e Maher (Antartide). Guinness World Records attribuisce a Hrvoje Lukatela la prima individuazione, nel 1992.",
+        "D10-C2": "Ricalcolato sulla linea di costa GSHHG a piena risoluzione (v2.3.7, 2017), il punto più lontano dalla terra si trova a circa 49°01,7'S 123°25,6'O, a 2.704,5 km da Motu Nui, Ducie Island e dalla costa antartica vicino a Siple Island, a 17 km dal punto pubblicato.",
+        "D10-C3": "Maher Island, lunga circa 1 km, manca dalla linea di costa GSHHG. Misurando fino alla posizione registrata di Maher, il punto pubblicato dista 2.688 km da tutte e tre le isole: gran parte dello scarto di 16 km dipende da ciò che ogni mappa include.",
+        "D10-C4": "I dataset costieri non concordano: un ricalcolo di Lukatela del 2022 su OpenStreetMap dà 2.701 km, e la posizione di Maher varia di circa 33 km tra un dataset e l'altro. La distanza esatta dipende dalla mappa usata.",
+        "D10-C5": "Sulla linea di costa GSHHG, il punto pubblicato dista 2.688 km dalla terra sull'ellissoide WGS84 (2.691 km su una sfera), contro 2.704,5 km nel punto ricalcolato: uno scarto di circa 16 km, cioè lo 0,6%.",
+        "D10-C6": "Un cerchio di 2.704,5 km di raggio intorno al punto ricalcolato copre circa 22,6 milioni di km², circa il 32% più della Russia (17,1 milioni di km²); con 2.688 km copre 22,4 milioni di km². Maher Island si trova a circa 2.671 km dal punto ricalcolato, dentro quel cerchio.",
+        "D10-C7": "Con lo stesso metodo e lo stesso dataset, il punto più remoto dell'Atlantico (24,2°N 43,4°O) dista 2.034 km dalla terra e quello dell'Oceano Indiano (47,6°S 100,0°E) 1.939 km. I 2.704,5 km del Pacifico sono il valore più alto.",
+        "D10-C8": "La terra abitata più vicina è Rapa Nui (Isola di Pasqua), a circa 2.710 km dal punto ricalcolato; Pitcairn è a circa 2.720 km.",
+        "D10-C9": "La Stazione Spaziale Internazionale orbita a 370–460 km di quota (NASA: circa 250 miglia) con un'inclinazione di 51,6°, quindi la sua traccia al suolo raggiunge latitudini oltre i 48,9°S di Point Nemo.",
+        "D10-C10": "Verifica geometrica: ogni volta che la ISS è sopra l'orizzonte di Point Nemo, dista al massimo circa 2.200–2.460 km, meno di qualsiasi terra; esattamente sulla verticale, 370–460 km. Senza navi nelle vicinanze, i suoi astronauti possono essere gli esseri umani più vicini.",
+        "D10-C11": "Il 23 marzo 2001, dopo 15 anni in orbita, la stazione spaziale russa Mir compì un rientro controllato; i suoi resti caddero nel Pacifico meridionale, a est della Nuova Zelanda.",
+        "D10-C12": "Secondo stime di stampa, in questa regione sono stati fatti rientrare da 250 a 300 veicoli spaziali. I cataloghi pubblici come GCAT riportano le date di rientro ma non le coordinate, quindi non è stato possibile trovare una mappa pubblica completa dei punti d'impatto.",
+        "D10-C13": "Nel giugno 2024 la NASA ha scelto SpaceX per costruire lo U.S. Deorbit Vehicle (valore del contratto fino a 843 milioni di dollari). La NASA prevede di operare la ISS fino al 2030 e poi di eseguire un rientro controllato e mirato in un'area oceanica remota; le sue FAQ non nominano Point Nemo.",
+        "D10-C14": "La linea di costa GSHHG a piena risoluzione usata contiene circa 9,7 milioni di punti di terra e di fronte del ghiaccio antartico in tutto il mondo, di cui circa 1,5 milioni nell'area di ricerca del Pacifico meridionale; come costa dell'Antartide si prende il fronte del ghiaccio."
+      },
+      "verdict": "La posizione pubblicata di Point Nemo, a circa 2.688 km dalle isole Ducie, Motu Nui e Maher, regge, e il ricalcolo del canale a 2.704,5 km si riproduce sulla linea di costa GSHHG, dove la differenza nasce soprattutto dall'assenza di Maher Island. Altri due poli oceanici (2.034 km e 1.939 km) confermano il primato del Pacifico, e una semplice verifica geometrica mostra che gli astronauti della ISS, a 370–460 km di quota, possono essere gli esseri umani più vicini ogni volta che la stazione è sopra l'orizzonte e nessuna nave è più vicina. Il rientro di Mir nel 2001 a est della Nuova Zelanda e il piano NASA di un rientro della ISS in un'area oceanica remota dopo il 2030 sono documentati, mentre i conteggi del cimitero dei veicoli spaziali restano stime di stampa.",
+      "errata": [
+        "Il video diceva che il punto originale del 1992 dista 2.691 km dalla terra nel dataset moderno, circa 13 km meno del nuovo massimo. I dati indicano 2.688 km sullo stesso ellissoide WGS84 usato per il massimo di 2.704,5 km (2.691 km è il valore su una sfera), con uno scarto di circa 16 km.",
+        "Il video diceva che il cerchio di 22,6 milioni di km² intorno al punto ricalcolato non contiene isole mappate. I dati indicano Maher Island, assente dalla linea di costa GSHHG ma elencata dalla NOAA, a circa 2.671 km da quel punto, dentro il cerchio."
+      ]
+    },
+    "de": {
+      "title": "Was wäre, wenn du am Point Nemo stranden würdest, 2.688 km vom Land?",
+      "lede": "Point Nemo, der landfernste Punkt des Ozeans, liegt laut dem veröffentlichten Rekord etwa 2.688 km von drei Inseln entfernt, auf einer Küstenlinie ohne die winzige Maher Island dagegen 2.704,5 km. Dort können Astronauten auf der ISS, 370–460 km hoch, näher sein als jeder Mensch an Land.",
+      "question": "Wie weit ist der abgelegenste Punkt des Ozeans vom Land entfernt, und wer wären dort deine nächsten Nachbarn?",
+      "claims": {
+        "D10-C1": "Point Nemo, der landfernste Punkt des Ozeans, wird bei 48°52,6'S 123°23,6'W angegeben, etwa 2.688 km von drei Inseln entfernt: Ducie (Pitcairn), Motu Nui (Osterinsel) und Maher (Antarktis). Guinness World Records schreibt die erste Bestimmung 1992 Hrvoje Lukatela zu.",
+        "D10-C2": "Neu berechnet auf der GSHHG-Küstenlinie in voller Auflösung (v2.3.7, 2017) liegt der landfernste Punkt bei etwa 49°01,7'S 123°25,6'W, 2.704,5 km von Motu Nui, Ducie Island und der antarktischen Küste bei Siple Island entfernt und 17 km vom veröffentlichten Punkt.",
+        "D10-C3": "Maher Island, etwa 1 km lang, fehlt in der GSHHG-Küstenlinie. Gemessen bis zur verzeichneten Position von Maher liegt der veröffentlichte Punkt 2.688 km von allen drei Inseln entfernt; der Großteil der Differenz von 16 km hängt also davon ab, was jede Karte enthält.",
+        "D10-C4": "Küstendatensätze weichen voneinander ab: Eine Neuberechnung von Lukatela aus dem Jahr 2022 auf OpenStreetMap ergibt 2.701 km, und die Position von Maher unterscheidet sich zwischen Datensätzen um etwa 33 km. Die genaue Entfernung hängt von der verwendeten Karte ab.",
+        "D10-C5": "Auf der GSHHG-Küstenlinie liegt der veröffentlichte Punkt auf dem WGS84-Ellipsoid 2.688 km vom Land entfernt (2.691 km auf einer Kugel), gegenüber 2.704,5 km am neu berechneten Punkt: eine Differenz von etwa 16 km oder 0,6 %.",
+        "D10-C6": "Ein Kreis mit 2.704,5 km Radius um den neu berechneten Punkt umfasst etwa 22,6 Millionen km², rund 32 % mehr als Russland (17,1 Millionen km²); bei 2.688 km sind es 22,4 Millionen km². Maher Island liegt etwa 2.671 km vom neu berechneten Punkt entfernt, innerhalb dieses Kreises.",
+        "D10-C7": "Mit derselben Methode und demselben Datensatz liegt der abgelegenste Punkt des Atlantiks (24,2°N 43,4°W) 2.034 km vom Land entfernt, der des Indischen Ozeans (47,6°S 100,0°O) 1.939 km. Die 2.704,5 km des Pazifiks sind der höchste Wert.",
+        "D10-C8": "Das nächste bewohnte Land ist Rapa Nui (Osterinsel), etwa 2.710 km vom neu berechneten Punkt entfernt; Pitcairn liegt etwa 2.720 km entfernt.",
+        "D10-C9": "Die Internationale Raumstation umkreist die Erde in 370–460 km Höhe (NASA: etwa 250 Meilen) mit einer Bahnneigung von 51,6°; ihre Bodenspur reicht daher über die 48,9°S von Point Nemo hinaus.",
+        "D10-C10": "Geometrische Prüfung: Immer wenn die ISS über dem Horizont von Point Nemo steht, ist sie höchstens etwa 2.200–2.460 km entfernt, näher als jedes Land; direkt darüber 370–460 km. Ist kein Schiff in der Nähe, können ihre Astronauten die nächsten Menschen sein.",
+        "D10-C11": "Am 23. März 2001 trat die russische Raumstation Mir nach 15 Jahren im Orbit kontrolliert wieder ein; ihre Trümmer fielen östlich von Neuseeland in den Südpazifik.",
+        "D10-C12": "Presseberichte schätzen, dass 250 bis 300 Raumfahrzeuge in dieser Region zum Absturz gebracht wurden. Öffentliche Kataloge wie GCAT nennen Wiedereintrittsdaten, aber keine Koordinaten; eine vollständige öffentliche Karte der Einschlagstellen ließ sich daher nicht finden.",
+        "D10-C13": "Im Juni 2024 beauftragte die NASA SpaceX mit dem Bau des U.S. Deorbit Vehicle (Vertragswert bis zu 843 Millionen Dollar). Die NASA will die ISS bis 2030 betreiben und dann einen kontrollierten, gezielten Wiedereintritt über einem abgelegenen Meeresgebiet durchführen; ihre FAQ nennt Point Nemo nicht.",
+        "D10-C14": "Die verwendete GSHHG-Küstenlinie in voller Auflösung enthält weltweit etwa 9,7 Millionen Land- und antarktische Eisfrontpunkte, davon etwa 1,5 Millionen im Suchgebiet des Südpazifiks; als Küste der Antarktis gilt die Eisfront."
+      },
+      "verdict": "Die veröffentlichte Position von Point Nemo, etwa 2.688 km von den Inseln Ducie, Motu Nui und Maher entfernt, hält stand, und die Neuberechnung des Kanals mit 2.704,5 km lässt sich auf der GSHHG-Küstenlinie reproduzieren, wo die Differenz vor allem vom Fehlen der Maher Island herrührt. Zwei weitere ozeanische Pole (2.034 km und 1.939 km) bestätigen den Vorsprung des Pazifiks, und eine einfache geometrische Prüfung zeigt, dass ISS-Astronauten in 370–460 km Höhe die nächsten Menschen sein können, sobald die Station über dem Horizont steht und kein Schiff näher ist. Der Wiedereintritt der Mir 2001 östlich von Neuseeland und der NASA-Plan für einen Wiedereintritt der ISS über einem abgelegenen Meeresgebiet nach 2030 sind dokumentiert, während die Zahlen zum Raumschiff-Friedhof Presseschätzungen bleiben.",
+      "errata": [
+        "Das Video sagte, der ursprüngliche Punkt von 1992 liege im modernen Datensatz 2.691 km vom Land entfernt, etwa 13 km unter dem neuen Maximum. Die Daten zeigen 2.688 km auf demselben WGS84-Ellipsoid, das für das Maximum von 2.704,5 km verwendet wurde (2.691 km ist der Wert auf einer Kugel), eine Differenz von etwa 16 km.",
+        "Das Video sagte, der Kreis von 22,6 Millionen km² um den neu berechneten Punkt enthalte keine kartierte Insel. Die Daten zeigen Maher Island, die in der GSHHG-Küstenlinie fehlt, aber von der NOAA geführt wird, etwa 2.671 km von diesem Punkt entfernt, innerhalb des Kreises."
+      ]
+    },
+    "es": {
+      "title": "¿Y si quedaras varado en el Punto Nemo, a 2.688 km de tierra?",
+      "lede": "El Punto Nemo, el punto del océano más alejado de tierra, está a unos 2.688 km de tres islas según el récord publicado, o a 2.704,5 km en una línea de costa que omite la diminuta isla Maher. Allí, los astronautas de la ISS, a 370–460 km de altura, pueden estar más cerca que cualquier persona en tierra.",
+      "question": "¿A qué distancia de tierra está el punto más remoto del océano, y quiénes serían allí tus vecinos más cercanos?",
+      "claims": {
+        "D10-C1": "El Punto Nemo, el punto del océano más alejado de tierra, figura en 48°52,6'S 123°23,6'O, a unos 2.688 km de tres islas: Ducie (Pitcairn), Motu Nui (isla de Pascua) y Maher (Antártida). Guinness World Records atribuye a Hrvoje Lukatela su primera identificación, en 1992.",
+        "D10-C2": "Recalculado sobre la línea de costa GSHHG de resolución completa (v2.3.7, 2017), el punto más alejado de tierra está en torno a 49°01,7'S 123°25,6'O, a 2.704,5 km de Motu Nui, la isla Ducie y la costa antártica cerca de la isla Siple, a 17 km del punto publicado.",
+        "D10-C3": "La isla Maher, de cerca de 1 km de largo, falta en la línea de costa GSHHG. Midiendo hasta la posición registrada de Maher, el punto publicado está a 2.688 km de las tres islas, así que la mayor parte de la diferencia de 16 km depende de lo que incluye cada mapa.",
+        "D10-C4": "Los conjuntos de datos de costa no coinciden: un recálculo de Lukatela de 2022 con OpenStreetMap da 2.701 km, y la posición de Maher varía unos 33 km entre conjuntos de datos. La distancia exacta depende del mapa utilizado.",
+        "D10-C5": "En la línea de costa GSHHG, el punto publicado está a 2.688 km de tierra sobre el elipsoide WGS84 (2.691 km sobre una esfera), frente a 2.704,5 km en el punto recalculado: una diferencia de unos 16 km, o el 0,6%.",
+        "D10-C6": "Un círculo de 2.704,5 km de radio alrededor del punto recalculado abarca unos 22,6 millones de km², alrededor de un 32% más que Rusia (17,1 millones de km²); con 2.688 km abarca 22,4 millones de km². La isla Maher está a unos 2.671 km del punto recalculado, dentro de ese círculo.",
+        "D10-C7": "Con el mismo método y los mismos datos, el punto más remoto del Atlántico (24,2°N 43,4°O) está a 2.034 km de tierra y el del océano Índico (47,6°S 100,0°E), a 1.939 km. Los 2.704,5 km del Pacífico son el valor más alto.",
+        "D10-C8": "La tierra habitada más cercana es Rapa Nui (isla de Pascua), a unos 2.710 km del punto recalculado; Pitcairn está a unos 2.720 km.",
+        "D10-C9": "La Estación Espacial Internacional orbita a 370–460 km de altura (NASA: unas 250 millas) con una inclinación de 51,6°, de modo que su traza en el suelo alcanza latitudes más allá de los 48,9°S del Punto Nemo.",
+        "D10-C10": "Comprobación geométrica: siempre que la ISS está sobre el horizonte del Punto Nemo, se encuentra como máximo a unos 2.200–2.460 km, más cerca que cualquier tierra; justo en la vertical, a 370–460 km. Si no hay ningún barco cerca, sus astronautas pueden ser los humanos más cercanos.",
+        "D10-C11": "El 23 de marzo de 2001, tras 15 años en órbita, la estación espacial rusa Mir realizó una reentrada controlada; sus restos cayeron en el Pacífico Sur, al este de Nueva Zelanda.",
+        "D10-C12": "Según estimaciones de prensa, en esta región se han hecho caer de 250 a 300 naves espaciales. Los catálogos públicos como GCAT recogen las fechas de reentrada pero no las coordenadas, por lo que no se encontró un mapa público completo de los puntos de impacto.",
+        "D10-C13": "En junio de 2024 la NASA eligió a SpaceX para construir el U.S. Deorbit Vehicle (valor del contrato de hasta 843 millones de dólares). La NASA prevé operar la ISS hasta 2030 y luego realizar una reentrada controlada y dirigida hacia una zona oceánica remota; sus preguntas frecuentes no mencionan el Punto Nemo.",
+        "D10-C14": "La línea de costa GSHHG de resolución completa utilizada contiene unos 9,7 millones de puntos de tierra y de frente de hielo antártico en todo el mundo, de los cuales unos 1,5 millones están en la zona de búsqueda del Pacífico Sur; como costa de la Antártida se toma el frente de hielo."
+      },
+      "verdict": "La posición publicada del Punto Nemo, a unos 2.688 km de las islas Ducie, Motu Nui y Maher, se sostiene, y el recálculo del canal de 2.704,5 km se reproduce sobre la línea de costa GSHHG, donde la diferencia se debe sobre todo a la ausencia de la isla Maher. Otros dos polos oceánicos (2.034 km y 1.939 km) confirman la ventaja del Pacífico, y una sencilla comprobación geométrica muestra que los astronautas de la ISS, a 370–460 km de altura, pueden ser los humanos más cercanos siempre que la estación esté sobre el horizonte y ningún barco esté más cerca. La reentrada de la Mir en 2001 al este de Nueva Zelanda y el plan de la NASA para una reentrada de la ISS en una zona oceánica remota después de 2030 están documentados, mientras que los recuentos del cementerio de naves espaciales siguen siendo estimaciones de prensa.",
+      "errata": [
+        "El video decía que el punto original de 1992 está a 2.691 km de tierra en el conjunto de datos moderno, unos 13 km por debajo del nuevo máximo. Los datos muestran 2.688 km sobre el mismo elipsoide WGS84 usado para el máximo de 2.704,5 km (2.691 km es el valor sobre una esfera), una diferencia de unos 16 km.",
+        "El video decía que el círculo de 22,6 millones de km² alrededor del punto recalculado no contiene ninguna isla cartografiada. Los datos muestran la isla Maher, ausente de la línea de costa GSHHG pero registrada por la NOAA, a unos 2.671 km de ese punto, dentro del círculo."
+      ]
+    },
+    "fr": {
+      "title": "Et si vous étiez naufragé au point Nemo, à 2 688 km de toute terre ?",
+      "lede": "Le point Nemo, le point de l'océan le plus éloigné des terres, se trouve à environ 2 688 km de trois îles selon le record publié, ou à 2 704,5 km sur un trait de côte qui omet la minuscule île Maher. Là-bas, les astronautes de l'ISS, à 370–460 km d'altitude, peuvent être plus proches que quiconque à terre.",
+      "question": "À quelle distance des terres se trouve le point le plus isolé de l'océan, et qui seraient là-bas vos plus proches voisins ?",
+      "claims": {
+        "D10-C1": "Le point Nemo, le point de l'océan le plus éloigné des terres, est situé à 48°52,6'S 123°23,6'O, à environ 2 688 km de trois îles : Ducie (Pitcairn), Motu Nui (île de Pâques) et Maher (Antarctique). Guinness World Records attribue à Hrvoje Lukatela sa première identification, en 1992.",
+        "D10-C2": "Recalculé sur le trait de côte GSHHG en pleine résolution (v2.3.7, 2017), le point le plus éloigné des terres se trouve vers 49°01,7'S 123°25,6'O, à 2 704,5 km de Motu Nui, de l'île Ducie et de la côte antarctique près de l'île Siple, à 17 km du point publié.",
+        "D10-C3": "L'île Maher, longue d'environ 1 km, est absente du trait de côte GSHHG. Mesuré jusqu'à la position répertoriée de Maher, le point publié se trouve à 2 688 km des trois îles : l'essentiel de l'écart de 16 km dépend donc de ce que chaque carte contient.",
+        "D10-C4": "Les jeux de données côtiers divergent : un recalcul de Lukatela en 2022 sur OpenStreetMap donne 2 701 km, et la position de Maher varie d'environ 33 km d'un jeu de données à l'autre. La distance exacte dépend de la carte utilisée.",
+        "D10-C5": "Sur le trait de côte GSHHG, le point publié se trouve à 2 688 km des terres sur l'ellipsoïde WGS84 (2 691 km sur une sphère), contre 2 704,5 km au point recalculé : un écart d'environ 16 km, soit 0,6 %.",
+        "D10-C6": "Un cercle de 2 704,5 km de rayon autour du point recalculé couvre environ 22,6 millions de km², soit environ 32 % de plus que la Russie (17,1 millions de km²) ; avec 2 688 km, il couvre 22,4 millions de km². L'île Maher se trouve à environ 2 671 km du point recalculé, à l'intérieur de ce cercle.",
+        "D10-C7": "Avec la même méthode et les mêmes données, le point le plus isolé de l'Atlantique (24,2°N 43,4°O) est à 2 034 km des terres et celui de l'océan Indien (47,6°S 100,0°E) à 1 939 km. Les 2 704,5 km du Pacifique sont la valeur la plus élevée.",
+        "D10-C8": "La terre habitée la plus proche est Rapa Nui (île de Pâques), à environ 2 710 km du point recalculé ; Pitcairn est à environ 2 720 km.",
+        "D10-C9": "La Station spatiale internationale orbite à 370–460 km d'altitude (NASA : environ 250 miles) avec une inclinaison de 51,6°, si bien que sa trace au sol atteint des latitudes au-delà des 48,9°S du point Nemo.",
+        "D10-C10": "Vérification géométrique : chaque fois que l'ISS est au-dessus de l'horizon du point Nemo, elle se trouve au plus à environ 2 200–2 460 km, plus près que n'importe quelle terre ; juste à la verticale, à 370–460 km. Sans navire à proximité, ses astronautes peuvent être les humains les plus proches.",
+        "D10-C11": "Le 23 mars 2001, après 15 ans en orbite, la station spatiale russe Mir a effectué une rentrée contrôlée ; ses débris sont tombés dans le Pacifique Sud, à l'est de la Nouvelle-Zélande.",
+        "D10-C12": "Selon des estimations de presse, 250 à 300 engins spatiaux ont été précipités dans cette région. Les catalogues publics comme GCAT indiquent les dates de rentrée mais pas les coordonnées : aucune carte publique complète des points d'impact n'a pu être trouvée.",
+        "D10-C13": "En juin 2024, la NASA a choisi SpaceX pour construire le U.S. Deorbit Vehicle (valeur du contrat jusqu'à 843 millions de dollars). La NASA prévoit d'exploiter l'ISS jusqu'en 2030, puis d'effectuer une rentrée contrôlée et ciblée vers une zone océanique isolée ; sa FAQ ne nomme pas le point Nemo.",
+        "D10-C14": "Le trait de côte GSHHG en pleine résolution utilisé contient environ 9,7 millions de points de terre et de front de glace antarctique dans le monde, dont environ 1,5 million dans la zone de recherche du Pacifique Sud ; la côte de l'Antarctique est prise au front de glace."
+      },
+      "verdict": "La position publiée du point Nemo, à environ 2 688 km des îles Ducie, Motu Nui et Maher, tient, et le recalcul de la chaîne à 2 704,5 km se reproduit sur le trait de côte GSHHG, où l'écart vient surtout de l'absence de l'île Maher. Deux autres pôles océaniques (2 034 km et 1 939 km) confirment l'avance du Pacifique, et une simple vérification géométrique montre que les astronautes de l'ISS, à 370–460 km d'altitude, peuvent être les humains les plus proches dès que la station est au-dessus de l'horizon et qu'aucun navire n'est plus près. La rentrée de Mir en 2001 à l'est de la Nouvelle-Zélande et le plan de la NASA pour une rentrée de l'ISS dans une zone océanique isolée après 2030 sont documentés, tandis que les décomptes du cimetière d'engins spatiaux restent des estimations de presse.",
+      "errata": [
+        "La vidéo disait que le point d'origine de 1992 se trouve à 2 691 km des terres dans le jeu de données moderne, environ 13 km de moins que le nouveau maximum. Les données montrent 2 688 km sur le même ellipsoïde WGS84 que celui utilisé pour le maximum de 2 704,5 km (2 691 km est la valeur sur une sphère), soit un écart d'environ 16 km.",
+        "La vidéo disait que le cercle de 22,6 millions de km² autour du point recalculé ne contient aucune île cartographiée. Les données montrent l'île Maher, absente du trait de côte GSHHG mais répertoriée par la NOAA, à environ 2 671 km de ce point, à l'intérieur du cercle."
+      ]
+    }
+  }
+}
