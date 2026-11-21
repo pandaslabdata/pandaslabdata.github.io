@@ -58,7 +58,7 @@ def fmt(spec, lang):
     if "r" in spec:
         d = spec.get("d", 0)
         d0, d1 = (d if isinstance(d, list) else [d, d])
-        return f"{pre}{_num(spec['r'][0], d0, lang)}–{_num(spec['r'][1], d1, lang)}{u}"
+        return f"{pre}{_num(spec['r'][0], d0, lang)}{spec.get('sep', '–')}{_num(spec['r'][1], d1, lang)}{u}"
     return f"{pre}{_num(spec['v'], spec.get('d', 0), lang)}{u}"
 
 
@@ -134,7 +134,7 @@ def check_case(c, engine):
         if src[k]["label"] not in LABELS:
             errs.append(f"source {k}: unknown label {src[k]['label']}")
         for key in ("url", "url2"):
-            if key in src[k] and not src[k][key].startswith("https://"):
+            if src[k].get(key) and not src[k][key].startswith("https://"):
                 errs.append(f"source {k}: {key} is not https")
         if k not in en["src"]:
             errs.append(f"source {k}: no description")
@@ -179,7 +179,7 @@ def host(u):
     return re.sub(r"^https://(www\.)?", "", u).split("/")[0]
 
 
-def build_case(c, engine, ui_all, env, ver, write=True):
+def build_case(c, engine, ui_all, env, ver, write=True, pool=None):
     num, nums = c["case"], c["numbers"]
     src = {s["claim"]: s for s in engine["sources"]}
     alts = case_paths(num)
@@ -200,20 +200,20 @@ def build_case(c, engine, ui_all, env, ver, write=True):
             exhibits.append({"claim": x["claim"], "label": s["label"], "img": x["img"], "alt": tx["alt"],
                              "big": R(tx.get("big", x.get("big", ""))), "text": R(tx["text"]),
                              "name": c["source_names"][x["claim"]], "url": s["url"], "host": host(s["url"])})
-        ct, cht = t_raw["chart_tide"], c["charts"]["tide"]
-        chart_tide = {"title": ct["title"], "sub": R(ct["sub"]),
-                      "rows": [{"label": ct["rows"][i], "color": r["color"], "w": round(r["share"] * 100, 1),
-                                "val": fmt(nums[r["val"]], lang)} for i, r in enumerate(cht["rows"])]}
-        cl, chl = t_raw["chart_tilt"], c["charts"]["tilt"]
-        chart_tilt = {"title": cl["title"], "sub": R(cl["sub"]), "note": R(cl["note"]),
-                      "axis": [f"{a}°" for a in chl["axis"]],
-                      "rows": [{"label": cl["rows"][i], "color": r["color"],
-                                "w": round(r["width"] / chl["axis_max"] * 100, 1),
-                                "val": fmt(nums[r["val"]], lang)} for i, r in enumerate(chl["rows"])]}
+        # charts drawn in code: "e" sits in The Evidence, "m" in the model section; numbers only from "numbers"
+        charts = {}
+        for key, cd in c.get("charts", {}).items():
+            ct = t_raw["chart_" + key]
+            rows = []
+            for i, r in enumerate(cd["rows"]):
+                w = r["share"] * 100 if "share" in r else r["width"] / cd["axis_max"] * 100
+                rows.append({"label": ct["rows"][i], "color": r["color"], "w": round(w, 1), "val": fmt(nums[r["val"]], lang)})
+            charts[key] = {"title": ct["title"], "sub": R(ct["sub"]), "note": R(ct["note"]) if ct.get("note") else "",
+                           "axis": [f"{a}{cd.get('axis_u', '')}" for a in cd.get("axis", [])], "rows": rows}
         sources = []
         for k in c["source_order"]:
             s = src[k]
-            urls = [s[u] for u in ("url", "url2") if u in s]
+            urls = [s[u] for u in ("url", "url2") if s.get(u)]
             sources.append({"claim": k, "label": s["label"], "desc": R(t_raw["src"][k]), "name": c["source_names"][k],
                             "urls": urls, "read": ui["read_" + read_kind(c, s)]})
         labels_used = sorted({s["label"] for s in engine["sources"]})
@@ -231,9 +231,11 @@ def build_case(c, engine, ui_all, env, ver, write=True):
             prefix="" if lang == "en" else f"/{lang}", page_kind="case", ver=ver,
             seo_title=t_raw["seo_title"], og_title=t_raw["title"], description=t_raw["description"], og_type="article",
             og_image=f"{img}/{c['images']['og']}", og_locale=OG_LOCALE[lang], jsonld=jsonld,
-            c=c, t=t, exhibits=exhibits, chart_tide=chart_tide, chart_tilt=chart_tilt, sources=sources,
+            c=c, t=t, exhibits=exhibits, charts=charts, sources=sources,
             sec_m=ui["sec_m"][c["dominant_label"]], toc=toc, img=img, claims_line=claims_line,
-            updated=date_str(c["updated"], ui), posts=c.get("posts", []), channels=CHANNELS, related=[])
+            updated=date_str(c["updated"], ui), posts=c.get("posts", []), channels=CHANNELS,
+            related=[{"href": case_paths(o["case"])[lang], "title": o["i18n"][lang]["title"], "case": o["case"],
+                      "cover": f"/img/cases/{o['case']}/{o['images']['cover']}"} for o in (pool or []) if o["case"] != num])
         built[lang] = page
         if write:
             out = SITE / alts[lang].strip("/") / "index.html"
@@ -297,7 +299,8 @@ def build_home(cases, ui_all, env, ver):
             files.append({"href": case_paths(c["case"])[lang], "external": False, "img": f"/img/cases/{c['case']}/{c['images']['cover']}",
                           "kind": ui["case"], "n": c["case"], "title": c["i18n"][lang]["title"], "stamp": ui["status"][c["status"]], "navy": False, "wide": False})
         for d in dj["dossiers"]:
-            files.append({"href": d["url"], "external": True, "img": d["thumb"], "kind": h["dossier"], "n": d["n"], "title": d["title"],
+            has_page = (BUILD / "dossiers" / f"D{d['n']}.json").exists()
+            files.append({"href": dossier_paths(d["n"])[lang] if has_page else d["url"], "external": not has_page, "img": d["thumb"], "kind": h["dossier"], "n": d["n"], "title": d["title"],
                           "stamp": "YOUTUBE", "navy": True, "wide": True})
         worlds = []
         for i, k in enumerate(["space", "earth", "life", "history"]):
@@ -347,8 +350,10 @@ def build_pages(ui_all, env, ver):
                       og_image="/assets/board/room_16x9.webp", dossier_word=hj[lang]["dossier"])
         pages = {
             "stories": dict(kicker=PAGE_KICKER["stories"][lang], title=o["st_title"], intro=o["st_intro"],
+                            open_file={"en": "Open the file", "it": "Apri il fascicolo", "de": "Akte öffnen", "es": "Abrir el expediente", "fr": "Ouvrir le dossier"}[lang],
                             topics=[{"key": k, "name": o["t_" + k]} for k in ("all", "dino", "space", "map", "evo")],
-                            dossiers=dj["dossiers"], coming=dj["coming"]),
+                            dossiers=[dict(x, page=dossier_paths(x["n"])[lang] if (BUILD / "dossiers" / f"D{x['n']}.json").exists() else None) for x in dj["dossiers"]],
+                            coming=dj["coming"]),
             "about": dict(kicker=PAGE_KICKER["about"][lang], title=o["ab_title"], intro=o["ab_intro"],
                           people=[{"name": "Michele Barison", "img": "/michele.jpg", "role": o["m_role"], "bio": o["m_bio"], "stamp": "LAB FOUNDER"},
                                   {"name": "Mike", "img": "/mike.jpg", "role": o["mk_role"], "bio": o["mk_bio"], "stamp": "WOOL TWIN"}],
@@ -368,6 +373,110 @@ def build_pages(ui_all, env, ver):
             out = SITE / alts[lang].lstrip("/")
             out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text(html_, encoding="utf-8")
+
+
+# ---------- DOSSIERS (the long episodes, re-checked) ----------
+ERRATA = {
+    "en": ("Corrections", "Re-checking the episode against the sources, we found things the published video got wrong or overstated. Here is the correct version."),
+    "it": ("Correzioni", "Ricontrollando l'episodio sulle fonti abbiamo trovato punti che il video pubblicato diceva in modo sbagliato o esagerato. Ecco la versione corretta."),
+    "de": ("Korrekturen", "Beim erneuten Prüfen der Folge anhand der Quellen haben wir Stellen gefunden, die das veröffentlichte Video falsch oder übertrieben darstellt. Hier ist die korrekte Fassung."),
+    "es": ("Correcciones", "Al volver a comprobar el episodio con las fuentes encontramos puntos que el vídeo publicado decía mal o exageraba. Esta es la versión correcta."),
+    "fr": ("Corrections", "En revérifiant l'épisode sur les sources, nous avons trouvé des points que la vidéo publiée présentait de façon erronée ou exagérée. Voici la version correcte."),
+}
+READ_KEY = {"full text": "read_full", "abstract only": "read_abstract", "data": "read_data"}
+
+
+def _digits(s):
+    s = re.sub(r"(?<=\d)[.,   ](?=\d{3}\b)", "", TAG.sub("", s))   # drop thousands separators (locale-neutral)
+    return sorted(re.findall(r"\d+", s))
+
+
+def dossier_files():
+    return sorted((BUILD / "dossiers").glob("D*.json"))
+
+
+def dossier_paths(n):
+    return {l: (f"/dossiers/{n}/" if l == "en" else f"/{l}/dossiers/{n}/") for l in LANGS}
+
+
+def check_dossier(d):
+    errs, en = [], d["i18n"]["en"]
+    ids = [c["id"] for c in d["claims"]]
+    for c in d["claims"]:
+        if c["label"] not in LABELS:
+            errs.append(f"{c['id']}: bad label {c['label']}")
+        for s in c["sources"]:
+            if not s["url"].startswith("https://"):
+                errs.append(f"{c['id']}: non-https source {s['url']}")
+            if s["read"] not in READ_KEY:
+                errs.append(f"{c['id']}: unknown reading status {s['read']}")
+    for x in d["exhibits"]:
+        if x not in ids:
+            errs.append(f"exhibit {x} is not a claim")
+    for lang in LANGS:
+        t = d["i18n"].get(lang)
+        if not t:
+            errs.append(f"missing language {lang}"); continue
+        if set(t["claims"]) != set(ids):
+            errs.append(f"[{lang}] claims differ from the claim list")
+        if len(t.get("errata", [])) != len(en.get("errata", [])):
+            errs.append(f"[{lang}] errata count differs")
+        pairs = [("lede", t["lede"], en["lede"]), ("question", t["question"], en["question"]), ("verdict", t["verdict"], en["verdict"])]
+        pairs += [(f"claim {k}", t["claims"].get(k, ""), en["claims"][k]) for k in ids]
+        pairs += [(f"errata {i}", a, b) for i, (a, b) in enumerate(zip(t.get("errata", []), en.get("errata", [])))]
+        for name, a, b in pairs:
+            if _digits(a) != _digits(b):
+                errs.append(f"[{lang}] {name}: digits differ EN={_digits(b)} {lang.upper()}={_digits(a)}")
+    return errs
+
+
+def build_dossiers(ui_all, env, ver, write=True):
+    hj = json.loads((BUILD / "ui_home.json").read_text(encoding="utf-8"))
+    built = []
+    for f in dossier_files():
+        d = json.loads(f.read_text(encoding="utf-8"))
+        errs = check_dossier(d)
+        if errs:
+            raise CheckError(f"Dossier {d['n']}: " + "; ".join(errs))
+        alts = dossier_paths(d["n"])
+        for lang in LANGS:
+            ui, t = dict(ui_all[lang], worlds_nav=WORLDS_NAV[lang]), d["i18n"][lang]
+            fr = (lambda s: re.sub(r" ([;:!?])", " \\1", s)) if lang == "fr" else (lambda s: s)
+            cl = {c["id"]: c for c in d["claims"]}
+            claims = [{"id": c["id"], "short": c["id"].split("-")[1], "label": c["label"], "text": fr(t["claims"][c["id"]]),
+                       "sources": [{"name": s["name"], "url": s["url"], "read": ui[READ_KEY[s["read"]]]} for s in c["sources"]]}
+                      for c in d["claims"]]
+            exhibits = [{"id": x.split("-")[1], "label": cl[x]["label"], "text": fr(t["claims"][x]), "src": cl[x]["sources"][0]["name"]} for x in d["exhibits"]]
+            has_err = bool(t.get("errata"))
+            toc = [{"id": "q", "n": "01", "name": ui["sec_q"]}, {"id": "e", "n": "02", "name": ui["sec_e"]}, {"id": "f", "n": "03", "name": ui["sec_f"]}]
+            if has_err:
+                toc.append({"id": "c", "n": "04", "name": ERRATA[lang][0]})
+            toc += [{"id": "v", "n": f"{len(toc) + 1:02d}", "name": ui["sec_v"]}, {"id": "w", "n": f"{len(toc) + 2:02d}", "name": ui["sec_w"]}]
+            labels_used = sorted({c["label"] for c in d["claims"]})
+            jsonld = js_safe({"@context": "https://schema.org", "@type": "Article", "headline": t["title"], "description": t["lede"],
+                              "inLanguage": lang, "dateModified": d["updated"], "url": BASE + alts[lang],
+                              "image": f"https://i.ytimg.com/vi/{d['yt']}/hqdefault.jpg",
+                              "video": {"@type": "VideoObject", "name": t["title"], "embedUrl": f"https://www.youtube.com/embed/{d['yt']}",
+                                        "thumbnailUrl": f"https://i.ytimg.com/vi/{d['yt']}/hqdefault.jpg", "uploadDate": d.get("upload", d["updated"])},
+                              "publisher": {"@type": "Organization", "name": "Pandas Lab", "url": BASE + "/"},
+                              "citation": sorted({s["url"] for c in d["claims"] for s in c["sources"]})})
+            page = env.get_template("dossier.html").render(
+                lang=lang, langs=LANGS, lang_names=LANG_NAMES, ui=ui, base=BASE, alts=alts, alts_json=js_safe(alts),
+                prefix="" if lang == "en" else f"/{lang}", page_kind="case", ver=ver,
+                seo_title=f"{t['title']} | {hj[lang]['dossier']} {d['n']} | Pandas Lab", og_title=t["title"], description=t["lede"],
+                og_type="article", og_image=f"https://i.ytimg.com/vi/{d['yt']}/hqdefault.jpg", og_locale=OG_LOCALE[lang],
+                jsonld=jsonld, d=d, t={**t, "lede": fr(t["lede"]), "question": fr(t["question"]), "verdict": fr(t["verdict"]),
+                                         "errata": [fr(e) for e in t.get("errata", [])]},
+                dossier_word=hj[lang]["dossier"], stamp="RE-CHECKED", exhibits=exhibits, claims=claims, toc=toc,
+                claims_line=ui["claims"].format(n=len(claims), m=len(labels_used)), updated=date_str(d["updated"], ui),
+                errata_title=ERRATA[lang][0], errata_intro=ERRATA[lang][1],
+                errata_num="04", verdict_num=f"{4 + has_err:02d}", watch_num=f"{5 + has_err:02d}")
+            if write:
+                out = SITE / alts[lang].strip("/") / "index.html"
+                out.parent.mkdir(parents=True, exist_ok=True)
+                out.write_text(page, encoding="utf-8")
+        built.append(d["n"])
+    return built
 
 
 def update_sitemap(groups, today):
@@ -398,7 +507,7 @@ def main():
         engine = json.loads((ROOT / c["engine_case"]).read_text(encoding="utf-8"))
         errs = check_case(c, engine)
         try:
-            build_case(c, engine, ui_all, env, "0", write=False)   # rendering errors count as check errors
+            build_case(c, engine, ui_all, env, "0", write=False, pool=[x for x, _ in cases] + [c])   # rendering errors count as check errors
         except (CheckError, KeyError) as e:
             errs.append(f"render: {e!r}")
         all_errs += [f"Case {c['case']}: {e}" for e in errs]
@@ -419,13 +528,20 @@ def main():
         dst.mkdir(parents=True, exist_ok=True)
         srcdir = (SITE / c["images"]["src_dir"]).resolve()
         for out_name, in_name in c["images"]["copy"].items():
-            shutil.copyfile(srcdir / in_name, dst / out_name)
-        build_case(c, engine, ui_all, env, ver)
+            from PIL import Image as _I                       # light copies for the phone: max 900 px wide
+            im = _I.open(srcdir / in_name).convert("RGB")
+            if im.width > 720:
+                im = im.resize((720, round(im.height * 720 / im.width)), _I.LANCZOS)
+            im.save(dst / out_name, "JPEG", quality=76, optimize=True, progressive=True)
+        build_case(c, engine, ui_all, env, ver, pool=[x for x, _ in cases])
     build_archive(cases, ui_all, env, ver)
     groups = [(archive_paths(), "0.8")] + [(case_paths(c["case"]), "0.9") for c, _ in cases]
     if "--home" in sys.argv:            # the investigation-room home replaces the old one only when asked
         build_home(cases, ui_all, env, ver)
         groups = [(home_paths(), "1.0")] + groups
+    if "--dossiers" in sys.argv:        # the long episodes, re-checked, 5 languages
+        done = build_dossiers(ui_all, env, ver)
+        groups += [(dossier_paths(n), "0.9") for n in done]
     if "--pages" in sys.argv:           # stories / about / shop / kit in the board style, 5 languages
         build_pages(ui_all, env, ver)
         groups += [(page_paths("stories"), "0.9"), (page_paths("shop"), "0.8"), (page_paths("about"), "0.7")]

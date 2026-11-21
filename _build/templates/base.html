@@ -9,7 +9,7 @@
 {% endfor %}<link rel="alternate" hreflang="x-default" href="{{ base }}{{ alts['en'] }}">
 <meta property="og:type" content="{{ og_type }}"><meta property="og:site_name" content="Pandas Lab">
 <meta property="og:title" content="{{ og_title }}"><meta property="og:description" content="{{ description }}">
-<meta property="og:url" content="{{ base }}{{ alts[lang] }}"><meta property="og:image" content="{{ base }}{{ og_image }}">
+<meta property="og:url" content="{{ base }}{{ alts[lang] }}"><meta property="og:image" content="{% if og_image.startswith('http') %}{{ og_image }}{% else %}{{ base }}{{ og_image }}{% endif %}">
 <meta property="og:locale" content="{{ og_locale }}"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/pandaslab-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="dossier-head"><div class="wrap">
+  <div>
+    <div class="crumb"><a href="{{ prefix }}/stories.html">{{ ui.nav_stories }}</a> / {{ ui.worlds[d.world] }} / {{ dossier_word }} {{ d.n }}</div>
+    <h1 class="slab{% if t.title|length > 40 %} long{% endif %}">{{ t.title }}</h1>
+    <p class="lede">{{ t.lede }}</p>
+    <div class="facts"><span>{{ dossier_word }} {{ d.n }} · {{ d.ep }}</span><span>{{ ui.world }}: {{ ui.worlds[d.world] }}</span><span>{{ claims_line }}</span><span>{{ ui.updated }} {{ updated }}</span></div>
+  </div>
+  <div class="cover paper"><span class="pin" style="left:46%;top:-4px"></span><img src="https://i.ytimg.com/vi/{{ d.yt }}/hqdefault.jpg" alt="{{ t.title }}" width="480" height="360"><span class="stamp anim">{{ stamp }}</span></div>
+</div></div>
+
+<nav class="toc" aria-label="{{ dossier_word }} {{ d.n }}"><div class="wrap">
+  {% for s in toc %}<a href="#{{ s.id }}">{{ s.n }} · {{ s.name }}</a>{% endfor %}
+</div><div class="read-thread"><i></i></div></nav>
+
+<div class="wrap"><article>
+  <section id="q" class="sheet paper rv"><span class="pin" style="left:30px;top:16px"></span>
+    <div class="num">01 · {{ ui.sec_q }}</div>
+    <h2 class="slab">{{ t.question }}</h2>
+    <p>{{ t.lede }}</p>
+  </section>
+
+  <section id="e" class="sheet paper rv"><span class="tape" style="left:44%;top:-8px"></span>
+    <div class="num">02 · {{ ui.sec_e }}</div>
+    <div class="swipe-hint"><span>{{ ui.swipe_ev }}</span><span class="arrow">→</span><span class="dots"></span></div>
+    <div class="exhibits rail cardsx">
+      {% for x in exhibits %}<div class="xcard"><img class="bgimg" src="/assets/board/card.webp" alt="" width="520" height="352"><img class="pin-c" src="/assets/board/pin1.webp" alt="" width="73" height="155">
+        <span class="label xtag">{{ x.label }}</span><p>{{ x.text }}</p><span class="xsrc">{{ x.id }} · {{ x.src }}</span></div>{% endfor %}
+    </div>
+  </section>
+
+  <section id="f" class="sheet paper rv"><span class="pin" style="left:30px;top:16px"></span>
+    <div class="num">03 · {{ ui.sec_f }}</div>
+    <ol class="sources">
+      {% for c in claims %}<li id="{{ c.id|lower }}"><b>{{ c.short }}</b><div>{{ c.text }} <span class="label">{{ c.label }}</span>
+        {% for s in c.sources %}<span class="cite">{{ s.name }} · <a href="{{ s.url }}" rel="noopener" target="_blank">{{ s.url|replace('https://','') }}</a> <i>({{ ui.read }}: {{ s.read }})</i></span>{% endfor %}</div></li>
+      {% endfor %}
+    </ol>
+    <p class="labels-note">{{ ui.labels_note }}</p>
+  </section>
+
+  {% if t.errata %}<section id="c" class="sheet paper rv errata"><span class="tape" style="left:20px;top:-6px"></span>
+    <div class="num">{{ errata_num }} · {{ errata_title }}</div>
+    <p>{{ errata_intro }}</p>
+    <ul>{% for e in t.errata %}<li>{{ e }}</li>{% endfor %}</ul>
+  </section>{% endif %}
+
+  <section id="v" class="sheet paper rv"><span class="tape" style="left:20px;top:-6px"></span>
+    <div class="num">{{ verdict_num }} · {{ ui.sec_v }}</div>
+    <p class="verdict">{{ t.verdict }}</p>
+    <span class="stamp anim" style="font-size:24px;margin-top:10px">{{ dossier_word }} {{ d.n }} — {{ stamp }}</span>
+  </section>
+
+  <section id="w" class="sheet paper rv"><span class="tape" style="right:40px;top:-8px"></span>
+    <div class="num">{{ watch_num }} · {{ ui.sec_w }}</div>
+    <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/{{ d.yt }}" title="{{ t.title }}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <p class="center"><a class="btn" href="https://www.youtube.com/watch?v={{ d.yt }}" target="_blank" rel="noopener">YouTube →</a> <a class="btn ghost" href="{{ prefix }}/stories.html">{{ ui.nav_stories }}</a></p>
+  </section>
+</article></div>
+{% endblock %}

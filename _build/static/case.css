@@ -268,11 +268,37 @@ footer a{color:var(--gold);text-decoration:none}
 .btn.off{cursor:default;color:var(--pencil);border-color:rgba(77,71,66,.55)}
 .hintline{opacity:.8;font-size:14px}
 
+/* Short embedded in the phone frame, model picture, related cases */
+.phone iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.m-fig{margin:22px auto 4px;max-width:420px;transform:rotate(-1.5deg);border:8px solid #f3ead6;box-shadow:0 8px 16px rgba(0,0,0,.35)}
+.m-fig img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.related{display:flex;gap:14px;margin-top:14px}
+.related a{flex:0 0 140px;text-decoration:none;color:var(--ink);font:13px/1.3 "Special Elite"}
+.related img{aspect-ratio:3/4;object-fit:cover;object-position:top;border:6px solid #f3ead6;box-shadow:0 4px 8px rgba(0,0,0,.3);margin-bottom:6px;transform:rotate(-2deg)}
+
+/* =================== DOSSIER pages =================== */
+.cardsx{grid-template-columns:repeat(2,1fr)}
+.xcard{position:relative;min-height:230px;padding:42px 22px 18px;background:url("/assets/board/card.webp") center/100% 100% no-repeat;filter:drop-shadow(0 8px 10px rgba(0,0,0,.25))}
+.xcard .bgimg{display:none}
+.xcard:nth-child(odd){transform:rotate(-1deg)}.xcard:nth-child(even){transform:rotate(1deg)}
+.xcard .pin-c{position:absolute;left:50%;top:-8px;width:17px;transform:translateX(-50%)}
+.xcard .xtag{position:absolute;right:16px;top:14px}
+.xcard p{font:22px/1.15 "Caveat",cursive;color:var(--ink);margin:6px 0 10px}
+.xcard .xsrc{font:12px "Special Elite";color:var(--pencil)}
+.sources .cite i{font-style:normal;color:var(--pencil);font-size:12px}
+.errata{border-left:6px solid var(--red)}
+.errata ul{margin:8px 0 0 20px}.errata li{margin-bottom:10px}
+.verdict{font-size:19px;line-height:1.6}
+.yt{position:relative;aspect-ratio:16/9;border:8px solid #0b0f15;border-radius:10px;overflow:hidden;background:#000;box-shadow:0 8px 16px rgba(0,0,0,.35)}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media (max-width:760px){.cardsx{--card:86%}.xcard:nth-child(odd),.xcard:nth-child(even){transform:none}.xcard p{font-size:20px}}
+
 /* mobile: thumb bar, language sheet, swipe rails */
 .tabbar,.sheet-lang,.swipe-hint{display:none}
 @media (max-width:920px){nav.main{gap:16px;font-size:14px}}
 @media (max-width:860px){
   .dossier-head .wrap{grid-template-columns:1fr}
+  .cover{max-width:280px;margin:14px auto 0}
   .exhibits{grid-template-columns:1fr}
   .watch{grid-template-columns:1fr}.phone{max-width:240px}
   .files{grid-template-columns:repeat(2,1fr)}

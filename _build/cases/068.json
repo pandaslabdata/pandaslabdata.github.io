@@ -48,10 +48,10 @@
   {"claim": "C7", "img": "p5.jpg"}
  ],
  "charts": {
-  "tide": {"claim": "C3", "max": null, "rows": [
+  "e": {"claim": "C3", "rows": [
    {"val": "one", "share": 1.0, "color": "blue"},
    {"val": "sun_half", "share": 0.5, "color": "gold"}]},
-  "tilt": {"claims": ["C8", "C9", "C10"], "axis_max": 90, "axis": [0, 45, 90], "rows": [
+  "m": {"claims": ["C8", "C9", "C10"], "axis_max": 90, "axis": [0, 45, 90], "axis_u": "°", "rows": [
    {"val": "w_today", "width": 2.4, "color": "fern"},
    {"val": "w_laskar", "width": 85, "color": "red"},
    {"val": "w_liss", "width": 22.5, "color": "gold"}]}
@@ -90,10 +90,10 @@
     {"text": "In Tanzania ({yrs}, about {n_att} attacks on people), lion attacks in the evening hours were {lion} higher in the {d10} days after a full moon, when early evenings are dark, than in the {d10} days before.", "alt": "Felt lioness crouching in the dark savanna"},
     {"big": "~{m18|count} <small>months</small>", "text": "A total solar eclipse happens somewhere on Earth about every {m18} months. Without the Moon there would be none [SCENARIO].", "alt": "Felt family watching a total solar eclipse"}
    ],
-   "chart_tide": {"title": "Tide-generating force", "sub": "Moon = {one} · values drawn in code from NOAA", "rows": ["Moon", "Sun"]},
+   "chart_e": {"title": "Tide-generating force", "sub": "Moon = {one} · values drawn in code from NOAA", "rows": ["Moon", "Sun"]},
    "m_h2": "The slow suspect: Earth's <em>tilt</em>",
    "m_p": ["Today Earth's tilt swings between {tilt_lo} and {tilt_hi} over about {yrs41} years [OBSERVED]. The Moon helps keep it steady. Without it, two published simulations disagree on how far it could drift."],
-   "chart_tilt": {"title": "How wide could the tilt swing?", "sub": "width of the range, in degrees", "rows": ["Today", "Laskar et al. 1993", "Lissauer et al. 2012"],
+   "chart_m": {"title": "How wide could the tilt swing?", "sub": "width of the range, in degrees", "rows": ["Today", "Laskar et al. 1993", "Lissauer et al. 2012"],
     "note": "Two different models, not directly comparable experiments; the bars only show how wide each range is. Laskar et al.: a chaotic zone from nearly {deg0} up to about {deg85}, over millions of years [SIMULATION]. Lissauer et al.: a range typically {deg2025} wide, over hundreds of millions of years [SIMULATION]."},
    "v_h2": "Not the end of the world. <em>Still open.</em>",
    "v_p": ["<b>What we know:</b> Earth stays in orbit, the tides shrink to the Sun's share, nights get much darker, and total solar eclipses disappear.",
@@ -132,10 +132,10 @@
     {"text": "In Tanzania ({yrs}, circa {n_att} attacchi a persone), gli attacchi dei leoni nelle ore serali erano {lion} più frequenti nei {d10} giorni dopo la luna piena, quando le prime ore della sera sono buie, che nei {d10} giorni prima.", "alt": "Leonessa in feltro acquattata nella savana buia"},
     {"big": "~{m18|count} <small>mesi</small>", "text": "Un'eclissi totale di Sole avviene da qualche parte sulla Terra circa ogni {m18} mesi. Senza la Luna non ce ne sarebbero più [SCENARIO].", "alt": "Famiglia in feltro che guarda un'eclissi totale di Sole"}
    ],
-   "chart_tide": {"title": "Forza di marea", "sub": "Luna = {one} · valori disegnati in codice dai dati NOAA", "rows": ["Luna", "Sole"]},
+   "chart_e": {"title": "Forza di marea", "sub": "Luna = {one} · valori disegnati in codice dai dati NOAA", "rows": ["Luna", "Sole"]},
    "m_h2": "Il sospettato lento: l'<em>inclinazione</em> della Terra",
    "m_p": ["Oggi l'inclinazione della Terra oscilla tra {tilt_lo} e {tilt_hi} in circa {yrs41} anni [OBSERVED]. La Luna aiuta a tenerla stabile. Senza, due simulazioni pubblicate non sono d'accordo su quanto potrebbe spostarsi."],
-   "chart_tilt": {"title": "Quanto potrebbe oscillare l'inclinazione?", "sub": "ampiezza dell'intervallo, in gradi", "rows": ["Oggi", "Laskar et al. 1993", "Lissauer et al. 2012"],
+   "chart_m": {"title": "Quanto potrebbe oscillare l'inclinazione?", "sub": "ampiezza dell'intervallo, in gradi", "rows": ["Oggi", "Laskar et al. 1993", "Lissauer et al. 2012"],
     "note": "Due modelli diversi, non esperimenti direttamente confrontabili; le barre mostrano solo quanto è ampio ciascun intervallo. Laskar et al.: una zona caotica da quasi {deg0} fino a circa {deg85}, su milioni di anni [SIMULATION]. Lissauer et al.: un intervallo ampio in genere {deg2025}, su centinaia di milioni di anni [SIMULATION]."},
    "v_h2": "Non è la fine del mondo. <em>Caso ancora aperto.</em>",
    "v_p": ["<b>Cosa sappiamo:</b> la Terra resta in orbita, le maree si riducono alla parte del Sole, le notti diventano molto più buie e le eclissi totali di Sole scompaiono.",
@@ -174,10 +174,10 @@
     {"text": "In Tansania ({yrs}, rund {n_att} Angriffe auf Menschen) waren Löwenangriffe in den Abendstunden in den {d10} Tagen nach Vollmond, wenn die frühen Abende dunkel sind, {lion} häufiger als in den {d10} Tagen davor.", "alt": "Löwin aus Filz, geduckt in der dunklen Savanne"},
     {"big": "~{m18|count} <small>Monate</small>", "text": "Irgendwo auf der Erde gibt es etwa alle {m18} Monate eine totale Sonnenfinsternis. Ohne den Mond gäbe es keine mehr [SCENARIO].", "alt": "Familie aus Filz beobachtet eine totale Sonnenfinsternis"}
    ],
-   "chart_tide": {"title": "Gezeitenerzeugende Kraft", "sub": "Mond = {one} · Werte im Code gezeichnet, nach NOAA", "rows": ["Mond", "Sonne"]},
+   "chart_e": {"title": "Gezeitenerzeugende Kraft", "sub": "Mond = {one} · Werte im Code gezeichnet, nach NOAA", "rows": ["Mond", "Sonne"]},
    "m_h2": "Der langsame Verdächtige: die <em>Neigung</em> der Erde",
    "m_p": ["Heute schwankt die Neigung der Erdachse in etwa {yrs41} Jahren zwischen {tilt_lo} und {tilt_hi} [OBSERVED]. Der Mond hilft, sie stabil zu halten. Ohne ihn sind sich zwei veröffentlichte Simulationen uneins, wie weit sie driften könnte."],
-   "chart_tilt": {"title": "Wie weit könnte die Neigung schwanken?", "sub": "Breite des Bereichs, in Grad", "rows": ["Heute", "Laskar et al. 1993", "Lissauer et al. 2012"],
+   "chart_m": {"title": "Wie weit könnte die Neigung schwanken?", "sub": "Breite des Bereichs, in Grad", "rows": ["Heute", "Laskar et al. 1993", "Lissauer et al. 2012"],
     "note": "Zwei verschiedene Modelle, keine direkt vergleichbaren Experimente; die Balken zeigen nur, wie breit jeder Bereich ist. Laskar et al.: eine chaotische Zone von fast {deg0} bis etwa {deg85}, über Millionen Jahre [SIMULATION]. Lissauer et al.: ein Bereich von typischerweise {deg2025} Breite, über Hunderte Millionen Jahre [SIMULATION]."},
    "v_h2": "Nicht das Ende der Welt. <em>Weiter offen.</em>",
    "v_p": ["<b>Was wir wissen:</b> Die Erde bleibt in ihrer Bahn, die Gezeiten schrumpfen auf den Anteil der Sonne, die Nächte werden viel dunkler, und totale Sonnenfinsternisse verschwinden.",
@@ -216,10 +216,10 @@
     {"text": "En Tanzania ({yrs}, unos {n_att} ataques a personas), los ataques de leones al anochecer fueron {lion} más frecuentes en los {d10} días posteriores a la luna llena, cuando el comienzo de la noche es oscuro, que en los {d10} días anteriores.", "alt": "Leona de fieltro agazapada en la sabana oscura"},
     {"big": "~{m18|count} <small>meses</small>", "text": "Un eclipse total de Sol ocurre en algún lugar de la Tierra aproximadamente cada {m18} meses. Sin la Luna no habría ninguno [SCENARIO].", "alt": "Familia de fieltro mirando un eclipse total de Sol"}
    ],
-   "chart_tide": {"title": "Fuerza generadora de mareas", "sub": "Luna = {one} · valores dibujados en código a partir de la NOAA", "rows": ["Luna", "Sol"]},
+   "chart_e": {"title": "Fuerza generadora de mareas", "sub": "Luna = {one} · valores dibujados en código a partir de la NOAA", "rows": ["Luna", "Sol"]},
    "m_h2": "El sospechoso lento: la <em>inclinación</em> de la Tierra",
    "m_p": ["Hoy la inclinación de la Tierra oscila entre {tilt_lo} y {tilt_hi} en unos {yrs41} años [OBSERVED]. La Luna ayuda a mantenerla estable. Sin ella, dos simulaciones publicadas no coinciden en cuánto podría desviarse."],
-   "chart_tilt": {"title": "¿Cuánto podría oscilar la inclinación?", "sub": "amplitud del intervalo, en grados", "rows": ["Hoy", "Laskar et al. 1993", "Lissauer et al. 2012"],
+   "chart_m": {"title": "¿Cuánto podría oscilar la inclinación?", "sub": "amplitud del intervalo, en grados", "rows": ["Hoy", "Laskar et al. 1993", "Lissauer et al. 2012"],
     "note": "Dos modelos distintos, no experimentos directamente comparables; las barras solo muestran la amplitud de cada intervalo. Laskar et al.: una zona caótica desde casi {deg0} hasta unos {deg85}, a lo largo de millones de años [SIMULATION]. Lissauer et al.: un intervalo de normalmente {deg2025} de amplitud, a lo largo de cientos de millones de años [SIMULATION]."},
    "v_h2": "No es el fin del mundo. <em>Caso abierto.</em>",
    "v_p": ["<b>Lo que sabemos:</b> la Tierra sigue en órbita, las mareas se reducen a la parte del Sol, las noches se vuelven mucho más oscuras y los eclipses totales de Sol desaparecen.",
@@ -258,10 +258,10 @@
     {"text": "En Tanzanie ({yrs}, environ {n_att} attaques contre des personnes), les attaques de lions en soirée étaient {lion} plus fréquentes dans les {d10} jours suivant la pleine lune, quand le début de soirée est sombre, que dans les {d10} jours précédents.", "alt": "Lionne en feutre tapie dans la savane sombre"},
     {"big": "~{m18|count} <small>mois</small>", "text": "Une éclipse totale de Soleil a lieu quelque part sur Terre environ tous les {m18} mois. Sans la Lune, il n'y en aurait plus [SCENARIO].", "alt": "Famille en feutre regardant une éclipse totale de Soleil"}
    ],
-   "chart_tide": {"title": "Force génératrice des marées", "sub": "Lune = {one} · valeurs tracées en code d'après la NOAA", "rows": ["Lune", "Soleil"]},
+   "chart_e": {"title": "Force génératrice des marées", "sub": "Lune = {one} · valeurs tracées en code d'après la NOAA", "rows": ["Lune", "Soleil"]},
    "m_h2": "Le suspect lent : l'<em>inclinaison</em> de la Terre",
    "m_p": ["Aujourd'hui, l'inclinaison de la Terre oscille entre {tilt_lo} et {tilt_hi} en environ {yrs41} ans [OBSERVED]. La Lune aide à la stabiliser. Sans elle, deux simulations publiées ne s'accordent pas sur l'ampleur de sa dérive."],
-   "chart_tilt": {"title": "Jusqu'où l'inclinaison pourrait-elle osciller ?", "sub": "largeur de l'intervalle, en degrés", "rows": ["Aujourd'hui", "Laskar et al. 1993", "Lissauer et al. 2012"],
+   "chart_m": {"title": "Jusqu'où l'inclinaison pourrait-elle osciller ?", "sub": "largeur de l'intervalle, en degrés", "rows": ["Aujourd'hui", "Laskar et al. 1993", "Lissauer et al. 2012"],
     "note": "Deux modèles différents, pas des expériences directement comparables ; les barres montrent seulement la largeur de chaque intervalle. Laskar et al. : une zone chaotique de presque {deg0} jusqu'à environ {deg85}, sur des millions d'années [SIMULATION]. Lissauer et al. : un intervalle large en général de {deg2025}, sur des centaines de millions d'années [SIMULATION]."},
    "v_h2": "Pas la fin du monde. <em>Affaire non classée.</em>",
    "v_p": ["<b>Ce que l'on sait :</b> la Terre reste en orbite, les marées se réduisent à la part du Soleil, les nuits deviennent bien plus sombres et les éclipses totales de Soleil disparaissent.",

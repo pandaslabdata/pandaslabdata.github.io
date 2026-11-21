@@ -12,11 +12,11 @@
   <div class="dgrid">
     {% for d in dossiers %}<article class="dfile paper rv" data-tags="{{ d.tags }}">
       <img class="tape-a" src="/assets/board/tape2.webp" alt="" width="240" height="75">
-      <a class="dphoto" href="{{ d.url }}" target="_blank" rel="noopener"><img src="{{ d.thumb }}" alt="{{ d.title }}" loading="lazy" width="480" height="360"><span class="play">▶</span></a>
+      <a class="dphoto" href="{{ d.page or d.url }}"{% if not d.page %} target="_blank" rel="noopener"{% endif %}><img src="{{ d.thumb }}" alt="{{ d.title }}" loading="lazy" width="480" height="360"><span class="play">▶</span></a>
       <div class="dbody">
         <div class="dmeta typed">{{ d.ep }} · {{ d.dur }}</div>
-        <h2><a href="{{ d.url }}" target="_blank" rel="noopener">{{ d.title }}</a></h2>
-        <a class="btn" href="{{ d.url }}" target="_blank" rel="noopener">{{ o.watch }} →</a>
+        <h2><a href="{{ d.page or d.url }}"{% if not d.page %} target="_blank" rel="noopener"{% endif %}>{{ d.title }}</a></h2>
+        {% if d.page %}<a class="btn" href="{{ d.page }}">{{ open_file }} →</a> {% endif %}<a class="btn{% if d.page %} ghost{% endif %}" href="{{ d.url }}" target="_blank" rel="noopener">{{ o.watch }} →</a>
         <details class="dsrc"><summary>{{ o.src }}</summary><ul>{% for s in d.sources %}<li>{{ s|safe }}</li>{% endfor %}</ul></details>
       </div>
       <span class="stamp anim navy">{{ dossier_word }} {{ d.n }}</span>

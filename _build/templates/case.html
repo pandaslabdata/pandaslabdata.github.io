@@ -32,22 +32,25 @@
         <div class="src">{{ x.claim }} · {{ x.name }} · <a href="{{ x.url }}" rel="noopener" target="_blank">{{ x.host }}</a></div></div>
       {% endfor %}
     </div>
-    <div class="chart" role="img" aria-label="{{ chart_tide.title }}">
-      <h3>{{ chart_tide.title }}</h3><div class="sub">{{ chart_tide.sub|safe }}</div>
-      {% for r in chart_tide.rows %}<div class="bar-row"><span>{{ r.label }}</span><div class="bar"><i class="c-{{ r.color }}" style="--w:{{ r.w }}%"></i></div><span>{{ r.val|safe }}</span></div>{% endfor %}
-    </div>
+    {% if charts.e %}{% set ch = charts.e %}<div class="chart" role="img" aria-label="{{ ch.title }}">
+      <h3>{{ ch.title }}</h3><div class="sub">{{ ch.sub|safe }}</div>
+      {% for r in ch.rows %}<div class="bar-row"><span>{{ r.label }}</span><div class="bar"><i class="c-{{ r.color }}" style="--w:{{ r.w }}%"></i></div><span>{{ r.val|safe }}</span></div>{% endfor %}
+      {% if ch.axis %}<div class="axis">{% for a in ch.axis %}<span>{{ a|safe }}</span>{% endfor %}</div>{% endif %}
+      {% if ch.note %}<p class="note">{{ ch.note|safe }}</p>{% endif %}
+    </div>{% endif %}
   </section>
 
   <section id="m" class="sheet paper rv"><span class="pin" style="right:40px;top:16px"></span>
     <div class="num">03 · {{ sec_m }}</div>
     <h2 class="slab">{{ t.m_h2|safe }}</h2>
     {% for p in t.m_p %}<p>{{ p|safe }}</p>{% endfor %}
-    <div class="chart" role="img" aria-label="{{ chart_tilt.title }}">
-      <h3>{{ chart_tilt.title }}</h3><div class="sub">{{ chart_tilt.sub|safe }}</div>
-      {% for r in chart_tilt.rows %}<div class="bar-row"><span>{{ r.label }}</span><div class="bar"><i class="c-{{ r.color }}" style="--w:{{ r.w }}%"></i></div><span>{{ r.val|safe }}</span></div>{% endfor %}
-      <div class="axis">{% for a in chart_tilt.axis %}<span>{{ a|safe }}</span>{% endfor %}</div>
-      <p class="note">{{ chart_tilt.note|safe }}</p>
-    </div>
+    {% if charts.m %}{% set ch = charts.m %}<div class="chart" role="img" aria-label="{{ ch.title }}">
+      <h3>{{ ch.title }}</h3><div class="sub">{{ ch.sub|safe }}</div>
+      {% for r in ch.rows %}<div class="bar-row"><span>{{ r.label }}</span><div class="bar"><i class="c-{{ r.color }}" style="--w:{{ r.w }}%"></i></div><span>{{ r.val|safe }}</span></div>{% endfor %}
+      {% if ch.axis %}<div class="axis">{% for a in ch.axis %}<span>{{ a|safe }}</span>{% endfor %}</div>{% endif %}
+      {% if ch.note %}<p class="note">{{ ch.note|safe }}</p>{% endif %}
+    </div>{% endif %}
+    {% if c.images.model %}<figure class="m-fig"><img src="{{ img }}/{{ c.images.model }}" alt="" loading="lazy"></figure>{% endif %}
   </section>
 
   <section id="v" class="sheet paper rv"><span class="tape" style="left:20px;top:-6px"></span>
@@ -74,13 +77,13 @@
     <div class="num">06 · {{ ui.sec_w }}</div>
     <h2 class="slab">{{ t.w_h2|safe }}</h2>
     <div class="watch">
-      <div class="phone"><img src="{{ img }}/{{ c.images.poster }}" alt="" loading="lazy"></div>
+      <div class="phone">{% if c.yt %}<iframe src="https://www.youtube-nocookie.com/embed/{{ c.yt }}" title="{{ t.title }}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>{% else %}<img src="{{ img }}/{{ c.images.poster }}" alt="" loading="lazy">{% endif %}</div>
       <div>
         {% if posts %}<p class="typed">{{ ui.posts_title }}</p>
         <div class="channels">{% for p in posts %}<a href="{{ p.url }}" rel="noopener" target="_blank"><span>{{ p.platform }}</span><span>→</span></a>{% endfor %}</div>
         {% else %}<p>{{ ui.watch_intro }}</p>
         <div class="channels">{% for ch in channels %}<a href="{{ ch.url }}" rel="noopener" target="_blank"><span>{{ ch.name }}</span><span>→</span></a>{% endfor %}</div>{% endif %}
-        {% if related %}<div class="related">{% for r in related %}<a href="{{ r.href }}">{{ r.title }}</a>{% endfor %}</div>{% endif %}
+        {% if related %}<div class="related rail">{% for r in related %}<a href="{{ r.href }}"><img src="{{ r.cover }}" alt="" loading="lazy"><span>{{ ui.case }} {{ r.case }} · {{ r.title }}</span></a>{% endfor %}</div>{% endif %}
         <a class="btn ghost allcases" href="{{ prefix }}/cases/">{{ ui.all_cases }}</a>
       </div>
     </div>
