@@ -221,7 +221,7 @@
     var spawn=function(){ var W=cv.width,H=cv.height,t=Math.random(); var x=W*(HX-t*.55)+(Math.random()-.5)*W*.05, y=H*(HY-t*.38)+(Math.random()-.5)*H*.08;
       return {x:x,y:y,vx:-(0.3+Math.random()*1.4)*(W/600),vy:-(0.1+Math.random()*.9)*(H/600),r:(.8+Math.random()*2.2)*(W/600),l:1,d:.008+Math.random()*.014}; };
     var frame=function(){ if(!on) return; var W=cv.width,H=cv.height; cx.clearRect(0,0,W,H);
-      for(var k=0;k<3;k++) if(E.length<160) E.push(spawn());
+      if(E.length<50&&Math.random()<.6) E.push(spawn());
       E.forEach(function(p,i){ p.x+=p.vx; p.y+=p.vy+Math.sin(p.x/30)*.2; p.l-=p.d; if(p.l<=0){ E[i]=spawn(); return; }
         cx.fillStyle='rgba(255,'+(120+p.l*120|0)+','+(40+p.l*40|0)+','+(p.l*.9).toFixed(2)+')'; cx.beginPath(); cx.arc(p.x,p.y,p.r*(.6+p.l*.6),0,7); cx.fill(); });
       requestAnimationFrame(frame); };
@@ -323,6 +323,90 @@
         if(!shot){ tg.setAttribute('x2',MX); tg.setAttribute('y2',MY); tip.setAttribute('r',0); }
         requestAnimationFrame(fr2); };
       liveC=watch(c,function(on,was){ if(on&&!was) requestAnimationFrame(fr2); }); }
+  })();
+
+  // 4l) the living newspaper: like the moving photos of a wizard's newspaper, every site image that has them gets
+  //     eyelids that blink (per face, at its own pace), rippling water, dust drifting in the light, rolling smoke.
+  //     Measurements live in /assets/alive.json (in % of the image), so the same image is alive on every page.
+  (function(){
+    if(!window.fetch) return;
+    fetch('/assets/alive.json').then(function(r){ return r.json(); }).then(function(A){
+      var defs=document.createElement('div'); defs.style.cssText='position:absolute;width:0;height:0;overflow:hidden';
+      defs.innerHTML='<svg width="0" height="0"><filter id="al-water" x="-5%" y="-10%" width="110%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.008 0.07" numOctaves="2" seed="5" result="n"><animate attributeName="baseFrequency" dur="11s" values="0.008 0.07;0.011 0.085;0.008 0.07" repeatCount="indefinite"/></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/></filter>'
+        +'<filter id="al-smoke" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="2" seed="9" result="n"><animate attributeName="baseFrequency" dur="10s" values="0.012 0.02;0.016 0.026;0.012 0.02" repeatCount="indefinite"/></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="14" xChannelSelector="R" yChannelSelector="G"/></filter></svg>';
+      document.body.appendChild(defs);
+      var pct=function(r){ return 'left:'+r[0]+'%;top:'+r[1]+'%;width:'+r[2]+'%;height:'+r[3]+'%'; };
+      var warp=function(inner,src,r,fid){ var s=document.createElement('span'); s.className='al-warp';
+        s.style.cssText=pct(r)+';background-image:url("'+src+'");background-size:'+(10000/r[2])+'% '+(10000/r[3])+'%;background-position:'+(r[2]>=99.9?0:r[0]/(100-r[2])*100)+'% '+(r[3]>=99.9?0:r[1]/(100-r[3])*100)+'%;filter:url(#'+fid+')';
+        inner.appendChild(s); };
+      var dust=function(inner,r){ var cv=document.createElement('canvas'); cv.className='al-dust'; cv.style.cssText=pct(r); inner.appendChild(cv);
+        var cx=cv.getContext('2d'), M=[], on=false;
+        var size=function(){ var b=cv.getBoundingClientRect(), k=Math.min(2,window.devicePixelRatio||1); cv.width=Math.max(1,b.width*k); cv.height=Math.max(1,b.height*k); M=[];
+          for(var i=0;i<12;i++) M.push({x:Math.random()*cv.width,y:Math.random()*cv.height,r:(.6+Math.random()*1.1)*k*Math.max(1,b.width/260),vx:(Math.random()-.5)*.12*k,vy:(Math.random()-.6)*.1*k,ph:Math.random()*6.3}); };
+        var fr=function(){ if(!on) return; cx.clearRect(0,0,cv.width,cv.height);
+          M.forEach(function(m){ m.ph+=.012; m.x+=m.vx+Math.sin(m.ph)*.08; m.y+=m.vy+Math.cos(m.ph*.7)*.05;
+            if(m.x<0) m.x+=cv.width; if(m.x>cv.width) m.x-=cv.width; if(m.y<0) m.y+=cv.height; if(m.y>cv.height) m.y-=cv.height;
+            cx.fillStyle='rgba(255,226,170,'+(.22+.18*Math.sin(m.ph*.5)).toFixed(3)+')'; cx.beginPath(); cx.arc(m.x,m.y,m.r,0,7); cx.fill(); });
+          requestAnimationFrame(fr); };
+        new IntersectionObserver(function(es){ es.forEach(function(e){ var was=on; on=e.isIntersecting; if(on&&!was){ size(); requestAnimationFrame(fr); } }); }).observe(cv); };
+      var face=function(inner,eyes){ var lids=eyes.map(function(e){ var s=document.createElement('span'); s.className='al-lid';
+          s.style.cssText='left:'+(e[0]-e[2])+'%;top:'+(e[1]-e[3])+'%;width:'+(e[2]*2)+'%;height:'+(e[3]*2)+'%;background:radial-gradient(80% 70% at 50% 25%,'+e[4]+','+e[5]+' 85%);box-shadow:inset 0 -1px 0 '+e[5];
+          inner.appendChild(s); return s; });
+        if(calm0) return;
+        var blink=function(){ lids.forEach(function(l){ l.classList.remove('shut'); void l.offsetWidth; l.classList.add('shut'); }); };
+        var loop=function(){ blink(); if(Math.random()<.25) setTimeout(blink,340); setTimeout(loop,2400+Math.random()*4200); };
+        setTimeout(loop,600+Math.random()*3000); };
+      [].forEach.call(document.images,function(img){ var path; try{ path=new URL(img.getAttribute('src'),location.href).pathname; }catch(e){ return; }
+        var a=A[path]; if(!a||img.dataset.alive) return; img.dataset.alive='1';
+        var host=img.parentElement; if(getComputedStyle(host).position==='static') host.style.position='relative';
+        var clip=document.createElement('span'); clip.className='al-clip'; var inner=document.createElement('span'); inner.className='al-in'; clip.appendChild(inner);
+        img.insertAdjacentElement('afterend',clip);
+        var place=function(){ var cw=img.offsetWidth, ch=img.offsetHeight; if(!cw||!ch) return; var fit=getComputedStyle(img).objectFit, dw=cw, dh=ch;
+          if(fit==='cover'||fit==='contain'){ var s=(fit==='cover'?Math.max:Math.min)(cw/a.w,ch/a.h); dw=a.w*s; dh=a.h*s; }
+          clip.style.cssText='left:'+img.offsetLeft+'px;top:'+img.offsetTop+'px;width:'+cw+'px;height:'+ch+'px';
+          inner.style.cssText='left:'+((cw-dw)/2)+'px;top:'+((ch-dh)/2)+'px;width:'+dw+'px;height:'+dh+'px'; };
+        place(); if(window.ResizeObserver) new ResizeObserver(place).observe(img); window.addEventListener('resize',place);
+        if(!calm0){ (a.water||[]).forEach(function(r){ warp(inner,img.src,r,'al-water'); }); (a.smoke||[]).forEach(function(r){ warp(inner,img.src,r,'al-smoke'); });
+          (a.dust||[]).forEach(function(r){ dust(inner,r); }); }
+        (a.faces||[]).forEach(function(f){ face(inner,f); }); });
+    }).catch(function(){});
+  })();
+
+  // 4m) titles underline themselves: a red marker stroke draws under each title when it comes into view,
+  //     then now and then lifts and is drawn again, a little differently each time. (World names stay clean: their stamp sits right under them.)
+  (function(){
+    var SEL='.band h2, .wall-band h2, .lab-band h2, .wp-band h2, h1.slab, h2.slab, .headline em', HOV='.no-hover-underline';
+    var NS='http://www.w3.org/2000/svg', seed=7, rnd=function(){ seed=(seed*9301+49297)%233280; return seed/233280; };
+    var line=function(el){ var sv=el.querySelector(':scope > .ul-svg'); if(sv) sv.style.display='none'; var r=document.createRange(); r.selectNodeContents(el); var rs=[].slice.call(r.getClientRects()).filter(function(q){ return q.width>1; }); if(sv) sv.style.display=''; if(!rs.length) return null;
+      var b=el.getBoundingClientRect(), last=rs[rs.length-1], y=last.bottom, L=Infinity, R=-Infinity;
+      rs.forEach(function(q){ if(Math.abs(q.bottom-y)<4){ L=Math.min(L,q.left); R=Math.max(R,q.right); } });
+      var k=el.offsetWidth/Math.max(1,b.width); return {x0:(L-b.left)*k, x1:(R-b.left)*k, y:(y-b.top)*k}; };
+    var mk=function(el){ if(el.querySelector(':scope > .ul-svg')) return el.querySelector(':scope > .ul-svg');
+      if(getComputedStyle(el).position==='static') el.style.position='relative';
+      var s=document.createElementNS(NS,'svg'); s.setAttribute('class','ul-svg'); s.setAttribute('aria-hidden','true'); s.innerHTML='<path/><path class="b"/>'; el.appendChild(s); return s; };
+    var shape=function(el,s){ var g=line(el); if(!g||g.x1<=g.x0) return 0; var fs=parseFloat(getComputedStyle(el).fontSize)||24, w=Math.max(2,fs*.085);
+      var x0=g.x0-fs*.08-rnd()*fs*.1, x1=g.x1+fs*.05+rnd()*fs*.15, y=g.y-fs*.02, d='M'+x0.toFixed(1)+' '+(y+rnd()*3-1.5).toFixed(1);
+      var n=3, prev=x0; for(var i=1;i<=n;i++){ var x=x0+(x1-x0)*i/n, cx=(prev+x)/2; d+=' Q'+cx.toFixed(1)+' '+(y+(rnd()-.5)*fs*.16).toFixed(1)+' '+x.toFixed(1)+' '+(y+(rnd()-.5)*fs*.06).toFixed(1); prev=x; }
+      s.setAttribute('style','left:0;top:0;width:'+el.offsetWidth+'px;height:'+el.offsetHeight+'px');
+      var p=s.querySelectorAll('path'); p[0].setAttribute('d',d); p[0].setAttribute('stroke-width',w.toFixed(1));
+      p[1].setAttribute('d',d); p[1].setAttribute('stroke-width',(w*.45).toFixed(1)); p[1].setAttribute('transform','translate('+(fs*.04).toFixed(1)+' '+(w*.5).toFixed(1)+')');
+      var L=Math.ceil(p[0].getTotalLength()+20); [].forEach.call(p,function(q){ q.style.strokeDasharray=L; }); return L; };
+    var draw=function(el,anim){ var s=mk(el), L=shape(el,s); if(!L) return; var p=s.querySelectorAll('path');
+      [].forEach.call(p,function(q,i){ q.style.transition='none'; q.style.strokeDashoffset=anim?L:0; });
+      if(!anim) return; void s.getBoundingClientRect();
+      [].forEach.call(p,function(q,i){ q.style.transition='stroke-dashoffset '+(.75+i*.2)+'s cubic-bezier(.5,.05,.3,1) '+(i*.12)+'s'; q.style.strokeDashoffset=0; }); };
+    var lift=function(el){ var s=el.querySelector(':scope > .ul-svg'); if(!s) return; s.classList.add('off'); setTimeout(function(){ s.classList.remove('off'); draw(el,!calm0); },520); };
+    var els=[].slice.call(document.querySelectorAll(SEL));
+    var go=function(){
+      els.forEach(function(el){ var seen=false, timer=0;
+        new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting&&!seen){ seen=true; setTimeout(function(){ draw(el,!calm0); },350);
+            if(!calm0){ var again=function(){ timer=setTimeout(function(){ if(el.offsetWidth) lift(el); again(); },9000+Math.random()*9000); }; again(); } } }); },{threshold:.6}).observe(el);
+        if(window.ResizeObserver) new ResizeObserver(function(){ if(seen) draw(el,false); }).observe(el); });
+      [].forEach.call(document.querySelectorAll(HOV),function(el){ var c=el.closest('.wclip'); if(!c) return;
+        var on=function(){ draw(el,!calm0); el.classList.add('ul-on'); }, off=function(){ if(!c.classList.contains('on')) el.classList.remove('ul-on'); };
+        c.addEventListener('mouseenter',on); c.addEventListener('focus',on); c.addEventListener('mouseleave',off); c.addEventListener('click',function(){ setTimeout(function(){
+          [].forEach.call(document.querySelectorAll(HOV),function(o){ if(o!==el&&!o.closest('.wclip').classList.contains('on')) o.classList.remove('ul-on'); }); el.classList.add('ul-on'); },30); }); }); };
+    (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(go);
   })();
 
   // 4g) dust in the lamp light, on every page

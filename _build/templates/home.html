@@ -33,7 +33,6 @@
     <a class="clip wclip rv{% if not w.files %} soon{% endif %}" href="#w-{{ w.key }}" data-world="{{ w.key }}" data-open="{{ w.key }}" style="--r:{{ [-2.2, 1.4, -0.8, 2.0, -1.5, 1.1, -2.4, 0.7, -1.2, 1.8][loop.index0] }}deg">
       <span class="sway" style="animation-delay:-{{ loop.index0 * 0.7 }}s">
         <img class="wc-img" src="{{ w.img }}" alt="" width="900" height="517" loading="lazy">
-        <span class="wc-photo live" data-fx="{{ w.fx }}" style="left:{{ w.photo[0] }}%;top:{{ w.photo[1] }}%;width:{{ w.photo[2] - w.photo[0] }}%;height:{{ w.photo[3] - w.photo[1] }}%"></span>
         <span class="wc-head" style="left:{{ w.head[0] }}%;top:{{ w.head[1] }}%;width:{{ w.head[2] - w.head[0] }}%;height:{{ w.head[3] - w.head[1] }}%;--hf:{{ w.hf }}"><b>{{ w.name }}</b><i>{{ w.count }}</i></span>
         <span class="pin2"></span>
       </span>
@@ -52,7 +51,7 @@
           <span class="sway" style="animation-delay:-{{ loop.index0 * 0.9 }}s">
             <span class="shade"></span>
             {% if f.clip %}<span class="realclip"><img src="{{ f.clip }}" alt="{{ f.head }}" loading="lazy"></span>
-            {% else %}<span class="news" data-torn><span class="h3" style="--hf:{{ [1, 26 / (f.head|length)]|min|round(3) }}">{{ f.head }}</span><span class="ph live" data-fx="{{ f.fx }}"><img src="{{ f.img }}" alt="" loading="lazy" width="576" height="720"></span><span class="cols" aria-hidden="true"></span></span>{% endif %}
+            {% else %}<span class="news" data-torn><span class="h3" style="--hf:{{ [1, 26 / (f.head|length)]|min|round(3) }}">{{ f.head }}</span><span class="ph live"{% if f.fx in ['water', 'spin'] %} data-fx="{{ f.fx }}"{% endif %}><img src="{{ f.img }}" alt="" loading="lazy" width="576" height="720"></span><span class="cols" aria-hidden="true"></span></span>{% endif %}
             <span class="pin2"></span>
           </span>
           <span class="meta">{{ f.meta }}</span>
@@ -78,7 +77,7 @@
   <div class="exps">
     {% for e in exps %}<a class="exp rv" href="{{ e.href }}" data-face="{{ e.face }}" data-say="{{ e.say }}" style="--r:{{ [-2, 1.5, -1][loop.index0 % 3] }}deg"><span class="pin2"></span>
       <b>{{ h.steve_exp }} #{{ e.n }}</b><span class="q">{{ e.q }}</span><span class="lbl">{{ e.label }}</span>
-      <span class="live exp-ph" data-fx="{{ e.fx }}"><img src="{{ e.img }}" alt="" loading="lazy" width="720" height="1280"></span></a>{% endfor %}
+      <span class="live exp-ph"{% if e.fx in ['water', 'spin'] %} data-fx="{{ e.fx }}"{% endif %}><img src="{{ e.img }}" alt="" loading="lazy" width="720" height="1280"></span></a>{% endfor %}
     <div class="exp next rv" data-face="sly" data-say="{{ h.steve_next_say }}" tabindex="0" style="--r:-1deg"><span class="tape2" style="left:30%;top:-14px;--tr:-4deg"></span>
       <b>{{ h.steve_next_t }}</b><span class="q">{{ h.steve_next_p }}</span></div>
   </div>
