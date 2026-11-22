@@ -18,7 +18,7 @@
 <link rel="icon" href="/pandaslab-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Caveat:wght@600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Special+Elite&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/case/case.css?v=202611211858">
+<link rel="stylesheet" href="/assets/case/case.css?v=202611221905">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/json" id="pl-alt">{"en": "/cases/068/", "de": "/de/cases/068/", "es": "/es/cases/068/", "it": "/it/cases/068/", "fr": "/fr/cases/068/"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Was wäre, wenn der Mond heute Nacht verschwände?", "description": "Die Erde bliebe auf Kurs, aber die Gezeiten, die Nächte und langsam auch die Jahreszeiten würden sich ändern. Die Beweise, zwei Simulationen, die sich widersprechen, und alle Quellen.", "inLanguage": "de", "dateModified": "2026-11-21", "image": "https://pandaslab.it/img/cases/068/cover.jpg", "url": "https://pandaslab.it/de/cases/068/", "publisher": {"@type": "Organization", "name": "Pandas Lab", "url": "https://pandaslab.it/"}, "citation": ["https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html", "https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html", "https://oceanservice.noaa.gov/education/tutorial_tides/tides02_cause.html", "https://oceanservice.noaa.gov/education/tutorial_tides/tides08_othereffects.html", "https://oceanservice.noaa.gov/education/tutorial_tides/tides07_cycles.html", "https://doi.org/10.1093/astrogeo/atx025", "https://www.nps.gov/subjects/nightskies/NSQmetrics.html", "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0022285", "https://science.nasa.gov/helio-and-you-studying-eclipses-near-and-far/", "https://science.nasa.gov/science-research/earth-science/climate-science/milankovitch-orbital-cycles-and-their-role-in-earths-climate/", "https://doi.org/10.1038/361615a0", "https://perso.imcce.fr/jacques-laskar/pdf/Laskar_Joutel_Robutel_1993.pdf", "https://doi.org/10.1016/j.icarus.2011.10.013", "https://arxiv.org/abs/1404.7505"]}</script>
@@ -28,7 +28,7 @@
 <header class="top"><div class="wrap">
   <a class="logo" href="/de/"><img src="/assets/board/logo.webp" alt="Pandas Lab" width="520" height="102"></a>
   <nav class="main" aria-label="Main">
-    <a href="/de/">Home</a><a href="/de/cases/" class="on">Fälle</a><a href="/de/stories.html">Storys</a><a href="/de/about.html">Über uns</a><a href="/de/shop.html">Shop</a>
+    <a href="/de/">Home</a><a href="/de/cases/" class="on">Fälle</a><a href="/de/stories.html">Storys</a><a href="/de/about.html">Über uns</a>
   </nav>
   <div class="hdr-r"><div class="langs"><a href="/cases/068/" hreflang="en" data-setlang="en">EN</a><a href="/de/cases/068/" hreflang="de" data-setlang="de" class="on" aria-current="true">DE</a><a href="/es/cases/068/" hreflang="es" data-setlang="es">ES</a><a href="/it/cases/068/" hreflang="it" data-setlang="it">IT</a><a href="/fr/cases/068/" hreflang="fr" data-setlang="fr">FR</a></div></div>
 </div></header>
@@ -75,24 +75,44 @@
         <div class="src">C7 · NASA Science · Eclipses · <a href="https://science.nasa.gov/helio-and-you-studying-eclipses-near-and-far/" rel="noopener" target="_blank">science.nasa.gov</a></div></div>
       
     </div>
-    <div class="chart" role="img" aria-label="Gezeitenerzeugende Kraft">
-      <h3>Gezeitenerzeugende Kraft</h3><div class="sub">Mond = 1 · Werte im Code gezeichnet, nach NOAA</div>
-      <div class="bar-row"><span>Mond</span><div class="bar"><i class="c-blue" style="--w:100.0%"></i></div><span>1</span></div><div class="bar-row"><span>Sonne</span><div class="bar"><i class="c-gold" style="--w:50.0%"></i></div><span>≈ 0,5</span></div>
+    <figure class="fchart rv" role="img" aria-label="Gezeitenerzeugende Kraft">
+      <span class="fc-pin" style="left:10px;top:10px"></span><span class="fc-pin" style="right:10px;top:10px"></span><span class="fc-pin" style="left:10px;bottom:10px"></span><span class="fc-pin" style="right:10px;bottom:10px"></span>
+      <div class="fc-title">Gezeitenerzeugende Kraft</div><div class="fc-sub">Mond = 1 · Werte im Code gezeichnet, nach NOAA</div>
+      <div class="fc-plot">
+        <div class="fc-row" style="--d:0.0s"><span class="fc-lab">Mond</span>
+          <div class="fc-track"><i class="fc-bar" style="--w:100.0%"></i></div>
+          <span class="fc-val">1</span></div><div class="fc-row" style="--d:0.18s"><span class="fc-lab">Sonne</span>
+          <div class="fc-track"><i class="fc-bar" style="--w:50.0%"></i></div>
+          <span class="fc-val">≈ 0,5</span></div>
+        
+      </div>
+      <figcaption class="fc-read">So liest man es: Jeder Balken ist die Kraft, die die Gezeiten hebt; die des Mondes ist auf 1 gesetzt. Die der Sonne ist etwa halb so groß. Ohne Mond bliebe nur der Balken der Sonne.</figcaption>
       
-      
-    </div>
+      <p class="fc-src">NOAA · Tides and Water Levels</p>
+    </figure>
   </section>
 
   <section id="m" class="sheet paper rv"><span class="pin" style="right:40px;top:16px"></span>
     <div class="num">03 · Die Simulation</div>
     <h2 class="slab">Der langsame Verdächtige: die <em>Neigung</em> der Erde</h2>
     <p>Heute schwankt die Neigung der Erdachse in etwa 41.000 Jahren zwischen 22,1° und 24,5° <span class="label l-observed">OBSERVED</span>. Der Mond hilft, sie stabil zu halten. Ohne ihn sind sich zwei veröffentlichte Simulationen uneins, wie weit sie driften könnte.</p>
-    <div class="chart" role="img" aria-label="Wie weit könnte die Neigung schwanken?">
-      <h3>Wie weit könnte die Neigung schwanken?</h3><div class="sub">Breite des Bereichs, in Grad</div>
-      <div class="bar-row"><span>Heute</span><div class="bar"><i class="c-fern" style="--w:2.7%"></i></div><span>2,4°</span></div><div class="bar-row"><span>Laskar et al. 1993</span><div class="bar"><i class="c-red" style="--w:94.4%"></i></div><span>~85°</span></div><div class="bar-row"><span>Lissauer et al. 2012</span><div class="bar"><i class="c-gold" style="--w:25.0%"></i></div><span>20–25°</span></div>
-      <div class="axis"><span>0°</span><span>45°</span><span>90°</span></div>
-      <p class="note">Zwei verschiedene Modelle, keine direkt vergleichbaren Experimente; die Balken zeigen nur, wie breit jeder Bereich ist. Laskar et al.: eine chaotische Zone von fast 0° bis etwa 85°, über Millionen Jahre <span class="label l-simulation">SIMULATION</span>. Lissauer et al.: ein Bereich von typischerweise 20–25° Breite, über Hunderte Millionen Jahre <span class="label l-simulation">SIMULATION</span>.</p>
-    </div>
+    <figure class="fchart rv" role="img" aria-label="Wie weit könnte die Neigung schwanken?">
+      <span class="fc-pin" style="left:10px;top:10px"></span><span class="fc-pin" style="right:10px;top:10px"></span><span class="fc-pin" style="left:10px;bottom:10px"></span><span class="fc-pin" style="right:10px;bottom:10px"></span>
+      <div class="fc-title">Wie weit könnte die Neigung schwanken?</div><div class="fc-sub">Breite des Bereichs, in Grad</div>
+      <div class="fc-plot">
+        <div class="fc-row" style="--d:0.0s"><span class="fc-lab">Heute</span>
+          <div class="fc-track"><i class="fc-bar" style="--w:2.7%"></i></div>
+          <span class="fc-val">2,4°</span></div><div class="fc-row" style="--d:0.18s"><span class="fc-lab">Laskar et al. 1993</span>
+          <div class="fc-track"><i class="fc-bar" style="--w:94.4%"></i></div>
+          <span class="fc-val">~85°</span></div><div class="fc-row" style="--d:0.36s"><span class="fc-lab">Lissauer et al. 2012</span>
+          <div class="fc-track"><i class="fc-bar" style="--w:25.0%"></i></div>
+          <span class="fc-val">20–25°</span></div>
+        <div class="fc-axis"><span>0°</span><span>45°</span><span>90°</span></div>
+      </div>
+      <figcaption class="fc-read">So liest man es: Jeder Balken zeigt, wie weit die Neigung der Erde schwanken kann. Heute bleibt sie innerhalb von etwa 2,4°. Je länger der Balken, desto stärker würden sich die Jahreszeiten im Lauf der Zeit verändern.</figcaption>
+      <p class="fc-note">Zwei verschiedene Modelle, keine direkt vergleichbaren Experimente; die Balken zeigen nur, wie breit jeder Bereich ist. Laskar et al.: eine chaotische Zone von fast 0° bis etwa 85°, über Millionen Jahre <span class="label l-simulation">SIMULATION</span>. Lissauer et al.: ein Bereich von typischerweise 20–25° Breite, über Hunderte Millionen Jahre <span class="label l-simulation">SIMULATION</span>.</p>
+      <p class="fc-src">NASA Science · Milankovitch Cycles · Laskar, Joutel &amp; Robutel 1993 · Nature 361:615 · Lissauer, Barnes &amp; Chambers 2012 · Icarus 217:77</p>
+    </figure>
     
   </section>
 
@@ -101,6 +121,29 @@
     <h2 class="slab">Nicht das Ende der Welt. <em>Weiter offen.</em></h2>
     <p><b>Was wir wissen:</b> Die Erde bleibt in ihrer Bahn, die Gezeiten schrumpfen auf den Anteil der Sonne, die Nächte werden viel dunkler, und totale Sonnenfinsternisse verschwinden.</p><p><b>Was wir nicht wissen:</b> wie weit die Neigung wirklich driften würde. Spätere Arbeiten deuten darauf hin, dass die Drift langsam ist und nicht als Zeichen extremer Klimaschwankungen gelesen werden sollte <span class="label l-hypothesis">HYPOTHESIS</span>. Den Mond zu verlieren wäre nicht das Ende der Welt. Es könnte die Jahreszeiten durcheinanderbringen.</p>
     <span class="stamp anim" style="font-size:24px;margin-top:10px">FALL 068 — UNSOLVED</span>
+  </section>
+
+  <section id="d" class="sheet paper rv packbox" data-pack data-action="https://assets.mailerlite.com/jsonp/2814697/forms/204776361558017640/subscribe" data-case="068" data-lang="de">
+    <span class="pin" style="right:40px;top:16px"></span>
+    <div class="num">Die Akte</div>
+    <h2 class="slab">Nimm den ganzen Fall mit</h2>
+    <div class="pk-grid">
+      <div>
+        <p>Ein kostenloses Paket: die druckbare Zusammenfassung mit allen Quellen, die Filzdiagramme in hoher Auflösung und die Daten dahinter. Hinterlass deine E-Mail: Du bekommst das Paket und eine Nachricht, wenn ein neuer Fall erscheint.</p>
+        <ul class="pk-items"><li>Druckbare Zusammenfassung (PDF)</li><li>Filzdiagramme (PNG)</li><li>Daten und Quellen (CSV)</li></ul>
+        <form class="pk-form" data-pack-form novalidate>
+          <div class="pk-row"><input type="email" name="email" required autocomplete="email" placeholder="deine@email.de" aria-label="Email"><button class="btn" type="submit">Paket senden</button></div>
+          <label class="pk-consent"><input type="checkbox" name="consent" required> <span>Ich möchte E-Mails von Pandas Lab zu neuen Fällen erhalten. Ich kann mich jederzeit abmelden. <a href="/de/privacy.html">Datenschutzerklärung</a></span></label>
+          <p class="pk-msg" aria-live="polite" data-need="Bitte gib eine gültige E-Mail ein und setz das Häkchen." data-err="Etwas ist schiefgelaufen. Bitte versuch es gleich noch einmal."></p>
+        </form>
+        <div class="pk-done" hidden><b>Danke! Dein Paket ist bereit.</b><a class="btn" href="/packs/pandaslab-case-068-de.zip" download>Paket herunterladen (ZIP)</a><p>Schau in dein Postfach und bestätige deine E-Mail, um auf der Liste zu bleiben.</p></div>
+      </div>
+      <div class="pk-stack" aria-hidden="true">
+        <span class="pk-sheet s1"><img src="/img/cases/068/cover.jpg" alt="" loading="lazy"><i>PDF</i></span>
+        <span class="pk-sheet s2"><i>PNG</i></span>
+        <span class="pk-sheet s3"><i>CSV</i></span>
+      </div>
+    </div>
   </section>
 
   <section id="f" class="sheet paper rv"><span class="pin" style="left:30px;top:16px"></span>
@@ -172,7 +215,7 @@
 </article></div>
 
 
-<footer><div class="wrap"><div>PANDAS LAB · IMPOSSIBLE QUESTIONS, REAL SCIENCE</div><div><a href="mailto:info@pandaslab.it">info@pandaslab.it</a></div></div></footer>
+<footer><div class="wrap"><div>PANDAS LAB · IMPOSSIBLE QUESTIONS, REAL SCIENCE</div><div><a href="/de/privacy.html">Privacy</a> · <a href="mailto:info@pandaslab.it">info@pandaslab.it</a></div></div></footer>
 
 <nav class="tabbar" aria-label="Fälle">
   <a href="/de/cases/"><svg viewBox="0 0 24 24"><path d="M3 7.5V18a1.5 1.5 0 0 0 1.5 1.5h15A1.5 1.5 0 0 0 21 18V9a1.5 1.5 0 0 0-1.5-1.5H11L9 5H4.5A1.5 1.5 0 0 0 3 6.5z"/></svg><span>Fälle</span></a>
@@ -185,7 +228,7 @@
   <a href="/cases/068/" hreflang="en" data-setlang="en">English<small>EN</small></a><a href="/de/cases/068/" hreflang="de" data-setlang="de" class="on">Deutsch<small>DE</small></a><a href="/es/cases/068/" hreflang="es" data-setlang="es">Español<small>ES</small></a><a href="/it/cases/068/" hreflang="it" data-setlang="it">Italiano<small>IT</small></a><a href="/fr/cases/068/" hreflang="fr" data-setlang="fr">Français<small>FR</small></a>
 </div></div>
 
-<script src="/assets/case/case.js?v=202611211858"></script>
+<script src="/assets/case/case.js?v=202611221905"></script>
 <script data-goatcounter="https://pandaslab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

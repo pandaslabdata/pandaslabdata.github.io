@@ -15,49 +15,217 @@
   "og": "cover.jpg",
   "poster": "p1.jpg",
   "src_dir": "../Proposte/sito_mockup/img",
-  "copy": {"cover.jpg": "c068_cover.jpg", "p1.jpg": "c068_p1.jpg", "p3.jpg": "c068_p3.jpg", "p4.jpg": "c068_p4.jpg", "p5.jpg": "c068_p5.jpg"}
+  "copy": {
+   "cover.jpg": "c068_cover.jpg",
+   "p1.jpg": "c068_p1.jpg",
+   "p3.jpg": "c068_p3.jpg",
+   "p4.jpg": "c068_p4.jpg",
+   "p5.jpg": "c068_p5.jpg"
+  }
  },
  "posts": [],
- "related": ["067", "069", "070"],
+ "related": [
+  "067",
+  "069",
+  "070"
+ ],
  "numbers": {
-  "mass": {"v": 1.23, "d": 2, "u": "%"},
-  "bary": {"v": 4670, "d": 0, "u": " km"},
-  "x100": {"v": 100, "d": 0, "u": "×"},
-  "fm_lux": {"r": [0.05, 0.1], "d": [2, 1], "u": " lux"},
-  "nl_lux": {"v": 0.0008, "d": 4, "u": " lux"},
-  "lion": {"r": [2, 4], "d": 0, "u": "×"},
-  "yrs": {"raw": "1988–2009"},
-  "n_att": {"v": 500, "d": 0},
-  "d10": {"v": 10, "d": 0},
-  "m18": {"v": 18, "d": 0},
-  "tilt_lo": {"v": 22.1, "d": 1, "u": "°"},
-  "tilt_hi": {"v": 24.5, "d": 1, "u": "°"},
-  "yrs41": {"v": 41000, "d": 0},
-  "deg0": {"v": 0, "d": 0, "u": "°"},
-  "deg85": {"v": 85, "d": 0, "u": "°"},
-  "deg2025": {"r": [20, 25], "d": 0, "u": "°"},
-  "one": {"v": 1, "d": 0},
-  "sun_half": {"v": 0.5, "d": 1, "pre": "≈ "},
-  "w_today": {"v": 2.4, "d": 1, "u": "°"},
-  "w_laskar": {"v": 85, "d": 0, "u": "°", "pre": "~"},
-  "w_liss": {"r": [20, 25], "d": 0, "u": "°"}
+  "mass": {
+   "v": 1.23,
+   "d": 2,
+   "u": "%"
+  },
+  "bary": {
+   "v": 4670,
+   "d": 0,
+   "u": " km"
+  },
+  "x100": {
+   "v": 100,
+   "d": 0,
+   "u": "×"
+  },
+  "fm_lux": {
+   "r": [
+    0.05,
+    0.1
+   ],
+   "d": [
+    2,
+    1
+   ],
+   "u": " lux"
+  },
+  "nl_lux": {
+   "v": 0.0008,
+   "d": 4,
+   "u": " lux"
+  },
+  "lion": {
+   "r": [
+    2,
+    4
+   ],
+   "d": 0,
+   "u": "×"
+  },
+  "yrs": {
+   "raw": "1988–2009"
+  },
+  "n_att": {
+   "v": 500,
+   "d": 0
+  },
+  "d10": {
+   "v": 10,
+   "d": 0
+  },
+  "m18": {
+   "v": 18,
+   "d": 0
+  },
+  "tilt_lo": {
+   "v": 22.1,
+   "d": 1,
+   "u": "°"
+  },
+  "tilt_hi": {
+   "v": 24.5,
+   "d": 1,
+   "u": "°"
+  },
+  "yrs41": {
+   "v": 41000,
+   "d": 0
+  },
+  "deg0": {
+   "v": 0,
+   "d": 0,
+   "u": "°"
+  },
+  "deg85": {
+   "v": 85,
+   "d": 0,
+   "u": "°"
+  },
+  "deg2025": {
+   "r": [
+    20,
+    25
+   ],
+   "d": 0,
+   "u": "°"
+  },
+  "one": {
+   "v": 1,
+   "d": 0
+  },
+  "sun_half": {
+   "v": 0.5,
+   "d": 1,
+   "pre": "≈ "
+  },
+  "w_today": {
+   "v": 2.4,
+   "d": 1,
+   "u": "°"
+  },
+  "w_laskar": {
+   "v": 85,
+   "d": 0,
+   "u": "°",
+   "pre": "~"
+  },
+  "w_liss": {
+   "r": [
+    20,
+    25
+   ],
+   "d": 0,
+   "u": "°"
+  }
  },
  "exhibits": [
-  {"claim": "C3", "img": "p3.jpg", "big": "≈ ½"},
-  {"claim": "C5", "img": "p1.jpg"},
-  {"claim": "C6", "img": "p4.jpg", "big": "{lion}"},
-  {"claim": "C7", "img": "p5.jpg"}
+  {
+   "claim": "C3",
+   "img": "p3.jpg",
+   "big": "≈ ½"
+  },
+  {
+   "claim": "C5",
+   "img": "p1.jpg"
+  },
+  {
+   "claim": "C6",
+   "img": "p4.jpg",
+   "big": "{lion}"
+  },
+  {
+   "claim": "C7",
+   "img": "p5.jpg"
+  }
  ],
  "charts": {
-  "e": {"claim": "C3", "rows": [
-   {"val": "one", "share": 1.0, "color": "blue"},
-   {"val": "sun_half", "share": 0.5, "color": "gold"}]},
-  "m": {"claims": ["C8", "C9", "C10"], "axis_max": 90, "axis": [0, 45, 90], "axis_u": "°", "rows": [
-   {"val": "w_today", "width": 2.4, "color": "fern"},
-   {"val": "w_laskar", "width": 85, "color": "red"},
-   {"val": "w_liss", "width": 22.5, "color": "gold"}]}
+  "e": {
+   "claim": "C3",
+   "rows": [
+    {
+     "val": "one",
+     "share": 1.0,
+     "color": "blue"
+    },
+    {
+     "val": "sun_half",
+     "share": 0.5,
+     "color": "gold"
+    }
+   ]
+  },
+  "m": {
+   "claims": [
+    "C8",
+    "C9",
+    "C10"
+   ],
+   "axis_max": 90,
+   "axis": [
+    0,
+    45,
+    90
+   ],
+   "axis_u": "°",
+   "rows": [
+    {
+     "val": "w_today",
+     "width": 2.4,
+     "color": "fern"
+    },
+    {
+     "val": "w_laskar",
+     "width": 85,
+     "color": "red"
+    },
+    {
+     "val": "w_liss",
+     "width": 22.5,
+     "color": "gold"
+    }
+   ]
+  }
  },
- "source_order": ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10", "C11"],
+ "source_order": [
+  "C1",
+  "C2",
+  "C3",
+  "C4",
+  "C5",
+  "C6",
+  "C7",
+  "C8",
+  "C9",
+  "C10",
+  "C11"
+ ],
  "source_names": {
   "C1": "NASA NSSDC · Moon Fact Sheet",
   "C2": "NASA NSSDC · Moon Fact Sheet",
@@ -71,8 +239,10 @@
   "C10": "Lissauer, Barnes & Chambers 2012 · Icarus 217:77",
   "C11": "Li & Batygin 2014 · ApJ 790:69"
  },
- "read_override": {"C1": "data", "C2": "calc"},
-
+ "read_override": {
+  "C1": "data",
+  "C2": "calc"
+ },
  "i18n": {
   "en": {
    "title": "What if the Moon disappeared tonight?",
@@ -81,24 +251,61 @@
    "description": "Earth would stay on course, but the tides, the nights and, slowly, the seasons would change. The evidence, two simulations that disagree, and every source.",
    "lede": "You'd be fine, and Earth stays on course. But the tides, the nights and, slowly, the seasons would change. Here is the evidence, and where the science still disagrees.",
    "q_h2": "One night, the sky is <em>empty</em>",
-   "q_p": ["The Moon has <b>{mass|count}</b> of Earth's mass [OBSERVED]. It looks small, so would anyone notice if it vanished?",
-           "Earth would keep orbiting the Sun. The Earth–Moon balance point sits about {bary} from Earth's center, inside the planet itself [SCENARIO]. Nothing flies off course. The changes are quieter, and some of them take millions of years."],
+   "q_p": [
+    "The Moon has <b>{mass|count}</b> of Earth's mass [OBSERVED]. It looks small, so would anyone notice if it vanished?",
+    "Earth would keep orbiting the Sun. The Earth–Moon balance point sits about {bary} from Earth's center, inside the planet itself [SCENARIO]. Nothing flies off course. The changes are quieter, and some of them take millions of years."
+   ],
    "q_note": "so what actually changes? →",
    "e_h2": "Four <em>exhibits</em>",
    "ex": [
-    {"text": "Without the Moon, only the Sun's tides remain. The Sun's tide-generating force is about half the Moon's [ESTIMATE]. That's a ratio of forces, not of tide heights: real tide heights depend on the shape of each coastline [OBSERVED].", "alt": "Felt diorama: the Sun pulls on Earth's oceans, the Moon's stand is empty"},
-    {"big": "~{x100|count} <small>darker</small>", "text": "A full moon gives about {fm_lux}. A natural moonless night gives about {nl_lux}.", "alt": "Felt seaside town at night, with an empty hole where the Moon was"},
-    {"text": "In Tanzania ({yrs}, about {n_att} attacks on people), lion attacks in the evening hours were {lion} higher in the {d10} days after a full moon, when early evenings are dark, than in the {d10} days before.", "alt": "Felt lioness crouching in the dark savanna"},
-    {"big": "~{m18|count} <small>months</small>", "text": "A total solar eclipse happens somewhere on Earth about every {m18} months. Without the Moon there would be none [SCENARIO].", "alt": "Felt family watching a total solar eclipse"}
+    {
+     "text": "Without the Moon, only the Sun's tides remain. The Sun's tide-generating force is about half the Moon's [ESTIMATE]. That's a ratio of forces, not of tide heights: real tide heights depend on the shape of each coastline [OBSERVED].",
+     "alt": "Felt diorama: the Sun pulls on Earth's oceans, the Moon's stand is empty"
+    },
+    {
+     "big": "~{x100|count} <small>darker</small>",
+     "text": "A full moon gives about {fm_lux}. A natural moonless night gives about {nl_lux}.",
+     "alt": "Felt seaside town at night, with an empty hole where the Moon was"
+    },
+    {
+     "text": "In Tanzania ({yrs}, about {n_att} attacks on people), lion attacks in the evening hours were {lion} higher in the {d10} days after a full moon, when early evenings are dark, than in the {d10} days before.",
+     "alt": "Felt lioness crouching in the dark savanna"
+    },
+    {
+     "big": "~{m18|count} <small>months</small>",
+     "text": "A total solar eclipse happens somewhere on Earth about every {m18} months. Without the Moon there would be none [SCENARIO].",
+     "alt": "Felt family watching a total solar eclipse"
+    }
    ],
-   "chart_e": {"title": "Tide-generating force", "sub": "Moon = {one} · values drawn in code from NOAA", "rows": ["Moon", "Sun"]},
+   "chart_e": {
+    "title": "Tide-generating force",
+    "sub": "Moon = {one} · values drawn in code from NOAA",
+    "rows": [
+     "Moon",
+     "Sun"
+    ],
+    "read": "How to read it: each bar is the pull that raises the tides, with the Moon's set to 1. The Sun's is about half. Without the Moon, only the Sun's bar would be left."
+   },
    "m_h2": "The slow suspect: Earth's <em>tilt</em>",
-   "m_p": ["Today Earth's tilt swings between {tilt_lo} and {tilt_hi} over about {yrs41} years [OBSERVED]. The Moon helps keep it steady. Without it, two published simulations disagree on how far it could drift."],
-   "chart_m": {"title": "How wide could the tilt swing?", "sub": "width of the range, in degrees", "rows": ["Today", "Laskar et al. 1993", "Lissauer et al. 2012"],
-    "note": "Two different models, not directly comparable experiments; the bars only show how wide each range is. Laskar et al.: a chaotic zone from nearly {deg0} up to about {deg85}, over millions of years [SIMULATION]. Lissauer et al.: a range typically {deg2025} wide, over hundreds of millions of years [SIMULATION]."},
+   "m_p": [
+    "Today Earth's tilt swings between {tilt_lo} and {tilt_hi} over about {yrs41} years [OBSERVED]. The Moon helps keep it steady. Without it, two published simulations disagree on how far it could drift."
+   ],
+   "chart_m": {
+    "title": "How wide could the tilt swing?",
+    "sub": "width of the range, in degrees",
+    "rows": [
+     "Today",
+     "Laskar et al. 1993",
+     "Lissauer et al. 2012"
+    ],
+    "note": "Two different models, not directly comparable experiments; the bars only show how wide each range is. Laskar et al.: a chaotic zone from nearly {deg0} up to about {deg85}, over millions of years [SIMULATION]. Lissauer et al.: a range typically {deg2025} wide, over hundreds of millions of years [SIMULATION].",
+    "read": "How to read it: each bar is how wide Earth's tilt can swing. Today it stays within about 2.4°. The longer the bar, the more the seasons would change over time."
+   },
    "v_h2": "Not the end of the world. <em>Still open.</em>",
-   "v_p": ["<b>What we know:</b> Earth stays in orbit, the tides shrink to the Sun's share, nights get much darker, and total solar eclipses disappear.",
-           "<b>What we don't:</b> how far the tilt would really drift. Later work suggests the drift is slow and should not be read as a sign of extreme climate swings [HYPOTHESIS]. Losing the Moon wouldn't end the world. It might shake up the seasons."],
+   "v_p": [
+    "<b>What we know:</b> Earth stays in orbit, the tides shrink to the Sun's share, nights get much darker, and total solar eclipses disappear.",
+    "<b>What we don't:</b> how far the tilt would really drift. Later work suggests the drift is slow and should not be read as a sign of extreme climate swings [HYPOTHESIS]. Losing the Moon wouldn't end the world. It might shake up the seasons."
+   ],
    "f_h2": "Every <em>source</em>, and how we read it",
    "src": {
     "C1": "The Moon's mass compared with Earth's.",
@@ -115,7 +322,6 @@
    },
    "w_h2": "The case in <em>motion</em>"
   },
-
   "it": {
    "title": "E se la Luna sparisse stanotte?",
    "title_html": "E se la <em>Luna</em> sparisse stanotte?",
@@ -123,24 +329,61 @@
    "description": "La Terra resterebbe in orbita, ma le maree, le notti e, lentamente, le stagioni cambierebbero. Le prove, due simulazioni in disaccordo e tutte le fonti.",
    "lede": "Staresti bene, e la Terra resta sulla sua rotta. Ma le maree, le notti e, lentamente, le stagioni cambierebbero. Ecco le prove, e dove la scienza non è ancora d'accordo.",
    "q_h2": "Una notte, il cielo è <em>vuoto</em>",
-   "q_p": ["La Luna ha <b>{mass|count}</b> della massa della Terra [OBSERVED]. Sembra poco: qualcuno se ne accorgerebbe, se sparisse?",
-           "La Terra continuerebbe a girare intorno al Sole. Il punto di equilibrio Terra–Luna si trova a circa {bary} dal centro della Terra, dentro il pianeta stesso [SCENARIO]. Niente esce di rotta. I cambiamenti sono più silenziosi, e alcuni richiedono milioni di anni."],
+   "q_p": [
+    "La Luna ha <b>{mass|count}</b> della massa della Terra [OBSERVED]. Sembra poco: qualcuno se ne accorgerebbe, se sparisse?",
+    "La Terra continuerebbe a girare intorno al Sole. Il punto di equilibrio Terra–Luna si trova a circa {bary} dal centro della Terra, dentro il pianeta stesso [SCENARIO]. Niente esce di rotta. I cambiamenti sono più silenziosi, e alcuni richiedono milioni di anni."
+   ],
    "q_note": "e allora cosa cambia davvero? →",
    "e_h2": "Quattro <em>reperti</em>",
    "ex": [
-    {"text": "Senza la Luna restano solo le maree del Sole. La forza di marea del Sole è circa la metà di quella della Luna [ESTIMATE]. È un rapporto tra forze, non tra altezze delle maree: le altezze reali dipendono dalla forma di ogni costa [OBSERVED].", "alt": "Diorama in feltro: il Sole tira gli oceani della Terra, il supporto della Luna è vuoto"},
-    {"big": "~{x100|count} <small>più buio</small>", "text": "Una luna piena dà circa {fm_lux}. Una notte naturale senza luna dà circa {nl_lux}.", "alt": "Paese di mare in feltro di notte, con un buco vuoto dove c'era la Luna"},
-    {"text": "In Tanzania ({yrs}, circa {n_att} attacchi a persone), gli attacchi dei leoni nelle ore serali erano {lion} più frequenti nei {d10} giorni dopo la luna piena, quando le prime ore della sera sono buie, che nei {d10} giorni prima.", "alt": "Leonessa in feltro acquattata nella savana buia"},
-    {"big": "~{m18|count} <small>mesi</small>", "text": "Un'eclissi totale di Sole avviene da qualche parte sulla Terra circa ogni {m18} mesi. Senza la Luna non ce ne sarebbero più [SCENARIO].", "alt": "Famiglia in feltro che guarda un'eclissi totale di Sole"}
+    {
+     "text": "Senza la Luna restano solo le maree del Sole. La forza di marea del Sole è circa la metà di quella della Luna [ESTIMATE]. È un rapporto tra forze, non tra altezze delle maree: le altezze reali dipendono dalla forma di ogni costa [OBSERVED].",
+     "alt": "Diorama in feltro: il Sole tira gli oceani della Terra, il supporto della Luna è vuoto"
+    },
+    {
+     "big": "~{x100|count} <small>più buio</small>",
+     "text": "Una luna piena dà circa {fm_lux}. Una notte naturale senza luna dà circa {nl_lux}.",
+     "alt": "Paese di mare in feltro di notte, con un buco vuoto dove c'era la Luna"
+    },
+    {
+     "text": "In Tanzania ({yrs}, circa {n_att} attacchi a persone), gli attacchi dei leoni nelle ore serali erano {lion} più frequenti nei {d10} giorni dopo la luna piena, quando le prime ore della sera sono buie, che nei {d10} giorni prima.",
+     "alt": "Leonessa in feltro acquattata nella savana buia"
+    },
+    {
+     "big": "~{m18|count} <small>mesi</small>",
+     "text": "Un'eclissi totale di Sole avviene da qualche parte sulla Terra circa ogni {m18} mesi. Senza la Luna non ce ne sarebbero più [SCENARIO].",
+     "alt": "Famiglia in feltro che guarda un'eclissi totale di Sole"
+    }
    ],
-   "chart_e": {"title": "Forza di marea", "sub": "Luna = {one} · valori disegnati in codice dai dati NOAA", "rows": ["Luna", "Sole"]},
+   "chart_e": {
+    "title": "Forza di marea",
+    "sub": "Luna = {one} · valori disegnati in codice dai dati NOAA",
+    "rows": [
+     "Luna",
+     "Sole"
+    ],
+    "read": "Come si legge: ogni barra è la spinta che alza le maree, con quella della Luna posta a 1. Quella del Sole è circa la metà. Senza la Luna resterebbe solo la barra del Sole."
+   },
    "m_h2": "Il sospettato lento: l'<em>inclinazione</em> della Terra",
-   "m_p": ["Oggi l'inclinazione della Terra oscilla tra {tilt_lo} e {tilt_hi} in circa {yrs41} anni [OBSERVED]. La Luna aiuta a tenerla stabile. Senza, due simulazioni pubblicate non sono d'accordo su quanto potrebbe spostarsi."],
-   "chart_m": {"title": "Quanto potrebbe oscillare l'inclinazione?", "sub": "ampiezza dell'intervallo, in gradi", "rows": ["Oggi", "Laskar et al. 1993", "Lissauer et al. 2012"],
-    "note": "Due modelli diversi, non esperimenti direttamente confrontabili; le barre mostrano solo quanto è ampio ciascun intervallo. Laskar et al.: una zona caotica da quasi {deg0} fino a circa {deg85}, su milioni di anni [SIMULATION]. Lissauer et al.: un intervallo ampio in genere {deg2025}, su centinaia di milioni di anni [SIMULATION]."},
+   "m_p": [
+    "Oggi l'inclinazione della Terra oscilla tra {tilt_lo} e {tilt_hi} in circa {yrs41} anni [OBSERVED]. La Luna aiuta a tenerla stabile. Senza, due simulazioni pubblicate non sono d'accordo su quanto potrebbe spostarsi."
+   ],
+   "chart_m": {
+    "title": "Quanto potrebbe oscillare l'inclinazione?",
+    "sub": "ampiezza dell'intervallo, in gradi",
+    "rows": [
+     "Oggi",
+     "Laskar et al. 1993",
+     "Lissauer et al. 2012"
+    ],
+    "note": "Due modelli diversi, non esperimenti direttamente confrontabili; le barre mostrano solo quanto è ampio ciascun intervallo. Laskar et al.: una zona caotica da quasi {deg0} fino a circa {deg85}, su milioni di anni [SIMULATION]. Lissauer et al.: un intervallo ampio in genere {deg2025}, su centinaia di milioni di anni [SIMULATION].",
+    "read": "Come si legge: ogni barra è quanto può oscillare l'inclinazione della Terra. Oggi resta entro circa 2,4°. Più lunga è la barra, più cambierebbero le stagioni nel tempo."
+   },
    "v_h2": "Non è la fine del mondo. <em>Caso ancora aperto.</em>",
-   "v_p": ["<b>Cosa sappiamo:</b> la Terra resta in orbita, le maree si riducono alla parte del Sole, le notti diventano molto più buie e le eclissi totali di Sole scompaiono.",
-           "<b>Cosa non sappiamo:</b> quanto si sposterebbe davvero l'inclinazione. Studi successivi indicano che la deriva è lenta e non va letta come segno di sbalzi climatici estremi [HYPOTHESIS]. Perdere la Luna non sarebbe la fine del mondo. Potrebbe sconvolgere le stagioni."],
+   "v_p": [
+    "<b>Cosa sappiamo:</b> la Terra resta in orbita, le maree si riducono alla parte del Sole, le notti diventano molto più buie e le eclissi totali di Sole scompaiono.",
+    "<b>Cosa non sappiamo:</b> quanto si sposterebbe davvero l'inclinazione. Studi successivi indicano che la deriva è lenta e non va letta come segno di sbalzi climatici estremi [HYPOTHESIS]. Perdere la Luna non sarebbe la fine del mondo. Potrebbe sconvolgere le stagioni."
+   ],
    "f_h2": "Tutte le <em>fonti</em>, e come le abbiamo lette",
    "src": {
     "C1": "La massa della Luna confrontata con quella della Terra.",
@@ -157,7 +400,6 @@
    },
    "w_h2": "Il caso in <em>movimento</em>"
   },
-
   "de": {
    "title": "Was wäre, wenn der Mond heute Nacht verschwände?",
    "title_html": "Was wäre, wenn der <em>Mond</em> heute Nacht verschwände?",
@@ -165,24 +407,61 @@
    "description": "Die Erde bliebe auf Kurs, aber die Gezeiten, die Nächte und langsam auch die Jahreszeiten würden sich ändern. Die Beweise, zwei Simulationen, die sich widersprechen, und alle Quellen.",
    "lede": "Dir ginge es gut, und die Erde bleibt auf Kurs. Aber die Gezeiten, die Nächte und langsam auch die Jahreszeiten würden sich ändern. Hier sind die Beweise, und wo die Wissenschaft noch uneins ist.",
    "q_h2": "Eines Nachts ist der Himmel <em>leer</em>",
-   "q_p": ["Der Mond hat <b>{mass|count}</b> der Erdmasse [OBSERVED]. Das wirkt wenig. Würde es überhaupt jemand merken, wenn er verschwände?",
-           "Die Erde würde weiter um die Sonne kreisen. Der gemeinsame Schwerpunkt von Erde und Mond liegt etwa {bary} vom Erdmittelpunkt entfernt, also im Inneren des Planeten [SCENARIO]. Nichts gerät aus der Bahn. Die Veränderungen sind leiser, und manche dauern Millionen Jahre."],
+   "q_p": [
+    "Der Mond hat <b>{mass|count}</b> der Erdmasse [OBSERVED]. Das wirkt wenig. Würde es überhaupt jemand merken, wenn er verschwände?",
+    "Die Erde würde weiter um die Sonne kreisen. Der gemeinsame Schwerpunkt von Erde und Mond liegt etwa {bary} vom Erdmittelpunkt entfernt, also im Inneren des Planeten [SCENARIO]. Nichts gerät aus der Bahn. Die Veränderungen sind leiser, und manche dauern Millionen Jahre."
+   ],
    "q_note": "was ändert sich also wirklich? →",
    "e_h2": "Vier <em>Beweisstücke</em>",
    "ex": [
-    {"text": "Ohne den Mond bleiben nur die Gezeiten der Sonne. Die gezeitenerzeugende Kraft der Sonne ist etwa halb so groß wie die des Mondes [ESTIMATE]. Das ist ein Verhältnis von Kräften, nicht von Gezeitenhöhen: Die echten Höhen hängen von der Form jeder Küste ab [OBSERVED].", "alt": "Filz-Diorama: Die Sonne zieht an den Ozeanen der Erde, der Halter des Mondes ist leer"},
-    {"big": "~{x100|count} <small>dunkler</small>", "text": "Ein Vollmond liefert etwa {fm_lux}. Eine natürliche mondlose Nacht liefert etwa {nl_lux}.", "alt": "Küstenstädtchen aus Filz bei Nacht, mit einem leeren Loch, wo der Mond war"},
-    {"text": "In Tansania ({yrs}, rund {n_att} Angriffe auf Menschen) waren Löwenangriffe in den Abendstunden in den {d10} Tagen nach Vollmond, wenn die frühen Abende dunkel sind, {lion} häufiger als in den {d10} Tagen davor.", "alt": "Löwin aus Filz, geduckt in der dunklen Savanne"},
-    {"big": "~{m18|count} <small>Monate</small>", "text": "Irgendwo auf der Erde gibt es etwa alle {m18} Monate eine totale Sonnenfinsternis. Ohne den Mond gäbe es keine mehr [SCENARIO].", "alt": "Familie aus Filz beobachtet eine totale Sonnenfinsternis"}
+    {
+     "text": "Ohne den Mond bleiben nur die Gezeiten der Sonne. Die gezeitenerzeugende Kraft der Sonne ist etwa halb so groß wie die des Mondes [ESTIMATE]. Das ist ein Verhältnis von Kräften, nicht von Gezeitenhöhen: Die echten Höhen hängen von der Form jeder Küste ab [OBSERVED].",
+     "alt": "Filz-Diorama: Die Sonne zieht an den Ozeanen der Erde, der Halter des Mondes ist leer"
+    },
+    {
+     "big": "~{x100|count} <small>dunkler</small>",
+     "text": "Ein Vollmond liefert etwa {fm_lux}. Eine natürliche mondlose Nacht liefert etwa {nl_lux}.",
+     "alt": "Küstenstädtchen aus Filz bei Nacht, mit einem leeren Loch, wo der Mond war"
+    },
+    {
+     "text": "In Tansania ({yrs}, rund {n_att} Angriffe auf Menschen) waren Löwenangriffe in den Abendstunden in den {d10} Tagen nach Vollmond, wenn die frühen Abende dunkel sind, {lion} häufiger als in den {d10} Tagen davor.",
+     "alt": "Löwin aus Filz, geduckt in der dunklen Savanne"
+    },
+    {
+     "big": "~{m18|count} <small>Monate</small>",
+     "text": "Irgendwo auf der Erde gibt es etwa alle {m18} Monate eine totale Sonnenfinsternis. Ohne den Mond gäbe es keine mehr [SCENARIO].",
+     "alt": "Familie aus Filz beobachtet eine totale Sonnenfinsternis"
+    }
    ],
-   "chart_e": {"title": "Gezeitenerzeugende Kraft", "sub": "Mond = {one} · Werte im Code gezeichnet, nach NOAA", "rows": ["Mond", "Sonne"]},
+   "chart_e": {
+    "title": "Gezeitenerzeugende Kraft",
+    "sub": "Mond = {one} · Werte im Code gezeichnet, nach NOAA",
+    "rows": [
+     "Mond",
+     "Sonne"
+    ],
+    "read": "So liest man es: Jeder Balken ist die Kraft, die die Gezeiten hebt; die des Mondes ist auf 1 gesetzt. Die der Sonne ist etwa halb so groß. Ohne Mond bliebe nur der Balken der Sonne."
+   },
    "m_h2": "Der langsame Verdächtige: die <em>Neigung</em> der Erde",
-   "m_p": ["Heute schwankt die Neigung der Erdachse in etwa {yrs41} Jahren zwischen {tilt_lo} und {tilt_hi} [OBSERVED]. Der Mond hilft, sie stabil zu halten. Ohne ihn sind sich zwei veröffentlichte Simulationen uneins, wie weit sie driften könnte."],
-   "chart_m": {"title": "Wie weit könnte die Neigung schwanken?", "sub": "Breite des Bereichs, in Grad", "rows": ["Heute", "Laskar et al. 1993", "Lissauer et al. 2012"],
-    "note": "Zwei verschiedene Modelle, keine direkt vergleichbaren Experimente; die Balken zeigen nur, wie breit jeder Bereich ist. Laskar et al.: eine chaotische Zone von fast {deg0} bis etwa {deg85}, über Millionen Jahre [SIMULATION]. Lissauer et al.: ein Bereich von typischerweise {deg2025} Breite, über Hunderte Millionen Jahre [SIMULATION]."},
+   "m_p": [
+    "Heute schwankt die Neigung der Erdachse in etwa {yrs41} Jahren zwischen {tilt_lo} und {tilt_hi} [OBSERVED]. Der Mond hilft, sie stabil zu halten. Ohne ihn sind sich zwei veröffentlichte Simulationen uneins, wie weit sie driften könnte."
+   ],
+   "chart_m": {
+    "title": "Wie weit könnte die Neigung schwanken?",
+    "sub": "Breite des Bereichs, in Grad",
+    "rows": [
+     "Heute",
+     "Laskar et al. 1993",
+     "Lissauer et al. 2012"
+    ],
+    "note": "Zwei verschiedene Modelle, keine direkt vergleichbaren Experimente; die Balken zeigen nur, wie breit jeder Bereich ist. Laskar et al.: eine chaotische Zone von fast {deg0} bis etwa {deg85}, über Millionen Jahre [SIMULATION]. Lissauer et al.: ein Bereich von typischerweise {deg2025} Breite, über Hunderte Millionen Jahre [SIMULATION].",
+    "read": "So liest man es: Jeder Balken zeigt, wie weit die Neigung der Erde schwanken kann. Heute bleibt sie innerhalb von etwa 2,4°. Je länger der Balken, desto stärker würden sich die Jahreszeiten im Lauf der Zeit verändern."
+   },
    "v_h2": "Nicht das Ende der Welt. <em>Weiter offen.</em>",
-   "v_p": ["<b>Was wir wissen:</b> Die Erde bleibt in ihrer Bahn, die Gezeiten schrumpfen auf den Anteil der Sonne, die Nächte werden viel dunkler, und totale Sonnenfinsternisse verschwinden.",
-           "<b>Was wir nicht wissen:</b> wie weit die Neigung wirklich driften würde. Spätere Arbeiten deuten darauf hin, dass die Drift langsam ist und nicht als Zeichen extremer Klimaschwankungen gelesen werden sollte [HYPOTHESIS]. Den Mond zu verlieren wäre nicht das Ende der Welt. Es könnte die Jahreszeiten durcheinanderbringen."],
+   "v_p": [
+    "<b>Was wir wissen:</b> Die Erde bleibt in ihrer Bahn, die Gezeiten schrumpfen auf den Anteil der Sonne, die Nächte werden viel dunkler, und totale Sonnenfinsternisse verschwinden.",
+    "<b>Was wir nicht wissen:</b> wie weit die Neigung wirklich driften würde. Spätere Arbeiten deuten darauf hin, dass die Drift langsam ist und nicht als Zeichen extremer Klimaschwankungen gelesen werden sollte [HYPOTHESIS]. Den Mond zu verlieren wäre nicht das Ende der Welt. Es könnte die Jahreszeiten durcheinanderbringen."
+   ],
    "f_h2": "Jede <em>Quelle</em>, und wie wir sie gelesen haben",
    "src": {
     "C1": "Die Masse des Mondes im Vergleich zur Erdmasse.",
@@ -199,7 +478,6 @@
    },
    "w_h2": "Der Fall in <em>Bewegung</em>"
   },
-
   "es": {
    "title": "¿Y si la Luna desapareciera esta noche?",
    "title_html": "¿Y si la <em>Luna</em> desapareciera esta noche?",
@@ -207,24 +485,61 @@
    "description": "La Tierra seguiría en su órbita, pero las mareas, las noches y, poco a poco, las estaciones cambiarían. Las pruebas, dos simulaciones que no coinciden y todas las fuentes.",
    "lede": "Estarías bien, y la Tierra sigue su rumbo. Pero las mareas, las noches y, poco a poco, las estaciones cambiarían. Aquí están las pruebas, y dónde la ciencia aún no se pone de acuerdo.",
    "q_h2": "Una noche, el cielo está <em>vacío</em>",
-   "q_p": ["La Luna tiene el <b>{mass|count}</b> de la masa de la Tierra [OBSERVED]. Parece poco: ¿alguien lo notaría si desapareciera?",
-           "La Tierra seguiría girando alrededor del Sol. El punto de equilibrio Tierra–Luna está a unos {bary} del centro de la Tierra, dentro del propio planeta [SCENARIO]. Nada se sale de su rumbo. Los cambios son más silenciosos, y algunos tardan millones de años."],
+   "q_p": [
+    "La Luna tiene el <b>{mass|count}</b> de la masa de la Tierra [OBSERVED]. Parece poco: ¿alguien lo notaría si desapareciera?",
+    "La Tierra seguiría girando alrededor del Sol. El punto de equilibrio Tierra–Luna está a unos {bary} del centro de la Tierra, dentro del propio planeta [SCENARIO]. Nada se sale de su rumbo. Los cambios son más silenciosos, y algunos tardan millones de años."
+   ],
    "q_note": "entonces, ¿qué cambia de verdad? →",
    "e_h2": "Cuatro <em>pruebas</em>",
    "ex": [
-    {"text": "Sin la Luna solo quedan las mareas del Sol. La fuerza generadora de mareas del Sol es más o menos la mitad de la de la Luna [ESTIMATE]. Es una relación entre fuerzas, no entre alturas de marea: las alturas reales dependen de la forma de cada costa [OBSERVED].", "alt": "Diorama de fieltro: el Sol tira de los océanos de la Tierra, el soporte de la Luna está vacío"},
-    {"big": "~{x100|count} <small>más oscuro</small>", "text": "Una luna llena da unos {fm_lux}. Una noche natural sin luna da unos {nl_lux}.", "alt": "Pueblo costero de fieltro de noche, con un agujero vacío donde estaba la Luna"},
-    {"text": "En Tanzania ({yrs}, unos {n_att} ataques a personas), los ataques de leones al anochecer fueron {lion} más frecuentes en los {d10} días posteriores a la luna llena, cuando el comienzo de la noche es oscuro, que en los {d10} días anteriores.", "alt": "Leona de fieltro agazapada en la sabana oscura"},
-    {"big": "~{m18|count} <small>meses</small>", "text": "Un eclipse total de Sol ocurre en algún lugar de la Tierra aproximadamente cada {m18} meses. Sin la Luna no habría ninguno [SCENARIO].", "alt": "Familia de fieltro mirando un eclipse total de Sol"}
+    {
+     "text": "Sin la Luna solo quedan las mareas del Sol. La fuerza generadora de mareas del Sol es más o menos la mitad de la de la Luna [ESTIMATE]. Es una relación entre fuerzas, no entre alturas de marea: las alturas reales dependen de la forma de cada costa [OBSERVED].",
+     "alt": "Diorama de fieltro: el Sol tira de los océanos de la Tierra, el soporte de la Luna está vacío"
+    },
+    {
+     "big": "~{x100|count} <small>más oscuro</small>",
+     "text": "Una luna llena da unos {fm_lux}. Una noche natural sin luna da unos {nl_lux}.",
+     "alt": "Pueblo costero de fieltro de noche, con un agujero vacío donde estaba la Luna"
+    },
+    {
+     "text": "En Tanzania ({yrs}, unos {n_att} ataques a personas), los ataques de leones al anochecer fueron {lion} más frecuentes en los {d10} días posteriores a la luna llena, cuando el comienzo de la noche es oscuro, que en los {d10} días anteriores.",
+     "alt": "Leona de fieltro agazapada en la sabana oscura"
+    },
+    {
+     "big": "~{m18|count} <small>meses</small>",
+     "text": "Un eclipse total de Sol ocurre en algún lugar de la Tierra aproximadamente cada {m18} meses. Sin la Luna no habría ninguno [SCENARIO].",
+     "alt": "Familia de fieltro mirando un eclipse total de Sol"
+    }
    ],
-   "chart_e": {"title": "Fuerza generadora de mareas", "sub": "Luna = {one} · valores dibujados en código a partir de la NOAA", "rows": ["Luna", "Sol"]},
+   "chart_e": {
+    "title": "Fuerza generadora de mareas",
+    "sub": "Luna = {one} · valores dibujados en código a partir de la NOAA",
+    "rows": [
+     "Luna",
+     "Sol"
+    ],
+    "read": "Cómo se lee: cada barra es la fuerza que levanta las mareas, con la de la Luna igual a 1. La del Sol es más o menos la mitad. Sin la Luna solo quedaría la barra del Sol."
+   },
    "m_h2": "El sospechoso lento: la <em>inclinación</em> de la Tierra",
-   "m_p": ["Hoy la inclinación de la Tierra oscila entre {tilt_lo} y {tilt_hi} en unos {yrs41} años [OBSERVED]. La Luna ayuda a mantenerla estable. Sin ella, dos simulaciones publicadas no coinciden en cuánto podría desviarse."],
-   "chart_m": {"title": "¿Cuánto podría oscilar la inclinación?", "sub": "amplitud del intervalo, en grados", "rows": ["Hoy", "Laskar et al. 1993", "Lissauer et al. 2012"],
-    "note": "Dos modelos distintos, no experimentos directamente comparables; las barras solo muestran la amplitud de cada intervalo. Laskar et al.: una zona caótica desde casi {deg0} hasta unos {deg85}, a lo largo de millones de años [SIMULATION]. Lissauer et al.: un intervalo de normalmente {deg2025} de amplitud, a lo largo de cientos de millones de años [SIMULATION]."},
+   "m_p": [
+    "Hoy la inclinación de la Tierra oscila entre {tilt_lo} y {tilt_hi} en unos {yrs41} años [OBSERVED]. La Luna ayuda a mantenerla estable. Sin ella, dos simulaciones publicadas no coinciden en cuánto podría desviarse."
+   ],
+   "chart_m": {
+    "title": "¿Cuánto podría oscilar la inclinación?",
+    "sub": "amplitud del intervalo, en grados",
+    "rows": [
+     "Hoy",
+     "Laskar et al. 1993",
+     "Lissauer et al. 2012"
+    ],
+    "note": "Dos modelos distintos, no experimentos directamente comparables; las barras solo muestran la amplitud de cada intervalo. Laskar et al.: una zona caótica desde casi {deg0} hasta unos {deg85}, a lo largo de millones de años [SIMULATION]. Lissauer et al.: un intervalo de normalmente {deg2025} de amplitud, a lo largo de cientos de millones de años [SIMULATION].",
+    "read": "Cómo se lee: cada barra es cuánto puede oscilar la inclinación de la Tierra. Hoy se mantiene en unos 2,4°. Cuanto más larga la barra, más cambiarían las estaciones con el tiempo."
+   },
    "v_h2": "No es el fin del mundo. <em>Caso abierto.</em>",
-   "v_p": ["<b>Lo que sabemos:</b> la Tierra sigue en órbita, las mareas se reducen a la parte del Sol, las noches se vuelven mucho más oscuras y los eclipses totales de Sol desaparecen.",
-           "<b>Lo que no sabemos:</b> cuánto se desviaría de verdad la inclinación. Trabajos posteriores sugieren que la deriva es lenta y que no debe interpretarse como señal de cambios climáticos extremos [HYPOTHESIS]. Perder la Luna no acabaría con el mundo. Podría alterar las estaciones."],
+   "v_p": [
+    "<b>Lo que sabemos:</b> la Tierra sigue en órbita, las mareas se reducen a la parte del Sol, las noches se vuelven mucho más oscuras y los eclipses totales de Sol desaparecen.",
+    "<b>Lo que no sabemos:</b> cuánto se desviaría de verdad la inclinación. Trabajos posteriores sugieren que la deriva es lenta y que no debe interpretarse como señal de cambios climáticos extremos [HYPOTHESIS]. Perder la Luna no acabaría con el mundo. Podría alterar las estaciones."
+   ],
    "f_h2": "Todas las <em>fuentes</em>, y cómo las leímos",
    "src": {
     "C1": "La masa de la Luna comparada con la de la Tierra.",
@@ -241,7 +556,6 @@
    },
    "w_h2": "El caso en <em>movimiento</em>"
   },
-
   "fr": {
    "title": "Et si la Lune disparaissait cette nuit ?",
    "title_html": "Et si la <em>Lune</em> disparaissait cette nuit ?",
@@ -249,24 +563,61 @@
    "description": "La Terre resterait sur son orbite, mais les marées, les nuits et, lentement, les saisons changeraient. Les preuves, deux simulations en désaccord et toutes les sources.",
    "lede": "Tout irait bien pour toi, et la Terre garde son cap. Mais les marées, les nuits et, lentement, les saisons changeraient. Voici les preuves, et ce sur quoi la science n'est pas encore d'accord.",
    "q_h2": "Une nuit, le ciel est <em>vide</em>",
-   "q_p": ["La Lune représente <b>{mass|count}</b> de la masse de la Terre [OBSERVED]. Ça paraît peu : quelqu'un le remarquerait-il si elle disparaissait ?",
-           "La Terre continuerait de tourner autour du Soleil. Le point d'équilibre Terre–Lune se trouve à environ {bary} du centre de la Terre, à l'intérieur même de la planète [SCENARIO]. Rien ne sort de sa trajectoire. Les changements sont plus discrets, et certains prennent des millions d'années."],
+   "q_p": [
+    "La Lune représente <b>{mass|count}</b> de la masse de la Terre [OBSERVED]. Ça paraît peu : quelqu'un le remarquerait-il si elle disparaissait ?",
+    "La Terre continuerait de tourner autour du Soleil. Le point d'équilibre Terre–Lune se trouve à environ {bary} du centre de la Terre, à l'intérieur même de la planète [SCENARIO]. Rien ne sort de sa trajectoire. Les changements sont plus discrets, et certains prennent des millions d'années."
+   ],
    "q_note": "alors, qu'est-ce qui change vraiment ? →",
    "e_h2": "Quatre <em>pièces à conviction</em>",
    "ex": [
-    {"text": "Sans la Lune, il ne reste que les marées du Soleil. La force génératrice des marées du Soleil vaut environ la moitié de celle de la Lune [ESTIMATE]. C'est un rapport de forces, pas de hauteurs de marée : les hauteurs réelles dépendent de la forme de chaque côte [OBSERVED].", "alt": "Diorama en feutre : le Soleil tire sur les océans de la Terre, le support de la Lune est vide"},
-    {"big": "~{x100|count} <small>plus sombre</small>", "text": "Une pleine lune donne environ {fm_lux}. Une nuit naturelle sans lune donne environ {nl_lux}.", "alt": "Village côtier en feutre la nuit, avec un trou vide à la place de la Lune"},
-    {"text": "En Tanzanie ({yrs}, environ {n_att} attaques contre des personnes), les attaques de lions en soirée étaient {lion} plus fréquentes dans les {d10} jours suivant la pleine lune, quand le début de soirée est sombre, que dans les {d10} jours précédents.", "alt": "Lionne en feutre tapie dans la savane sombre"},
-    {"big": "~{m18|count} <small>mois</small>", "text": "Une éclipse totale de Soleil a lieu quelque part sur Terre environ tous les {m18} mois. Sans la Lune, il n'y en aurait plus [SCENARIO].", "alt": "Famille en feutre regardant une éclipse totale de Soleil"}
+    {
+     "text": "Sans la Lune, il ne reste que les marées du Soleil. La force génératrice des marées du Soleil vaut environ la moitié de celle de la Lune [ESTIMATE]. C'est un rapport de forces, pas de hauteurs de marée : les hauteurs réelles dépendent de la forme de chaque côte [OBSERVED].",
+     "alt": "Diorama en feutre : le Soleil tire sur les océans de la Terre, le support de la Lune est vide"
+    },
+    {
+     "big": "~{x100|count} <small>plus sombre</small>",
+     "text": "Une pleine lune donne environ {fm_lux}. Une nuit naturelle sans lune donne environ {nl_lux}.",
+     "alt": "Village côtier en feutre la nuit, avec un trou vide à la place de la Lune"
+    },
+    {
+     "text": "En Tanzanie ({yrs}, environ {n_att} attaques contre des personnes), les attaques de lions en soirée étaient {lion} plus fréquentes dans les {d10} jours suivant la pleine lune, quand le début de soirée est sombre, que dans les {d10} jours précédents.",
+     "alt": "Lionne en feutre tapie dans la savane sombre"
+    },
+    {
+     "big": "~{m18|count} <small>mois</small>",
+     "text": "Une éclipse totale de Soleil a lieu quelque part sur Terre environ tous les {m18} mois. Sans la Lune, il n'y en aurait plus [SCENARIO].",
+     "alt": "Famille en feutre regardant une éclipse totale de Soleil"
+    }
    ],
-   "chart_e": {"title": "Force génératrice des marées", "sub": "Lune = {one} · valeurs tracées en code d'après la NOAA", "rows": ["Lune", "Soleil"]},
+   "chart_e": {
+    "title": "Force génératrice des marées",
+    "sub": "Lune = {one} · valeurs tracées en code d'après la NOAA",
+    "rows": [
+     "Lune",
+     "Soleil"
+    ],
+    "read": "Comment le lire : chaque barre est la force qui soulève les marées, celle de la Lune valant 1. Celle du Soleil vaut environ la moitié. Sans la Lune, il ne resterait que la barre du Soleil."
+   },
    "m_h2": "Le suspect lent : l'<em>inclinaison</em> de la Terre",
-   "m_p": ["Aujourd'hui, l'inclinaison de la Terre oscille entre {tilt_lo} et {tilt_hi} en environ {yrs41} ans [OBSERVED]. La Lune aide à la stabiliser. Sans elle, deux simulations publiées ne s'accordent pas sur l'ampleur de sa dérive."],
-   "chart_m": {"title": "Jusqu'où l'inclinaison pourrait-elle osciller ?", "sub": "largeur de l'intervalle, en degrés", "rows": ["Aujourd'hui", "Laskar et al. 1993", "Lissauer et al. 2012"],
-    "note": "Deux modèles différents, pas des expériences directement comparables ; les barres montrent seulement la largeur de chaque intervalle. Laskar et al. : une zone chaotique de presque {deg0} jusqu'à environ {deg85}, sur des millions d'années [SIMULATION]. Lissauer et al. : un intervalle large en général de {deg2025}, sur des centaines de millions d'années [SIMULATION]."},
+   "m_p": [
+    "Aujourd'hui, l'inclinaison de la Terre oscille entre {tilt_lo} et {tilt_hi} en environ {yrs41} ans [OBSERVED]. La Lune aide à la stabiliser. Sans elle, deux simulations publiées ne s'accordent pas sur l'ampleur de sa dérive."
+   ],
+   "chart_m": {
+    "title": "Jusqu'où l'inclinaison pourrait-elle osciller ?",
+    "sub": "largeur de l'intervalle, en degrés",
+    "rows": [
+     "Aujourd'hui",
+     "Laskar et al. 1993",
+     "Lissauer et al. 2012"
+    ],
+    "note": "Deux modèles différents, pas des expériences directement comparables ; les barres montrent seulement la largeur de chaque intervalle. Laskar et al. : une zone chaotique de presque {deg0} jusqu'à environ {deg85}, sur des millions d'années [SIMULATION]. Lissauer et al. : un intervalle large en général de {deg2025}, sur des centaines de millions d'années [SIMULATION].",
+    "read": "Comment le lire : chaque barre indique de combien l'inclinaison de la Terre peut osciller. Aujourd'hui, elle reste dans environ 2,4°. Plus la barre est longue, plus les saisons changeraient au fil du temps."
+   },
    "v_h2": "Pas la fin du monde. <em>Affaire non classée.</em>",
-   "v_p": ["<b>Ce que l'on sait :</b> la Terre reste en orbite, les marées se réduisent à la part du Soleil, les nuits deviennent bien plus sombres et les éclipses totales de Soleil disparaissent.",
-           "<b>Ce que l'on ne sait pas :</b> jusqu'où l'inclinaison dériverait vraiment. Des travaux plus récents suggèrent que la dérive est lente et ne doit pas être lue comme le signe de variations climatiques extrêmes [HYPOTHESIS]. Perdre la Lune ne serait pas la fin du monde. Cela pourrait bouleverser les saisons."],
+   "v_p": [
+    "<b>Ce que l'on sait :</b> la Terre reste en orbite, les marées se réduisent à la part du Soleil, les nuits deviennent bien plus sombres et les éclipses totales de Soleil disparaissent.",
+    "<b>Ce que l'on ne sait pas :</b> jusqu'où l'inclinaison dériverait vraiment. Des travaux plus récents suggèrent que la dérive est lente et ne doit pas être lue comme le signe de variations climatiques extrêmes [HYPOTHESIS]. Perdre la Lune ne serait pas la fin du monde. Cela pourrait bouleverser les saisons."
+   ],
    "f_h2": "Toutes les <em>sources</em>, et comment nous les avons lues",
    "src": {
     "C1": "La masse de la Lune comparée à celle de la Terre.",

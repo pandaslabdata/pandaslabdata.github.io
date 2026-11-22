@@ -1,0 +1,15 @@
+<!doctype html>
+{% from "_fchart.html" import fchart %}
+<html lang="{{ lang }}"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Caveat:wght@600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/case/case.css?v={{ ver }}">
+<style>
+html,body{margin:0;background:#1a2436!important}
+.wrapc{width:1500px;padding:40px 50px;box-sizing:border-box}
+.fchart{margin:0!important;font-size:18px}
+.fchart .fc-bar{transition:none!important}
+.brand{margin-top:16px;font:18px "Special Elite";color:#f4e7c8;text-align:right}
+.rv{opacity:1!important;transform:none!important}
+.fchart .fc-bar{width:max(26px,var(--w))!important}
+</style></head>
+<body><div class="wrapc">{{ fchart(ch) }}<div class="brand">Pandas Lab · {{ ui.case }} {{ c.case }} · pandaslab.it</div></div></body></html>

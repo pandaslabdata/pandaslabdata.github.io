@@ -55,6 +55,12 @@
   <p class="center"><a class="btn" href="https://www.linkedin.com/company/pandas-lab" target="_blank" rel="noopener">{{ o.ab_li }}</a></p>
 </div>
 
+{% elif page == 'privacy' %}
+<div class="wrap"><div class="sheet paper rv privacy">
+  {% for s in pv.s %}<h2 class="slab">{{ s[0] }}</h2><p>{{ s[1] }}</p>{% endfor %}
+  <p class="typed">{{ pv.updated }}</p>
+</div></div>
+
 {% elif page == 'shop' or page == 'kit' %}
 <div class="wrap">
   <div class="locker{% if page == 'kit' %} single{% endif %}">

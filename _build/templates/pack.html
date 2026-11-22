@@ -1,0 +1,120 @@
+<!doctype html>
+{% from "_fchart.html" import fchart %}
+<html lang="{{ lang }}"><head><meta charset="utf-8">
+<title>Pandas Lab · {{ ui.case }} {{ c.case }} · {{ t.title|striptags }}</title>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Caveat:wght@600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/case/case.css?v={{ ver }}">
+<style>
+@page{size:210mm 297mm;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#555!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font:10.5pt/1.5 "Source Serif 4",Georgia,serif;color:#2b1a10}
+.rv{opacity:1!important;transform:none!important}
+.fchart .fc-bar{width:max(26px,var(--w))!important;transition:none!important}
+.pk-pg{position:relative;width:210mm;height:297mm;overflow:hidden;page-break-after:always;break-after:page;margin:0 auto}
+.pk-pg:last-child{page-break-after:auto;break-after:auto}
+@media screen{.pk-pg{margin:0 auto 10mm;box-shadow:0 4mm 10mm rgba(0,0,0,.4)}}
+.pk-paper-pg{background:radial-gradient(120% 90% at 50% 40%,#f7eed9 0%,#eddcb8 70%,#e2cc9f 100%);padding:16mm 16mm 18mm}
+.pk-paper-pg::after{content:"";position:absolute;inset:7mm;border:1.5px dashed rgba(141,29,23,.35);pointer-events:none}
+.pk-run{position:absolute;left:16mm;right:16mm;bottom:9mm;display:flex;justify-content:space-between;font:8pt "Special Elite";color:#6b5a48}
+.pk-kick{font:9pt "Special Elite";letter-spacing:.12em;color:#8d1d17;text-transform:uppercase}
+.pk-h{font:400 21pt/1.08 "Lilita One";color:#1d2a44;margin:1.5mm 0 4mm}
+.pk-h em,.pk-h b,.pk-h span{color:#c48410;font-style:normal}
+p{margin:0 0 3mm}
+.pk-hand{font:600 15pt/1.2 Caveat,cursive;color:#2b1a10;background:#fff8e6;padding:3mm 4mm;transform:rotate(-.8deg);box-shadow:0 1.5mm 3mm rgba(0,0,0,.2);margin:4mm 0}
+.pk-cover{background:#1d2a44 url("/assets/charts/navy_felt.webp") 0 0/210mm auto;color:#f1e4c6;padding:18mm 18mm}
+.pk-cover::before{content:"";position:absolute;inset:8mm;border:5px solid #e4cf9f;border-radius:5mm;box-shadow:inset 0 0 0 2mm #1d2a44,inset 0 0 0 2.6mm rgba(228,207,159,.6)}
+.pk-cover .pk-pin{position:absolute;width:7mm;height:7mm;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffe7a6,#c58b16 45%,#6b4708 100%);box-shadow:0 1mm 1.5mm rgba(0,0,0,.5)}
+.pk-cover .pk-logo{height:12mm;position:relative}
+.pk-cover .pk-tag{display:inline-block;margin-top:9mm;font:400 13pt "Lilita One";color:#9c1c14;background:#efdcb3;border:2.5px solid #9c1c14;padding:1.5mm 4mm;transform:rotate(-3deg)}
+.pk-cover h1{position:relative;font:400 34pt/1.02 "Lilita One";color:#f4e7c8;margin:7mm 0 5mm;max-width:112mm}
+.pk-cover h1 em,.pk-cover h1 b,.pk-cover h1 span{color:#f0b43c;font-style:normal}
+.pk-cover .pk-lede{position:relative;max-width:105mm;font-size:11.5pt;color:#eadbbd}
+.pk-cover .pk-shot{position:absolute;right:20mm;top:58mm;width:68mm;background:#fffaf0;padding:3mm 3mm 10mm;transform:rotate(3deg);box-shadow:0 3mm 6mm rgba(0,0,0,.5)}
+.pk-cover .pk-shot img{display:block;width:100%}
+.pk-cover .pk-shot .pk-tape{position:absolute;left:22mm;top:-4mm;width:26mm;height:8mm;background:rgba(236,222,190,.85);transform:rotate(-4deg)}
+.pk-cover .pk-stampv{position:absolute;right:26mm;top:190mm;font:400 17pt "Lilita One";color:#d23a2b;border:3px solid #d23a2b;padding:1.5mm 5mm;transform:rotate(-8deg);background:rgba(255,248,230,.9)}
+.pk-cover .pk-meta{position:absolute;left:18mm;right:18mm;bottom:20mm;display:flex;gap:4mm;flex-wrap:wrap}
+.pk-cover .pk-meta span{font:9pt "Special Elite";border:1px dashed rgba(228,207,159,.6);padding:1.5mm 3mm;border-radius:2mm}
+.pk-cover .pk-foot{position:absolute;left:18mm;right:18mm;bottom:11mm;font:8.5pt "Special Elite";color:#d9c9a3}
+.pk-exg{display:grid;grid-template-columns:1fr 1fr;gap:5mm}
+.pk-excard{background:#fffaf0;padding:3mm;box-shadow:0 1.5mm 3mm rgba(0,0,0,.25);position:relative}
+.pk-excard:nth-child(odd){transform:rotate(-.6deg)}.pk-excard:nth-child(even){transform:rotate(.6deg)}
+.pk-excard .pk-ph{height:38mm;overflow:hidden;margin-bottom:2.5mm}
+.pk-excard .pk-ph img{width:100%;height:100%;object-fit:cover;display:block}
+.pk-excard .pk-big{font:400 17pt/1 "Lilita One";color:#c48410;margin-bottom:1.5mm}
+.pk-excard p{font-size:9pt;line-height:1.4;margin:0 0 1.5mm}
+.pk-excard .pk-src{font:7pt "Special Elite";color:#6b5a48;word-break:break-word}
+.pk-excard .label{position:absolute;top:5mm;right:5mm;font-size:7.5pt!important;background:rgba(255,248,230,.95)}
+.label{font-size:7.5pt!important}
+.fchart{margin:3mm 0!important;font-size:11px;padding:16px 20px!important}
+.fchart .fc-row{margin:9px 0}
+.fchart .fc-lab{font-size:15px}
+.fchart .fc-read{font-size:15px}
+.fchart .fc-note{font-size:11px}
+.pk-verdict{background:#fff8e6;padding:5mm 6mm;box-shadow:0 1.5mm 3mm rgba(0,0,0,.2);position:relative;margin-bottom:6mm}
+.pk-verdict .pk-vst{position:absolute;right:5mm;top:-4mm;font:400 13pt "Lilita One";color:#d23a2b;border:2.5px solid #d23a2b;padding:1mm 4mm;transform:rotate(6deg);background:#fff8e6}
+ol.pk-srcl{margin:0;padding-left:5mm;font-size:8.2pt;line-height:1.35;columns:2;column-gap:7mm}
+ol.pk-srcl li{margin:0 0 2.2mm;break-inside:avoid}
+ol.pk-srcl a{color:#1d2a44;word-break:break-all}
+ol.pk-srcl .pk-cite{font:7pt "Special Elite";color:#6b5a48}
+.pk-legend{display:grid;grid-template-columns:repeat(5,1fr);gap:2mm;margin-top:5mm}
+.pk-legend div{background:#fff8e6;padding:2mm;font:600 11pt/1.1 Caveat,cursive;box-shadow:0 1mm 2mm rgba(0,0,0,.15)}
+.pk-legend .label{display:inline-block;margin-bottom:1mm}
+.pk-lic{margin-top:5mm;font:8pt "Special Elite";color:#6b5a48;border-top:1px dashed #c48410;padding-top:2.5mm}
+</style></head>
+<body>
+
+<section class="pk-pg pk-cover">
+  <span class="pk-pin" style="left:11mm;top:11mm"></span><span class="pk-pin" style="right:11mm;top:11mm"></span><span class="pk-pin" style="left:11mm;bottom:11mm"></span><span class="pk-pin" style="right:11mm;bottom:11mm"></span>
+  <img class="pk-logo" src="/assets/board/logo.webp" alt="Pandas Lab">
+  <div><span class="pk-tag">{{ ui.case|upper }} {{ c.case }}</span></div>
+  <h1>{{ t.title_html|safe }}</h1>
+  <p class="pk-lede">{{ t.lede|safe }}</p>
+  <div class="pk-shot"><span class="pk-tape"></span><img src="{{ img }}/{{ c.images.cover }}" alt=""></div>
+  <div class="pk-stampv">{{ ui.status[c.status] }}</div>
+  <div class="pk-meta"><span>{{ ui.world }}: {{ ui.worlds[c.world] }}</span><span>{{ claims_line }}</span><span>{{ ui.updated }} {{ updated }}</span></div>
+  <div class="pk-foot">pandaslab.it{{ alts[lang] }}</div>
+</section>
+
+<section class="pk-pg pk-paper-pg">
+  <div class="pk-kick">01 · {{ ui.sec_q }}</div>
+  <h2 class="pk-h">{{ t.q_h2|safe }}</h2>
+  {% for p in t.q_p %}<p>{{ p|safe }}</p>{% endfor %}
+  <div class="pk-hand">{{ t.q_note|safe }}</div>
+  <div class="pk-kick" style="margin-top:5mm">02 · {{ ui.sec_e }}</div>
+  <h2 class="pk-h">{{ t.e_h2|safe }}</h2>
+  <div class="pk-exg">
+    {% for x in exhibits %}<div class="pk-excard"><span class="label l-{{ x.label|lower }}">{{ x.label }}</span><div class="pk-ph"><img src="{{ img }}/{{ x.img }}" alt=""></div>
+      <div class="pk-big">{{ x.big|safe }}</div><p>{{ x.text|safe }}</p><div class="pk-src">{{ x.claim }} · {{ x.name }}</div></div>{% endfor %}
+  </div>
+  <div class="pk-run"><span>Pandas Lab · {{ ui.case }} {{ c.case }}</span><span>2</span></div>
+</section>
+
+<section class="pk-pg pk-paper-pg">
+  <div class="pk-kick">02 · {{ ui.sec_e }} · 03 · {{ sec_m }}</div>
+  <h2 class="pk-h">{{ charts_t }}</h2>
+  {% if charts.e %}{{ fchart(charts.e) }}{% endif %}
+  {% if charts.m %}{{ fchart(charts.m) }}{% endif %}
+  <div class="pk-run"><span>Pandas Lab · {{ ui.case }} {{ c.case }}</span><span>3</span></div>
+</section>
+
+<section class="pk-pg pk-paper-pg">
+  <div class="pk-kick">03 · {{ sec_m }}</div>
+  <h2 class="pk-h">{{ t.m_h2|safe }}</h2>
+  {% for p in t.m_p %}<p>{{ p|safe }}</p>{% endfor %}
+  <div class="pk-kick" style="margin-top:6mm">04 · {{ ui.sec_v }}</div>
+  <h2 class="pk-h">{{ t.v_h2|safe }}</h2>
+  <div class="pk-verdict"><span class="pk-vst">{{ ui.status[c.status] }}</span>{% for p in t.v_p %}<p>{{ p|safe }}</p>{% endfor %}</div>
+  <div class="pk-run"><span>Pandas Lab · {{ ui.case }} {{ c.case }}</span><span>4</span></div>
+</section>
+
+<section class="pk-pg pk-paper-pg">
+  <div class="pk-kick">05 · {{ ui.sec_f }}</div>
+  <h2 class="pk-h" style="font-size:16pt">{{ t.f_h2|safe }}</h2>
+  <ol class="pk-srcl">{% for s in sources %}<li><b>{{ s.claim }}</b> <span class="label l-{{ s.label|lower }}">{{ s.label }}</span> {{ s.desc|safe }}<br><span class="pk-cite">{{ s.name }} · {{ ui.read }}: {{ s.read }}</span><br>{% for u in s.urls %}<a href="{{ u }}">{{ u }}</a><br>{% endfor %}</li>{% endfor %}</ol>
+  <div class="pk-legend">{% for k, v in ab.labels.items() %}<div><span class="label">{{ k }}</span><br>{{ v }}</div>{% endfor %}</div>
+  <div class="pk-lic">{{ pk.lic }}</div>
+  <div class="pk-run"><span>Pandas Lab · {{ ui.case }} {{ c.case }}</span><span>5</span></div>
+</section>
+</body></html>

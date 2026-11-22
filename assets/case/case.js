@@ -432,6 +432,25 @@
     requestAnimationFrame(tick);
   })();
 
+  // 4o) the case pack: email + consent -> MailerLite (the subscriber gets the pack email), and the download appears here.
+  (function(){
+    [].forEach.call(document.querySelectorAll('[data-pack]'),function(box){
+      var f=box.querySelector('[data-pack-form]'), msg=box.querySelector('.pk-msg'), done=box.querySelector('.pk-done'), act=box.dataset.action;
+      if(!f) return;
+      f.addEventListener('submit',function(e){ e.preventDefault();
+        var em=f.email.value.trim(), ok=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em);
+        if(!ok||!f.consent.checked){ msg.textContent=msg.dataset.need; return; }
+        msg.textContent=''; var b=f.querySelector('button'); b.disabled=true;
+        var show=function(){ f.hidden=true; done.hidden=false; };
+        if(!act){ show(); return; }   // local preview only: the build hides the box when no form is configured
+        var fd=new FormData(); fd.append('fields[email]',em); fd.append('fields[case]',box.dataset.case); fd.append('fields[lang]',box.dataset.lang);
+        fd.append('ml-submit','1'); fd.append('anticsrf','true');
+        fetch(act,{method:'POST',body:fd}).then(function(r){ return r.json(); }).then(function(j){ if(j&&j.success) show(); else { msg.textContent=msg.dataset.err; b.disabled=false; } })
+          .catch(function(){ msg.textContent=msg.dataset.err; b.disabled=false; });
+      });
+    });
+  })();
+
   // 4g) dust in the lamp light, on every page
   (function(){ var d=document.querySelector('.web-bg .dust'); if(!d||calm0) return;
     for(var i=0;i<22;i++){ var m=document.createElement('i'); m.style.left=(Math.random()*42)+'%'; m.style.top=(18+Math.random()*72)+'%';

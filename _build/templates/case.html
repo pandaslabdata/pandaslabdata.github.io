@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_fchart.html" import fchart %}
 {% block body %}
 <div class="dossier-head"><div class="wrap">
   <div>
@@ -32,24 +33,14 @@
         <div class="src">{{ x.claim }} · {{ x.name }} · <a href="{{ x.url }}" rel="noopener" target="_blank">{{ x.host }}</a></div></div>
       {% endfor %}
     </div>
-    {% if charts.e %}{% set ch = charts.e %}<div class="chart" role="img" aria-label="{{ ch.title }}">
-      <h3>{{ ch.title }}</h3><div class="sub">{{ ch.sub|safe }}</div>
-      {% for r in ch.rows %}<div class="bar-row"><span>{{ r.label }}</span><div class="bar"><i class="c-{{ r.color }}" style="--w:{{ r.w }}%"></i></div><span>{{ r.val|safe }}</span></div>{% endfor %}
-      {% if ch.axis %}<div class="axis">{% for a in ch.axis %}<span>{{ a|safe }}</span>{% endfor %}</div>{% endif %}
-      {% if ch.note %}<p class="note">{{ ch.note|safe }}</p>{% endif %}
-    </div>{% endif %}
+    {% if charts.e %}{{ fchart(charts.e) }}{% endif %}
   </section>
 
   <section id="m" class="sheet paper rv"><span class="pin" style="right:40px;top:16px"></span>
     <div class="num">03 · {{ sec_m }}</div>
     <h2 class="slab">{{ t.m_h2|safe }}</h2>
     {% for p in t.m_p %}<p>{{ p|safe }}</p>{% endfor %}
-    {% if charts.m %}{% set ch = charts.m %}<div class="chart" role="img" aria-label="{{ ch.title }}">
-      <h3>{{ ch.title }}</h3><div class="sub">{{ ch.sub|safe }}</div>
-      {% for r in ch.rows %}<div class="bar-row"><span>{{ r.label }}</span><div class="bar"><i class="c-{{ r.color }}" style="--w:{{ r.w }}%"></i></div><span>{{ r.val|safe }}</span></div>{% endfor %}
-      {% if ch.axis %}<div class="axis">{% for a in ch.axis %}<span>{{ a|safe }}</span>{% endfor %}</div>{% endif %}
-      {% if ch.note %}<p class="note">{{ ch.note|safe }}</p>{% endif %}
-    </div>{% endif %}
+    {% if charts.m %}{{ fchart(charts.m) }}{% endif %}
     {% if c.images.model %}<figure class="m-fig"><img src="{{ img }}/{{ c.images.model }}" alt="" loading="lazy"></figure>{% endif %}
   </section>
 
@@ -59,6 +50,29 @@
     {% for p in t.v_p %}<p>{{ p|safe }}</p>{% endfor %}
     <span class="stamp anim" style="font-size:24px;margin-top:10px">{{ ui.case }} {{ c.case }} — {{ ui.status[c.status] }}</span>
   </section>
+
+  {% if pkui %}<section id="d" class="sheet paper rv packbox" data-pack data-action="{{ mailer.action }}" data-case="{{ c.case }}" data-lang="{{ lang }}">
+    <span class="pin" style="right:40px;top:16px"></span>
+    <div class="num">{{ pkui.num }}</div>
+    <h2 class="slab">{{ pkui.h2 }}</h2>
+    <div class="pk-grid">
+      <div>
+        <p>{{ pkui.p }}</p>
+        <ul class="pk-items">{% for i in pkui["items"] %}<li>{{ i }}</li>{% endfor %}</ul>
+        <form class="pk-form" data-pack-form novalidate>
+          <div class="pk-row"><input type="email" name="email" required autocomplete="email" placeholder="{{ pkui.ph }}" aria-label="Email"><button class="btn" type="submit">{{ pkui.btn }}</button></div>
+          <label class="pk-consent"><input type="checkbox" name="consent" required> <span>{{ pkui.consent }} <a href="{{ prefix }}/privacy.html">{{ pkui.privacy }}</a></span></label>
+          <p class="pk-msg" aria-live="polite" data-need="{{ pkui.need }}" data-err="{{ pkui.err }}"></p>
+        </form>
+        <div class="pk-done" hidden><b>{{ pkui.ok }}</b><a class="btn" href="/packs/pandaslab-case-{{ c.case }}-{{ lang }}.zip" download>{{ pkui.dl }}</a><p>{{ pkui.check }}</p></div>
+      </div>
+      <div class="pk-stack" aria-hidden="true">
+        <span class="pk-sheet s1"><img src="{{ img }}/{{ c.images.cover }}" alt="" loading="lazy"><i>PDF</i></span>
+        <span class="pk-sheet s2"><i>PNG</i></span>
+        <span class="pk-sheet s3"><i>CSV</i></span>
+      </div>
+    </div>
+  </section>{% endif %}
 
   <section id="f" class="sheet paper rv"><span class="pin" style="left:30px;top:16px"></span>
     <div class="num">05 · {{ ui.sec_f }}</div>

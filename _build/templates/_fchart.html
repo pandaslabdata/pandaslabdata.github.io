@@ -1,0 +1,13 @@
+{% macro fchart(ch) %}<figure class="fchart rv" role="img" aria-label="{{ ch.title }}">
+      <span class="fc-pin" style="left:10px;top:10px"></span><span class="fc-pin" style="right:10px;top:10px"></span><span class="fc-pin" style="left:10px;bottom:10px"></span><span class="fc-pin" style="right:10px;bottom:10px"></span>
+      <div class="fc-title">{{ ch.title }}</div><div class="fc-sub">{{ ch.sub|safe }}</div>
+      <div class="fc-plot"{% if ch.ref_w %} style="--ref:{{ ch.ref_w }}%"{% endif %}>
+        {% for r in ch.rows %}<div class="fc-row" style="--d:{{ loop.index0 * 0.18 }}s"><span class="fc-lab">{{ r.label }}</span>
+          <div class="fc-track">{% if ch.ref_w %}<i class="fc-tline"></i><i class="fc-bar ref" style="--w:{{ ch.ref_w }}%"></i>{% endif %}<i class="fc-bar" style="--w:{{ r.w }}%"></i></div>
+          <span class="fc-val">{{ r.val|safe }}</span></div>{% endfor %}
+        {% if ch.axis %}<div class="fc-axis">{% for a in ch.axis %}<span>{{ a|safe }}</span>{% endfor %}</div>{% endif %}
+      </div>
+      {% if ch.read %}<figcaption class="fc-read">{{ ch.read|safe }}</figcaption>{% endif %}
+      {% if ch.note %}<p class="fc-note">{{ ch.note|safe }}</p>{% endif %}
+      {% if ch.src %}<p class="fc-src">{{ ch.src }}</p>{% endif %}
+    </figure>{% endmacro %}

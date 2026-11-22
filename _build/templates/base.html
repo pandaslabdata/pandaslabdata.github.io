@@ -24,14 +24,14 @@
 <header class="top"><div class="wrap">
   <a class="logo" href="{{ prefix }}/"><img src="/assets/board/logo.webp" alt="Pandas Lab" width="520" height="102"></a>
   <nav class="main" aria-label="Main">
-    <a href="{{ prefix }}/"{% if page_kind == 'home' %} class="on"{% endif %}>{{ ui.nav_home }}</a><a href="{{ prefix }}/cases/"{% if page_kind == 'archive' or page_kind == 'case' %} class="on"{% endif %}>{{ ui.nav_cases }}</a><a href="{{ prefix }}/stories.html"{% if page_kind in ('stories', 'dossier') %} class="on"{% endif %}>{{ ui.nav_stories }}</a><a href="{{ prefix }}/about.html"{% if page_kind == 'about' %} class="on"{% endif %}>{{ ui.nav_about }}</a><a href="{{ prefix }}/shop.html"{% if page_kind in ('shop', 'kit') %} class="on"{% endif %}>{{ ui.nav_shop }}</a>
+    <a href="{{ prefix }}/"{% if page_kind == 'home' %} class="on"{% endif %}>{{ ui.nav_home }}</a><a href="{{ prefix }}/cases/"{% if page_kind == 'archive' or page_kind == 'case' %} class="on"{% endif %}>{{ ui.nav_cases }}</a><a href="{{ prefix }}/stories.html"{% if page_kind in ('stories', 'dossier') %} class="on"{% endif %}>{{ ui.nav_stories }}</a><a href="{{ prefix }}/about.html"{% if page_kind == 'about' %} class="on"{% endif %}>{{ ui.nav_about }}</a>
   </nav>
   <div class="hdr-r"><div class="langs">{% for l in langs %}<a href="{{ alts[l] }}" hreflang="{{ l }}" data-setlang="{{ l }}"{% if l == lang %} class="on" aria-current="true"{% endif %}>{{ l|upper }}</a>{% endfor %}</div></div>
 </div></header>
 
-{% if page_kind in ('archive', 'stories', 'about', 'shop', 'kit', 'world') %}<div class="stage page-stage">{% endif %}{% block body %}{% endblock %}{% if page_kind in ('archive', 'stories', 'about', 'shop', 'kit', 'world') %}</div>{% endif %}
+{% if page_kind in ('archive', 'stories', 'about', 'shop', 'kit', 'world', 'privacy') %}<div class="stage page-stage">{% endif %}{% block body %}{% endblock %}{% if page_kind in ('archive', 'stories', 'about', 'shop', 'kit', 'world', 'privacy') %}</div>{% endif %}
 
-<footer><div class="wrap"><div>PANDAS LAB · IMPOSSIBLE QUESTIONS, REAL SCIENCE</div><div>{% block footer_extra %}{% endblock %}<a href="mailto:info@pandaslab.it">info@pandaslab.it</a></div></div></footer>
+<footer><div class="wrap"><div>PANDAS LAB · IMPOSSIBLE QUESTIONS, REAL SCIENCE</div><div>{% block footer_extra %}{% endblock %}<a href="{{ prefix }}/privacy.html">Privacy</a> · <a href="mailto:info@pandaslab.it">info@pandaslab.it</a></div></div></footer>
 
 <nav class="tabbar" aria-label="{{ ui.nav_cases }}">
   <a href="{{ prefix }}/cases/"{% if page_kind == 'archive' %} class="on"{% endif %}><svg viewBox="0 0 24 24"><path d="M3 7.5V18a1.5 1.5 0 0 0 1.5 1.5h15A1.5 1.5 0 0 0 21 18V9a1.5 1.5 0 0 0-1.5-1.5H11L9 5H4.5A1.5 1.5 0 0 0 3 6.5z"/></svg><span>{{ ui.nav_cases }}</span></a>

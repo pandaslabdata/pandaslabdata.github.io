@@ -179,6 +179,15 @@ def host(u):
     return re.sub(r"^https://(www\.)?", "", u).split("/")[0]
 
 
+PACK_TXT = {
+    "en": {"lic": "Pandas Lab case pack. Free for personal and classroom use with credit (Pandas Lab, pandaslab.it). Not for resale."},
+    "it": {"lic": "Fascicolo Pandas Lab. Gratuito per uso personale e in classe, citando la fonte (Pandas Lab, pandaslab.it). Non rivendibile."},
+    "de": {"lic": "Pandas-Lab-Fallpaket. Kostenlos für den privaten Gebrauch und den Unterricht mit Quellenangabe (Pandas Lab, pandaslab.it). Kein Weiterverkauf."},
+    "es": {"lic": "Expediente de Pandas Lab. Gratis para uso personal y en clase, citando la fuente (Pandas Lab, pandaslab.it). Prohibida la reventa."},
+    "fr": {"lic": "Dossier Pandas Lab. Gratuit pour un usage personnel et en classe, avec mention de la source (Pandas Lab, pandaslab.it). Revente interdite."},
+}
+
+
 def build_case(c, engine, ui_all, env, ver, write=True, pool=None):
     num, nums = c["case"], c["numbers"]
     src = {s["claim"]: s for s in engine["sources"]}
@@ -208,7 +217,11 @@ def build_case(c, engine, ui_all, env, ver, write=True, pool=None):
             for i, r in enumerate(cd["rows"]):
                 w = r["share"] * 100 if "share" in r else r["width"] / cd["axis_max"] * 100
                 rows.append({"label": ct["rows"][i], "color": r["color"], "w": round(w, 1), "val": fmt(nums[r["val"]], lang)})
+            ref_w = round(cd["ref"] / cd["axis_max"] * 100, 1) if "ref" in cd else None
+            cl = cd.get("claims") or ([cd["claim"]] if cd.get("claim") else [])
             charts[key] = {"title": ct["title"], "sub": R(ct["sub"]), "note": R(ct["note"]) if ct.get("note") else "",
+                           "read": R(ct["read"]) if ct.get("read") else "", "ref_w": ref_w,
+                           "src": " · ".join(dict.fromkeys(c["source_names"][k] for k in cl if k in c["source_names"])),
                            "axis": [f"{a}{cd.get('axis_u', '')}" for a in cd.get("axis", [])], "rows": rows}
         sources = []
         for k in c["source_order"]:
@@ -232,6 +245,9 @@ def build_case(c, engine, ui_all, env, ver, write=True, pool=None):
             seo_title=t_raw["seo_title"], og_title=t_raw["title"], description=t_raw["description"], og_type="article",
             og_image=f"{img}/{c['images']['og']}", og_locale=OG_LOCALE[lang], jsonld=jsonld,
             c=c, t=t, exhibits=exhibits, charts=charts, sources=sources,
+            pkui=json.loads((BUILD / "ui_pack.json").read_text(encoding="utf-8"))[lang] if (SITE / "packs" / f"pandaslab-case-{num}-{lang}.zip").exists()
+                 and (json.loads((BUILD / "mailer.json").read_text(encoding="utf-8"))["action"] or __import__("os").environ.get("PL_PREVIEW")) else None,
+            mailer=json.loads((BUILD / "mailer.json").read_text(encoding="utf-8")),
             sec_m=ui["sec_m"][c["dominant_label"]], toc=toc, img=img, claims_line=claims_line,
             updated=date_str(c["updated"], ui), posts=c.get("posts", []), channels=CHANNELS,
             related=[{"href": case_paths(o["case"])[lang], "title": o["i18n"][lang]["title"], "case": o["case"],
@@ -241,6 +257,16 @@ def build_case(c, engine, ui_all, env, ver, write=True, pool=None):
             out = SITE / alts[lang].strip("/") / "index.html"
             out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text(page, encoding="utf-8")
+            # the downloadable case pack: printable summary + one page per chart (turned into PDF/PNG by make_packs.py)
+            ab = json.loads((BUILD / "ui_about.json").read_text(encoding="utf-8"))[lang]
+            pk = PACK_TXT[lang]
+            pdir = SITE / "_mock" / "pack" / num
+            pdir.mkdir(parents=True, exist_ok=True)
+            ctx = dict(lang=lang, ui=ui, c=c, t=t, exhibits=exhibits, charts=charts, sources=sources, img=img, ver=ver,
+                       sec_m=ui["sec_m"][c["dominant_label"]], updated=date_str(c["updated"], ui), ab=ab, pk=pk, alts=alts, claims_line=claims_line, charts_t={"en": "The charts", "it": "I grafici", "de": "Die Diagramme", "es": "Los gráficos", "fr": "Les graphiques"}[lang])
+            (pdir / f"{lang}.html").write_text(env.get_template("pack.html").render(**ctx), encoding="utf-8")
+            for key, ch in charts.items():
+                (pdir / f"{lang}_chart_{key}.html").write_text(env.get_template("packchart.html").render(ch=ch, **ctx), encoding="utf-8")
     return built
 
 
@@ -532,6 +558,7 @@ def build_pages(ui_all, env, ver):
     dj = json.loads((BUILD / "dossiers.json").read_text(encoding="utf-8"))
     geo = json.loads((BUILD / "board_geometry.json").read_text(encoding="utf-8"))
     ab = json.loads((BUILD / "ui_about.json").read_text(encoding="utf-8"))
+    PV = json.loads((BUILD / "ui_privacy.json").read_text(encoding="utf-8"))
     for lang in LANGS:
         o, ui = old[lang], dict(ui_all[lang], worlds_nav=WORLDS_NAV[lang])
         common = dict(lang=lang, langs=LANGS, lang_names=LANG_NAMES, ui=ui, base=BASE, ver=ver, o=o, g=geo,
@@ -547,6 +574,7 @@ def build_pages(ui_all, env, ver):
                           people=[{"name": "Michele Barison", "img": "/img/about/a_portrait.webp", "role": o["m_role"], "bio": ab[lang]["m_bio"], "stamp": "LAB FOUNDER"},
                                   {"name": "Mike", "img": "/mike.jpg", "role": o["mk_role"], "bio": o["mk_bio"], "stamp": "WOOL TWIN"}],
                           howto=[{"t": o["p1t"], "b": o["p1b"]}, {"t": o["p2t"], "b": o["p2b"]}, {"t": o["p3t"], "b": o["p3b"]}]),
+            "privacy": dict(kicker=PV[lang]["kicker"], title=PV[lang]["title"], intro=PV[lang]["intro"], pv=PV[lang]),
             "shop": dict(kicker=PAGE_KICKER["shop"][lang], title=o["sh_title"], intro=o["sh_intro"], hint=o["howworks"],
                          kits=[{"title": "Pandas Lab Chart Kit", "img": "/chartkit.jpg", "blurb": o["k1_b"], "href": PAGE_FORM, "btn": o["get_btn"], "stamp": o["free"]},
                                {"title": "EP 3 Data Kit · T. rex & the Giants", "img": "https://i.ytimg.com/vi/k_eJcF2WMfw/hqdefault.jpg", "blurb": o["ksoon_b"], "href": None, "btn": o["soon"], "stamp": o["soon"].upper()},
@@ -556,6 +584,12 @@ def build_pages(ui_all, env, ver):
         }
         for name, extra in pages.items():
             alts = page_paths(name)
+            if name == "shop":      # the shop is closed: its old address leads to the case archive
+                to = archive_paths()[lang]
+                out = SITE / alts[lang].lstrip("/")
+                out.write_text(f'<!doctype html><meta charset="utf-8"><title>Pandas Lab</title><link rel="canonical" href="{BASE}{to}">'
+                               f'<meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url={to}"><a href="{to}">{to}</a>', encoding="utf-8")
+                continue
             html_ = env.get_template("pages.html").render(page=name, page_kind=name, alts=alts, alts_json=js_safe(alts),
                                                           seo_title=f"{extra['title']} | Pandas Lab", og_title=extra["title"],
                                                           description=extra["intro"], **common, **extra)
@@ -739,7 +773,7 @@ def main():
         groups += [(dossier_paths(n), "0.9") for n in done]
     if "--pages" in sys.argv:           # stories / about / shop / kit in the board style, 5 languages
         build_pages(ui_all, env, ver)
-        groups += [(page_paths("stories"), "0.9"), (page_paths("shop"), "0.8"), (page_paths("about"), "0.7")]
+        groups += [(page_paths("stories"), "0.9"), (page_paths("about"), "0.7"), (page_paths("privacy"), "0.2")]
     update_sitemap(groups, date.today().isoformat())
     print(f"BUILT: {len(cases)} case page(s) + archive, {len(LANGS)} languages each; sitemap updated")
 

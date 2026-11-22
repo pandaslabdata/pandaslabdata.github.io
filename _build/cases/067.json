@@ -12,48 +12,231 @@
  "yt": "i2BhEURDtNc",
  "images": {
   "clip_src": "../Motore Vox/assets/case_067/parts/clips/piece_00.png",
-  "cover": "cover.jpg", "og": "cover.jpg", "poster": "p02.jpg", "model": "p02.jpg",
+  "cover": "cover.jpg",
+  "og": "cover.jpg",
+  "poster": "p02.jpg",
+  "model": "p02.jpg",
   "src_dir": "../Motore Vox/assets/case_067/board",
-  "copy": {"cover.jpg": "GD_COVER_9x16.png", "p02.jpg": "GD_PHOTO_02.png", "p03.jpg": "GD_PHOTO_03.png", "p04.jpg": "GD_PHOTO_04.png", "p05.jpg": "GD_PHOTO_05.png", "p07.jpg": "GD_PHOTO_07.png"}
+  "copy": {
+   "cover.jpg": "GD_COVER_9x16.png",
+   "p02.jpg": "GD_PHOTO_02.png",
+   "p03.jpg": "GD_PHOTO_03.png",
+   "p04.jpg": "GD_PHOTO_04.png",
+   "p05.jpg": "GD_PHOTO_05.png",
+   "p07.jpg": "GD_PHOTO_07.png"
+  }
  },
- "posts": [{"platform": "YouTube Short", "url": "https://www.youtube.com/shorts/i2BhEURDtNc"}],
- "related": ["068"],
+ "posts": [
+  {
+   "platform": "YouTube Short",
+   "url": "https://www.youtube.com/shorts/i2BhEURDtNc"
+  }
+ ],
+ "related": [
+  "068"
+ ],
  "numbers": {
-  "g0": {"v": 9.80665, "d": 5, "u": " m/s²"},
-  "one_g": {"v": 1, "d": 0, "u": " g"},
-  "two_g": {"v": 2, "d": 0, "u": " g"},
-  "x2": {"v": 2, "d": 0, "pre": "×"},
-  "mmhg": {"r": [22, 44], "d": 0, "u": " mmHg", "sep": " → "},
-  "mmhg_a": {"v": 22, "d": 0, "u": " mmHg"},
-  "mmhg_b": {"v": 44, "d": 0, "u": " mmHg"},
-  "gz": {"r": [4.5, 5], "d": [1, 0], "u": " g"},
-  "tree": {"r": [122, 130], "d": 0, "u": " m"},
-  "tree_ft": {"r": [400, 427], "d": 0, "u": " ft"},
-  "sh": {"r": [8.5, 4.25], "d": [1, 2], "u": " km", "sep": " → "},
-  "sh_a": {"v": 8.5, "d": 1, "u": " km"},
-  "sh_b": {"v": 4.25, "d": 2, "u": " km"},
-  "ev": {"r": [11.2, 15.8], "d": 1, "u": " km/s", "sep": " → "},
-  "ev_a": {"v": 11.2, "d": 1, "u": " km/s"},
-  "ev_b": {"v": 15.8, "d": 1, "u": " km/s"},
-  "ev_pct": {"v": 41, "d": 0, "u": "%", "pre": "+"},
-  "ev_pct2": {"v": 41, "d": 0, "u": "%"},
-  "fall": {"v": 3.7, "d": 1, "u": " s"},
-  "one": {"v": 1, "d": 0}
+  "g0": {
+   "v": 9.80665,
+   "d": 5,
+   "u": " m/s²"
+  },
+  "one_g": {
+   "v": 1,
+   "d": 0,
+   "u": " g"
+  },
+  "two_g": {
+   "v": 2,
+   "d": 0,
+   "u": " g"
+  },
+  "x2": {
+   "v": 2,
+   "d": 0,
+   "pre": "×"
+  },
+  "mmhg": {
+   "r": [
+    22,
+    44
+   ],
+   "d": 0,
+   "u": " mmHg",
+   "sep": " → "
+  },
+  "mmhg_a": {
+   "v": 22,
+   "d": 0,
+   "u": " mmHg"
+  },
+  "mmhg_b": {
+   "v": 44,
+   "d": 0,
+   "u": " mmHg"
+  },
+  "gz": {
+   "r": [
+    4.5,
+    5
+   ],
+   "d": [
+    1,
+    0
+   ],
+   "u": " g"
+  },
+  "tree": {
+   "r": [
+    122,
+    130
+   ],
+   "d": 0,
+   "u": " m"
+  },
+  "tree_ft": {
+   "r": [
+    400,
+    427
+   ],
+   "d": 0,
+   "u": " ft"
+  },
+  "sh": {
+   "r": [
+    8.5,
+    4.25
+   ],
+   "d": [
+    1,
+    2
+   ],
+   "u": " km",
+   "sep": " → "
+  },
+  "sh_a": {
+   "v": 8.5,
+   "d": 1,
+   "u": " km"
+  },
+  "sh_b": {
+   "v": 4.25,
+   "d": 2,
+   "u": " km"
+  },
+  "ev": {
+   "r": [
+    11.2,
+    15.8
+   ],
+   "d": 1,
+   "u": " km/s",
+   "sep": " → "
+  },
+  "ev_a": {
+   "v": 11.2,
+   "d": 1,
+   "u": " km/s"
+  },
+  "ev_b": {
+   "v": 15.8,
+   "d": 1,
+   "u": " km/s"
+  },
+  "ev_pct": {
+   "v": 41,
+   "d": 0,
+   "u": "%",
+   "pre": "+"
+  },
+  "ev_pct2": {
+   "v": 41,
+   "d": 0,
+   "u": "%"
+  },
+  "fall": {
+   "v": 3.7,
+   "d": 1,
+   "u": " s"
+  },
+  "one": {
+   "v": 1,
+   "d": 0
+  }
  },
  "exhibits": [
-  {"claim": "C3", "img": "p03.jpg", "big": "{mmhg}"},
-  {"claim": "C4", "img": "p04.jpg", "big": "~{gz}"},
-  {"claim": "C7", "img": "p05.jpg", "big": "~{tree}"},
-  {"claim": "C9", "img": "p07.jpg", "big": "{ev_pct}"}
+  {
+   "claim": "C3",
+   "img": "p03.jpg",
+   "big": "{mmhg}"
+  },
+  {
+   "claim": "C4",
+   "img": "p04.jpg",
+   "big": "~{gz}"
+  },
+  {
+   "claim": "C7",
+   "img": "p05.jpg",
+   "big": "~{tree}"
+  },
+  {
+   "claim": "C9",
+   "img": "p07.jpg",
+   "big": "{ev_pct}"
+  }
  ],
  "charts": {
-  "e": {"claims": ["C2", "C3", "C8", "C9"], "axis_max": 2, "axis": [0, 1, 2], "axis_u": "×", "rows": [
-   {"val": "x2", "width": 2, "color": "gold"},
-   {"val": "mmhg", "width": 2, "color": "red"},
-   {"val": "sh", "width": 0.5, "color": "blue"},
-   {"val": "ev", "width": 1.414, "color": "fern"}]}
+  "e": {
+   "claims": [
+    "C2",
+    "C3",
+    "C8",
+    "C9"
+   ],
+   "axis_max": 2,
+   "axis": [
+    0,
+    1,
+    2
+   ],
+   "axis_u": "×",
+   "rows": [
+    {
+     "val": "x2",
+     "width": 2,
+     "color": "gold"
+    },
+    {
+     "val": "mmhg",
+     "width": 2,
+     "color": "red"
+    },
+    {
+     "val": "sh",
+     "width": 0.5,
+     "color": "blue"
+    },
+    {
+     "val": "ev",
+     "width": 1.414,
+     "color": "fern"
+    }
+   ],
+   "ref": 1
+  }
  },
- "source_order": ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9"],
+ "source_order": [
+  "C1",
+  "C2",
+  "C3",
+  "C4",
+  "C5",
+  "C6",
+  "C7",
+  "C8",
+  "C9"
+ ],
  "source_names": {
   "C1": "NIST · SP 330, The International System of Units",
   "C2": "Pandas Lab · W = m × g",
@@ -65,8 +248,17 @@
   "C8": "NASA NSSDC · Earth Fact Sheet",
   "C9": "NASA NSSDC · Earth Fact Sheet"
  },
- "read_override": {"C1": "data", "C2": "calc", "C3": "full", "C4": "full", "C5": "abstract", "C6": "calc", "C7": "abstract", "C8": "calc", "C9": "calc"},
-
+ "read_override": {
+  "C1": "data",
+  "C2": "calc",
+  "C3": "full",
+  "C4": "full",
+  "C5": "abstract",
+  "C6": "calc",
+  "C7": "abstract",
+  "C8": "calc",
+  "C9": "calc"
+ },
  "i18n": {
   "en": {
    "title": "What if gravity doubled tonight?",
@@ -75,25 +267,53 @@
    "description": "You wouldn't be crushed. You'd be stuck: twice your weight, a harder job for your heart, shorter trees, a lower sky and a planet that is harder to leave. The evidence and every source.",
    "lede": "You wouldn't be crushed. You'd be stuck. Here is what doubling Earth's pull would do to your body, to the trees, to the sky and to the way off the planet.",
    "q_h2": "Twice the <em>pull</em>, overnight",
-   "q_p": ["Standard gravity is {g0} [OBSERVED]. Weight is mass times gravity, so if gravity doubled, you would weigh twice as much [SCENARIO].",
-           "Every staircase would feel like climbing with a second you on your back. The real question is not whether you survive the first night. It's how long a body can live like that."],
+   "q_p": [
+    "Standard gravity is {g0} [OBSERVED]. Weight is mass times gravity, so if gravity doubled, you would weigh twice as much [SCENARIO].",
+    "Every staircase would feel like climbing with a second you on your back. The real question is not whether you survive the first night. It's how long a body can live like that."
+   ],
    "q_note": "so how much can a body take? →",
    "e_h2": "Four <em>exhibits</em>",
    "ex": [
-    {"text": "To push blood up to your brain, your heart works against about {mmhg_a} at {one_g}. At {two_g}, that column of blood weighs twice as much: about {mmhg_b} [ESTIMATE].", "alt": "Felt body with the heart pushing blood up to the brain"},
-    {"text": "Relaxed, people tolerate about {gz} head-to-feet before blacking out [OBSERVED], so {two_g} alone won't knock you out. But no human has ever lived at {two_g} for long [OBSERVED].", "alt": "Felt pilot straining under g-forces"},
-    {"text": "Lifting water to the top limits how tall trees can grow: about {tree} ({tree_ft}), according to a study of the tallest redwoods [HYPOTHESIS]. With water twice as heavy, that ceiling would drop [SCENARIO].", "alt": "Felt hiker at the foot of giant redwoods"},
-    {"text": "If gravity doubled because Earth had twice the mass at the same size, escape velocity would rise from {ev_a} to {ev_b} [SCENARIO].", "alt": "Felt rocket straining on the launch pad"}
+    {
+     "text": "To push blood up to your brain, your heart works against about {mmhg_a} at {one_g}. At {two_g}, that column of blood weighs twice as much: about {mmhg_b} [ESTIMATE].",
+     "alt": "Felt body with the heart pushing blood up to the brain"
+    },
+    {
+     "text": "Relaxed, people tolerate about {gz} head-to-feet before blacking out [OBSERVED], so {two_g} alone won't knock you out. But no human has ever lived at {two_g} for long [OBSERVED].",
+     "alt": "Felt pilot straining under g-forces"
+    },
+    {
+     "text": "Lifting water to the top limits how tall trees can grow: about {tree} ({tree_ft}), according to a study of the tallest redwoods [HYPOTHESIS]. With water twice as heavy, that ceiling would drop [SCENARIO].",
+     "alt": "Felt hiker at the foot of giant redwoods"
+    },
+    {
+     "text": "If gravity doubled because Earth had twice the mass at the same size, escape velocity would rise from {ev_a} to {ev_b} [SCENARIO].",
+     "alt": "Felt rocket straining on the launch pad"
+    }
    ],
-   "chart_e": {"title": "At 2 g, compared with today", "sub": "today = {one} · computed in code from NIST, NASA and JMVH values", "rows": ["Your weight", "Pressure to lift blood to the brain", "Height over which air thins out", "Speed needed to leave Earth"],
-    "note": "Bars show each value at {two_g} relative to today (1 = today). The air estimate assumes the same temperature [SCENARIO]."},
+   "chart_e": {
+    "title": "At 2 g, compared with today",
+    "sub": "today = {one} · computed in code from NIST, NASA and JMVH values",
+    "rows": [
+     "Your weight",
+     "Pressure to lift blood to the brain",
+     "Height over which air thins out",
+     "Speed needed to leave Earth"
+    ],
+    "note": "Bars show each value at {two_g} relative to today (1 = today). The air estimate assumes the same temperature [SCENARIO].",
+    "read": "How to read it: the cream bar is today (1 g), the gold bar is the same quantity at 2 g. The red stitch marks today: past it the value grows, short of it the value shrinks."
+   },
    "m_h2": "Steve's <em>test</em>",
-   "m_p": ["We tried it on Steve, our felt puppet, in a physics model: same muscles, then the weight doubles. Standing at {one_g}, he went down {fall} after gravity switched to {two_g} [SIMULATION].",
-           "It's a toy model of a puppet, not of a human body. It shows the idea, same strength against double the load, not how long a person would last.",
-           "And the sky? The height over which air thins out would drop from {sh_a} to about {sh_b} if the air kept the same temperature [SCENARIO]."],
+   "m_p": [
+    "We tried it on Steve, our felt puppet, in a physics model: same muscles, then the weight doubles. Standing at {one_g}, he went down {fall} after gravity switched to {two_g} [SIMULATION].",
+    "It's a toy model of a puppet, not of a human body. It shows the idea, same strength against double the load, not how long a person would last.",
+    "And the sky? The height over which air thins out would drop from {sh_a} to about {sh_b} if the air kept the same temperature [SCENARIO]."
+   ],
    "v_h2": "Not crushed. <em>Kept.</em>",
-   "v_p": ["<b>What we know:</b> your weight would double, your heart would push against about twice the pressure, and leaving the planet would take about {ev_pct2} more speed.",
-           "<b>What we don't:</b> how a human body copes with {two_g} for months or years. Nobody has tried [OBSERVED]. Gravity wouldn't crush you. It would keep you."],
+   "v_p": [
+    "<b>What we know:</b> your weight would double, your heart would push against about twice the pressure, and leaving the planet would take about {ev_pct2} more speed.",
+    "<b>What we don't:</b> how a human body copes with {two_g} for months or years. Nobody has tried [OBSERVED]. Gravity wouldn't crush you. It would keep you."
+   ],
    "f_h2": "Every <em>source</em>, and how we read it",
    "src": {
     "C1": "Standard gravity, the reference value of g.",
@@ -108,7 +328,6 @@
    },
    "w_h2": "The case in <em>motion</em>"
   },
-
   "it": {
    "title": "E se la gravità raddoppiasse stanotte?",
    "title_html": "E se la <em>gravità</em> raddoppiasse stanotte?",
@@ -116,25 +335,53 @@
    "description": "Non resteresti schiacciato. Resteresti bloccato: il doppio del peso, un cuore più affaticato, alberi più bassi, un cielo più basso e un pianeta più difficile da lasciare. Le prove e tutte le fonti.",
    "lede": "Non resteresti schiacciato. Resteresti bloccato. Ecco cosa farebbe una Terra che tira il doppio al tuo corpo, agli alberi, al cielo e alla via d'uscita dal pianeta.",
    "q_h2": "Il doppio della <em>forza</em>, in una notte",
-   "q_p": ["La gravità standard vale {g0} [OBSERVED]. Il peso è la massa per la gravità: se la gravità raddoppiasse, peseresti il doppio [SCENARIO].",
-           "Ogni rampa di scale sarebbe come salire con un secondo te sulle spalle. La vera domanda non è se sopravvivi alla prima notte. È quanto a lungo un corpo può vivere così."],
+   "q_p": [
+    "La gravità standard vale {g0} [OBSERVED]. Il peso è la massa per la gravità: se la gravità raddoppiasse, peseresti il doppio [SCENARIO].",
+    "Ogni rampa di scale sarebbe come salire con un secondo te sulle spalle. La vera domanda non è se sopravvivi alla prima notte. È quanto a lungo un corpo può vivere così."
+   ],
    "q_note": "e allora quanto regge un corpo? →",
    "e_h2": "Quattro <em>reperti</em>",
    "ex": [
-    {"text": "Per spingere il sangue fino al cervello, il cuore lavora contro circa {mmhg_a} a {one_g}. A {two_g} quella colonna di sangue pesa il doppio: circa {mmhg_b} [ESTIMATE].", "alt": "Corpo in feltro con il cuore che spinge il sangue verso il cervello"},
-    {"text": "Rilassate, le persone sopportano circa {gz} dalla testa ai piedi prima di perdere i sensi [OBSERVED]: {two_g} da soli non ti fanno svenire. Ma nessun essere umano ha mai vissuto a lungo a {two_g} [OBSERVED].", "alt": "Pilota in feltro sotto sforzo per l'accelerazione"},
-    {"text": "Portare l'acqua fino in cima limita l'altezza degli alberi: circa {tree} ({tree_ft}), secondo uno studio sulle sequoie più alte [HYPOTHESIS]. Con l'acqua che pesa il doppio, quel tetto si abbasserebbe [SCENARIO].", "alt": "Escursionista in feltro ai piedi di sequoie giganti"},
-    {"text": "Se la gravità raddoppiasse perché la Terra ha il doppio della massa con le stesse dimensioni, la velocità di fuga salirebbe da {ev_a} a {ev_b} [SCENARIO].", "alt": "Razzo in feltro che fatica sulla rampa di lancio"}
+    {
+     "text": "Per spingere il sangue fino al cervello, il cuore lavora contro circa {mmhg_a} a {one_g}. A {two_g} quella colonna di sangue pesa il doppio: circa {mmhg_b} [ESTIMATE].",
+     "alt": "Corpo in feltro con il cuore che spinge il sangue verso il cervello"
+    },
+    {
+     "text": "Rilassate, le persone sopportano circa {gz} dalla testa ai piedi prima di perdere i sensi [OBSERVED]: {two_g} da soli non ti fanno svenire. Ma nessun essere umano ha mai vissuto a lungo a {two_g} [OBSERVED].",
+     "alt": "Pilota in feltro sotto sforzo per l'accelerazione"
+    },
+    {
+     "text": "Portare l'acqua fino in cima limita l'altezza degli alberi: circa {tree} ({tree_ft}), secondo uno studio sulle sequoie più alte [HYPOTHESIS]. Con l'acqua che pesa il doppio, quel tetto si abbasserebbe [SCENARIO].",
+     "alt": "Escursionista in feltro ai piedi di sequoie giganti"
+    },
+    {
+     "text": "Se la gravità raddoppiasse perché la Terra ha il doppio della massa con le stesse dimensioni, la velocità di fuga salirebbe da {ev_a} a {ev_b} [SCENARIO].",
+     "alt": "Razzo in feltro che fatica sulla rampa di lancio"
+    }
    ],
-   "chart_e": {"title": "A 2 g, rispetto a oggi", "sub": "oggi = {one} · calcolato in codice dai valori di NIST, NASA e JMVH", "rows": ["Il tuo peso", "Pressione per portare il sangue al cervello", "Altezza in cui l'aria si dirada", "Velocità per lasciare la Terra"],
-    "note": "Le barre mostrano ogni valore a {two_g} rispetto a oggi (1 = oggi). La stima sull'aria presuppone la stessa temperatura [SCENARIO]."},
+   "chart_e": {
+    "title": "A 2 g, rispetto a oggi",
+    "sub": "oggi = {one} · calcolato in codice dai valori di NIST, NASA e JMVH",
+    "rows": [
+     "Il tuo peso",
+     "Pressione per portare il sangue al cervello",
+     "Altezza in cui l'aria si dirada",
+     "Velocità per lasciare la Terra"
+    ],
+    "note": "Le barre mostrano ogni valore a {two_g} rispetto a oggi (1 = oggi). La stima sull'aria presuppone la stessa temperatura [SCENARIO].",
+    "read": "Come si legge: la barra crema è oggi (1 g), quella oro è la stessa grandezza a 2 g. La cucitura rossa segna l'oggi: oltre, il valore cresce; prima, si riduce."
+   },
    "m_h2": "La <em>prova</em> di Steve",
-   "m_p": ["L'abbiamo provato su Steve, il nostro pupazzo di feltro, in un modello fisico: stessi muscoli, poi il peso raddoppia. In piedi a {one_g}, è crollato {fall} dopo il passaggio a {two_g} [SIMULATION].",
-           "È un modello giocattolo di un pupazzo, non di un corpo umano. Mostra l'idea, la stessa forza contro il doppio del carico, non quanto resisterebbe una persona.",
-           "E il cielo? L'altezza in cui l'aria si dirada scenderebbe da {sh_a} a circa {sh_b}, se l'aria mantenesse la stessa temperatura [SCENARIO]."],
+   "m_p": [
+    "L'abbiamo provato su Steve, il nostro pupazzo di feltro, in un modello fisico: stessi muscoli, poi il peso raddoppia. In piedi a {one_g}, è crollato {fall} dopo il passaggio a {two_g} [SIMULATION].",
+    "È un modello giocattolo di un pupazzo, non di un corpo umano. Mostra l'idea, la stessa forza contro il doppio del carico, non quanto resisterebbe una persona.",
+    "E il cielo? L'altezza in cui l'aria si dirada scenderebbe da {sh_a} a circa {sh_b}, se l'aria mantenesse la stessa temperatura [SCENARIO]."
+   ],
    "v_h2": "Non schiacciato. <em>Trattenuto.</em>",
-   "v_p": ["<b>Cosa sappiamo:</b> il tuo peso raddoppierebbe, il cuore spingerebbe contro circa il doppio della pressione e per lasciare il pianeta servirebbe circa il {ev_pct2} di velocità in più.",
-           "<b>Cosa non sappiamo:</b> come regge un corpo umano a {two_g} per mesi o anni. Nessuno l'ha mai provato [OBSERVED]. La gravità non ti schiaccerebbe. Ti tratterrebbe."],
+   "v_p": [
+    "<b>Cosa sappiamo:</b> il tuo peso raddoppierebbe, il cuore spingerebbe contro circa il doppio della pressione e per lasciare il pianeta servirebbe circa il {ev_pct2} di velocità in più.",
+    "<b>Cosa non sappiamo:</b> come regge un corpo umano a {two_g} per mesi o anni. Nessuno l'ha mai provato [OBSERVED]. La gravità non ti schiaccerebbe. Ti tratterrebbe."
+   ],
    "f_h2": "Tutte le <em>fonti</em>, e come le abbiamo lette",
    "src": {
     "C1": "La gravità standard, il valore di riferimento di g.",
@@ -149,7 +396,6 @@
    },
    "w_h2": "Il caso in <em>movimento</em>"
   },
-
   "de": {
    "title": "Was wäre, wenn sich die Schwerkraft heute Nacht verdoppelte?",
    "title_html": "Was wäre, wenn sich die <em>Schwerkraft</em> heute Nacht verdoppelte?",
@@ -157,25 +403,53 @@
    "description": "Du würdest nicht zerquetscht. Du säßest fest: doppeltes Gewicht, mehr Arbeit für dein Herz, kleinere Bäume, ein niedrigerer Himmel und ein Planet, den man schwerer verlässt. Die Beweise und alle Quellen.",
    "lede": "Du würdest nicht zerquetscht. Du säßest fest. Hier ist, was eine doppelt so starke Anziehung der Erde mit deinem Körper, den Bäumen, dem Himmel und dem Weg vom Planeten machen würde.",
    "q_h2": "Doppelte <em>Anziehung</em>, über Nacht",
-   "q_p": ["Die Normfallbeschleunigung beträgt {g0} [OBSERVED]. Gewicht ist Masse mal Schwerkraft: Verdoppelt sich die Schwerkraft, wiegst du doppelt so viel [SCENARIO].",
-           "Jede Treppe würde sich anfühlen, als trügest du ein zweites Ich auf dem Rücken. Die eigentliche Frage ist nicht, ob du die erste Nacht überlebst, sondern wie lange ein Körper so leben kann."],
+   "q_p": [
+    "Die Normfallbeschleunigung beträgt {g0} [OBSERVED]. Gewicht ist Masse mal Schwerkraft: Verdoppelt sich die Schwerkraft, wiegst du doppelt so viel [SCENARIO].",
+    "Jede Treppe würde sich anfühlen, als trügest du ein zweites Ich auf dem Rücken. Die eigentliche Frage ist nicht, ob du die erste Nacht überlebst, sondern wie lange ein Körper so leben kann."
+   ],
    "q_note": "wie viel hält ein Körper also aus? →",
    "e_h2": "Vier <em>Beweisstücke</em>",
    "ex": [
-    {"text": "Um Blut bis ins Gehirn zu pumpen, arbeitet dein Herz bei {one_g} gegen etwa {mmhg_a}. Bei {two_g} wiegt diese Blutsäule doppelt so viel: etwa {mmhg_b} [ESTIMATE].", "alt": "Filzkörper mit dem Herzen, das Blut zum Gehirn pumpt"},
-    {"text": "Entspannt halten Menschen etwa {gz} in Kopf-Fuß-Richtung aus, bevor sie das Bewusstsein verlieren [OBSERVED]: {two_g} allein machen dich nicht ohnmächtig. Aber kein Mensch hat je lange bei {two_g} gelebt [OBSERVED].", "alt": "Pilot aus Filz unter hoher Beschleunigung"},
-    {"text": "Wasser bis in die Krone zu heben, begrenzt, wie hoch Bäume wachsen: etwa {tree} ({tree_ft}), laut einer Studie an den höchsten Mammutbäumen [HYPOTHESIS]. Mit doppelt so schwerem Wasser läge diese Grenze tiefer [SCENARIO].", "alt": "Wanderer aus Filz am Fuß riesiger Mammutbäume"},
-    {"text": "Verdoppelte sich die Schwerkraft, weil die Erde bei gleicher Größe die doppelte Masse hätte, stiege die Fluchtgeschwindigkeit von {ev_a} auf {ev_b} [SCENARIO].", "alt": "Rakete aus Filz, die sich auf der Startrampe abmüht"}
+    {
+     "text": "Um Blut bis ins Gehirn zu pumpen, arbeitet dein Herz bei {one_g} gegen etwa {mmhg_a}. Bei {two_g} wiegt diese Blutsäule doppelt so viel: etwa {mmhg_b} [ESTIMATE].",
+     "alt": "Filzkörper mit dem Herzen, das Blut zum Gehirn pumpt"
+    },
+    {
+     "text": "Entspannt halten Menschen etwa {gz} in Kopf-Fuß-Richtung aus, bevor sie das Bewusstsein verlieren [OBSERVED]: {two_g} allein machen dich nicht ohnmächtig. Aber kein Mensch hat je lange bei {two_g} gelebt [OBSERVED].",
+     "alt": "Pilot aus Filz unter hoher Beschleunigung"
+    },
+    {
+     "text": "Wasser bis in die Krone zu heben, begrenzt, wie hoch Bäume wachsen: etwa {tree} ({tree_ft}), laut einer Studie an den höchsten Mammutbäumen [HYPOTHESIS]. Mit doppelt so schwerem Wasser läge diese Grenze tiefer [SCENARIO].",
+     "alt": "Wanderer aus Filz am Fuß riesiger Mammutbäume"
+    },
+    {
+     "text": "Verdoppelte sich die Schwerkraft, weil die Erde bei gleicher Größe die doppelte Masse hätte, stiege die Fluchtgeschwindigkeit von {ev_a} auf {ev_b} [SCENARIO].",
+     "alt": "Rakete aus Filz, die sich auf der Startrampe abmüht"
+    }
    ],
-   "chart_e": {"title": "Bei 2 g, verglichen mit heute", "sub": "heute = {one} · im Code berechnet aus Werten von NIST, NASA und JMVH", "rows": ["Dein Gewicht", "Druck, um Blut ins Gehirn zu bringen", "Höhe, in der die Luft dünner wird", "Tempo, um die Erde zu verlassen"],
-    "note": "Die Balken zeigen jeden Wert bei {two_g} im Verhältnis zu heute (1 = heute). Die Schätzung zur Luft setzt dieselbe Temperatur voraus [SCENARIO]."},
+   "chart_e": {
+    "title": "Bei 2 g, verglichen mit heute",
+    "sub": "heute = {one} · im Code berechnet aus Werten von NIST, NASA und JMVH",
+    "rows": [
+     "Dein Gewicht",
+     "Druck, um Blut ins Gehirn zu bringen",
+     "Höhe, in der die Luft dünner wird",
+     "Tempo, um die Erde zu verlassen"
+    ],
+    "note": "Die Balken zeigen jeden Wert bei {two_g} im Verhältnis zu heute (1 = heute). Die Schätzung zur Luft setzt dieselbe Temperatur voraus [SCENARIO].",
+    "read": "So liest man es: Der cremefarbene Balken ist heute (1 g), der goldene dieselbe Größe bei 2 g. Die rote Naht markiert heute: Dahinter wächst der Wert, davor schrumpft er."
+   },
    "m_h2": "Steves <em>Test</em>",
-   "m_p": ["Wir haben es an Steve getestet, unserer Filzpuppe, in einem Physikmodell: dieselben Muskeln, dann verdoppelt sich das Gewicht. Bei {one_g} stehend, ging er {fall} nach dem Wechsel auf {two_g} zu Boden [SIMULATION].",
-           "Es ist ein Spielzeugmodell einer Puppe, kein menschlicher Körper. Es zeigt die Idee, gleiche Kraft gegen doppelte Last, nicht, wie lange ein Mensch durchhalten würde.",
-           "Und der Himmel? Die Höhe, in der die Luft dünner wird, sänke von {sh_a} auf etwa {sh_b}, wenn die Luft dieselbe Temperatur behielte [SCENARIO]."],
+   "m_p": [
+    "Wir haben es an Steve getestet, unserer Filzpuppe, in einem Physikmodell: dieselben Muskeln, dann verdoppelt sich das Gewicht. Bei {one_g} stehend, ging er {fall} nach dem Wechsel auf {two_g} zu Boden [SIMULATION].",
+    "Es ist ein Spielzeugmodell einer Puppe, kein menschlicher Körper. Es zeigt die Idee, gleiche Kraft gegen doppelte Last, nicht, wie lange ein Mensch durchhalten würde.",
+    "Und der Himmel? Die Höhe, in der die Luft dünner wird, sänke von {sh_a} auf etwa {sh_b}, wenn die Luft dieselbe Temperatur behielte [SCENARIO]."
+   ],
    "v_h2": "Nicht zerquetscht. <em>Festgehalten.</em>",
-   "v_p": ["<b>Was wir wissen:</b> Dein Gewicht würde sich verdoppeln, dein Herz gegen etwa den doppelten Druck pumpen, und um den Planeten zu verlassen, bräuchte man etwa {ev_pct2} mehr Tempo.",
-           "<b>Was wir nicht wissen:</b> wie ein menschlicher Körper {two_g} über Monate oder Jahre verkraftet. Niemand hat es je versucht [OBSERVED]. Die Schwerkraft würde dich nicht zerquetschen. Sie würde dich festhalten."],
+   "v_p": [
+    "<b>Was wir wissen:</b> Dein Gewicht würde sich verdoppeln, dein Herz gegen etwa den doppelten Druck pumpen, und um den Planeten zu verlassen, bräuchte man etwa {ev_pct2} mehr Tempo.",
+    "<b>Was wir nicht wissen:</b> wie ein menschlicher Körper {two_g} über Monate oder Jahre verkraftet. Niemand hat es je versucht [OBSERVED]. Die Schwerkraft würde dich nicht zerquetschen. Sie würde dich festhalten."
+   ],
    "f_h2": "Jede <em>Quelle</em>, und wie wir sie gelesen haben",
    "src": {
     "C1": "Die Normfallbeschleunigung, der Referenzwert für g.",
@@ -190,7 +464,6 @@
    },
    "w_h2": "Der Fall in <em>Bewegung</em>"
   },
-
   "es": {
    "title": "¿Y si la gravedad se duplicara esta noche?",
    "title_html": "¿Y si la <em>gravedad</em> se duplicara esta noche?",
@@ -198,25 +471,53 @@
    "description": "No quedarías aplastado. Quedarías atrapado: el doble de peso, más trabajo para tu corazón, árboles más bajos, un cielo más bajo y un planeta más difícil de abandonar. Las pruebas y todas las fuentes.",
    "lede": "No quedarías aplastado. Quedarías atrapado. Esto es lo que haría una Tierra que tira el doble a tu cuerpo, a los árboles, al cielo y a la salida del planeta.",
    "q_h2": "El doble de <em>tirón</em>, de la noche a la mañana",
-   "q_p": ["La gravedad estándar vale {g0} [OBSERVED]. El peso es la masa por la gravedad: si la gravedad se duplicara, pesarías el doble [SCENARIO].",
-           "Cada escalera sería como subir con otro tú a la espalda. La verdadera pregunta no es si sobrevives a la primera noche, sino cuánto tiempo puede vivir así un cuerpo."],
+   "q_p": [
+    "La gravedad estándar vale {g0} [OBSERVED]. El peso es la masa por la gravedad: si la gravedad se duplicara, pesarías el doble [SCENARIO].",
+    "Cada escalera sería como subir con otro tú a la espalda. La verdadera pregunta no es si sobrevives a la primera noche, sino cuánto tiempo puede vivir así un cuerpo."
+   ],
    "q_note": "entonces, ¿cuánto aguanta un cuerpo? →",
    "e_h2": "Cuatro <em>pruebas</em>",
    "ex": [
-    {"text": "Para empujar la sangre hasta el cerebro, tu corazón trabaja contra unos {mmhg_a} a {one_g}. A {two_g}, esa columna de sangre pesa el doble: unos {mmhg_b} [ESTIMATE].", "alt": "Cuerpo de fieltro con el corazón empujando la sangre hacia el cerebro"},
-    {"text": "Relajadas, las personas toleran unos {gz} de la cabeza a los pies antes de perder el conocimiento [OBSERVED]: {two_g} por sí solos no te desmayan. Pero ningún ser humano ha vivido nunca mucho tiempo a {two_g} [OBSERVED].", "alt": "Piloto de fieltro bajo fuerzas g"},
-    {"text": "Subir el agua hasta la copa limita la altura de los árboles: unos {tree} ({tree_ft}), según un estudio de las secuoyas más altas [HYPOTHESIS]. Con el agua pesando el doble, ese techo bajaría [SCENARIO].", "alt": "Excursionista de fieltro al pie de secuoyas gigantes"},
-    {"text": "Si la gravedad se duplicara porque la Tierra tuviera el doble de masa con el mismo tamaño, la velocidad de escape subiría de {ev_a} a {ev_b} [SCENARIO].", "alt": "Cohete de fieltro esforzándose en la plataforma de lanzamiento"}
+    {
+     "text": "Para empujar la sangre hasta el cerebro, tu corazón trabaja contra unos {mmhg_a} a {one_g}. A {two_g}, esa columna de sangre pesa el doble: unos {mmhg_b} [ESTIMATE].",
+     "alt": "Cuerpo de fieltro con el corazón empujando la sangre hacia el cerebro"
+    },
+    {
+     "text": "Relajadas, las personas toleran unos {gz} de la cabeza a los pies antes de perder el conocimiento [OBSERVED]: {two_g} por sí solos no te desmayan. Pero ningún ser humano ha vivido nunca mucho tiempo a {two_g} [OBSERVED].",
+     "alt": "Piloto de fieltro bajo fuerzas g"
+    },
+    {
+     "text": "Subir el agua hasta la copa limita la altura de los árboles: unos {tree} ({tree_ft}), según un estudio de las secuoyas más altas [HYPOTHESIS]. Con el agua pesando el doble, ese techo bajaría [SCENARIO].",
+     "alt": "Excursionista de fieltro al pie de secuoyas gigantes"
+    },
+    {
+     "text": "Si la gravedad se duplicara porque la Tierra tuviera el doble de masa con el mismo tamaño, la velocidad de escape subiría de {ev_a} a {ev_b} [SCENARIO].",
+     "alt": "Cohete de fieltro esforzándose en la plataforma de lanzamiento"
+    }
    ],
-   "chart_e": {"title": "A 2 g, comparado con hoy", "sub": "hoy = {one} · calculado en código con valores de NIST, NASA y JMVH", "rows": ["Tu peso", "Presión para llevar la sangre al cerebro", "Altura en la que el aire se enrarece", "Velocidad para salir de la Tierra"],
-    "note": "Las barras muestran cada valor a {two_g} respecto a hoy (1 = hoy). La estimación del aire supone la misma temperatura [SCENARIO]."},
+   "chart_e": {
+    "title": "A 2 g, comparado con hoy",
+    "sub": "hoy = {one} · calculado en código con valores de NIST, NASA y JMVH",
+    "rows": [
+     "Tu peso",
+     "Presión para llevar la sangre al cerebro",
+     "Altura en la que el aire se enrarece",
+     "Velocidad para salir de la Tierra"
+    ],
+    "note": "Las barras muestran cada valor a {two_g} respecto a hoy (1 = hoy). La estimación del aire supone la misma temperatura [SCENARIO].",
+    "read": "Cómo se lee: la barra crema es hoy (1 g) y la dorada, la misma magnitud a 2 g. La costura roja marca el hoy: más allá, el valor crece; antes, se reduce."
+   },
    "m_h2": "La <em>prueba</em> de Steve",
-   "m_p": ["Lo probamos con Steve, nuestro muñeco de fieltro, en un modelo físico: los mismos músculos y luego el peso se duplica. De pie a {one_g}, cayó {fall} después del cambio a {two_g} [SIMULATION].",
-           "Es un modelo de juguete de un muñeco, no de un cuerpo humano. Muestra la idea, la misma fuerza contra el doble de carga, no cuánto aguantaría una persona.",
-           "¿Y el cielo? La altura en la que el aire se enrarece bajaría de {sh_a} a unos {sh_b} si el aire mantuviera la misma temperatura [SCENARIO]."],
+   "m_p": [
+    "Lo probamos con Steve, nuestro muñeco de fieltro, en un modelo físico: los mismos músculos y luego el peso se duplica. De pie a {one_g}, cayó {fall} después del cambio a {two_g} [SIMULATION].",
+    "Es un modelo de juguete de un muñeco, no de un cuerpo humano. Muestra la idea, la misma fuerza contra el doble de carga, no cuánto aguantaría una persona.",
+    "¿Y el cielo? La altura en la que el aire se enrarece bajaría de {sh_a} a unos {sh_b} si el aire mantuviera la misma temperatura [SCENARIO]."
+   ],
    "v_h2": "No aplastado. <em>Retenido.</em>",
-   "v_p": ["<b>Lo que sabemos:</b> tu peso se duplicaría, tu corazón empujaría contra casi el doble de presión y para salir del planeta haría falta un {ev_pct2} más de velocidad.",
-           "<b>Lo que no sabemos:</b> cómo soporta un cuerpo humano {two_g} durante meses o años. Nadie lo ha intentado [OBSERVED]. La gravedad no te aplastaría. Te retendría."],
+   "v_p": [
+    "<b>Lo que sabemos:</b> tu peso se duplicaría, tu corazón empujaría contra casi el doble de presión y para salir del planeta haría falta un {ev_pct2} más de velocidad.",
+    "<b>Lo que no sabemos:</b> cómo soporta un cuerpo humano {two_g} durante meses o años. Nadie lo ha intentado [OBSERVED]. La gravedad no te aplastaría. Te retendría."
+   ],
    "f_h2": "Todas las <em>fuentes</em>, y cómo las leímos",
    "src": {
     "C1": "La gravedad estándar, el valor de referencia de g.",
@@ -231,7 +532,6 @@
    },
    "w_h2": "El caso en <em>movimiento</em>"
   },
-
   "fr": {
    "title": "Et si la gravité doublait cette nuit ?",
    "title_html": "Et si la <em>gravité</em> doublait cette nuit ?",
@@ -239,25 +539,53 @@
    "description": "Tu ne serais pas écrasé. Tu serais cloué au sol : deux fois ton poids, un cœur plus sollicité, des arbres plus petits, un ciel plus bas et une planète plus difficile à quitter. Les preuves et toutes les sources.",
    "lede": "Tu ne serais pas écrasé. Tu serais cloué au sol. Voici ce qu'une Terre qui tire deux fois plus fort ferait à ton corps, aux arbres, au ciel et à la sortie de la planète.",
    "q_h2": "Deux fois plus d'<em>attraction</em>, en une nuit",
-   "q_p": ["La pesanteur standard vaut {g0} [OBSERVED]. Le poids, c'est la masse multipliée par la gravité : si la gravité doublait, tu pèserais deux fois plus [SCENARIO].",
-           "Chaque escalier serait comme grimper avec un deuxième toi sur le dos. La vraie question n'est pas de savoir si tu survis à la première nuit, mais combien de temps un corps peut vivre ainsi."],
+   "q_p": [
+    "La pesanteur standard vaut {g0} [OBSERVED]. Le poids, c'est la masse multipliée par la gravité : si la gravité doublait, tu pèserais deux fois plus [SCENARIO].",
+    "Chaque escalier serait comme grimper avec un deuxième toi sur le dos. La vraie question n'est pas de savoir si tu survis à la première nuit, mais combien de temps un corps peut vivre ainsi."
+   ],
    "q_note": "alors, combien un corps peut-il encaisser ? →",
    "e_h2": "Quatre <em>pièces à conviction</em>",
    "ex": [
-    {"text": "Pour pousser le sang jusqu'au cerveau, ton cœur travaille contre environ {mmhg_a} à {one_g}. À {two_g}, cette colonne de sang pèse deux fois plus : environ {mmhg_b} [ESTIMATE].", "alt": "Corps en feutre avec le cœur qui pousse le sang vers le cerveau"},
-    {"text": "Détendu, on supporte environ {gz} de la tête aux pieds avant de perdre connaissance [OBSERVED] : {two_g} à eux seuls ne te feraient pas perdre connaissance. Mais aucun humain n'a jamais vécu longtemps à {two_g} [OBSERVED].", "alt": "Pilote en feutre sous les forces g"},
-    {"text": "Hisser l'eau jusqu'à la cime limite la hauteur des arbres : environ {tree} ({tree_ft}), selon une étude des plus grands séquoias [HYPOTHESIS]. Avec une eau deux fois plus lourde, ce plafond baisserait [SCENARIO].", "alt": "Randonneur en feutre au pied de séquoias géants"},
-    {"text": "Si la gravité doublait parce que la Terre avait deux fois plus de masse pour la même taille, la vitesse de libération passerait de {ev_a} à {ev_b} [SCENARIO].", "alt": "Fusée en feutre peinant sur le pas de tir"}
+    {
+     "text": "Pour pousser le sang jusqu'au cerveau, ton cœur travaille contre environ {mmhg_a} à {one_g}. À {two_g}, cette colonne de sang pèse deux fois plus : environ {mmhg_b} [ESTIMATE].",
+     "alt": "Corps en feutre avec le cœur qui pousse le sang vers le cerveau"
+    },
+    {
+     "text": "Détendu, on supporte environ {gz} de la tête aux pieds avant de perdre connaissance [OBSERVED] : {two_g} à eux seuls ne te feraient pas perdre connaissance. Mais aucun humain n'a jamais vécu longtemps à {two_g} [OBSERVED].",
+     "alt": "Pilote en feutre sous les forces g"
+    },
+    {
+     "text": "Hisser l'eau jusqu'à la cime limite la hauteur des arbres : environ {tree} ({tree_ft}), selon une étude des plus grands séquoias [HYPOTHESIS]. Avec une eau deux fois plus lourde, ce plafond baisserait [SCENARIO].",
+     "alt": "Randonneur en feutre au pied de séquoias géants"
+    },
+    {
+     "text": "Si la gravité doublait parce que la Terre avait deux fois plus de masse pour la même taille, la vitesse de libération passerait de {ev_a} à {ev_b} [SCENARIO].",
+     "alt": "Fusée en feutre peinant sur le pas de tir"
+    }
    ],
-   "chart_e": {"title": "À 2 g, comparé à aujourd'hui", "sub": "aujourd'hui = {one} · calculé en code à partir des valeurs du NIST, de la NASA et du JMVH", "rows": ["Ton poids", "Pression pour amener le sang au cerveau", "Hauteur où l'air se raréfie", "Vitesse pour quitter la Terre"],
-    "note": "Les barres montrent chaque valeur à {two_g} par rapport à aujourd'hui (1 = aujourd'hui). L'estimation sur l'air suppose la même température [SCENARIO]."},
+   "chart_e": {
+    "title": "À 2 g, comparé à aujourd'hui",
+    "sub": "aujourd'hui = {one} · calculé en code à partir des valeurs du NIST, de la NASA et du JMVH",
+    "rows": [
+     "Ton poids",
+     "Pression pour amener le sang au cerveau",
+     "Hauteur où l'air se raréfie",
+     "Vitesse pour quitter la Terre"
+    ],
+    "note": "Les barres montrent chaque valeur à {two_g} par rapport à aujourd'hui (1 = aujourd'hui). L'estimation sur l'air suppose la même température [SCENARIO].",
+    "read": "Comment le lire : la barre crème, c'est aujourd'hui (1 g) ; la barre dorée, la même grandeur à 2 g. La couture rouge marque aujourd'hui : au-delà, la valeur augmente ; en deçà, elle diminue."
+   },
    "m_h2": "Le <em>test</em> de Steve",
-   "m_p": ["Nous l'avons testé sur Steve, notre marionnette en feutre, dans un modèle physique : mêmes muscles, puis le poids double. Debout à {one_g}, il s'est effondré {fall} après le passage à {two_g} [SIMULATION].",
-           "C'est un modèle jouet d'une marionnette, pas d'un corps humain. Il montre l'idée, la même force contre une charge double, pas combien de temps une personne tiendrait.",
-           "Et le ciel ? La hauteur où l'air se raréfie passerait de {sh_a} à environ {sh_b} si l'air gardait la même température [SCENARIO]."],
+   "m_p": [
+    "Nous l'avons testé sur Steve, notre marionnette en feutre, dans un modèle physique : mêmes muscles, puis le poids double. Debout à {one_g}, il s'est effondré {fall} après le passage à {two_g} [SIMULATION].",
+    "C'est un modèle jouet d'une marionnette, pas d'un corps humain. Il montre l'idée, la même force contre une charge double, pas combien de temps une personne tiendrait.",
+    "Et le ciel ? La hauteur où l'air se raréfie passerait de {sh_a} à environ {sh_b} si l'air gardait la même température [SCENARIO]."
+   ],
    "v_h2": "Pas écrasé. <em>Retenu.</em>",
-   "v_p": ["<b>Ce que l'on sait :</b> ton poids doublerait, ton cœur pousserait contre environ deux fois plus de pression, et quitter la planète demanderait environ {ev_pct2} de vitesse en plus.",
-           "<b>Ce que l'on ne sait pas :</b> comment un corps humain supporte {two_g} pendant des mois ou des années. Personne n'a essayé [OBSERVED]. La gravité ne t'écraserait pas. Elle te retiendrait."],
+   "v_p": [
+    "<b>Ce que l'on sait :</b> ton poids doublerait, ton cœur pousserait contre environ deux fois plus de pression, et quitter la planète demanderait environ {ev_pct2} de vitesse en plus.",
+    "<b>Ce que l'on ne sait pas :</b> comment un corps humain supporte {two_g} pendant des mois ou des années. Personne n'a essayé [OBSERVED]. La gravité ne t'écraserait pas. Elle te retiendrait."
+   ],
    "f_h2": "Toutes les <em>sources</em>, et comment nous les avons lues",
    "src": {
     "C1": "La pesanteur standard, la valeur de référence de g.",
