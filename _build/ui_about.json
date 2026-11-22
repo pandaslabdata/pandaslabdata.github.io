@@ -1,82 +1,282 @@
 {
  "en": {
-  "intro": "Impossible questions, real science: a small lab that answers every \"what if\" with real data",
-  "m_bio": "The human half of the lab: he digs into real datasets, checks every number at the source and decides which stories deserve to be told. Every case is researched, written and checked here before it reaches the screen.",
+  "intro": "We take impossible questions, look for evidence in official sources and turn each one into a case to analyse and solve",
+  "m_bio": "The human half of the lab. Michele is a data analyst, not a scientist. Every case works the same way: a question comes in, he gathers the evidence from official sources (space agencies, published studies, public datasets), analyses the numbers and tries to solve the case, saying how sure the answer is. The science belongs to the researchers who did it, and every case links to their work.",
   "focus_t": "What the channel is about",
-  "focus": [["Impossible questions", "What if the Moon disappeared? What if gravity doubled? Every case starts from something that can't happen."],
-            ["Real science", "Every number is checked against the original document, and every source is listed in the description."],
-            ["A world made by hand", "We tell it all in wool and felt, with charts built from the real numbers."]],
+  "focus": [
+   [
+    "Impossible questions",
+    "What if the Moon disappeared? What if gravity doubled? Every case starts from something that can't happen."
+   ],
+   [
+    "Evidence from official sources",
+    "Space agencies, published studies, public datasets. We don't run the experiments: we read them, and every number is checked against the original document. The only things we run ourselves are simple models, always labelled SIMULATION."
+   ],
+   [
+    "A world made by hand",
+    "We tell it all in wool and felt, with charts built from the real numbers."
+   ]
+  ],
   "labels_t": "How sure are we? Every claim says so",
-  "labels": {"OBSERVED": "measured or observed directly", "ESTIMATE": "derived from data with a stated method", "HYPOTHESIS": "an explanation proposed and debated by scientists", "SCENARIO": "the \"what if\": a hypothetical world we build", "SIMULATION": "the result of a model that was actually run"},
+  "labels": {
+   "OBSERVED": "measured or observed directly",
+   "ESTIMATE": "derived from data with a stated method",
+   "HYPOTHESIS": "an explanation proposed and debated by scientists",
+   "SCENARIO": "the \"what if\": a hypothetical world we build",
+   "SIMULATION": "the result of a model that was actually run"
+  },
   "steps_t": "How a case is made",
-  "steps": [["desk_telescope", "The question", "It starts with something nobody could ever test for real."],
-            ["museum", "The sources", "Papers, public datasets, museum collections, space agencies: we read the documents, not the summaries."],
-            ["handmade", "Built by hand", "Every figure is recalculated, given its label, then turned into wool, felt and charts."],
-            ["edit", "Edit and voice", "The story is cut, voiced and checked again, scene by scene."],
-            ["archive", "Filed with its sources", "Every case ends up here, on pandaslab.it, with all its sources."]]
+  "steps": [
+   [
+    "desk_telescope",
+    "The question",
+    "It starts with a question nobody could ever test for real."
+   ],
+   [
+    "museum",
+    "The evidence",
+    "Official sources only: space agencies, published studies, public datasets. We read the documents, not the summaries."
+   ],
+   [
+    "handmade",
+    "The analysis",
+    "Every number is recalculated and labelled, then the case is solved as far as the evidence allows, and built in wool, felt and charts."
+   ],
+   [
+    "edit",
+    "Edit and voice",
+    "The story is cut, voiced and checked again, scene by scene."
+   ],
+   [
+    "archive",
+    "Filed with its sources",
+    "Every case ends up here, on pandaslab.it, with all its sources."
+   ]
+  ],
+  "m_role": "Founder · Data analyst"
  },
  "it": {
-  "intro": "Domande impossibili, scienza vera: un piccolo laboratorio che risponde a ogni \"what if\" con dati reali",
-  "m_bio": "La metà umana del laboratorio: scava nei dataset reali, verifica ogni numero alla fonte e decide quali storie meritano di essere raccontate. Ogni caso viene cercato, scritto e controllato qui prima di arrivare sullo schermo.",
+  "intro": "Prendiamo domande impossibili, cerchiamo le prove nelle fonti ufficiali e trasformiamo ognuna in un caso da analizzare e risolvere",
+  "m_bio": "La metà umana del laboratorio. Michele è un data analyst, non uno scienziato. Ogni caso funziona allo stesso modo: arriva una domanda, lui raccoglie le prove dalle fonti ufficiali (agenzie spaziali, studi pubblicati, dataset pubblici), analizza i numeri e prova a risolvere il caso, dicendo quanto è sicura la risposta. La scienza è dei ricercatori che l'hanno fatta, e ogni caso rimanda al loro lavoro.",
   "focus_t": "Di cosa parla il canale",
-  "focus": [["Domande impossibili", "E se la Luna sparisse? E se la gravità raddoppiasse? Ogni caso parte da qualcosa che non può succedere."],
-            ["Scienza vera", "Ogni numero è verificato sul documento originale e ogni fonte è indicata nella descrizione."],
-            ["Un mondo fatto a mano", "Raccontiamo tutto in lana e feltro, con grafici costruiti sui numeri veri."]],
+  "focus": [
+   [
+    "Domande impossibili",
+    "E se la Luna sparisse? E se la gravità raddoppiasse? Ogni caso parte da qualcosa che non può succedere."
+   ],
+   [
+    "Prove da fonti ufficiali",
+    "Agenzie spaziali, studi pubblicati, dataset pubblici. Gli esperimenti non li facciamo noi: li leggiamo, e ogni numero è verificato sul documento originale. Le uniche cose che eseguiamo noi sono modelli semplici, sempre etichettati SIMULATION."
+   ],
+   [
+    "Un mondo fatto a mano",
+    "Raccontiamo tutto in lana e feltro, con grafici costruiti sui numeri veri."
+   ]
+  ],
   "labels_t": "Quanto ne siamo sicuri? Lo dice ogni affermazione",
-  "labels": {"OBSERVED": "misurato od osservato direttamente", "ESTIMATE": "ricavato dai dati con un metodo dichiarato", "HYPOTHESIS": "una spiegazione proposta e discussa dagli scienziati", "SCENARIO": "il \"what if\": un mondo ipotetico che costruiamo noi", "SIMULATION": "il risultato di un modello eseguito davvero"},
+  "labels": {
+   "OBSERVED": "misurato od osservato direttamente",
+   "ESTIMATE": "ricavato dai dati con un metodo dichiarato",
+   "HYPOTHESIS": "una spiegazione proposta e discussa dagli scienziati",
+   "SCENARIO": "il \"what if\": un mondo ipotetico che costruiamo noi",
+   "SIMULATION": "il risultato di un modello eseguito davvero"
+  },
   "steps_t": "Come nasce un caso",
-  "steps": [["desk_telescope", "La domanda", "Si parte da qualcosa che nessuno potrebbe mai provare davvero."],
-            ["museum", "Le fonti", "Articoli scientifici, dataset pubblici, collezioni dei musei, agenzie spaziali: leggiamo i documenti, non i riassunti."],
-            ["handmade", "Fatto a mano", "Ogni numero viene ricalcolato, riceve la sua etichetta e diventa lana, feltro e grafici."],
-            ["edit", "Montaggio e voce", "La storia viene montata, doppiata e ricontrollata, scena per scena."],
-            ["archive", "Archiviato con le fonti", "Ogni caso finisce qui, su pandaslab.it, con tutte le sue fonti."]]
+  "steps": [
+   [
+    "desk_telescope",
+    "La domanda",
+    "Si parte da una domanda che nessuno potrebbe mai verificare davvero."
+   ],
+   [
+    "museum",
+    "Le prove",
+    "Solo fonti ufficiali: agenzie spaziali, studi pubblicati, dataset pubblici. Leggiamo i documenti, non i riassunti."
+   ],
+   [
+    "handmade",
+    "L'analisi",
+    "Ogni numero viene ricalcolato ed etichettato, poi il caso si risolve fin dove le prove lo permettono e diventa lana, feltro e grafici."
+   ],
+   [
+    "edit",
+    "Montaggio e voce",
+    "La storia viene montata, doppiata e ricontrollata, scena per scena."
+   ],
+   [
+    "archive",
+    "Archiviato con le fonti",
+    "Ogni caso finisce qui, su pandaslab.it, con tutte le sue fonti."
+   ]
+  ],
+  "m_role": "Fondatore · Data analyst"
  },
  "de": {
-  "intro": "Unmögliche Fragen, echte Wissenschaft: ein kleines Labor, das jedes \"Was wäre, wenn\" mit echten Daten beantwortet",
-  "m_bio": "Die menschliche Hälfte des Labors: er gräbt sich durch echte Datensätze, prüft jede Zahl an der Quelle und entscheidet, welche Geschichten erzählt werden. Jeder Fall wird hier recherchiert, geschrieben und geprüft, bevor er auf den Bildschirm kommt.",
+  "intro": "Wir nehmen unmögliche Fragen, suchen Beweise in offiziellen Quellen und machen aus jeder einen Fall, den wir analysieren und lösen",
+  "m_bio": "Die menschliche Hälfte des Labors. Michele ist Datenanalyst, kein Wissenschaftler. Jeder Fall läuft gleich ab: Eine Frage kommt herein, er sammelt die Beweise aus offiziellen Quellen (Raumfahrtagenturen, veröffentlichte Studien, öffentliche Datensätze), analysiert die Zahlen und versucht, den Fall zu lösen, und sagt dabei, wie sicher die Antwort ist. Die Wissenschaft gehört den Forschenden, die sie gemacht haben, und jeder Fall verweist auf ihre Arbeit.",
   "focus_t": "Worum es auf dem Kanal geht",
-  "focus": [["Unmögliche Fragen", "Was, wenn der Mond verschwände? Was, wenn sich die Schwerkraft verdoppelte? Jeder Fall beginnt mit etwas, das nicht passieren kann."],
-            ["Echte Wissenschaft", "Jede Zahl wird am Originaldokument geprüft, und jede Quelle steht in der Beschreibung."],
-            ["Eine handgemachte Welt", "Wir erzählen alles in Wolle und Filz, mit Diagrammen aus den echten Zahlen."]],
+  "focus": [
+   [
+    "Unmögliche Fragen",
+    "Was, wenn der Mond verschwände? Was, wenn sich die Schwerkraft verdoppelte? Jeder Fall beginnt mit etwas, das nicht passieren kann."
+   ],
+   [
+    "Beweise aus offiziellen Quellen",
+    "Raumfahrtagenturen, veröffentlichte Studien, öffentliche Datensätze. Die Experimente machen nicht wir: Wir lesen sie, und jede Zahl wird am Originaldokument geprüft. Selbst rechnen wir nur einfache Modelle, immer mit SIMULATION gekennzeichnet."
+   ],
+   [
+    "Eine handgemachte Welt",
+    "Wir erzählen alles in Wolle und Filz, mit Diagrammen aus den echten Zahlen."
+   ]
+  ],
   "labels_t": "Wie sicher sind wir? Jede Aussage sagt es",
-  "labels": {"OBSERVED": "direkt gemessen oder beobachtet", "ESTIMATE": "mit einer angegebenen Methode aus Daten abgeleitet", "HYPOTHESIS": "eine von Fachleuten vorgeschlagene und diskutierte Erklärung", "SCENARIO": "das \"Was wäre, wenn\": eine hypothetische Welt, die wir bauen", "SIMULATION": "das Ergebnis eines Modells, das tatsächlich gerechnet wurde"},
+  "labels": {
+   "OBSERVED": "direkt gemessen oder beobachtet",
+   "ESTIMATE": "mit einer angegebenen Methode aus Daten abgeleitet",
+   "HYPOTHESIS": "eine von Fachleuten vorgeschlagene und diskutierte Erklärung",
+   "SCENARIO": "das \"Was wäre, wenn\": eine hypothetische Welt, die wir bauen",
+   "SIMULATION": "das Ergebnis eines Modells, das tatsächlich gerechnet wurde"
+  },
   "steps_t": "So entsteht ein Fall",
-  "steps": [["desk_telescope", "Die Frage", "Am Anfang steht etwas, das niemand je wirklich testen könnte."],
-            ["museum", "Die Quellen", "Fachartikel, öffentliche Datensätze, Museumssammlungen, Raumfahrtagenturen: Wir lesen die Dokumente, nicht die Zusammenfassungen."],
-            ["handmade", "Von Hand gebaut", "Jede Zahl wird nachgerechnet, bekommt ihr Etikett und wird zu Wolle, Filz und Diagrammen."],
-            ["edit", "Schnitt und Stimme", "Die Geschichte wird geschnitten, vertont und Szene für Szene noch einmal geprüft."],
-            ["archive", "Mit Quellen archiviert", "Jeder Fall landet hier, auf pandaslab.it, mit allen Quellen."]]
+  "steps": [
+   [
+    "desk_telescope",
+    "Die Frage",
+    "Am Anfang steht eine Frage, die niemand je wirklich überprüfen könnte."
+   ],
+   [
+    "museum",
+    "Die Beweise",
+    "Nur offizielle Quellen: Raumfahrtagenturen, veröffentlichte Studien, öffentliche Datensätze. Wir lesen die Dokumente, nicht die Zusammenfassungen."
+   ],
+   [
+    "handmade",
+    "Die Analyse",
+    "Jede Zahl wird nachgerechnet und gekennzeichnet, dann wird der Fall gelöst, so weit die Beweise reichen, und in Wolle, Filz und Diagrammen gebaut."
+   ],
+   [
+    "edit",
+    "Schnitt und Stimme",
+    "Die Geschichte wird geschnitten, vertont und Szene für Szene noch einmal geprüft."
+   ],
+   [
+    "archive",
+    "Mit Quellen archiviert",
+    "Jeder Fall landet hier, auf pandaslab.it, mit allen Quellen."
+   ]
+  ],
+  "m_role": "Gründer · Datenanalyst"
  },
  "es": {
-  "intro": "Preguntas imposibles, ciencia real: un pequeño laboratorio que responde a cada \"¿y si...?\" con datos reales",
-  "m_bio": "La mitad humana del laboratorio: bucea en datasets reales, comprueba cada número en la fuente y decide qué historias merecen contarse. Cada caso se investiga, se escribe y se comprueba aquí antes de llegar a la pantalla.",
+  "intro": "Tomamos preguntas imposibles, buscamos pruebas en fuentes oficiales y convertimos cada una en un caso que analizar y resolver",
+  "m_bio": "La mitad humana del laboratorio. Michele es analista de datos, no científico. Cada caso funciona igual: llega una pregunta, él reúne las pruebas de fuentes oficiales (agencias espaciales, estudios publicados, datos públicos), analiza las cifras e intenta resolver el caso, diciendo cuán segura es la respuesta. La ciencia es de los investigadores que la hicieron, y cada caso remite a su trabajo.",
   "focus_t": "De qué trata el canal",
-  "focus": [["Preguntas imposibles", "¿Y si la Luna desapareciera? ¿Y si la gravedad se duplicara? Cada caso parte de algo que no puede ocurrir."],
-            ["Ciencia real", "Cada número se comprueba en el documento original y cada fuente aparece en la descripción."],
-            ["Un mundo hecho a mano", "Lo contamos todo en lana y fieltro, con gráficos construidos con los números reales."]],
+  "focus": [
+   [
+    "Preguntas imposibles",
+    "¿Y si la Luna desapareciera? ¿Y si la gravedad se duplicara? Cada caso parte de algo que no puede ocurrir."
+   ],
+   [
+    "Pruebas de fuentes oficiales",
+    "Agencias espaciales, estudios publicados, datos públicos. Los experimentos no los hacemos nosotros: los leemos, y cada cifra se comprueba en el documento original. Lo único que ejecutamos nosotros son modelos sencillos, siempre etiquetados como SIMULATION."
+   ],
+   [
+    "Un mundo hecho a mano",
+    "Lo contamos todo en lana y fieltro, con gráficos construidos con los números reales."
+   ]
+  ],
   "labels_t": "¿Cuán seguros estamos? Cada afirmación lo dice",
-  "labels": {"OBSERVED": "medido u observado directamente", "ESTIMATE": "obtenido de los datos con un método declarado", "HYPOTHESIS": "una explicación propuesta y debatida por los científicos", "SCENARIO": "el \"¿y si...?\": un mundo hipotético que construimos", "SIMULATION": "el resultado de un modelo que se ejecutó de verdad"},
+  "labels": {
+   "OBSERVED": "medido u observado directamente",
+   "ESTIMATE": "obtenido de los datos con un método declarado",
+   "HYPOTHESIS": "una explicación propuesta y debatida por los científicos",
+   "SCENARIO": "el \"¿y si...?\": un mundo hipotético que construimos",
+   "SIMULATION": "el resultado de un modelo que se ejecutó de verdad"
+  },
   "steps_t": "Cómo nace un caso",
-  "steps": [["desk_telescope", "La pregunta", "Empieza con algo que nadie podría comprobar nunca de verdad."],
-            ["museum", "Las fuentes", "Artículos científicos, datos públicos, colecciones de museos, agencias espaciales: leemos los documentos, no los resúmenes."],
-            ["handmade", "Hecho a mano", "Cada cifra se recalcula, recibe su etiqueta y se convierte en lana, fieltro y gráficos."],
-            ["edit", "Montaje y voz", "La historia se monta, se pone voz y se vuelve a comprobar, escena por escena."],
-            ["archive", "Archivado con sus fuentes", "Cada caso termina aquí, en pandaslab.it, con todas sus fuentes."]]
+  "steps": [
+   [
+    "desk_telescope",
+    "La pregunta",
+    "Todo empieza con una pregunta que nadie podría comprobar de verdad."
+   ],
+   [
+    "museum",
+    "Las pruebas",
+    "Solo fuentes oficiales: agencias espaciales, estudios publicados, datos públicos. Leemos los documentos, no los resúmenes."
+   ],
+   [
+    "handmade",
+    "El análisis",
+    "Cada cifra se recalcula y se etiqueta; luego el caso se resuelve hasta donde las pruebas lo permiten y se construye en lana, fieltro y gráficos."
+   ],
+   [
+    "edit",
+    "Montaje y voz",
+    "La historia se monta, se pone voz y se vuelve a comprobar, escena por escena."
+   ],
+   [
+    "archive",
+    "Archivado con sus fuentes",
+    "Cada caso termina aquí, en pandaslab.it, con todas sus fuentes."
+   ]
+  ],
+  "m_role": "Fundador · Analista de datos"
  },
  "fr": {
-  "intro": "Questions impossibles, vraie science : un petit labo qui répond à chaque « et si » avec des données réelles",
-  "m_bio": "La moitié humaine du labo : il fouille de vrais jeux de données, vérifie chaque chiffre à la source et décide quelles histoires méritent d'être racontées. Chaque affaire est enquêtée, écrite et vérifiée ici avant d'arriver à l'écran.",
+  "intro": "Nous prenons des questions impossibles, cherchons des preuves dans des sources officielles et faisons de chacune une affaire à analyser et à résoudre",
+  "m_bio": "La moitié humaine du laboratoire. Michele est data analyst, pas scientifique. Chaque affaire suit le même chemin : une question arrive, il rassemble les preuves dans des sources officielles (agences spatiales, études publiées, données publiques), analyse les chiffres et essaie de résoudre l'affaire, en disant à quel point la réponse est sûre. La science appartient aux chercheurs qui l'ont faite, et chaque affaire renvoie à leur travail.",
   "focus_t": "De quoi parle la chaîne",
-  "focus": [["Questions impossibles", "Et si la Lune disparaissait ? Et si la gravité doublait ? Chaque affaire part de quelque chose qui ne peut pas arriver."],
-            ["Vraie science", "Chaque chiffre est vérifié sur le document original, et chaque source figure dans la description."],
-            ["Un monde fait main", "Nous racontons tout en laine et en feutre, avec des graphiques construits sur les vrais chiffres."]],
+  "focus": [
+   [
+    "Questions impossibles",
+    "Et si la Lune disparaissait ? Et si la gravité doublait ? Chaque affaire part de quelque chose qui ne peut pas arriver."
+   ],
+   [
+    "Des preuves issues de sources officielles",
+    "Agences spatiales, études publiées, données publiques. Les expériences, ce n'est pas nous qui les faisons : nous les lisons, et chaque chiffre est vérifié dans le document original. Les seules choses que nous faisons tourner nous-mêmes sont des modèles simples, toujours étiquetés SIMULATION."
+   ],
+   [
+    "Un monde fait main",
+    "Nous racontons tout en laine et en feutre, avec des graphiques construits sur les vrais chiffres."
+   ]
+  ],
   "labels_t": "À quel point en sommes-nous sûrs ? Chaque affirmation le dit",
-  "labels": {"OBSERVED": "mesuré ou observé directement", "ESTIMATE": "tiré des données avec une méthode déclarée", "HYPOTHESIS": "une explication proposée et débattue par les scientifiques", "SCENARIO": "le « et si » : un monde hypothétique que nous construisons", "SIMULATION": "le résultat d'un modèle réellement exécuté"},
+  "labels": {
+   "OBSERVED": "mesuré ou observé directement",
+   "ESTIMATE": "tiré des données avec une méthode déclarée",
+   "HYPOTHESIS": "une explication proposée et débattue par les scientifiques",
+   "SCENARIO": "le « et si » : un monde hypothétique que nous construisons",
+   "SIMULATION": "le résultat d'un modèle réellement exécuté"
+  },
   "steps_t": "Comment naît une affaire",
-  "steps": [["desk_telescope", "La question", "Tout part de quelque chose que personne ne pourrait jamais tester pour de vrai."],
-            ["museum", "Les sources", "Articles scientifiques, données publiques, collections de musées, agences spatiales : nous lisons les documents, pas les résumés."],
-            ["handmade", "Fait main", "Chaque chiffre est recalculé, reçoit son étiquette, puis devient laine, feutre et graphiques."],
-            ["edit", "Montage et voix", "L'histoire est montée, mise en voix et revérifiée, scène par scène."],
-            ["archive", "Classé avec ses sources", "Chaque affaire finit ici, sur pandaslab.it, avec toutes ses sources."]]
+  "steps": [
+   [
+    "desk_telescope",
+    "La question",
+    "Tout commence par une question que personne ne pourrait jamais vérifier pour de vrai."
+   ],
+   [
+    "museum",
+    "Les preuves",
+    "Uniquement des sources officielles : agences spatiales, études publiées, données publiques. Nous lisons les documents, pas les résumés."
+   ],
+   [
+    "handmade",
+    "L'analyse",
+    "Chaque chiffre est recalculé et étiqueté, puis l'affaire est résolue aussi loin que les preuves le permettent, et construite en laine, feutre et graphiques."
+   ],
+   [
+    "edit",
+    "Montage et voix",
+    "L'histoire est montée, mise en voix et revérifiée, scène par scène."
+   ],
+   [
+    "archive",
+    "Classé avec ses sources",
+    "Chaque affaire finit ici, sur pandaslab.it, avec toutes ses sources."
+   ]
+  ],
+  "m_role": "Fondateur · Data analyst"
  }
 }

@@ -572,7 +572,7 @@ def build_pages(ui_all, env, ver):
                             dossiers=[dict(x, ar=img_ar(x["clip_img"]), page=dossier_paths(x["n"])[lang] if (BUILD / "dossiers" / f"D{x['n']}.json").exists() else None) for x in dj["dossiers"]],
                             coming=dj["coming"]),
             "about": dict(kicker=PAGE_KICKER["about"][lang], title=o["ab_title"], intro=ab[lang]["intro"], ab=ab[lang],
-                          people=[{"name": "Michele Barison", "img": "/img/about/a_portrait.webp", "role": o["m_role"], "bio": ab[lang]["m_bio"], "stamp": "LAB FOUNDER"},
+                          people=[{"name": "Michele Barison", "img": "/img/about/a_portrait.webp", "role": ab[lang].get("m_role", o["m_role"]), "bio": ab[lang]["m_bio"], "stamp": "LAB FOUNDER"},
                                   {"name": "Mike", "img": "/mike.jpg", "role": o["mk_role"], "bio": o["mk_bio"], "stamp": "WOOL TWIN"}],
                           howto=[{"t": o["p1t"], "b": o["p1b"]}, {"t": o["p2t"], "b": o["p2b"]}, {"t": o["p3t"], "b": o["p3b"]}]),
             "privacy": dict(kicker=PV[lang]["kicker"], title=PV[lang]["title"], intro=PV[lang]["intro"], pv=PV[lang]),
