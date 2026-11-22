@@ -873,3 +873,17 @@ footer a{color:var(--gold);text-decoration:none}
 .pk-sheet.s3{left:6%;top:40px;transform:rotate(-12deg);z-index:1;background:#fffaf0 repeating-linear-gradient(#fffaf0 0 22px,#d9c9a3 22px 23px)}
 .privacy p{margin:6px 0 14px}
 @media (max-width:760px){.packbox .pk-grid{grid-template-columns:1fr}.pk-stack{height:240px}}
+
+/* empty worlds: still on the wall, but quieter */
+.wclip.soon .wc-img{filter:saturate(.35) brightness(.72) drop-shadow(4px 10px 9px rgba(0,0,0,.55))}
+.wclip.soon .sway{transform:scale(.92)}
+.wclip.soon:hover .wc-img{filter:saturate(.7) brightness(.9) drop-shadow(4px 10px 9px rgba(0,0,0,.55))}
+/* newsletter box (home, dossiers) */
+.nlwrap{max-width:860px;margin-top:40px}
+.nlbox{max-width:860px;margin-left:auto;margin-right:auto}
+.pk-form .pk-consent{margin:0 0 10px}
+/* the first screen never waits for the script: the hero drops in with CSS alone */
+.js .hero3 .rv{opacity:1;transform:rotate(var(--r,0deg));animation:hero-in .7s cubic-bezier(.2,.9,.25,1.25) both}
+.js .hero3 .rv:nth-child(2){animation-delay:.12s}.js .hero3 .rv:nth-child(3){animation-delay:.22s}
+@keyframes hero-in{from{opacity:0;transform:rotate(var(--r,0deg)) translateY(-36px) scale(1.05)}to{opacity:1;transform:rotate(var(--r,0deg))}}
+@media (prefers-reduced-motion:reduce){.js .hero3 .rv{animation:none}}

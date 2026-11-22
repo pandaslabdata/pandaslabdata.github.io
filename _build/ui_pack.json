@@ -1,42 +1,132 @@
 {
  "en": {
-  "num": "Case file", "h2": "Take the whole case with you",
+  "num": "Case file",
+  "h2": "Take the whole case with you",
   "p": "A free pack: the printable summary with every source, the felt charts in high resolution and the data behind them. Leave your email: you get the pack, and a message when a new case opens.",
-  "items": ["Printable summary (PDF)", "Felt charts (PNG)", "Data and sources (CSV)"],
-  "ph": "your@email.com", "consent": "I agree to receive Pandas Lab emails about new cases. I can unsubscribe at any time.", "privacy": "Privacy policy",
-  "btn": "Send me the pack", "ok": "Thanks! Your pack is ready.", "dl": "Download the pack (ZIP)", "check": "Check your inbox and confirm your email to stay on the list.",
-  "err": "Something went wrong. Please try again in a moment.", "need": "Please enter a valid email and tick the box."
+  "items": [
+   "Printable summary (PDF)",
+   "Felt charts (PNG)",
+   "Data and sources (CSV)"
+  ],
+  "ph": "your@email.com",
+  "consent": "I agree to receive Pandas Lab emails about new cases. I can unsubscribe at any time.",
+  "privacy": "Privacy policy",
+  "btn": "Send me the pack",
+  "ok": "Thanks! Your pack is ready.",
+  "dl": "Download the pack (ZIP)",
+  "check": "Check your inbox and confirm your email to stay on the list.",
+  "err": "Something went wrong. Please try again in a moment.",
+  "need": "Please enter a valid email and tick the box.",
+  "nl": {
+   "num": "The case list",
+   "h2": "Get the next case first",
+   "p": "One email when a new case opens: the question, the evidence, the verdict. Nothing else, and you can leave with one click.",
+   "btn": "Keep me posted",
+   "ok": "Thanks! Check your inbox and confirm your email: then you are on the list."
+  }
  },
  "it": {
-  "num": "Il fascicolo", "h2": "Porta con te il caso completo",
+  "num": "Il fascicolo",
+  "h2": "Porta con te il caso completo",
   "p": "Un pack gratuito: il riepilogo stampabile con tutte le fonti, i grafici in feltro in alta risoluzione e i dati che li compongono. Lascia la tua email: ricevi il pack e un messaggio quando si apre un nuovo caso.",
-  "items": ["Riepilogo stampabile (PDF)", "Grafici in feltro (PNG)", "Dati e fonti (CSV)"],
-  "ph": "tua@email.it", "consent": "Accetto di ricevere le email di Pandas Lab sui nuovi casi. Posso disiscrivermi quando voglio.", "privacy": "Informativa privacy",
-  "btn": "Mandami il pack", "ok": "Grazie! Il tuo pack è pronto.", "dl": "Scarica il pack (ZIP)", "check": "Controlla la posta e conferma l'email per restare in lista.",
-  "err": "Qualcosa non ha funzionato. Riprova tra un momento.", "need": "Inserisci un'email valida e spunta la casella."
+  "items": [
+   "Riepilogo stampabile (PDF)",
+   "Grafici in feltro (PNG)",
+   "Dati e fonti (CSV)"
+  ],
+  "ph": "tua@email.it",
+  "consent": "Accetto di ricevere le email di Pandas Lab sui nuovi casi. Posso disiscrivermi quando voglio.",
+  "privacy": "Informativa privacy",
+  "btn": "Mandami il pack",
+  "ok": "Grazie! Il tuo pack è pronto.",
+  "dl": "Scarica il pack (ZIP)",
+  "check": "Controlla la posta e conferma l'email per restare in lista.",
+  "err": "Qualcosa non ha funzionato. Riprova tra un momento.",
+  "need": "Inserisci un'email valida e spunta la casella.",
+  "nl": {
+   "num": "La lista dei casi",
+   "h2": "Ricevi per primo il prossimo caso",
+   "p": "Una email quando si apre un nuovo caso: la domanda, le prove, il verdetto. Nient'altro, e te ne vai con un clic.",
+   "btn": "Avvisami",
+   "ok": "Grazie! Controlla la posta e conferma l'email: così sei in lista."
+  }
  },
  "de": {
-  "num": "Die Akte", "h2": "Nimm den ganzen Fall mit",
+  "num": "Die Akte",
+  "h2": "Nimm den ganzen Fall mit",
   "p": "Ein kostenloses Paket: die druckbare Zusammenfassung mit allen Quellen, die Filzdiagramme in hoher Auflösung und die Daten dahinter. Hinterlass deine E-Mail: Du bekommst das Paket und eine Nachricht, wenn ein neuer Fall erscheint.",
-  "items": ["Druckbare Zusammenfassung (PDF)", "Filzdiagramme (PNG)", "Daten und Quellen (CSV)"],
-  "ph": "deine@email.de", "consent": "Ich möchte E-Mails von Pandas Lab zu neuen Fällen erhalten. Ich kann mich jederzeit abmelden.", "privacy": "Datenschutzerklärung",
-  "btn": "Paket senden", "ok": "Danke! Dein Paket ist bereit.", "dl": "Paket herunterladen (ZIP)", "check": "Schau in dein Postfach und bestätige deine E-Mail, um auf der Liste zu bleiben.",
-  "err": "Etwas ist schiefgelaufen. Bitte versuch es gleich noch einmal.", "need": "Bitte gib eine gültige E-Mail ein und setz das Häkchen."
+  "items": [
+   "Druckbare Zusammenfassung (PDF)",
+   "Filzdiagramme (PNG)",
+   "Daten und Quellen (CSV)"
+  ],
+  "ph": "deine@email.de",
+  "consent": "Ich möchte E-Mails von Pandas Lab zu neuen Fällen erhalten. Ich kann mich jederzeit abmelden.",
+  "privacy": "Datenschutzerklärung",
+  "btn": "Paket senden",
+  "ok": "Danke! Dein Paket ist bereit.",
+  "dl": "Paket herunterladen (ZIP)",
+  "check": "Schau in dein Postfach und bestätige deine E-Mail, um auf der Liste zu bleiben.",
+  "err": "Etwas ist schiefgelaufen. Bitte versuch es gleich noch einmal.",
+  "need": "Bitte gib eine gültige E-Mail ein und setz das Häkchen.",
+  "nl": {
+   "num": "Die Fallliste",
+   "h2": "Bekomm den nächsten Fall zuerst",
+   "p": "Eine E-Mail, wenn ein neuer Fall erscheint: die Frage, die Beweise, das Urteil. Sonst nichts, und mit einem Klick bist du wieder draußen.",
+   "btn": "Benachrichtige mich",
+   "ok": "Danke! Schau in dein Postfach und bestätige deine E-Mail: Dann bist du auf der Liste."
+  }
  },
  "es": {
-  "num": "El expediente", "h2": "Llévate el caso completo",
+  "num": "El expediente",
+  "h2": "Llévate el caso completo",
   "p": "Un pack gratuito: el resumen imprimible con todas las fuentes, los gráficos de fieltro en alta resolución y los datos que los forman. Deja tu email: recibes el pack y un mensaje cuando se abra un caso nuevo.",
-  "items": ["Resumen imprimible (PDF)", "Gráficos de fieltro (PNG)", "Datos y fuentes (CSV)"],
-  "ph": "tu@email.es", "consent": "Acepto recibir emails de Pandas Lab sobre casos nuevos. Puedo darme de baja cuando quiera.", "privacy": "Política de privacidad",
-  "btn": "Envíame el pack", "ok": "¡Gracias! Tu pack está listo.", "dl": "Descargar el pack (ZIP)", "check": "Revisa tu correo y confirma tu email para seguir en la lista.",
-  "err": "Algo ha fallado. Inténtalo de nuevo en un momento.", "need": "Escribe un email válido y marca la casilla."
+  "items": [
+   "Resumen imprimible (PDF)",
+   "Gráficos de fieltro (PNG)",
+   "Datos y fuentes (CSV)"
+  ],
+  "ph": "tu@email.es",
+  "consent": "Acepto recibir emails de Pandas Lab sobre casos nuevos. Puedo darme de baja cuando quiera.",
+  "privacy": "Política de privacidad",
+  "btn": "Envíame el pack",
+  "ok": "¡Gracias! Tu pack está listo.",
+  "dl": "Descargar el pack (ZIP)",
+  "check": "Revisa tu correo y confirma tu email para seguir en la lista.",
+  "err": "Algo ha fallado. Inténtalo de nuevo en un momento.",
+  "need": "Escribe un email válido y marca la casilla.",
+  "nl": {
+   "num": "La lista de casos",
+   "h2": "Recibe primero el próximo caso",
+   "p": "Un email cuando se abre un caso nuevo: la pregunta, las pruebas, el veredicto. Nada más, y te vas con un clic.",
+   "btn": "Avísame",
+   "ok": "¡Gracias! Revisa tu correo y confirma tu email: así estás en la lista."
+  }
  },
  "fr": {
-  "num": "Le dossier", "h2": "Emporte l'affaire complète",
+  "num": "Le dossier",
+  "h2": "Emporte l'affaire complète",
   "p": "Un pack gratuit : le résumé imprimable avec toutes les sources, les graphiques en feutre en haute résolution et les données qui les composent. Laisse ton e-mail : tu reçois le pack, et un message quand une nouvelle affaire s'ouvre.",
-  "items": ["Résumé imprimable (PDF)", "Graphiques en feutre (PNG)", "Données et sources (CSV)"],
-  "ph": "ton@email.fr", "consent": "J'accepte de recevoir les e-mails de Pandas Lab sur les nouvelles affaires. Je peux me désinscrire à tout moment.", "privacy": "Politique de confidentialité",
-  "btn": "Envoie-moi le pack", "ok": "Merci ! Ton pack est prêt.", "dl": "Télécharger le pack (ZIP)", "check": "Vérifie ta boîte mail et confirme ton adresse pour rester sur la liste.",
-  "err": "Un problème est survenu. Réessaie dans un instant.", "need": "Saisis un e-mail valide et coche la case."
+  "items": [
+   "Résumé imprimable (PDF)",
+   "Graphiques en feutre (PNG)",
+   "Données et sources (CSV)"
+  ],
+  "ph": "ton@email.fr",
+  "consent": "J'accepte de recevoir les e-mails de Pandas Lab sur les nouvelles affaires. Je peux me désinscrire à tout moment.",
+  "privacy": "Politique de confidentialité",
+  "btn": "Envoie-moi le pack",
+  "ok": "Merci ! Ton pack est prêt.",
+  "dl": "Télécharger le pack (ZIP)",
+  "check": "Vérifie ta boîte mail et confirme ton adresse pour rester sur la liste.",
+  "err": "Un problème est survenu. Réessaie dans un instant.",
+  "need": "Saisis un e-mail valide et coche la case.",
+  "nl": {
+   "num": "La liste des affaires",
+   "h2": "Reçois la prochaine affaire en premier",
+   "p": "Un e-mail quand une nouvelle affaire s'ouvre : la question, les preuves, le verdict. Rien d'autre, et tu pars en un clic.",
+   "btn": "Préviens-moi",
+   "ok": "Merci ! Vérifie ta boîte mail et confirme ton adresse : tu es alors sur la liste."
+  }
  }
 }

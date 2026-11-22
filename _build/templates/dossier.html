@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_nlbox.html" import nlbox %}
 {% block body %}
 <div class="dossier-head"><div class="wrap">
   <div>
@@ -57,5 +58,6 @@
     <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/{{ d.yt }}" title="{{ t.title }}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     <p class="center"><a class="btn" href="https://www.youtube.com/watch?v={{ d.yt }}" target="_blank" rel="noopener">YouTube →</a> <a class="btn ghost" href="{{ prefix }}/stories.html">{{ ui.nav_stories }}</a></p>
   </section>
+  {{ nlbox("D" ~ d.n, lang, prefix) }}
 </article></div>
 {% endblock %}

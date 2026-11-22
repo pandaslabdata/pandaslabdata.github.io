@@ -1,0 +1,13 @@
+{% macro nlbox(src, lang, prefix) %}{% if mailer.action %}{% set pk = packui[lang] %}{% set n = pk.nl %}
+<section class="sheet paper rv packbox nlbox" data-pack data-action="{{ mailer.action }}" data-case="{{ src }}" data-lang="{{ lang }}">
+  <span class="pin" style="right:40px;top:16px"></span>
+  <div class="num">{{ n.num }}</div>
+  <h2 class="slab">{{ n.h2 }}</h2>
+  <p>{{ n.p }}</p>
+  <form class="pk-form" data-pack-form novalidate>
+    <label class="pk-consent"><input type="checkbox" name="consent" required> <span>{{ pk.consent }} <a href="{{ prefix }}/privacy.html">{{ pk.privacy }}</a></span></label>
+    <div class="pk-row"><input type="email" name="email" required autocomplete="email" placeholder="{{ pk.ph }}" aria-label="Email"><button class="btn" type="submit">{{ n.btn }}</button></div>
+    <p class="pk-msg" aria-live="polite" data-need="{{ pk.need }}" data-err="{{ pk.err }}"></p>
+  </form>
+  <div class="pk-done" hidden><b>{{ n.ok }}</b></div>
+</section>{% endif %}{% endmacro %}

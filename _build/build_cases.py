@@ -515,6 +515,7 @@ def build_home(cases, ui_all, env, ver):
                              "files": fs, "count": (h["soon"] if not fs else h["file_1"] if len(fs) == 1 else h["files_n"].replace("{n}", str(len(fs)))),
                              "head": [4.5, g["head"][1] - 1, g["head"][2] + 1.5, g["photo"][1] + (g["photo"][3] - g["photo"][1]) * .7], "photo": [g["photo"][0], g["photo"][1], g["photo"][2] - 1.2, g["photo"][3]], "fx": WORLD_FX[k],
                              "hf": round(min(1.0, 9.0 / max(len(w_) for w_ in h["w"][k].split())), 3)})
+        worlds10.sort(key=lambda w: not w["files"])      # worlds with files first; the empty ones close the wall, dimmed
         n_files = len(wall)
         hero_img = f"/img/cases/{lc['case']}/{hj['_exp_img'].get(lc['case'], lc['images']['cover'])}"
         jsonld = js_safe({"@context": "https://schema.org", "@type": "WebSite", "name": "Pandas Lab", "url": BASE + "/",
@@ -724,6 +725,8 @@ def main():
     only_check = "--check" in sys.argv
     ui_all = json.loads((BUILD / "ui.json").read_text(encoding="utf-8"))
     env = Environment(loader=FileSystemLoader(BUILD / "templates"), autoescape=True)
+    env.globals["packui"] = json.loads((BUILD / "ui_pack.json").read_text(encoding="utf-8"))
+    env.globals["mailer"] = json.loads((BUILD / "mailer.json").read_text(encoding="utf-8"))
     cases, all_errs = [], []
     for f in sorted((BUILD / "cases").glob("*.json")):
         c = json.loads(f.read_text(encoding="utf-8"))
