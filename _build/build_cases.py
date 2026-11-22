@@ -709,7 +709,7 @@ def update_sitemap(groups, today):
     old = sm.read_text(encoding="utf-8")
     generated = {BASE + p for alts, _ in groups for p in alts.values()}
     keep = [u for u in re.findall(r"<url>.*?</url>", old, re.S)
-            if "/cases/" not in u and re.search(r"<loc>(.*?)</loc>", u).group(1) not in generated]
+            if "/cases/" not in u and "shop.html" not in u and "kit.html" not in u and re.search(r"<loc>(.*?)</loc>", u).group(1) not in generated]
     new = []
     for alts, prio in groups:
         links = "".join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{BASE}{alts[l]}"/>' for l in LANGS)
