@@ -249,7 +249,7 @@ def build_case(c, engine, ui_all, env, ver, write=True, pool=None):
                  and (json.loads((BUILD / "mailer.json").read_text(encoding="utf-8"))["action"] or __import__("os").environ.get("PL_PREVIEW")) else None,
             mailer=json.loads((BUILD / "mailer.json").read_text(encoding="utf-8")),
             sec_m=ui["sec_m"][c["dominant_label"]], toc=toc, img=img, claims_line=claims_line,
-            updated=date_str(c["updated"], ui), posts=c.get("posts", []), channels=CHANNELS,
+            updated=date_str(c["updated"], ui), posts=[p for p in c.get("posts", []) if "youtube.com" in p["url"]], channels=[ch for ch in CHANNELS if ch["name"] == "YouTube"],
             related=[{"href": case_paths(o["case"])[lang], "title": o["i18n"][lang]["title"], "case": o["case"],
                       "cover": f"/img/cases/{o['case']}/{o['images']['cover']}"} for o in (pool or []) if o["case"] != num])
         built[lang] = page
